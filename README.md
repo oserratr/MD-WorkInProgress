@@ -6,7 +6,7 @@ Documentation du projet de diplome MD2, process.
 
 ### DATA
 
-[Données de recherches, Insights](/DATA/README.md)
+[Données de recherches, Insights](/DATA)
 
 ### INSPIRATIONS
 
@@ -18,4 +18,4 @@ Documentation du projet de diplome MD2, process.
 
 ### PROCESS
 
-[Tutorials, Processus de construction](/PROCESS/README.md)
+[Tutorials, Processus de construction](/PROCESS)
