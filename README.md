@@ -14,7 +14,7 @@ Documentation du projet de diplome MD2, process.
 
 [Mindmap Personnelle](/IMAGES/Map-ws-workinprogress.jpg)<br/>
 
-[Presentation 25-09-2024]()
+[Presentation 25-09-2024](/IMAGES/presentation-mind-map.jpg)
 
 ### PROCESS
 
