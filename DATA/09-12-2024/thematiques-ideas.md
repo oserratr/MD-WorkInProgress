@@ -49,4 +49,10 @@ Langue officielle = Antananarivo
 
 ## Detournement et generalisation de situation pour renforcer des idées politiques radicales
 
+## Pourquoi le féminisme doit être intersectionnelle ?
+
+Ochy Curiel : « Le fait d’être des femmes noires nous place en situation d’oppression à la fois de genre, de « race » et de classe : en plus d’être des femmes et définies « racinement » comme noires, la plupart d’entre nous font partie des couches sociales les plus appauvries. »
+
 ## Insights / Inputs
+
+-> parralèle avec les spores de champignons
