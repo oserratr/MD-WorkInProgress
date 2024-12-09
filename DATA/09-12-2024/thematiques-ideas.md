@@ -34,6 +34,10 @@ Sans savoir réellement parler le malgache, je reussi néanmoins a comprendre ce
 -> mots n'ayant pas la même signification en fonction de l'intonation : par exemple Azala peut etre a la fois une isulte, juron, joie, humour
 -> Plus compliqué a comprendre le malgache écrit que parlé (certainement de part la construction de la langue)
 
+#### Danse et musique
+
+#### Coiffures et bijoux
+
 #### Domination culturelle
 
 Langue officielle = Antananarivo
