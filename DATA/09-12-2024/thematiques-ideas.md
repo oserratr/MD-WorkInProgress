@@ -57,6 +57,8 @@ Langue officielle = Antananarivo
 
 Ochy Curiel : « Le fait d’être des femmes noires nous place en situation d’oppression à la fois de genre, de « race » et de classe : en plus d’être des femmes et définies « racinement » comme noires, la plupart d’entre nous font partie des couches sociales les plus appauvries. »
 
+## Comment être un/une allié/ée?
+
 ## Insights / Inputs
 
 -> parralèle avec les spores de champignons
