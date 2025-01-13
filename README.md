@@ -2,7 +2,7 @@
 
 Documentation du projet de diplome MD2, processus de recherche.
 
-## Naviguation du GIT
+## Navigation du GIT
 
 ### DATA
 

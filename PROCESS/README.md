@@ -1,4 +1,4 @@
-# Naviguation PROCESS
+# Navigation PROCESS
 
 ## Process
 
