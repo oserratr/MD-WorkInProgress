@@ -1,5 +1,7 @@
 # Firsts ideas
 
+> Quels sujets politiques me touchent personnellement, ceux qui sont le plus présents dans mon environnement
+
 ## Héritage culturelle, transmission, acculturation
 
 Constat personnel : Même si il y a une consientisation des conséquences du colonialisme sur plusieurs aspect (notamment sur la domination culturelle), les nouvelles generations issus de l'immigration sont souvent meconnaissantes de leurs héritage et histoire culturelle. Ce qui mène a une dicotomie entre des personnes ayant la même racine culturelle.
@@ -57,8 +59,10 @@ Langue officielle = Antananarivo
 
 Ochy Curiel : « Le fait d’être des femmes noires nous place en situation d’oppression à la fois de genre, de « race » et de classe : en plus d’être des femmes et définies « racinement » comme noires, la plupart d’entre nous font partie des couches sociales les plus appauvries. »
 
-## Comment être un/une allié/ée?
+## Comment être un/une allié/ée pour des causes qui ne nous concernent pas directement?
 
 ## Insights / Inputs
 
--> parralèle avec les spores de champignons
+- Parralèle avec :
+  - Les spores de champignons
+  - Les racines d'un arbre
