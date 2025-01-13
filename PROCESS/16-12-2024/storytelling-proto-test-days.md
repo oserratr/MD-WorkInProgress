@@ -1,5 +1,7 @@
 # Story
 
+> Pour [Prototypage des tests days](/PROCESS/16-12-2024/prototypage-test-days.md)
+
 Once upon a time, in the heart of a vast forest, there stood a Giant Tree. Its majestic branches reached so high that they almost touched the clouds, and its roots, as thick as rivers, plunged so deep that they shook the earth. The tree was the soul of the forest. Its leaves whispered ancient secrets in the wind, its fruit fed all the inhabitants, and its shade offered shelter to those in need.
 
 Every year, at the time of renewal, the creatures of the forest - colourful birds, cunning foxes, swift squirrels and silent snakes - gathered around him. They would listen to the wind singing in its leaves, a gentle song that told the story of the world. In return, they would leave their most beautiful offerings: freshly fallen petals and joyful songs. In return, the tree offered them its fruit and its eternal wisdom.
