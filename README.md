@@ -17,3 +17,5 @@ Documentation du projet de diplome MD2, processus de recherche.
 ### PROCESS
 
 [Tutorials, Processus de recherches, tests](/PROCESS)
+
+[Poster WIP](/IMAGES/roots-oceane-serrat.pdf)
