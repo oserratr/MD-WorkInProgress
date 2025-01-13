@@ -1,8 +1,8 @@
 # Work In Progress
 
-Documentation du projet de diplome MD2, process.
+Documentation du projet de diplome MD2, processus de recherche.
 
-## Naviguation GIT
+## Naviguation du GIT
 
 ### DATA
 
@@ -10,12 +10,10 @@ Documentation du projet de diplome MD2, process.
 
 ### INSPIRATIONS
 
-[Reférences](https://www.are.na/oceane-serrat/md-workinprogress)<br/>
+[Reférences Arena](https://www.are.na/oceane-serrat/md-workinprogress)<br/>
 
-[Mindmap Personnelle](/IMAGES/Map-ws-workinprogress.jpg)<br/>
-
-[Presentation 25-09-2024](/IMAGES/presentation-mind-map.jpg)
+[Mindmap Personnelle](/IMAGES/Mindmap%20personnelle.pdf) | [Présentation mindmap personnelle](/IMAGES/presentation-mind-map.jpg)<br/>
 
 ### PROCESS
 
-[Tutorials, Processus de construction](/PROCESS)
+[Tutorials, Processus de recherches, tests](/PROCESS)
