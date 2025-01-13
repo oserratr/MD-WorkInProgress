@@ -2,9 +2,13 @@
 
 > Quels sujets politiques me touchent personnellement, ceux qui sont le plus présents dans mon environnement
 
+![Mindmap recherche topics](/IMAGES/topic-ideas.jpg)
+
 ## Héritage culturelle, transmission, acculturation
 
 Constat personnel : Même si il y a une consientisation des conséquences du colonialisme sur plusieurs aspect (notamment sur la domination culturelle), les nouvelles generations issus de l'immigration sont souvent meconnaissantes de leurs héritage et histoire culturelle. Ce qui mène a une dicotomie entre des personnes ayant la même racine culturelle.
+
+![Mindmap heritage culturelle](/IMAGES/topic-ideas-cultural-heritage.jpg)
 
 ### Chit chat with mom about gasy culture
 
