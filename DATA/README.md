@@ -2,7 +2,7 @@
 
 ## Topic
 
-- Topic ideas : [09-12-2024](/DATA/09-12-2024/thematiques-ideas.md)
+- Topic ideas : [09-12-2024](/DATA/09-12-2024/topic-ideas.md)
 
 ## Insight
 
