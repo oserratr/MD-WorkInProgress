@@ -9,3 +9,7 @@
 ## Tutorials & Feedback
 
 - Tutorials : [25-09-2024](/PROCESS/25-09-2024/Tutorials.md) | [11-12-2024](/PROCESS/11-12-2024/tutorials-for-test-days.md) | [13-01-2025](/PROCESS/13-01-2025/tutoriels-prepare-jury.md)
+
+## Presentations
+
+- Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md)
