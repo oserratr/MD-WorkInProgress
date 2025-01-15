@@ -65,6 +65,8 @@ _end demo test_
 
 - I also started research closer to the theme starting from my personal experience and start "mapping" objects catalyzing certain aspects of a culture (music, language, stories, ...) and show these different perceptions with sound recordings, testimonies, personal experiences
 
+> https://prezi.com/view/pJFydkUucZglCRiIHrhJ/
+
 **What i learn with this begin of research**
 
 - I did not suspect how people of all ages who had the same environment could have very different perceptions of everyday objects.
