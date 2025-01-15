@@ -4,6 +4,7 @@
 
 - Prototypage : [16-12-2024](/PROCESS/16-12-2024/prototypage-test-days.md)
 - Storytelling test : [16-12-2024](/PROCESS/16-12-2024/storytelling-proto-test-days.md)
+- Cartographie culturelle : [14-01-2025](/PROCESS/14-01-2025/recherche-objets.md)
 
 ## Tutorials & Feedback
 
