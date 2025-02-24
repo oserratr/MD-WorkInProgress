@@ -1,0 +1,9 @@
+# References de jeux d'enquetes, puzzles games, fictions...
+| Jeux vidéo | Description | Interaction principale | Lien Steam |
+| --- | --- | --- | --- |
+| Chants of Sennaar | Jeu d'enigme ou le but est de réunir des peuples qui ne parlent pas la même langue | **Traduire des glyphes par deduction grace a un contexte et une repetition, point & click, requete de personnages a faire pour avancer ou avoir des indices**| https://store.steampowered.com/app/1931770/Chants_of_Sennaar/ |
+| The Case of the Golden Idol | Jeu d'enquete ou le but et de trouver le tueur et d'enqueter de façon libre | **Recolter des mots via des indices visuels pour les remplir dans un carnet a chaque scene** | https://store.steampowered.com/app/1677770/The_Case_of_the_Golden_Idol/ | 
+| The Past Within | Jeu cooperatif pour resoudre des puzzle grace a des indices différents en fonction de la temporalité | **Communication via une boite ou le joueur du futur ou du passe va influencer la partie de l'autre** | https://store.steampowered.com/app/1515210/The_Past_Within/ |
+| Heaven's Vault | Puzzle game et jeux d'aventure narratif sur l'archeologie et le decryptage d'une langue morte | **Comme Chants of Sennaar, traduction de glyphe par deduction de contexte** | https://store.steampowered.com/app/774201/Heavens_Vault/ |
+| Return of the Obra Dinn | Jeu d'enquete sur le mysterieu destin d'un bateau ou il faut elucidé les identité des personnages | **revivre et arreter des scene de vies avec un objet (la montre), deduire des actions via l'environnement ET But est d'associer visages et noms** | https://store.steampowered.com/app/653530/Return_of_the_Obra_Dinn/?l=french |
+| Venba | Jeu de cuisine indienne narratif | **Faire la cuisine en essayant de reconstituer des recettes**| https://store.steampowered.com/app/1491670/Venba/ |
