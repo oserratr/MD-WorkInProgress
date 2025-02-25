@@ -12,7 +12,7 @@
 - **Interaction narrative** : Le personnage principal interagit avec divers membres de la famille pour tenter de traduire un document mystérieux. Ne recevant pas toutes les réponses directement, il est amené à fouiller dans les affaires familiales. Au fil de ses recherches, les indices recueillis lui permettent de reconstituer l'histoire de sa famille et de comprendre ce que signifie vivre dans un pays étranger.
 
 - **Jeu de type objet caché** : Le personnage peut manipuler et zoomer sur des objets, afin de découvrir des traductions de mots ou des indices invisibles à première vue.
-Évolution des objets par la compréhension des mots : La maîtrise de certains termes accélère la progression et révèle de nouvelles facettes des objets. Par exemple, une cocotte à riz pourrait se transformer en une représentation du Sahara, ou une trace de poussière laissée sur un meuble pourrait redonner vie à l'objet lui-même.
+Évolution des objets par la compréhension des mots : La maîtrise de certains termes accélère la progression et révèle de nouvelles facettes des objets. Par exemple, une cocotte à riz pourrait se transformer en une représentation du Sahafa, ou une trace de poussière laissée sur un meuble pourrait redonner vie à l'objet lui-même.
 
 - **Quêtes secondaires** : Des missions annexes confiées par les membres de la famille permettent d’obtenir plus rapidement des informations essentielles pour traduire le testament.
 
