@@ -7,33 +7,30 @@
 - Test d'un gameplay ou le joueur doit traduire des petites phrases en ecoutant / lisant un monologue 
 
 **Textes à traduires**
-1. "Tova mino selka. Néra duva lakomi fira. Talno vera sima tova."<br/>
-➡ "C'était un vieux jeu. Moi, j'avais toujours envie de manger, mais toi, tu préférais autre chose. On faisait ça tout le temps."
-2. "Néra sovira ramo panta. Suma sima. Nino divo kani."<br/>
-➡ "Je marchais dans la forêt le matin. Le soleil était agréable. Toi, tu aimais l’eau."
-3. "Kera vera sima. Néra duva miska filo. Nino davo tova."<br/>
-➡ "La maison était agréable. Moi, j’avais peur d’oublier une lettre. Toi, tu parlais du passé."
-4. "Tilo vera nino. Néra kani davo. Divo fira panta."<br/>
-➡ "Tu chantais souvent. Moi, j’aimais parler. L’eau était froide le matin."
+1. "Néra vera kani selka."<br/>
+➡ "Un jeu que j'aime beaucoup" OK
+
+2. "Néra sovira ramo panta. Nino divo kani."<br/>
+➡ "Je marchais dans la forêt le matin." A TRADUIRE
+
+3. "Kera rave sima. Néra duva miska filo."<br/>
+➡ "La maison était bien. Moi, j’ai oublié une lettre."
 
 ### Monologue
 
 #### Premier texte
 
 1️⃣ Première partie :
-"Ah, tova... tova mino selka. Comme avant ! Tu te souviens ? Quand on était jeunes, on faisait toujours ça."
-
-(Pause pour laisser le joueur réfléchir à "Tova mino selka")
+"Ah, Nino ! Regarde Néra Lunja selka. Tu te souviens ? Quand nino petite, nino avoir lunja."
+--> Ah toi ! regarde moi trouver jeu. Tu te souviens ? Quand tu etait jeune, c'est toi qui l'avais trouver.
 
 2️⃣ Deuxième partie :
-"Néra duva lakomi fira… ah, toujours faim ! Moi, je veux lakomi, mais toi, tu préfères fira, pas vrai ?"
-
-(Pause pour laisser le joueur comprendre que "lakomi" est lié à la nourriture et "fira" à un type spécifique)
+"Néra souviens que Nino dis vera "néra vouloir etre forte a selka". Nino faire du the, et, nino y néra selka "
+--> Je me rapelle que tu aimer beaucoup ce jeu. Je vais faire du the et on va jouer.
 
 3️⃣ Troisième partie :
-"Talno vera sima tova. Ah, c'était bien… talno, toujours en train de faire ça, vera… comme une habitude !"
-
-(Pause pour laisser le joueur faire les connexions avec "talno" et "vera")
+"Nino kani selka autant que le the ? "
+--> Tu aime ce jeu autant que le the?
 
 #### Deuxième texte
 
@@ -56,18 +53,6 @@
 
 3️⃣ "Toi, nino davo tova… tu parlais tout le temps des choses d’avant !"
 (Pause pour comprendre "davo" = parler, "tova" = passé)
-
-#### Quatrième texte
-
-1️⃣ "Tilo vera nino… toi, toujours en train de chanter ! Une vraie habitude !"
-(Pause pour comprendre "tilo" = chanson, "vera" = habitude, "nino" = toi)
-
-2️⃣ "Mais moi, néra kani davo. Toujours envie de parler, raconter des histoires !"
-(Pause pour identifier "kani" = aimer, "davo" = parler, "néra" = moi)
-
-3️⃣ "Divo fira panta… tu te souviens ? L’eau était froide, le matin, toujours trop froide !"
-(Pause pour comprendre "divo" = eau, "fira" = spécifique (ici, froid), "panta" = matin)
-
 
 ### Traduction des mots
 
@@ -94,6 +79,9 @@
 | Filo | Lettre / Message |
 | Davo | Parler / Dire |
 | Kani | Aimer |
+| Néra | Moi |
+| Rave | etre |
+| Care | chanter |
 
 ## Scene 2 
 
