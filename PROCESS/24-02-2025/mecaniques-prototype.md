@@ -4,17 +4,19 @@
 
 ## Test 1
 
+[PROTOTYPE FIGMA](https://www.figma.com/design/98HLBnGPttUsDlPQCcbD5R/Prototype-gameplay-traduction?node-id=0-1&t=SCmHkVIa7WZQCvU2-1)
+
 - Test d'un gameplay ou le joueur doit traduire des petites phrases en ecoutant / lisant un monologue 
 
 **Textes à traduires**
-1. "Néra vera kani selka."<br/>
+1. **"Néra vera kani selka."**<br/>
 ➡ "Un jeu que j'aime beaucoup" OK
 
-2. "Néra sovira ramo panta. Nino divo kani."<br/>
-➡ "Je marchais dans la forêt le matin." A TRADUIRE
+2. **"Néra kani sovira ramo panta."**<br/>
+➡ "J'aime marcher dans la forêt le matin." OK
 
-3. "Kera rave sima. Néra duva miska filo."<br/>
-➡ "La maison était bien. Moi, j’ai oublié une lettre."
+3. **"Néra miska filo kera."**<br/>
+➡ "J'ai perdu la lettre a la maison" OK
 
 ### Monologue
 
@@ -25,7 +27,7 @@
 --> Ah toi ! regarde moi trouver jeu. Tu te souviens ? Quand tu etait jeune, c'est toi qui l'avais trouver.
 
 2️⃣ Deuxième partie :
-"Néra souviens que Nino dis vera "néra vouloir etre forte a selka". Nino faire du the, et, nino y néra selka "
+"Néra souviens que Nino dis vera "néra vouloir etre forte a selka". Nino faire du the, et, nino et néra selka "
 --> Je me rapelle que tu aimer beaucoup ce jeu. Je vais faire du the et on va jouer.
 
 3️⃣ Troisième partie :
@@ -34,25 +36,25 @@
 
 #### Deuxième texte
 
-1️⃣ "Ah, néra sovira ramo panta… chaque matin, j’aimais bien partir tôt, marcher là-bas !"
-(Pause pour identifier "sovira" = marcher, "ramo" = forêt, "panta" = matin)
+1️⃣ "C'est panta, reveille nino" 
+--> c'est le matin, reveille toi.
 
-2️⃣ "Suma sima ! Tu te souviens ? Il faisait bon, pas trop chaud !"
-(Pause pour comprendre "suma" = soleil, "sima" = agréable)
+2️⃣ "Néra sais que nino pas kani ramo et pas kani sovira, mais important ! "
+--> Je sais que tu n'aimes pas la foret, que tu n'aime pas marché mais c'est important!
 
-3️⃣ "Mais toi, nino divo kani. Toujours près de l’eau, à jouer, à regarder les poissons !"
-(Pause pour relier "nino" = toi, "divo" = eau, "kani" = aimer)
+3️⃣ "Nino souvent sovira longtemps quand nino jeune."
+--> J'ai souvent marché longtemps quand j'etais jeune.
 
 #### Troisième texte
 
-1️⃣ "Ah, kera vera sima… notre maison, toujours un bon endroit, hein ?"
-(Pause pour comprendre "kera" = maison, "vera" = habitude, "sima" = bien)
+1️⃣ "Longtemps nino pas venus a kera ! Sika ?"
+--> ca fait longtemps que tu n'est pas venus a la maison ! Sika ?
 
-2️⃣ "Mais néra duva miska filo… oh là là, toujours peur d’oublier, de perdre une lettre !"
-(Pause pour relier "miska" = oublier, "filo" = lettre, "duva" = vouloir / peur ici)
+2️⃣ "Ah, nino miska les clé de kera ?"
+--> Ah, tu as perdu les clé de la maison ? 
 
-3️⃣ "Toi, nino davo tova… tu parlais tout le temps des choses d’avant !"
-(Pause pour comprendre "davo" = parler, "tova" = passé)
+3️⃣ "Néra aussi miska beaucoup de chose, comme filo retrouver hier"
+--> Moi aussi je perds beaucoup de chose, comme cette lettre que j'ai retrouver hier.
 
 ### Traduction des mots
 
@@ -83,17 +85,5 @@
 | Rave | etre |
 | Care | chanter |
 
-## Scene 2 
-
--> Tester la partie du gameplay sur l'interaction narrative
-
-## Scene 2 & Scene 3 A VOIR APRES
-
--> arbre narratif avec des short indice narratifs avec des quetes simples et interactions avec la famille 
--> voir si la narration par interaction avec les membre de la famille fonctionne est n'est pas trop long
-
--> Tester la partie du gameplay ou il y a une recherche d'objets, est-ce qu'on comprends ce que les objets racontent?
-
-## Scene 4
-??
+## Retours test prototype
 
