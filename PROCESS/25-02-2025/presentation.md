@@ -20,7 +20,15 @@ Lors du déménagement de sa grand-mère, qui venait vivre avec lui et sa mère,
 **Idées de gameplay** : Interaction narrative, Jeu de type objet caché, Quêtes secondaires, Traduction
 
 - demo
+**Textes à traduires**
+1. **"Néra vera kani selka."**<br/>
+➡ "Un jeu que j'aime beaucoup" OK
 
+2. **"Néra kani sovira ramo panta."**<br/>
+➡ "J'aime marcher dans la forêt le matin." OK
+
+3. **"Néra miska filo kera."**<br/>
+➡ "J'ai perdu la lettre a la maison" OK
 ## Next step
 
 ### Test feedback 
