@@ -7,6 +7,7 @@
 - faire liste collection objets categorisation sur comment ils racontes des histoires
 - interviews
 - repertorié anecdotes personnelles
+- recherche graphique ?
 - regarder les vidéos que marion m'as conseillé 
 
 | Vidéo | Lien |
