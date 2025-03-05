@@ -1,14 +1,14 @@
 # To do list pour le 06/03/2025
 ## Test
-- faire test avec moins de français 
-- faire test sans français
+- [ ] faire test avec moins de français 
+- [ ] faire test sans français
 
 ## Recherche
-- faire liste collection objets categorisation sur comment ils racontes des histoires
-- interviews
-- repertorié anecdotes personnelles
-- recherche graphique ?
-- regarder les vidéos que marion m'as conseillé 
+- [ ] faire liste collection objets categorisation sur comment ils racontes des histoires
+- [ ] interviews
+- [ ] repertorié anecdotes personnelles
+- [ ] recherche graphique ?
+- [ ] regarder les vidéos que marion m'as conseillé 
 
 | Vidéo | Lien |
 | --- | --- |
@@ -18,7 +18,7 @@
 | How Interactive Should My Game Story Be? | https://www.youtube.com/watch?v=tq2n-DEUiVw |
 
 ## Ecriture
-- ecriture des différents personnages
+- [ ] ecriture des différents personnages
 
 ## Organisation
-- liste interaction et voir si utilisation godot ou autre
+- [ ] liste interaction et voir si utilisation godot ou autre
