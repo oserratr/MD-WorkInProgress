@@ -87,3 +87,10 @@
 
 ## Retours test prototype
 
+- Peut etre faire une langue detacher du francais,
+- la grand mère qui ne parle pas du tout le français 
+- elle communiquerais uniquement avec les objets, les objets pourraits etre les clés de compréhension du language
+- maniabilité des objets
+
+![Image 1 test proto](/IMAGES/test-proto-1-trad/WhatsApp%20Image%202025-03-04%20à%2011.34.54_63cd8999.jpg)
+![Image 2 test proto](/IMAGES/test-proto-1-trad/WhatsApp%20Image%202025-03-04%20à%2011.34.54_88a1fc45.jpgg)
