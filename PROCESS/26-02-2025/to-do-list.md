@@ -22,7 +22,7 @@
 ## Ecriture
 - [ ] commencer world building (diagramme a partir de grand mère)
     -> conflit ? pourquoi ? verrouiller les rapports sociaux
-    
+
 - [ ] commencer a écrire document a déchiffrer
 
 ## Prototypage
@@ -31,7 +31,7 @@
 
 ## Recherche
 - [ ] repertorier anecdotes personnelles 
-- [ ] faire liste collection objets categorisation sur comment ils racontes des histoires 
+- [x] faire liste collection objets categorisation sur comment ils racontes des histoires 
 - [x] Interviews
 
 # To do list non définis date
