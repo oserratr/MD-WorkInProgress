@@ -31,3 +31,6 @@
 - Le Madras : tissu traditionnel guadeloupéen utilisé pour les vêtements, les nappes, les rideaux, etc.
 - La sorbetière guadeloupéenne : outil traditionnel pour faire du sorbet coco en tournant la manivelle à la main pendant une heure.
 - Les grandes marmites pour la cuisine créole, qui sont emblématiques des traditions culinaires.
+
+## Autre
+- drapeau independantiste guadeloupe diff a "l'officiel"
