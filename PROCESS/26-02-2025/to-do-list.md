@@ -21,11 +21,13 @@
 
 ## Ecriture
 - [ ] commencer world building (diagramme a partir de grand mère)
+    -> conflit ? pourquoi ? verrouiller les rapports sociaux
+    
 - [ ] commencer a écrire document a déchiffrer
 
 ## Prototypage
 
-- [ ] proto interaction d'inspection d'objet
+- [ ] proto interaction d'inspection d'objet unity ou godot
 
 ## Recherche
 - [ ] repertorier anecdotes personnelles 
@@ -36,3 +38,6 @@
 
 ## Organisation
 - [ ] liste interaction et voir si utilisation godot ou autre
+- [ ] faire test avec interaction perso + trouver objets scène clé
+- [ ] préciser le contenu, pourquoi a quoi ca sert ?
+
