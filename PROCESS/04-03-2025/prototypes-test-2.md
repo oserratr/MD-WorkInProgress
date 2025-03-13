@@ -70,4 +70,7 @@ _"Néra kani sovira ramo panta."_<br/>
 -> Chaussures de marche pour marcher
 -> calendrier avec photo de foret
 
+## Retours test prototype
 
+- La version avec moins de français ne fonctionne pas du tout 
+- Cependant, la version avec la recherche d'objet fonctionne bien et plus ludique
