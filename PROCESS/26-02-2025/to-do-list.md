@@ -20,7 +20,7 @@
 # To do list pour le 13/03/2025
 
 ## Ecriture
-- [ ] commencer world building (diagramme a partir de grand mère)
+- [x] commencer world building (diagramme a partir de grand mère) + timeline world building
     -> conflit ? pourquoi ? verrouiller les rapports sociaux
 
 - [ ] commencer a écrire document a déchiffrer
