@@ -12,7 +12,7 @@
 ## Tutorials & Feedback
 
 - Tutorials : [25-09-2024](/PROCESS/25-09-2024/Tutorials.md) | [11-12-2024](/PROCESS/11-12-2024/tutorials-for-test-days.md) | [13-01-2025](/PROCESS/13-01-2025/tutoriels-prepare-jury.md) 
-- To do list : [26-02-2025 to 13-03-2025](/PROCESS/26-02-2025/to-do-list.md)
+- To do list : [26-02-2025 to 20-03-2025](/PROCESS/26-02-2025/to-do-list.md)
 - Feedback : [26-02-2025](/PROCESS/26-02-2025/retours-presentation.md)
 
 ## Presentations
