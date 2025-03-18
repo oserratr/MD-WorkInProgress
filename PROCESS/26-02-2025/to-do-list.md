@@ -23,16 +23,28 @@
 - [x] commencer world building (diagramme a partir de grand mère) + timeline world building
     -> conflit ? pourquoi ? verrouiller les rapports sociaux
 
-- [ ] commencer a écrire document a déchiffrer
-
-## Prototypage
-
-- [ ] proto interaction d'inspection d'objet unity ou godot
 
 ## Recherche
 - [ ] repertorier anecdotes personnelles 
 - [x] faire liste collection objets categorisation sur comment ils racontes des histoires 
 - [x] Interviews
+
+# To do list pour le 20/03/2025
+
+## Prototypage
+
+- [ ] abstrait : plan de jeu, nb d'objets, lié les objets a des evenements et personnes et fonctions
+- [ ] arbre structure de dialogue, prototyper conversation
+    - twine + godot fonctionne bien
+
+## Recherche
+- [ ] repertorier anecdotes personnelles 
+
+## Ecriture
+
+- [ ] commencer a écrire document a déchiffrer
+- [ ] continuer world building et ecriture des perosonnages
+- [ ] mapper objets avec timline sur evenement important
 
 # To do list non définis date
 
