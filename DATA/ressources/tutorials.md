@@ -4,6 +4,7 @@
 |Vidéo|Lien|
 |---|---|
 |Examiner un objet camera 1st personne|https://www.youtube.com/watch?v=6Y2Z2YlCy-s|
+|Json for narrative games|https://www.youtube.com/watch?v=eaNQkD1vX-E|
 
 
 
