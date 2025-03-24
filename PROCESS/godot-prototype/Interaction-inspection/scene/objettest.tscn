@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://clre2s1gjlkun"]
+
+[ext_resource type="Script" path="res://scripts/objettest.gd" id="1_qv4hc"]
+[ext_resource type="PackedScene" uid="uid://bgnflaj57jrvb" path="res://asset/suz.glb" id="2_1j4wc"]
+
+[node name="Objettest" type="Node3D"]
+script = ExtResource("1_qv4hc")
+
+[node name="suz" parent="." instance=ExtResource("2_1j4wc")]

@@ -1,0 +1,110 @@
+[gd_scene load_steps=15 format=3 uid="uid://x7ibe57fjfov"]
+
+[ext_resource type="Script" path="res://scripts/gamemanager.gd" id="1_4ns3m"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ppuvl"]
+[ext_resource type="PackedScene" uid="uid://b52rfde5p00g0" path="res://scene/interactable.tscn" id="2_sxsyt"]
+[ext_resource type="PackedScene" uid="uid://clre2s1gjlkun" path="res://scene/objettest.tscn" id="3_0t7qd"]
+[ext_resource type="Script" path="res://scripts/Area3D1.gd" id="3_qsb14"]
+[ext_resource type="Script" path="res://scripts/objettest.gd" id="6_y6i7j"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bla7q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u0sn0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lotxd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_28lod"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1wk0w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htplw"]
+albedo_color = Color(0.337255, 1, 1, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_aehr7"]
+material = SubResource("StandardMaterial3D_htplw")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ytovr"]
+
+[node name="controller" type="Node3D"]
+script = ExtResource("1_4ns3m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.724509, 0.689266, 0, -0.689266, 0.724509, -2.29791, 9.42229, 8.88807)
+
+[node name="player" type="CharacterBody3D" parent="." groups=["player"]]
+script = ExtResource("1_ppuvl")
+
+[node name="body" type="MeshInstance3D" parent="player"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.627556, 0)
+mesh = SubResource("CapsuleMesh_bla7q")
+
+[node name="bodycollider" type="CollisionShape3D" parent="player"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.616643, 0)
+shape = SubResource("CapsuleShape3D_u0sn0")
+
+[node name="CameraOrigin" type="Node3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.90144, 0)
+
+[node name="Camera3Dplayer" type="Camera3D" parent="player/CameraOrigin"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3.1891, 7.2913)
+keep_aspect = 0
+
+[node name="floor" type="Node3D" parent="."]
+
+[node name="floor" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(7, 0, 0, 0, 0.24, 0, 0, 0, 7, 0, 0, 0)
+mesh = SubResource("BoxMesh_lotxd")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor/floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/floor/StaticBody3D"]
+transform = Transform3D(0.993165, 0, 0, 0, 1.00233, 0, 0, 0, 1.01694, 0, 0, 0)
+shape = SubResource("BoxShape3D_28lod")
+
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("target_camera")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.67889, 0.68849, -1.90026)
+script = ExtResource("3_qsb14")
+target_camera = NodePath("../Camera3Dobject1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 3.32258)
+shape = SubResource("SphereShape3D_1wk0w")
+
+[node name="Objettest" parent="Area3D" node_paths=PackedStringArray("trigger_camera", "suz") instance=ExtResource("3_0t7qd")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+trigger_camera = NodePath("../../Camera3Dobject1")
+suz = NodePath(".")
+
+[node name="uiinteraction" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interactable" parent="uiinteraction" instance=ExtResource("2_sxsyt")]
+
+[node name="Camera3Dobject1" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64086, 0.654879, -1.01591)
+keep_aspect = 0
+
+[node name="Area3D2" type="Area3D" parent="." node_paths=PackedStringArray("target_camera")]
+script = ExtResource("3_qsb14")
+target_camera = NodePath("../Camera3Dobject2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D2" node_paths=PackedStringArray("trigger_camera", "suz")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.8072, 0.675651, -2.02786)
+mesh = SubResource("PrismMesh_aehr7")
+script = ExtResource("6_y6i7j")
+trigger_camera = NodePath("../../Camera3Dobject2")
+suz = NodePath(".")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84429, 0.71871, -0.541895)
+shape = SubResource("SphereShape3D_ytovr")
+
+[node name="Camera3Dobject2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78047, 0.654879, -1.01591)
+keep_aspect = 0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+[connection signal="body_exited" from="Area3D2" to="." method="_on_area_3d_2_body_exited"]
