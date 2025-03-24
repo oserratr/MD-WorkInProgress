@@ -45,6 +45,8 @@
 - [ ] commencer a écrire document a déchiffrer
 - [ ] continuer world building et ecriture des perosonnages
 - [ ] mapper objets avec timline sur evenement important
+-> contenu technique : contenu de la lettre, ce que ca doit dire, etc...
+-> faire ponts entre objet, lettre et conversation
 
 # Presentation
 - [ ] faire une presentation slide + proto
