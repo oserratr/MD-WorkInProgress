@@ -17,3 +17,7 @@
 ## Estetique 
 - [ ] Shaders
 - [ ] Lighting
+
+
+## + OU - bon
+- [x] Structure pour code propre inspection d'objet + switch de camera avec trigger collider
