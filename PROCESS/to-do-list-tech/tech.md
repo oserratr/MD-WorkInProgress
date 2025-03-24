@@ -1,0 +1,19 @@
+# Liste to-do pour la partie technique et problèmes
+
+## Assets
+- [ ] 3D assets
+- [ ] Sound design
+- [ ] Dialogue text
+
+## Interactions 
+- [ ] Inspection d'objets
+    - [ ] Zoom in out ?
+    - [ ] Reset position après echap camera
+- [ ] Inventaire objets ?
+- [ ] Carnet / prise de note / complété traduire document
+- [ ] Interaction narratives
+- [ ] Controle manette
+
+## Estetique 
+- [ ] Shaders
+- [ ] Lighting
