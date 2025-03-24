@@ -49,6 +49,7 @@
 # Presentation
 - [ ] faire une presentation slide + proto
     - montrer : recherches objects, points clés interviews, world building, ecriture personnage, description projet, plan de jeu, test de narration et etapes suivantes
+    - devlog itch.io (optionel)
 
 # To do list non définis date
 
