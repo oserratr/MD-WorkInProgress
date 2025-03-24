@@ -13,6 +13,7 @@
 - [ ] Carnet / prise de note / complété traduire document
 - [ ] Interaction narratives
 - [ ] Controle manette
+- [ ] Zoom in et out camera 3 ieme personne ?
 
 ## Estetique 
 - [ ] Shaders
