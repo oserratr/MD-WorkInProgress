@@ -29,13 +29,13 @@
 - [x] faire liste collection objets categorisation sur comment ils racontes des histoires 
 - [x] Interviews
 
-# To do list pour le 20/03/2025
+# To do list pour le 26/03/2025
 
 ## Prototypage
 
 - [ ] abstrait : plan de jeu, nb d'objets, lié les objets a des evenements et personnes et fonctions
 - [ ] arbre structure de dialogue, prototyper conversation
-    - twine + godot fonctionne bien
+    - ink + godot fonctionne bien
 
 ## Recherche
 - [ ] repertorier anecdotes personnelles 
@@ -45,6 +45,10 @@
 - [ ] commencer a écrire document a déchiffrer
 - [ ] continuer world building et ecriture des perosonnages
 - [ ] mapper objets avec timline sur evenement important
+
+# Presentation
+- [ ] faire une presentation slide + proto
+    - montrer : recherches objects, points clés interviews, world building, ecriture personnage, description projet, plan de jeu, test de narration et etapes suivantes
 
 # To do list non définis date
 
