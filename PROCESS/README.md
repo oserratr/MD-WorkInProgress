@@ -19,4 +19,4 @@
 
 ## Presentations
 
-- Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md)
+- Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md) | [Mid-crit presentation](/PROCESS/24-03-2025/presentation-mid-crit-26.md)
