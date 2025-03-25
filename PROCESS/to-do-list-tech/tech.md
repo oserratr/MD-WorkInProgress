@@ -12,7 +12,7 @@
 - [ ] Inventaire objets ?
 - [ ] Carnet / prise de note / complété traduire document
 - [ ] Interaction narratives
-- [ ] Controle manette
+- [ ] Controle manette PS4 ou xbox
 - [ ] Zoom in et out camera 3 ieme personne ?
 
 ## Estetique 
