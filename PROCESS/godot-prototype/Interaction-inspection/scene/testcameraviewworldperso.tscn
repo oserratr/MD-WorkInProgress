@@ -97,7 +97,7 @@ trigger_camera = NodePath("../../Camera3Dobject2")
 suz = NodePath(".")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84429, 0.71871, -0.541895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.77384, 0.71871, -0.541895)
 shape = SubResource("SphereShape3D_ytovr")
 
 [node name="Camera3Dobject2" type="Camera3D" parent="."]
