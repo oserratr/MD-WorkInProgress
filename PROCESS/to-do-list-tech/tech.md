@@ -19,6 +19,10 @@
 - [ ] Shaders
 - [ ] Lighting
 
+## PROBLEME
+- [ ] Faire test build pour resolution sur pc !!
+- [ ] Bloquer deplacement du personnage pendant inspection
+
 
 ## + OU - bon
 - [x] Structure pour code propre inspection d'objet + switch de camera avec trigger collider
