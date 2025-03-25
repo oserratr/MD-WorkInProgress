@@ -1,22 +1,11 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
 @onready var pivot = $CameraOrigin
 @export var sens = 0.5
-
 @export var rotation_speed: float = 100.0  # Vitesse de rotation (degrés par seconde)
 var rotation_velocity: float = 0.0  # Vitesse actuelle de rotation
 var damping: float = 5.0  # Facteur de ralentissement
-
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			rotation_velocity = -rotation_speed  # Scroll vers le haut → Rotation négative
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			rotation_velocity = rotation_speed  # Scroll vers le bas → Rotation positive
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -28,6 +17,17 @@ func _physics_process(delta):
 	# Gravité
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+
+	# Lecture des gâchettes de la manette
+	var trigger_left = Input.get_joy_axis(0, JOY_AXIS_TRIGGER_LEFT)   # LT
+	var trigger_right = Input.get_joy_axis(0, JOY_AXIS_TRIGGER_RIGHT) # RT
+
+	# Seuil pour éviter les micro-activations
+	var trigger_deadzone = 0.1
+	if trigger_left > trigger_deadzone:
+		rotation_velocity = -rotation_speed * trigger_left  # Rotation vers la gauche
+	elif trigger_right > trigger_deadzone:
+		rotation_velocity = rotation_speed * trigger_right  # Rotation vers la droite
 
 	# Appliquer la rotation avec interpolation pour la fluidité
 	rotation.y += deg_to_rad(rotation_velocity * delta)
@@ -57,11 +57,16 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
+# (Optionnel) Tu peux supprimer cette fonction si tu n'utilises plus la souris
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			rotation_velocity = -rotation_speed
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			rotation_velocity = rotation_speed
 
 func _on_collision_shape_3d_tree_entered():
 	pass # Replace with function body.
-
 
 func _on_area_3d_body_entered(body):
 	pass # Replace with function body.

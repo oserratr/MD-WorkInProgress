@@ -16,7 +16,7 @@ layout_mode = 2
 offset_top = 298.0
 offset_right = 1152.0
 offset_bottom = 324.0
-text = "Press \"E\""
+text = "Press \"A\""
 label_settings = SubResource("LabelSettings_03mpw")
 horizontal_alignment = 1
 

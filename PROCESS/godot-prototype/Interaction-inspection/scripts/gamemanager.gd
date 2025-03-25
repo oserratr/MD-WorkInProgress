@@ -30,7 +30,7 @@ func _process(delta):
 		_switch_to_player_camera()
 
 	# Nouveau : appuyer sur Échap revient à la caméra du joueur
-	if camera_switched and Input.is_action_just_pressed("ui_cancel"):  # "ui_cancel" est mappé à Échap par défaut
+	if camera_switched and Input.is_action_just_pressed("cancel"):  # "ui_cancel" est mappé à Échap par défaut
 		print("Escape pressed: switching back to player camera")
 		_switch_to_player_camera()
 
