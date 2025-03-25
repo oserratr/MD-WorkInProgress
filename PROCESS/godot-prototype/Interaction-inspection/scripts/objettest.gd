@@ -3,29 +3,29 @@ extends Node3D
 @export var trigger_camera: Camera3D  # assignée dans l'inspecteur
 @export var suz : Node3D
 
-var pressed := false
 var default_transform: Transform3D
 var default_suz_rotation: Vector3
+
+const ROTATION_SPEED := 2.5  # Vitesse de rotation ajustable
 
 func _ready():
 	default_transform = global_transform
 	default_suz_rotation = suz.rotation
 
-func _input(event: InputEvent) -> void:
-	if trigger_camera.current and pressed and event is InputEventMouseMotion:
-		rotation.x += event.relative.y * 0.005
-		suz.rotation.y += event.relative.x * 0.005
-
 func _physics_process(delta: float) -> void:
 	if not trigger_camera.current:
 		return
 
-	if Input.is_action_just_pressed("click"):
-		pressed = true
-	if Input.is_action_just_released("click"):
-		pressed = false
+	# Lire les axes du joystick droit (Right Stick)
+	var rs_x := Input.get_action_strength("ui_right_stick_right") - Input.get_action_strength("ui_right_stick_left")
+	var rs_y := Input.get_action_strength("ui_right_stick_down") - Input.get_action_strength("ui_right_stick_up")
 
-	if Input.is_action_just_pressed("ui_cancel"):
+	# Appliquer la rotation en fonction du stick droit
+	if abs(rs_x) > 0.05 or abs(rs_y) > 0.05:
+		rotation.x += -rs_y * ROTATION_SPEED * delta
+		suz.rotation.y += rs_x * ROTATION_SPEED * delta
+
+	# Réinitialisation avec la touche "cancel"
+	if Input.is_action_just_pressed("cancel"):
 		global_transform = default_transform
 		suz.rotation = default_suz_rotation
-		pressed = false
