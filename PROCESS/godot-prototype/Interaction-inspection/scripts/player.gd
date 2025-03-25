@@ -25,23 +25,29 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta):
-	# Add the gravity.
+	# Gravité
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-		
 	# Appliquer la rotation avec interpolation pour la fluidité
 	rotation.y += deg_to_rad(rotation_velocity * delta)
-	
-	# Appliquer un ralentissement progressif
 	rotation_velocity = lerp(rotation_velocity, 0.0, damping * delta)
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("left", "right", "up", "down")
+
+	# Lecture du stick gauche de la manette (joystick analogique)
+	var left_stick_x = Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
+	var left_stick_y = Input.get_joy_axis(0, JOY_AXIS_LEFT_Y)
+
+	# Zone morte pour éviter les mouvements parasites
+	var deadzone = 0.2
+	if abs(left_stick_x) < deadzone:
+		left_stick_x = 0
+	if abs(left_stick_y) < deadzone:
+		left_stick_y = 0
+
+	# Calcul de la direction
+	var input_dir = Vector2(left_stick_x, left_stick_y)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -50,6 +56,7 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
 
 
 func _on_collision_shape_3d_tree_entered():
