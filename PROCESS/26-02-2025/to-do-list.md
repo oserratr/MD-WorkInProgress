@@ -46,7 +46,7 @@
 -> faire ponts entre objet, lettre et conversation
 
 # Presentation
-- [ ] faire une presentation slide ou github + proto
+- [x] faire une presentation slide ou github + proto
     - montrer : recherches objects, points clés interviews, world building, ecriture personnage, description projet, plan de jeu, test de narration et etapes suivantes
     - devlog itch.io (optionel)
 
