@@ -15,7 +15,7 @@
 - objet mysterieux
 - Pagne 
 - photo/album photo
-
+- Lettre a trouver dans la poubelle ?
 ## Gameplay
 
 -> Intervention des mecaniques dans la narration, a quel moment, pourquoi, quel mecaniques ?
