@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=15 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 
@@ -28,6 +28,14 @@ albedo_color = Color(0.329412, 0.658824, 0.658824, 1)
 material = SubResource("StandardMaterial3D_n5ckc")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbvoe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qetn"]
+albedo_color = Color(1, 1, 0.435294, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yb6ec"]
+material = SubResource("StandardMaterial3D_6qetn")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kab8i"]
 
 [node name="structureproto" type="Node3D"]
 
@@ -150,3 +158,13 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 
 keep_aspect = 0
 
 [node name="GameManager" type="Node3D" parent="."]
+
+[node name="NPCmere" type="CharacterBody3D" parent="." groups=["npc"]]
+
+[node name="Body" type="MeshInstance3D" parent="NPCmere"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.46012, 0.579, 2.25914)
+mesh = SubResource("CapsuleMesh_yb6ec")
+
+[node name="BodyCollider" type="CollisionShape3D" parent="NPCmere"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.46, 0.579, 2.259)
+shape = SubResource("CapsuleShape3D_kab8i")
