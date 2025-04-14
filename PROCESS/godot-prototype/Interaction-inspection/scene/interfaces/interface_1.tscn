@@ -29,6 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1082.0
 
@@ -38,5 +39,5 @@ position = Vector2(1602, 853)
 scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_q4o5o")
 animation = &"pressed"
-frame_progress = 0.630835
+frame_progress = 0.761427
 script = ExtResource("3_j7euk")

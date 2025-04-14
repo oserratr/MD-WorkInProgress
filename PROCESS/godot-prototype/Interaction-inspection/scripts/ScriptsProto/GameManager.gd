@@ -11,6 +11,8 @@ var playerAssis: bool = true
 var can_interact: bool = false
 var pending_state_change: bool = false  # Flag pour attendre l'entrée dans interaction_area
 var next_position: Vector3  # La position à appliquer une fois dans la bonne zone
+var in_mom_area: bool = false  # ← Nouveau flag
+
 
 func _ready():
 	if uiButtonA:
@@ -22,6 +24,7 @@ func _process(delta):
 
 	handle_interaction()
 	handle_player_state()
+	_narrative_interaction()
 
 
 	if pending_state_change and can_interact:
@@ -51,7 +54,11 @@ func handle_interaction():
 			pending_state_change = true
 			print("s'assoie")
 
-
+func _narrative_interaction():
+	if in_mom_area and Input.is_action_just_pressed("interaction"):
+		Dialogic.start("greniertuto")
+	
+	
 func _on_area_3d_body_entered(body):
 	if body == player:
 		can_interact = true
@@ -67,11 +74,14 @@ func _on_area_3d_body_exited(body):
 
 func _on_area_mom_body_entered(body):
 	if body == player:
+		in_mom_area = true
 		if uiButtonA:
 			uiButtonA.visible = true
+	
 
 
 func _on_area_mom_body_exited(body):
 	if body == player:
+		in_mom_area = false
 		if uiButtonA:
 			uiButtonA.visible = false
