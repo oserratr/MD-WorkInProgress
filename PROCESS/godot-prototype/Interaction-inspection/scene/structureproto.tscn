@@ -132,6 +132,7 @@ environment = SubResource("Environment_7e0wt")
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 script = ExtResource("1_8ug0b")
+max_zoom = 8.0
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00739479, 0.578581, -0.012939)
@@ -142,9 +143,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.579, 0)
 shape = SubResource("CapsuleShape3D_kbvoe")
 
 [node name="CameraOrigin" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 
 [node name="CameraPlayer" type="Camera3D" parent="Player/CameraOrigin"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3.189, 7.291)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
 [node name="GameManager" type="Node3D" parent="."]

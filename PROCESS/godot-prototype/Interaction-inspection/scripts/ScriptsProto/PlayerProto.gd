@@ -1,49 +1,66 @@
 extends CharacterBody3D
 
 const SPEED = 5.0
-@onready var pivot = $CameraOrigin
-@export var sens = 0.5
-@export var rotation_speed: float = 100.0  # Vitesse de rotation (degrés par seconde)
-var rotation_velocity: float = 0.0  # Vitesse actuelle de rotation
-var damping: float = 5.0  # Facteur de ralentissement
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+@onready var pivot = $CameraOrigin            # <- point de focus du zoom
+@onready var camera = $CameraOrigin/CameraPlayer
 
-func _ready(): 
+@export var sens := 0.5
+@export var rotation_speed := 100.0
+@export var zoom_speed := 5.0
+@export_range(1.0, 10.0, 0.1) var min_zoom := 2.0   # ← slider dans l’inspecteur
+@export_range(1.0, 20.0, 0.1) var max_zoom := 10.0  # ← slider dans l’inspecteur
+
+var rotation_velocity := 0.0
+var zoom_velocity := 0.0
+var damping := 5.0
+var camera_distance := 5.0  # Distance initiale
+
+var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+
+func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	camera_distance = clamp(camera_distance, min_zoom, max_zoom)
+	_update_camera_distance()
 
 func _physics_process(delta):
-	# Gravité
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Lecture du stick droit de la manette (rotation horizontale)
+	# --- Rotation (stick droit) ---
 	var right_stick_x = Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
-
-	# Zone morte pour éviter les micro-activations
 	var deadzone = 0.2
 	if abs(right_stick_x) < deadzone:
 		right_stick_x = 0
-
-	# Met à jour la vitesse de rotation en fonction du stick droit
 	rotation_velocity = rotation_speed * right_stick_x
-
-	# Appliquer la rotation avec interpolation pour la fluidité
 	rotation.y += deg_to_rad(rotation_velocity * delta)
 	rotation_velocity = lerp(rotation_velocity, 0.0, damping * delta)
 
-	# Lecture du stick gauche de la manette (joystick analogique)
+	# --- Zoom (gâchettes) ---
+	var trigger_left = Input.get_joy_axis(0, JOY_AXIS_TRIGGER_LEFT)
+	var trigger_right = Input.get_joy_axis(0, JOY_AXIS_TRIGGER_RIGHT)
+	var trigger_deadzone = 0.1
+
+	if trigger_left > trigger_deadzone:
+		zoom_velocity = -zoom_speed * trigger_left
+	elif trigger_right > trigger_deadzone:
+		zoom_velocity = zoom_speed * trigger_right
+
+	# Appliquer le zoom et le limiter
+	camera_distance = clamp(camera_distance + zoom_velocity * delta, min_zoom, max_zoom)
+	zoom_velocity = lerp(zoom_velocity, 0.0, damping * delta)
+
+	_update_camera_distance()
+
+	# --- Déplacement (stick gauche) ---
 	var left_stick_x = Input.get_joy_axis(0, JOY_AXIS_LEFT_X)
 	var left_stick_y = Input.get_joy_axis(0, JOY_AXIS_LEFT_Y)
-
-	# Zone morte
 	if abs(left_stick_x) < deadzone:
 		left_stick_x = 0
 	if abs(left_stick_y) < deadzone:
 		left_stick_y = 0
 
-	# Calcul de la direction
 	var input_dir = Vector2(left_stick_x, left_stick_y)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
@@ -55,3 +72,13 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _update_camera_distance():
+	# Direction de pivot vers la caméra
+	var direction = (camera.global_position - pivot.global_position).normalized()
+
+	# Sécurité : on clamp la distance à chaque update
+	camera_distance = clamp(camera_distance, min_zoom, max_zoom)
+
+	# Nouvelle position de la caméra en fonction de la distance
+	camera.global_position = pivot.global_position + direction * camera_distance
