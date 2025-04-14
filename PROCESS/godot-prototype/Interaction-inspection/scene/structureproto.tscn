@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=21 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
+[ext_resource type="PackedScene" uid="uid://mdtujh8fnx1m" path="res://scene/interfaces/interface_1.tscn" id="3_0ptmr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q52m"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -20,7 +21,7 @@ material = SubResource("StandardMaterial3D_v5jvy")
 [sub_resource type="BoxShape3D" id="BoxShape3D_cdgg8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvq6u"]
-albedo_color = Color(0.978739, 0.133768, 1, 1)
+albedo_color = Color(0.658824, 0.835294, 0.886275, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_046l7"]
 material = SubResource("StandardMaterial3D_qvq6u")
@@ -29,9 +30,10 @@ material = SubResource("StandardMaterial3D_qvq6u")
 
 [sub_resource type="Environment" id="Environment_7e0wt"]
 background_mode = 1
+background_color = Color(0.43134, 0.43134, 0.43134, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5ckc"]
-albedo_color = Color(0.329412, 0.658824, 0.658824, 1)
+albedo_color = Color(0.976471, 0.65098, 0.12549, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yf27h"]
 material = SubResource("StandardMaterial3D_n5ckc")
@@ -39,7 +41,7 @@ material = SubResource("StandardMaterial3D_n5ckc")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbvoe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6qetn"]
-albedo_color = Color(1, 1, 0.435294, 1)
+albedo_color = Color(1, 0.831373, 0.286275, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yb6ec"]
 material = SubResource("StandardMaterial3D_6qetn")
@@ -274,10 +276,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA")]
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
+uiButtonA = NodePath("../uibuttonA")
 seat_position = Vector3(2.131, 0.36, 2.31)
 stand_position = Vector3(1.903, -0.001, 1.67)
 
@@ -298,6 +301,11 @@ shape = SubResource("CapsuleShape3D_kab8i")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DebutTuto/Area3D"]
 transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 2.16289, 0.711833, 2.25055)
 shape = SubResource("SphereShape3D_otaci")
+
+[node name="uibuttonA" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interface1" parent="uibuttonA" instance=ExtResource("3_0ptmr")]
 
 [connection signal="body_entered" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_exited"]

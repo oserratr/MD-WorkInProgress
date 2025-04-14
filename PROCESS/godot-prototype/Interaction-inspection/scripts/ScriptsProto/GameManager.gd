@@ -2,6 +2,7 @@ extends Node3D
 
 @export var player: CharacterBody3D
 @export var interaction_area: Area3D
+@export var uiButtonA: CanvasLayer
 
 # Positions personnalisables pour assis/debout
 @export var seat_position: Vector3 = Vector3(0, 0, 0)
@@ -45,7 +46,11 @@ func handle_interaction():
 func _on_area_3d_body_entered(body):
 	if body == player:
 		can_interact = true
+		if uiButtonA:
+			uiButtonA.visible = true
 
 func _on_area_3d_body_exited(body):
 	if body == player:
 		can_interact = false
+		if uiButtonA:
+			uiButtonA.visible = false
