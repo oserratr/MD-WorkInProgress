@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=20 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
@@ -45,6 +45,8 @@ albedo_color = Color(1, 1, 0.435294, 1)
 material = SubResource("StandardMaterial3D_6qetn")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kab8i"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_otaci"]
 
 [node name="structureproto" type="Node3D"]
 
@@ -253,7 +255,7 @@ transform = Transform3D(-4.37114e-08, 0.258819, 0.965926, 0, -0.965926, 0.258819
 environment = SubResource("Environment_7e0wt")
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23466, 0.360265, 2.34862)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13134, 0.360265, 2.30987)
 script = ExtResource("1_8ug0b")
 max_zoom = 8.0
 
@@ -272,9 +274,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area")]
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
+interaction_area = NodePath("../DebutTuto/Area3D")
 
 [node name="NPCmere" type="CharacterBody3D" parent="." groups=["npc"]]
 
@@ -285,3 +288,11 @@ mesh = SubResource("CapsuleMesh_yb6ec")
 [node name="BodyCollider" type="CollisionShape3D" parent="NPCmere"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.1304, 0.579, -2.07896)
 shape = SubResource("CapsuleShape3D_kab8i")
+
+[node name="DebutTuto" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="DebutTuto"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DebutTuto/Area3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 2.16289, 0.711833, 2.25055)
+shape = SubResource("SphereShape3D_otaci")
