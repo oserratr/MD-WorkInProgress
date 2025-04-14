@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=19 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
+[ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q52m"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -17,6 +18,14 @@ albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
 material = SubResource("StandardMaterial3D_v5jvy")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cdgg8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvq6u"]
+albedo_color = Color(0.978739, 0.133768, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_046l7"]
+material = SubResource("StandardMaterial3D_qvq6u")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43d0i"]
 
 [sub_resource type="Environment" id="Environment_7e0wt"]
 background_mode = 1
@@ -121,6 +130,111 @@ shape = SubResource("BoxShape3D_cdgg8")
 
 [node name="LevelDesignGrenier" type="Node3D" parent="Grenier"]
 
+[node name="Interactables" type="Node3D" parent="Grenier/LevelDesignGrenier"]
+
+[node name="CartonsAssis" type="Node3D" parent="Grenier/LevelDesignGrenier/Interactables"]
+transform = Transform3D(0.450338, 0, 0.217246, 0, 0.5, 0, -0.217246, 0, 0.450338, 2.15159, 0.253354, 2.28182)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonsAssis"]
+transform = Transform3D(2.025, 0, 0, 0, 0.72, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonsAssis"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonsAssis/StaticBody3D"]
+transform = Transform3D(2.025, 0, 0, 0, 0.72, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Ambiance" type="Node3D" parent="Grenier/LevelDesignGrenier"]
+
+[node name="Cartons" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.468872, 0, -0.173664, 0, 0.5, 0, 0.173664, 0, 0.468872, -2.19832, 0.327366, 1.85008)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons2" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.956351, 0, 0.292221, 0, 1, 0, -0.292221, 0, 0.956351, -1.08324, 0.497371, 2.15496)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons2"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons2/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons4" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.446493, 0, -0.225041, 0, 0.5, 0, 0.225041, 0, 0.446493, 1.75219, 0.321449, -0.807484)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons4"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons4/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons5" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.75219, 0.232696, -1.63726)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons5"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons5/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons6" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.263518, 0, -0.143382, 0, 0.3, 0, 0.143382, 0, 0.263518, 2.30372, 0.232696, -1.24066)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons6"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons6/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons7" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.956351, 0, 0.292221, 0, 1, 0, -0.292221, 0, 0.956351, -1.99063, 0.497371, -2.09338)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons7"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons7/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons8" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.476193, 0, -0.152449, 0, 0.5, 0, 0.152449, 0, 0.476193, -2.33466, 0.321449, -0.807484)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="Cartons9" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
+transform = Transform3D(0.2828, 0, -0.41234, 0, 0.5, 0, 0.41234, 0, 0.2828, -0.737272, 0.321449, -1.8924)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons9"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons9/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
 [node name="Light" type="Node3D" parent="Grenier"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Grenier/Light"]
@@ -139,6 +253,7 @@ transform = Transform3D(-4.37114e-08, 0.258819, 0.965926, 0, -0.965926, 0.258819
 environment = SubResource("Environment_7e0wt")
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23466, 0.360265, 2.34862)
 script = ExtResource("1_8ug0b")
 max_zoom = 8.0
 
@@ -157,14 +272,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="."]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("2_6uvup")
+player = NodePath("../Player")
 
 [node name="NPCmere" type="CharacterBody3D" parent="." groups=["npc"]]
 
 [node name="Body" type="MeshInstance3D" parent="NPCmere"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.46012, 0.579, 2.25914)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.13052, 0.579, -2.07882)
 mesh = SubResource("CapsuleMesh_yb6ec")
 
 [node name="BodyCollider" type="CollisionShape3D" parent="NPCmere"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.46, 0.579, 2.259)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.1304, 0.579, -2.07896)
 shape = SubResource("CapsuleShape3D_kab8i")
