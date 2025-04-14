@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=22 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
@@ -47,6 +47,8 @@ albedo_color = Color(1, 0.831373, 0.286275, 1)
 material = SubResource("StandardMaterial3D_6qetn")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kab8i"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sg1q0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_otaci"]
 
@@ -294,6 +296,13 @@ mesh = SubResource("CapsuleMesh_yb6ec")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.1304, 0.579, -2.07896)
 shape = SubResource("CapsuleShape3D_kab8i")
 
+[node name="areaMom" type="Area3D" parent="NPCmere"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13473, 0.204778, -2.09768)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCmere/areaMom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.386193, 0)
+shape = SubResource("SphereShape3D_sg1q0")
+
 [node name="DebutTuto" type="Node3D" parent="."]
 
 [node name="Area3D" type="Area3D" parent="DebutTuto"]
@@ -307,5 +316,7 @@ visible = false
 
 [node name="Interface1" parent="uibuttonA" instance=ExtResource("3_0ptmr")]
 
+[connection signal="body_entered" from="NPCmere/areaMom" to="GameManager" method="_on_area_mom_body_entered"]
+[connection signal="body_exited" from="NPCmere/areaMom" to="GameManager" method="_on_area_mom_body_exited"]
 [connection signal="body_entered" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_exited"]

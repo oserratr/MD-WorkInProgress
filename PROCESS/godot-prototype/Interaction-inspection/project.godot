@@ -26,6 +26,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "greniertuto": "res://narrative-interactions/structureproto/greniertuto.dtl"
 }
+layout/style_list=[]
+layout/default_style="Default"
 
 [display]
 
