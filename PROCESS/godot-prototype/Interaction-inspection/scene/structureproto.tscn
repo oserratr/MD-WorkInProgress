@@ -1,0 +1,150 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbmtjxm4i1wqo"]
+
+[ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q52m"]
+albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eaam7"]
+material = SubResource("StandardMaterial3D_2q52m")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ll6s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5jvy"]
+albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_118mi"]
+material = SubResource("StandardMaterial3D_v5jvy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cdgg8"]
+
+[sub_resource type="Environment" id="Environment_7e0wt"]
+background_mode = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5ckc"]
+albedo_color = Color(0.329412, 0.658824, 0.658824, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yf27h"]
+material = SubResource("StandardMaterial3D_n5ckc")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbvoe"]
+
+[node name="structureproto" type="Node3D"]
+
+[node name="Grenier" type="Node3D" parent="."]
+
+[node name="Sol" type="Node3D" parent="Grenier"]
+
+[node name="sol-mesh" type="MeshInstance3D" parent="Grenier/Sol"]
+transform = Transform3D(7, 0, 0, 0, 0.148, 0, 0, 0, 7, 0, 0, 0)
+mesh = SubResource("BoxMesh_eaam7")
+skeleton = NodePath("../../..")
+
+[node name="collider-sol" type="StaticBody3D" parent="Grenier/Sol"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/Sol/collider-sol"]
+transform = Transform3D(7, 0, 0, 0, 0.148, 0, 0, 0, 7, 0, 0, 0)
+shape = SubResource("BoxShape3D_4ll6s")
+
+[node name="MursInvisibles" type="Node3D" parent="Grenier"]
+
+[node name="Mur1" type="Node3D" parent="Grenier/MursInvisibles"]
+
+[node name="Body" type="MeshInstance3D" parent="Grenier/MursInvisibles/Mur1"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.57237, 1.42428, 0)
+visible = false
+mesh = SubResource("BoxMesh_118mi")
+skeleton = NodePath("../..")
+
+[node name="collider-mur1" type="StaticBody3D" parent="Grenier/MursInvisibles/Mur1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0147027, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/MursInvisibles/Mur1/collider-mur1"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.572, 1.439, 0)
+shape = SubResource("BoxShape3D_cdgg8")
+
+[node name="Mur2" type="Node3D" parent="Grenier/MursInvisibles"]
+transform = Transform3D(0.00110009, -0.00180931, -0.999998, -0.000565223, 0.999998, -0.00180994, 0.999999, 0.000567216, 0.00109907, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Grenier/MursInvisibles/Mur2"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.57237, 1.42428, 0)
+visible = false
+mesh = SubResource("BoxMesh_118mi")
+skeleton = NodePath("../..")
+
+[node name="collider-mur2" type="StaticBody3D" parent="Grenier/MursInvisibles/Mur2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0147027, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/MursInvisibles/Mur2/collider-mur2"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.572, 1.439, 0)
+shape = SubResource("BoxShape3D_cdgg8")
+
+[node name="Mur3" type="Node3D" parent="Grenier/MursInvisibles"]
+transform = Transform3D(-1, 4.57104e-05, 0.000174719, 4.5792e-05, 1, 0.000435289, -0.000174698, 0.000435298, -1, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Grenier/MursInvisibles/Mur3"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.57237, 1.42428, 0)
+visible = false
+mesh = SubResource("BoxMesh_118mi")
+skeleton = NodePath("../..")
+
+[node name="collider-mur3" type="StaticBody3D" parent="Grenier/MursInvisibles/Mur3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0147027, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/MursInvisibles/Mur3/collider-mur3"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.572, 1.439, 0)
+shape = SubResource("BoxShape3D_cdgg8")
+
+[node name="Mur4" type="Node3D" parent="Grenier/MursInvisibles"]
+transform = Transform3D(0.000174742, -0.000435298, 1, 4.5792e-05, 1, 0.000435289, -1, 4.57103e-05, 0.000174763, 0, 0, 0)
+
+[node name="Body" type="MeshInstance3D" parent="Grenier/MursInvisibles/Mur4"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.57237, 1.42428, 0)
+visible = false
+mesh = SubResource("BoxMesh_118mi")
+skeleton = NodePath("../..")
+
+[node name="collider-mur4" type="StaticBody3D" parent="Grenier/MursInvisibles/Mur4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0147027, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/MursInvisibles/Mur4/collider-mur4"]
+transform = Transform3D(-1.31134e-07, 0.148, 0, -3, -6.46929e-09, 0, 0, 0, 7, -3.572, 1.439, 0)
+shape = SubResource("BoxShape3D_cdgg8")
+
+[node name="LevelDesignGrenier" type="Node3D" parent="Grenier"]
+
+[node name="Light" type="Node3D" parent="Grenier"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Grenier/Light"]
+transform = Transform3D(1, 0, 0, 0, 0.832041, 0.554714, 0, -0.554714, 0.832041, 0, 7.226, 7.95448)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Grenier/Light"]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 0, 7.226, -9.79167)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Grenier/Light"]
+transform = Transform3D(-4.37114e-08, 0.554714, -0.832041, 0, 0.832041, 0.554714, 1, 2.42473e-08, -3.63697e-08, -8.87307, 7.226, -0.918597)
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="Grenier/Light"]
+transform = Transform3D(-4.37114e-08, 0.258819, 0.965926, 0, -0.965926, 0.258819, 1, 1.13133e-08, 4.2222e-08, 8.87307, 7.226, -0.918596)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Grenier/Light"]
+environment = SubResource("Environment_7e0wt")
+
+[node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
+script = ExtResource("1_8ug0b")
+
+[node name="Body" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00739479, 0.578581, -0.012939)
+mesh = SubResource("CapsuleMesh_yf27h")
+
+[node name="BodyCollider" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.579, 0)
+shape = SubResource("CapsuleShape3D_kbvoe")
+
+[node name="CameraOrigin" type="Node3D" parent="Player"]
+
+[node name="CameraPlayer" type="Camera3D" parent="Player/CameraOrigin"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 3.189, 7.291)
+keep_aspect = 0
+
+[node name="GameManager" type="Node3D" parent="."]
