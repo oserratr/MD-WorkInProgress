@@ -1,20 +1,20 @@
 extends Node3D
 
 @export var player: CharacterBody3D
-@export var interaction_area: Area3D  # ← L’Area où le joueur peut interagir
+@export var interaction_area: Area3D
+
+# Positions personnalisables pour assis/debout
+@export var seat_position: Vector3 = Vector3(0, 0, 0)
+@export var stand_position: Vector3 = Vector3(0, 0, -1)
 
 var playerAssis: bool = true
 var can_interact: bool = false
-
-func _ready():
-	if interaction_area:
-		interaction_area.body_entered.connect(_on_area_entered)
-		interaction_area.body_exited.connect(_on_area_exited)
 
 func _process(delta):
 	if player == null:
 		return
 
+	handle_interaction()
 	handle_player_state()
 
 func handle_player_state():
@@ -24,13 +24,28 @@ func handle_player_state():
 		player.set_movement_enabled(true)
 
 func handle_interaction():
-	if can_interact and Input.is_joy_button_pressed(0, JOY_BUTTON_A):  # A = 0
-		playerAssis = !playerAssis
+	if not can_interact:
+		return
 
-func _on_area_entered(body):
+	if playerAssis:
+		# Le joueur est assis
+		if Input.is_action_just_pressed("interaction"):
+			playerAssis = false
+			# Edit position player (debout)
+			player.global_position = stand_position
+			print("se leve")
+	else:
+		# Le joueur est debout
+		if Input.is_action_just_pressed("interaction"):
+			playerAssis = true
+			# Edit position player (assis)
+			player.global_position = seat_position
+			print("s'assoie")
+
+func _on_area_3d_body_entered(body):
 	if body == player:
 		can_interact = true
 
-func _on_area_exited(body):
+func _on_area_3d_body_exited(body):
 	if body == player:
 		can_interact = false

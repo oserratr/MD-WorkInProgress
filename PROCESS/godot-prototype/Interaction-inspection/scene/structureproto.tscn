@@ -255,7 +255,7 @@ transform = Transform3D(-4.37114e-08, 0.258819, 0.965926, 0, -0.965926, 0.258819
 environment = SubResource("Environment_7e0wt")
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13134, 0.360265, 2.30987)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.131, 0.36, 2.31)
 script = ExtResource("1_8ug0b")
 max_zoom = 8.0
 
@@ -278,6 +278,8 @@ keep_aspect = 0
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
+seat_position = Vector3(2.131, 0.36, 2.31)
+stand_position = Vector3(1.903, -0.001, 1.67)
 
 [node name="NPCmere" type="CharacterBody3D" parent="." groups=["npc"]]
 
@@ -296,3 +298,6 @@ shape = SubResource("CapsuleShape3D_kab8i")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DebutTuto/Area3D"]
 transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 2.16289, 0.711833, 2.25055)
 shape = SubResource("SphereShape3D_otaci")
+
+[connection signal="body_entered" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_exited"]
