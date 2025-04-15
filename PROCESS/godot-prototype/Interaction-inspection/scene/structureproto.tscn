@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=30 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://y0mptasvcw05" path="res://scene/interfaces/interface_x.tscn" id="5_hc3qr"]
 [ext_resource type="PackedScene" uid="uid://cegclq26g2nfg" path="res://scene/interfaces/interfacejoygauche.tscn" id="5_o73f5"]
 [ext_resource type="PackedScene" uid="uid://d2b2ywskd2ntk" path="res://scene/interfaces/interfacejoyright.tscn" id="6_tm032"]
+[ext_resource type="PackedScene" uid="uid://x8odc2wr8h2j" path="res://scene/interfaces/interfacecartonpris.tscn" id="8_pyx0l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q52m"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -15,6 +16,8 @@ albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
 material = SubResource("StandardMaterial3D_2q52m")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ll6s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dqqmm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5jvy"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -76,6 +79,26 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/Sol/collider-sol"]
 transform = Transform3D(7, 0, 0, 0, 0.148, 0, 0, 0, 7, 0, 0, 0)
 shape = SubResource("BoxShape3D_4ll6s")
+
+[node name="Sol2" type="Node3D" parent="Grenier"]
+transform = Transform3D(0.259404, 0, 0, 0, 1, 0, 0, 0, 0.325195, 2.58925, 0, -4.62812)
+
+[node name="sol-mesh" type="MeshInstance3D" parent="Grenier/Sol2"]
+transform = Transform3D(7, 0, 0, 0, 0.148, 0, 0, 0, 7, 0, 0, 0)
+mesh = SubResource("BoxMesh_eaam7")
+skeleton = NodePath("../../..")
+
+[node name="collider-sol" type="StaticBody3D" parent="Grenier/Sol2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/Sol2/collider-sol"]
+transform = Transform3D(7, 0, 0, 0, 0.148, 0, 0, 0, 7, 0, 0, 0)
+shape = SubResource("BoxShape3D_4ll6s")
+
+[node name="salon" type="Area3D" parent="Grenier/Sol2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/Sol2/salon"]
+transform = Transform3D(5.745, 0, 0, 0, 2.585, 0, 0, 0, 5.745, -0.0278702, 0.638501, 4.50997)
+shape = SubResource("SphereShape3D_dqqmm")
 
 [node name="MursInvisibles" type="Node3D" parent="Grenier"]
 
@@ -298,7 +321,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "carton_pickable", "hand_player")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "uiCartonPris", "carton_pickable", "hand_player", "niveau_suivant", "niveau_suivant_area")]
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
@@ -307,8 +330,11 @@ uiButtonX = NodePath("../uibuttonX")
 uiButtonZoom = NodePath("../uibuttonzoom")
 uiButtonRotate = NodePath("../uibuttonrotate")
 uiButtonDeplacement = NodePath("../uibuttondeplacement")
+uiCartonPris = NodePath("../uicartonpris")
 carton_pickable = NodePath("../Grenier/LevelDesignGrenier/Interactables/CartonPrendre")
 hand_player = NodePath("../Player/Hand")
+niveau_suivant = NodePath("../Grenier/Sol2/sol-mesh")
+niveau_suivant_area = NodePath("../DebutTuto/Area3D")
 seat_position = Vector3(2.131, 0.36, 2.31)
 stand_position = Vector3(1.903, -0.001, 1.67)
 
@@ -362,6 +388,13 @@ visible = false
 
 [node name="Interfacejoygauche" parent="uibuttonrotate" instance=ExtResource("6_tm032")]
 
+[node name="uicartonpris" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interfacecartonpris" parent="uicartonpris" instance=ExtResource("8_pyx0l")]
+
+[connection signal="body_entered" from="Grenier/Sol2/salon" to="GameManager" method="_on_salon_body_entered"]
+[connection signal="body_exited" from="Grenier/Sol2/salon" to="GameManager" method="_on_salon_body_exited"]
 [connection signal="body_entered" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_entered"]
 [connection signal="body_exited" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_exited"]
 [connection signal="body_entered" from="NPCmere/areaMom" to="GameManager" method="_on_area_mom_body_entered"]

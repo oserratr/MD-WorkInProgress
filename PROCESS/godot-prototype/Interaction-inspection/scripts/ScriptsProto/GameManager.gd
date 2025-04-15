@@ -7,8 +7,11 @@ extends Node3D
 @export var uiButtonZoom: CanvasLayer
 @export var uiButtonRotate: CanvasLayer
 @export var uiButtonDeplacement: CanvasLayer
+@export var uiCartonPris: CanvasLayer
 @export var carton_pickable: Node3D
 @export var hand_player: MeshInstance3D
+@export var niveau_suivant: Node3D
+@export var niveau_suivant_area: Area3D
 
 @export var seat_position: Vector3 = Vector3(0, 0, 0)
 @export var stand_position: Vector3 = Vector3(0, 0, -1)
@@ -17,6 +20,7 @@ var showed_deplacement_hint := false
 var movement_started := false
 var movement_timer := 0.0
 
+var in_salon_area : bool = false
 var x_button_timer: Timer
 var waiting_first_interaction := true  # Devient false après la 1ère interaction
 var playerAssis: bool = true
@@ -35,7 +39,7 @@ var tutorial_completed := false
 func _ready():
 	# Création d'un Timer pour uiButtonX
 	x_button_timer = Timer.new()
-	x_button_timer.wait_time = 1.0
+	x_button_timer.wait_time = 3.0
 	x_button_timer.one_shot = true
 	x_button_timer.connect("timeout", _on_x_button_timer_timeout)
 	add_child(x_button_timer)
@@ -54,7 +58,9 @@ func _process(delta):
 	handle_player_state()
 	_narrative_interaction()
 	interaction_carton()
+	_salon()
 	handle_deplacement_ui(delta)  # ← Nouveau
+	
 
 	if pending_state_change and can_interact:
 		player.global_position = next_position
@@ -147,6 +153,8 @@ func interaction_carton():
 		if Input.is_action_just_pressed("interaction"):
 			print("prendre carton")
 			carton_pickable.queue_free()
+			uiCartonPris.visible = true
+			carton_pris = true
 
 # --- Zones d'interaction ---
 
@@ -185,3 +193,20 @@ func _on_cartonprendre_body_exited(body):
 		in_carton_area = false
 		if tutorial_completed and not waiting_first_interaction:
 			uiButtonA.visible = false
+
+func _salon():
+	if Dialogic.VAR.joueur_interagit and carton_pris : 
+		print("switch de scene bientot")
+		if in_salon_area :
+			print("switch de scene")
+			get_tree().change_scene_to_file("res://scene/interfaces/salon.tscn")
+
+
+func _on_salon_body_entered(body):
+	if body == player:
+		in_salon_area = true
+
+
+func _on_salon_body_exited(body):
+	if body == player:
+		in_salon_area = false
