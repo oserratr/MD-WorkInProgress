@@ -26,8 +26,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "greniertuto": "res://narrative-interactions/structureproto/greniertuto.dtl"
 }
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://narrative-interactions/styleproto.tres"]
+layout/default_style="res://narrative-interactions/styleproto.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -39,11 +39,11 @@ animations/leave_default_wait=true
 animations/join_default_wait=true
 choices/autofocus_first=true
 choices/delay=0.2
-choices/reveal_delay=0
+choices/reveal_delay=0.5
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
-text/input_action="dialogic_default_action"
+text/input_action="ui_accept"
 text/autocolor_names=false
 text/autopauses={}
 variables={}
