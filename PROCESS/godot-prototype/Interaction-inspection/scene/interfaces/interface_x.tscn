@@ -39,5 +39,5 @@ position = Vector2(1602, 853)
 scale = Vector2(9.53127, 9.71876)
 sprite_frames = SubResource("SpriteFrames_8d88x")
 animation = &"pressx"
-frame_progress = 0.195726
+frame_progress = 0.153496
 script = ExtResource("3_ctqs8")

@@ -298,11 +298,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "carton_pickable", "hand_player")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "carton_pickable", "hand_player")]
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
 uiButtonA = NodePath("../uibuttonA")
+uiButtonX = NodePath("../uibuttonX")
+uiButtonZoom = NodePath("../uibuttonzoom")
+uiButtonRotate = NodePath("../uibuttonrotate")
+uiButtonDeplacement = NodePath("../uibuttondeplacement")
 carton_pickable = NodePath("../Grenier/LevelDesignGrenier/Interactables/CartonPrendre")
 hand_player = NodePath("../Player/Hand")
 seat_position = Vector3(2.131, 0.36, 2.31)

@@ -18,7 +18,7 @@ animations = [{
 "texture": ExtResource("7_25x4p")
 }],
 "loop": true,
-"name": &"rootate",
+"name": &"rotate",
 "speed": 3.0
 }]
 
@@ -42,6 +42,5 @@ texture_filter = 1
 position = Vector2(1602, 853)
 scale = Vector2(9.53127, 9.71876)
 sprite_frames = SubResource("SpriteFrames_5bjwr")
-animation = &"rootate"
-frame_progress = 0.615515
+animation = &"rotate"
 script = ExtResource("4_vmc0f")
