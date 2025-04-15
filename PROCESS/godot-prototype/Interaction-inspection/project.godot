@@ -46,7 +46,9 @@ save/encryption_on_exports_only=true
 text/input_action="ui_accept"
 text/autocolor_names=false
 text/autopauses={}
-variables={}
+variables={
+"joueur_interagit": false
+}
 glossary/default_case_sensitive=true
 choices/hotkey_behaviour=1
 

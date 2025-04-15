@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://y0mptasvcw05"]
+
+[ext_resource type="Texture2D" uid="uid://c8twwj3p26a3h" path="res://asset/images/ui/x/XButtonDown.png" id="1_pe3yu"]
+[ext_resource type="Texture2D" uid="uid://chpfec4ve4agl" path="res://asset/images/ui/x/XButtonIddle.png" id="2_q6kid"]
+[ext_resource type="Script" path="res://scene/interfaces/AnimatedSprite2Dx.gd" id="3_ctqs8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8d88x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pe3yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q6kid")
+}],
+"loop": true,
+"name": &"pressx",
+"speed": 3.0
+}]
+
+[node name="Interfacejoygauche" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1082.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1602, 853)
+scale = Vector2(9.53127, 9.71876)
+sprite_frames = SubResource("SpriteFrames_8d88x")
+animation = &"pressx"
+frame_progress = 0.195726
+script = ExtResource("3_ctqs8")

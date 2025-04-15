@@ -1,3 +1,4 @@
+set {joueur_interagit} = false
 Mere (Mere): Regarde ce que j'ai trouvé
 - Qu'est-ce que c'est ?
 	[background arg="res://asset/images/photo.png" fade="0.0"]
@@ -7,10 +8,11 @@ Mere (Mere): Regarde ce que j'ai trouvé
 		[background fade="0.0"]
 		Mere (Mere): C’est bizarre de trier ses affaires comme ça. J’ai encore du mal à réaliser qu’elle est partie…
 		- On peut faire une pause si tu veux
-			Mere (Mere): Il ne reste qu'un dernier carton. Tu peux le descendre au salon, s’il te plaît ?\
-
+			Mere (Mere): Il ne reste qu'un dernier carton. Tu peux le descendre au salon, s’il te plaît ?
+			set {joueur_interagit} = true
 	- C’est étrange de la voir aussi jeune…
 		[background fade="0.0"]
 		Mere (Mere): C’est bizarre de trier ses affaires comme ça. J’ai encore du mal à réaliser qu’elle est partie…
 		- On peut faire une pause si tu veux
 			Mere (Mere): Il ne reste qu'un dernier carton. Tu peux le descendre au salon, s’il te plaît ?
+			set {joueur_interagit} = true

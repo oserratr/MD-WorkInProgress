@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxoh5yldhfj7b"
-path="res://.godot/imported/AButtonDown.png-2df05c73bbdc76abe5ff6ce30e5a1c3f.ctex"
+uid="uid://3ie6fvm2xf3"
+path="res://.godot/imported/RightStickDown.png-4eb003fbd69fcfd8351bdf64b0230446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/images/ui/AButtonDown.png"
-dest_files=["res://.godot/imported/AButtonDown.png-2df05c73bbdc76abe5ff6ce30e5a1c3f.ctex"]
+source_file="res://asset/images/ui/rjoy/RightStickDown.png"
+dest_files=["res://.godot/imported/RightStickDown.png-4eb003fbd69fcfd8351bdf64b0230446.ctex"]
 
 [params]
 

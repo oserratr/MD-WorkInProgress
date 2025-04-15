@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=24 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
@@ -28,9 +28,13 @@ material = SubResource("StandardMaterial3D_qvq6u")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_43d0i"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_w1qqf"]
+
 [sub_resource type="Environment" id="Environment_7e0wt"]
 background_mode = 1
 background_color = Color(0.43134, 0.43134, 0.43134, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3jagn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5ckc"]
 albedo_color = Color(0.976471, 0.65098, 0.12549, 1)
@@ -138,6 +142,23 @@ shape = SubResource("BoxShape3D_cdgg8")
 
 [node name="Interactables" type="Node3D" parent="Grenier/LevelDesignGrenier"]
 
+[node name="CartonPrendre" type="Node3D" parent="Grenier/LevelDesignGrenier/Interactables"]
+transform = Transform3D(0.554689, 0, -0.230945, 0, 0.326213, 0, 0.177579, 0, 0.721386, -2.33466, 0.24649, -0.807484)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonPrendre"]
+mesh = SubResource("BoxMesh_046l7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonPrendre"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/StaticBody3D"]
+shape = SubResource("BoxShape3D_43d0i")
+
+[node name="cartonprendre" type="Area3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonPrendre"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_w1qqf")
+
 [node name="CartonsAssis" type="Node3D" parent="Grenier/LevelDesignGrenier/Interactables"]
 transform = Transform3D(0.450338, 0, 0.217246, 0, 0.5, 0, -0.217246, 0, 0.450338, 2.15159, 0.253354, 2.28182)
 
@@ -146,6 +167,7 @@ transform = Transform3D(2.025, 0, 0, 0, 0.72, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_046l7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonsAssis"]
+transform = Transform3D(1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Interactables/CartonsAssis/StaticBody3D"]
 transform = Transform3D(2.025, 0, 0, 0, 0.72, 0, 0, 0, 1, 0, 0, 0)
@@ -219,17 +241,6 @@ mesh = SubResource("BoxMesh_046l7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons7/StaticBody3D"]
 shape = SubResource("BoxShape3D_43d0i")
 
-[node name="Cartons8" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
-transform = Transform3D(0.476193, 0, -0.152449, 0, 0.5, 0, 0.152449, 0, 0.476193, -2.33466, 0.321449, -0.807484)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8"]
-mesh = SubResource("BoxMesh_046l7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Grenier/LevelDesignGrenier/Ambiance/Cartons8/StaticBody3D"]
-shape = SubResource("BoxShape3D_43d0i")
-
 [node name="Cartons9" type="Node3D" parent="Grenier/LevelDesignGrenier/Ambiance"]
 transform = Transform3D(0.2828, 0, -0.41234, 0, 0.5, 0, 0.41234, 0, 0.2828, -0.737272, 0.321449, -1.8924)
 
@@ -263,6 +274,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.131, 0.36, 2.31)
 script = ExtResource("1_8ug0b")
 max_zoom = 8.0
 
+[node name="Hand" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(0.598997, 0, 0.15648, 0, 0.334724, 0, -0.275432, 0, 0.340306, -0.154148, 0.575148, -0.42651)
+visible = false
+mesh = SubResource("BoxMesh_3jagn")
+
 [node name="Body" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00739479, 0.578581, -0.012939)
 mesh = SubResource("CapsuleMesh_yf27h")
@@ -278,11 +294,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
 keep_aspect = 0
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "carton_pickable", "hand_player")]
 script = ExtResource("2_6uvup")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
 uiButtonA = NodePath("../uibuttonA")
+carton_pickable = NodePath("../Grenier/LevelDesignGrenier/Interactables/CartonPrendre")
+hand_player = NodePath("../Player/Hand")
 seat_position = Vector3(2.131, 0.36, 2.31)
 stand_position = Vector3(1.903, -0.001, 1.67)
 
@@ -316,6 +334,8 @@ visible = false
 
 [node name="Interface1" parent="uibuttonA" instance=ExtResource("3_0ptmr")]
 
+[connection signal="body_entered" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_entered"]
+[connection signal="body_exited" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_exited"]
 [connection signal="body_entered" from="NPCmere/areaMom" to="GameManager" method="_on_area_mom_body_entered"]
 [connection signal="body_exited" from="NPCmere/areaMom" to="GameManager" method="_on_area_mom_body_exited"]
 [connection signal="body_entered" from="DebutTuto/Area3D" to="GameManager" method="_on_area_3d_body_entered"]

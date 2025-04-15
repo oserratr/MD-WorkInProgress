@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciy3q41je3nna"
-path="res://.godot/imported/AButtonIddle.png-4516d0f727ab965b7234859da60026c3.ctex"
+uid="uid://bpci3g6rnkom3"
+path="res://.godot/imported/RightStickPressed.png-39d9a98ce63cec0234fb8683dde8151d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/images/ui/AButtonIddle.png"
-dest_files=["res://.godot/imported/AButtonIddle.png-4516d0f727ab965b7234859da60026c3.ctex"]
+source_file="res://asset/images/ui/rjoy/RightStickPressed.png"
+dest_files=["res://.godot/imported/RightStickPressed.png-39d9a98ce63cec0234fb8683dde8151d.ctex"]
 
 [params]
 

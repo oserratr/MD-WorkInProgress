@@ -3,6 +3,8 @@ extends Node3D
 @export var player: CharacterBody3D
 @export var interaction_area: Area3D
 @export var uiButtonA: CanvasLayer
+@export var carton_pickable: Node3D
+@export var hand_player: MeshInstance3D
 
 @export var seat_position: Vector3 = Vector3(0, 0, 0)
 @export var stand_position: Vector3 = Vector3(0, 0, -1)
@@ -12,6 +14,7 @@ var can_interact: bool = false
 var pending_state_change: bool = false  # Flag pour attendre l'entrée dans interaction_area
 var next_position: Vector3  # La position à appliquer une fois dans la bonne zone
 var in_mom_area: bool = false  # ← Nouveau flag
+var in_carton_area: bool = false
 
 
 func _ready():
@@ -21,15 +24,19 @@ func _ready():
 func _process(delta):
 	if player == null:
 		return
+	
 
 	handle_interaction()
 	handle_player_state()
 	_narrative_interaction()
+	interaction_carton()
 
 
 	if pending_state_change and can_interact:
 		player.global_position = next_position
 		pending_state_change = false
+	
+	#print(Dialogic.VAR.joueur_interagit)
 
 func handle_player_state():
 	if playerAssis:
@@ -57,7 +64,15 @@ func handle_interaction():
 func _narrative_interaction():
 	if in_mom_area and Input.is_action_just_pressed("interaction"):
 		Dialogic.start("greniertuto")
-	
+
+func interaction_carton():
+	if Dialogic.VAR.joueur_interagit and in_carton_area:
+		if Input.is_action_just_pressed("interaction"):
+			print("prendre carton")
+			carton_pickable.queue_free()
+			
+
+		
 	
 func _on_area_3d_body_entered(body):
 	if body == player:
@@ -83,5 +98,19 @@ func _on_area_mom_body_entered(body):
 func _on_area_mom_body_exited(body):
 	if body == player:
 		in_mom_area = false
+		if uiButtonA:
+			uiButtonA.visible = false
+
+
+func _on_cartonprendre_body_entered(body):
+	if body == player:
+		in_carton_area = true
+		if uiButtonA:
+			uiButtonA.visible = true
+
+
+func _on_cartonprendre_body_exited(body):
+	if body == player:
+		in_carton_area = false
 		if uiButtonA:
 			uiButtonA.visible = false
