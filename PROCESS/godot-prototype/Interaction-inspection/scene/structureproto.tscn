@@ -1,8 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=28 format=3 uid="uid://cbmtjxm4i1wqo"]
 
 [ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
 [ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
 [ext_resource type="PackedScene" uid="uid://mdtujh8fnx1m" path="res://scene/interfaces/interface_1.tscn" id="3_0ptmr"]
+[ext_resource type="PackedScene" uid="uid://o7yp76xb4jk8" path="res://scene/interfaces/interfacezoom.tscn" id="4_ftlst"]
+[ext_resource type="PackedScene" uid="uid://y0mptasvcw05" path="res://scene/interfaces/interface_x.tscn" id="5_hc3qr"]
+[ext_resource type="PackedScene" uid="uid://cegclq26g2nfg" path="res://scene/interfaces/interfacejoygauche.tscn" id="5_o73f5"]
+[ext_resource type="PackedScene" uid="uid://d2b2ywskd2ntk" path="res://scene/interfaces/interfacejoyright.tscn" id="6_tm032"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2q52m"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -333,6 +337,26 @@ shape = SubResource("SphereShape3D_otaci")
 visible = false
 
 [node name="Interface1" parent="uibuttonA" instance=ExtResource("3_0ptmr")]
+
+[node name="uibuttonzoom" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interfacejoygauche" parent="uibuttonzoom" instance=ExtResource("4_ftlst")]
+
+[node name="uibuttonX" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interfacejoygauche" parent="uibuttonX" instance=ExtResource("5_hc3qr")]
+
+[node name="uibuttondeplacement" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interfacejoygauche" parent="uibuttondeplacement" instance=ExtResource("5_o73f5")]
+
+[node name="uibuttonrotate" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interfacejoygauche" parent="uibuttonrotate" instance=ExtResource("6_tm032")]
 
 [connection signal="body_entered" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_entered"]
 [connection signal="body_exited" from="Grenier/LevelDesignGrenier/Interactables/CartonPrendre/cartonprendre" to="GameManager" method="_on_cartonprendre_body_exited"]
