@@ -55,7 +55,6 @@ diffuse_mode = 1
 
 [sub_resource type="Environment" id="Environment_7e0wt"]
 background_mode = 1
-background_color = Color(0.43134, 0.43134, 0.43134, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3jagn"]
 
