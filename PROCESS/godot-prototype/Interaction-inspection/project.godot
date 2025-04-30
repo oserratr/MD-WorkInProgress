@@ -62,6 +62,10 @@ window/size/viewport_height=1080
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 ui_accept={

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c47td7hhrgjp0"]
+
+[ext_resource type="PackedScene" uid="uid://k2ilocbh6w43" path="res://estetique/asset/untitled.glb" id="1_jxtdi"]
+[ext_resource type="Shader" path="res://estetique/asset/psx.gdshader" id="2_jrtlg"]
+[ext_resource type="Texture2D" uid="uid://jn7e6eqtwbwf" path="res://estetique/asset/untitled_carboard_01_x128.png" id="3_rj5fg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_63ck1"]
+render_priority = 0
+shader = ExtResource("2_jrtlg")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("3_rj5fg")
+
+[node name="untitled" instance=ExtResource("1_jxtdi")]
+
+[node name="Cardboard_Boxes_ALL_001" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_63ck1")
