@@ -20,3 +20,7 @@
 ## Presentations
 
 - Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md) | [Mid-crit presentation](/PROCESS/24-03-2025/presentation-mid-crit-26.md) | [Mid-Jury presentation](/PROCESS/15-04-2025/Prez.md)
+
+## Devlog
+
+- Vidéos youtube : [Playlist](/https://www.youtube.com/playlist?list=PLYcV2nuqmy5LSnISOvCs3weJGaKszDHUk)
