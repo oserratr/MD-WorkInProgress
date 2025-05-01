@@ -1717,7 +1717,6 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_xbqi4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GrenierLevelDesign/papier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GrenierLevelDesign/papier/StaticBody3D"]
 transform = Transform3D(1.00001, 0, 4.47035e-08, 0, 1, 0, -1.78814e-07, 0, 1.00001, 0.000182979, -0.00170901, -0.00903213)
