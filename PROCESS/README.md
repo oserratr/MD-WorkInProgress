@@ -23,4 +23,4 @@
 
 ## Devlog
 
-- Vidéos youtube : [Playlist](/https://www.youtube.com/playlist?list=PLYcV2nuqmy5LSnISOvCs3weJGaKszDHUk)
+- Vidéos youtube : [Playlist](https://www.youtube.com/playlist?list=PLYcV2nuqmy5LSnISOvCs3weJGaKszDHUk)
