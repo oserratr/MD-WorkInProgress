@@ -1265,12 +1265,11 @@ transform = Transform3D(5.745, 0, 0, 0, 2.585, 0, 0, 0, 5.745, -0.0278702, 0.638
 shape = SubResource("SphereShape3D_dqqmm")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(0.756584, 0, 0.653896, 0, 1, 0, -0.653896, 0, 0.756584, 0, 0, 0)
+transform = Transform3D(0.922538, 0, 0.385906, 0, 1, 0, -0.385906, 0, 0.922538, 0, 0, 0)
 script = ExtResource("1_2dehg")
 
 [node name="CameraPlayer" type="Camera3D" parent="CameraOrigin"]
-transform = Transform3D(1, 0.00035587, -0.000517786, 0, 0.824126, 0.566406, 0.000628322, -0.566406, 0.824126, 2.38419e-07, 3.87704, 6.79096)
-keep_aspect = 0
+transform = Transform3D(1, 0.000355884, -0.000517815, 0, 0.824126, 0.566406, 0.000628322, -0.566406, 0.824126, -2.38419e-07, 3.24794, 5.54881)
 
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.131, 0.36, 2.31)
@@ -1288,7 +1287,7 @@ mesh = SubResource("PrismMesh_2m45e")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.579, 0)
 shape = SubResource("CapsuleShape3D_kbvoe")
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "uiCartonPris", "carton_pickable", "hand_player", "niveau_suivant", "niveau_suivant_area")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "uiCartonPris", "carton_pickable", "niveau_suivant", "niveau_suivant_area")]
 script = ExtResource("2_3pphl")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
@@ -1299,7 +1298,6 @@ uiButtonRotate = NodePath("../Interface/uibuttonrotate")
 uiButtonDeplacement = NodePath("../Interface/uibuttondeplacement")
 uiCartonPris = NodePath("../Interface/uicartonpris")
 carton_pickable = NodePath("../GrenierLevelDesign/Interactables/CartonPrendre")
-hand_player = NodePath("")
 niveau_suivant = NodePath("../Sol2/sol-mesh")
 niveau_suivant_area = NodePath("../DebutTuto/Area3D")
 seat_position = Vector3(2.131, 0.36, 2.31)
