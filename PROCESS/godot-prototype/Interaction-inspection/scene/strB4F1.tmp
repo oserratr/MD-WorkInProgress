@@ -1,29 +1,29 @@
-[gd_scene load_steps=114 format=3 uid="uid://cbmtjxm4i1wqo"]
+[gd_scene load_steps=113 format=3 uid="uid://dhlive4ir085k"]
 
-[ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto.gd" id="1_8ug0b"]
-[ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_6uvup"]
-[ext_resource type="PackedScene" uid="uid://mdtujh8fnx1m" path="res://scene/interfaces/interface_1.tscn" id="3_0ptmr"]
-[ext_resource type="PackedScene" uid="uid://o7yp76xb4jk8" path="res://scene/interfaces/interfacezoom.tscn" id="4_ftlst"]
-[ext_resource type="Shader" path="res://estetique/asset/psx.gdshader" id="4_scpur"]
-[ext_resource type="PackedScene" uid="uid://y0mptasvcw05" path="res://scene/interfaces/interface_x.tscn" id="5_hc3qr"]
-[ext_resource type="PackedScene" uid="uid://cegclq26g2nfg" path="res://scene/interfaces/interfacejoygauche.tscn" id="5_o73f5"]
-[ext_resource type="PackedScene" uid="uid://d2b2ywskd2ntk" path="res://scene/interfaces/interfacejoyright.tscn" id="6_tm032"]
-[ext_resource type="PackedScene" uid="uid://x8odc2wr8h2j" path="res://scene/interfaces/interfacecartonpris.tscn" id="8_pyx0l"]
-[ext_resource type="Texture2D" uid="uid://b0jydyajtwdry" path="res://estetique/asset/assetstest_teeshirt.png" id="13_pcacj"]
-[ext_resource type="Texture2D" uid="uid://d0hwbtxvgbar8" path="res://estetique/asset/idll_skin.png" id="16_2vbp5"]
-[ext_resource type="Script" path="res://estetique/anim.gd" id="16_tr21o"]
-[ext_resource type="Texture2D" uid="uid://d3rttkg42mrua" path="res://estetique/asset/idll_motherskin.png" id="17_ulcfd"]
-[ext_resource type="Texture2D" uid="uid://q7j0t55qmx73" path="res://estetique/asset/idll_haire.png" id="18_70wm6"]
-[ext_resource type="Texture2D" uid="uid://ug3tlh1qggxh" path="res://estetique/asset/idll_pant.png" id="19_f4e0c"]
-[ext_resource type="Texture2D" uid="uid://cdk51vwl8tuun" path="res://estetique/asset/Chaise/armchaire1_Armchair_02.png" id="20_e76en"]
-[ext_resource type="Texture2D" uid="uid://dhaxfkmxp653y" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Cardboad_60_A_baseColor.png" id="22_kdtaw"]
-[ext_resource type="Texture2D" uid="uid://de4eho0gvovcd" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair.png" id="24_34cfs"]
-[ext_resource type="Texture2D" uid="uid://dtd3yr64aeie5" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair_01.png" id="25_dj167"]
-[ext_resource type="Texture2D" uid="uid://cdup0wj8a0pod" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair_02.png" id="26_o8tns"]
-[ext_resource type="Texture2D" uid="uid://dwilgafq7egjr" path="res://estetique/asset/leveldesigngrenier/lvgrenier_tapistext.png" id="27_xbuoq"]
-[ext_resource type="Texture2D" uid="uid://dwyrhh06jq7f2" path="res://estetique/asset/leveldesigngrenier/lvgrenier_sol test_DefaultMaterial_BaseColor.png" id="28_wmrju"]
-[ext_resource type="Texture2D" uid="uid://ch4xpvbebvnbp" path="res://estetique/asset/leveldesigngrenier/lvgrenier_annie-spratt-xvU-X0GV9-o-unsplash.png" id="29_kwgid"]
-[ext_resource type="Texture2D" uid="uid://bohxvcsmhq581" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chest_drawers_01.png" id="30_uqdh7"]
+[ext_resource type="Script" path="res://scripts/ScriptsProto/PlayerProto2.gd" id="1_1va1a"]
+[ext_resource type="Script" path="res://scripts/ScriptsProto/GameManager.gd" id="2_3pphl"]
+[ext_resource type="Script" path="res://estetique/anim.gd" id="3_jeym5"]
+[ext_resource type="Texture2D" uid="uid://d0hwbtxvgbar8" path="res://estetique/asset/idll_skin.png" id="4_6mc6t"]
+[ext_resource type="Shader" path="res://estetique/asset/psx.gdshader" id="5_dj2dn"]
+[ext_resource type="Texture2D" uid="uid://d3rttkg42mrua" path="res://estetique/asset/idll_motherskin.png" id="6_wsi7a"]
+[ext_resource type="Texture2D" uid="uid://b0jydyajtwdry" path="res://estetique/asset/assetstest_teeshirt.png" id="7_gmeo6"]
+[ext_resource type="Texture2D" uid="uid://q7j0t55qmx73" path="res://estetique/asset/idll_haire.png" id="8_nfv83"]
+[ext_resource type="Texture2D" uid="uid://ug3tlh1qggxh" path="res://estetique/asset/idll_pant.png" id="9_1ela0"]
+[ext_resource type="PackedScene" uid="uid://mdtujh8fnx1m" path="res://scene/interfaces/interface_1.tscn" id="10_nalop"]
+[ext_resource type="PackedScene" uid="uid://o7yp76xb4jk8" path="res://scene/interfaces/interfacezoom.tscn" id="11_cuc0a"]
+[ext_resource type="PackedScene" uid="uid://y0mptasvcw05" path="res://scene/interfaces/interface_x.tscn" id="12_l6dsk"]
+[ext_resource type="PackedScene" uid="uid://cegclq26g2nfg" path="res://scene/interfaces/interfacejoygauche.tscn" id="13_f24xq"]
+[ext_resource type="PackedScene" uid="uid://d2b2ywskd2ntk" path="res://scene/interfaces/interfacejoyright.tscn" id="14_p8kpk"]
+[ext_resource type="PackedScene" uid="uid://x8odc2wr8h2j" path="res://scene/interfaces/interfacecartonpris.tscn" id="15_04iad"]
+[ext_resource type="Texture2D" uid="uid://dwyrhh06jq7f2" path="res://estetique/asset/leveldesigngrenier/lvgrenier_sol test_DefaultMaterial_BaseColor.png" id="16_m76mr"]
+[ext_resource type="Texture2D" uid="uid://de4eho0gvovcd" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair.png" id="17_n5m87"]
+[ext_resource type="Texture2D" uid="uid://dwilgafq7egjr" path="res://estetique/asset/leveldesigngrenier/lvgrenier_tapistext.png" id="18_mrmqf"]
+[ext_resource type="Texture2D" uid="uid://ch4xpvbebvnbp" path="res://estetique/asset/leveldesigngrenier/lvgrenier_annie-spratt-xvU-X0GV9-o-unsplash.png" id="19_xdk5g"]
+[ext_resource type="Texture2D" uid="uid://bohxvcsmhq581" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chest_drawers_01.png" id="20_we487"]
+[ext_resource type="Texture2D" uid="uid://dtd3yr64aeie5" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair_01.png" id="21_tsdh7"]
+[ext_resource type="Texture2D" uid="uid://cdup0wj8a0pod" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Chair_02.png" id="22_vpmj3"]
+[ext_resource type="Texture2D" uid="uid://cdk51vwl8tuun" path="res://estetique/asset/Chaise/armchaire1_Armchair_02.png" id="23_moq2m"]
+[ext_resource type="Texture2D" uid="uid://dhaxfkmxp653y" path="res://estetique/asset/leveldesigngrenier/lvgrenier_Cardboad_60_A_baseColor.png" id="24_57f2t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mrad"]
 albedo_color = Color(0.741176, 0.741176, 0.741176, 1)
@@ -35,8 +35,6 @@ material = SubResource("StandardMaterial3D_5mrad")
 size = Vector3(0.823105, 1, 0.825256)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dqqmm"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_3jagn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5ckc"]
 albedo_color = Color(0.976471, 0.65098, 0.12549, 1)
@@ -56,7 +54,7 @@ resource_name = "mother.001"
 transparency = 4
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("16_2vbp5")
+albedo_texture = ExtResource("4_6mc6t")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vsso0"]
 resource_name = "idll_Cube_001"
@@ -159,19 +157,19 @@ bind/24/pose = Transform3D(-98.5726, -15.9409, 5.39754, 5.44724, 0.122423, 99.85
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pbq0b"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("16_2vbp5")
+shader_parameter/albedo = ExtResource("4_6mc6t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1yft5"]
 resource_name = "mother"
 transparency = 4
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("17_ulcfd")
+albedo_texture = ExtResource("6_wsi7a")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5j6lj"]
 resource_name = "idll_Cube_003"
@@ -195,12 +193,12 @@ blend_shape_mode = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l3fte"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("17_ulcfd")
+shader_parameter/albedo = ExtResource("6_wsi7a")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2pmwu"]
 resource_name = "teeshirt"
@@ -230,18 +228,18 @@ blend_shape_mode = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7kj01"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("13_pcacj")
+shader_parameter/albedo = ExtResource("7_gmeo6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vei2e"]
 resource_name = "hair"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("18_70wm6")
+albedo_texture = ExtResource("8_nfv83")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_yydtw"]
@@ -265,18 +263,18 @@ blend_shape_mode = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6krvu"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("18_70wm6")
+shader_parameter/albedo = ExtResource("8_nfv83")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4a17"]
 resource_name = "Material.001"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("19_f4e0c")
+albedo_texture = ExtResource("9_1ela0")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wfdbt"]
@@ -301,12 +299,12 @@ blend_shape_mode = 0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_27r4h"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.1
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("19_f4e0c")
+shader_parameter/albedo = ExtResource("9_1ela0")
 
 [sub_resource type="Animation" id="Animation_pqra6"]
 resource_name = "idle"
@@ -637,7 +635,7 @@ size = Vector3(1, 1, 0.821777)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jp2v7"]
 resource_name = "DefaultMaterial"
-albedo_texture = ExtResource("28_wmrju")
+albedo_texture = ExtResource("16_m76mr")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gtih2"]
@@ -674,17 +672,17 @@ shadow_mesh = SubResource("ArrayMesh_gtih2")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_od7e7"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("28_wmrju")
+shader_parameter/albedo = ExtResource("16_m76mr")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rh5h"]
 resource_name = "Chair.002"
 cull_mode = 2
-albedo_texture = ExtResource("24_34cfs")
+albedo_texture = ExtResource("17_n5m87")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_lw3w7"]
@@ -721,12 +719,12 @@ shadow_mesh = SubResource("ArrayMesh_lw3w7")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_i08nt"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("24_34cfs")
+shader_parameter/albedo = ExtResource("17_n5m87")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wvvu5"]
 height = 1.67499
@@ -734,7 +732,7 @@ height = 1.67499
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3p0rd"]
 resource_name = "tapis"
 cull_mode = 2
-albedo_texture = ExtResource("27_xbuoq")
+albedo_texture = ExtResource("18_mrmqf")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0v5ii"]
@@ -771,17 +769,17 @@ shadow_mesh = SubResource("ArrayMesh_0v5ii")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3wpwk"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("27_xbuoq")
+shader_parameter/albedo = ExtResource("18_mrmqf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ki2o"]
 resource_name = "Material.004"
 cull_mode = 2
-albedo_texture = ExtResource("29_kwgid")
+albedo_texture = ExtResource("19_xdk5g")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_r0ic0"]
@@ -820,12 +818,12 @@ shadow_mesh = SubResource("ArrayMesh_r0ic0")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xbqi4"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("29_kwgid")
+shader_parameter/albedo = ExtResource("19_xdk5g")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_erx3f"]
 size = Vector3(0.217407, 0.393066, 2.0249)
@@ -833,7 +831,7 @@ size = Vector3(0.217407, 0.393066, 2.0249)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lphcj"]
 resource_name = "Chest_drawers_01.001"
 cull_mode = 2
-albedo_texture = ExtResource("30_uqdh7")
+albedo_texture = ExtResource("20_we487")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3aeav"]
@@ -870,12 +868,12 @@ shadow_mesh = SubResource("ArrayMesh_3aeav")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x5fx1"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("30_uqdh7")
+shader_parameter/albedo = ExtResource("20_we487")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hu2u8"]
 size = Vector3(2.31598, 2.33772, 1.53296)
@@ -883,7 +881,7 @@ size = Vector3(2.31598, 2.33772, 1.53296)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s43et"]
 resource_name = "Chair"
 cull_mode = 2
-albedo_texture = ExtResource("24_34cfs")
+albedo_texture = ExtResource("17_n5m87")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ty165"]
@@ -921,7 +919,7 @@ shadow_mesh = SubResource("ArrayMesh_ty165")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jl7fs"]
 resource_name = "Chair_01"
 cull_mode = 2
-albedo_texture = ExtResource("25_dj167")
+albedo_texture = ExtResource("21_tsdh7")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_a41kr"]
@@ -960,17 +958,17 @@ shadow_mesh = SubResource("ArrayMesh_a41kr")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jr6kn"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("25_dj167")
+shader_parameter/albedo = ExtResource("21_tsdh7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eax3d"]
 resource_name = "Chair_02"
 cull_mode = 2
-albedo_texture = ExtResource("26_o8tns")
+albedo_texture = ExtResource("22_vpmj3")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_cvpkf"]
@@ -1007,17 +1005,17 @@ shadow_mesh = SubResource("ArrayMesh_cvpkf")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_17xfp"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("26_o8tns")
+shader_parameter/albedo = ExtResource("22_vpmj3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvhtx"]
 resource_name = "Chair.001"
 cull_mode = 2
-albedo_texture = ExtResource("24_34cfs")
+albedo_texture = ExtResource("17_n5m87")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bffwl"]
@@ -1055,7 +1053,7 @@ shadow_mesh = SubResource("ArrayMesh_bffwl")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iduxb"]
 resource_name = "Chair_01.001"
 cull_mode = 2
-albedo_texture = ExtResource("25_dj167")
+albedo_texture = ExtResource("21_tsdh7")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ljas7"]
@@ -1095,7 +1093,7 @@ shadow_mesh = SubResource("ArrayMesh_ljas7")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rm4b"]
 resource_name = "Chair_02.001"
 cull_mode = 2
-albedo_texture = ExtResource("26_o8tns")
+albedo_texture = ExtResource("22_vpmj3")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6gcgc"]
@@ -1136,7 +1134,7 @@ size = Vector3(1.64136, 0.613159, 2.41003)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hlhr"]
 resource_name = "Armchair_02"
 cull_mode = 2
-albedo_texture = ExtResource("20_e76en")
+albedo_texture = ExtResource("23_moq2m")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_8g8dm"]
@@ -1173,12 +1171,12 @@ shadow_mesh = SubResource("ArrayMesh_8g8dm")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k2qkd"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("20_e76en")
+shader_parameter/albedo = ExtResource("23_moq2m")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvq6u"]
 albedo_color = Color(0.658824, 0.835294, 0.886275, 1)
@@ -1192,7 +1190,7 @@ size = Vector3(0.7276, 1, 0.873047)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2y8da"]
 resource_name = "Cardboad_60_A"
 cull_mode = 2
-albedo_texture = ExtResource("22_kdtaw")
+albedo_texture = ExtResource("24_57f2t")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nwaex"]
@@ -1231,12 +1229,12 @@ shadow_mesh = SubResource("ArrayMesh_nwaex")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8mt8y"]
 render_priority = 0
-shader = ExtResource("4_scpur")
+shader = ExtResource("5_dj2dn")
 shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("22_kdtaw")
+shader_parameter/albedo = ExtResource("24_57f2t")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_w1qqf"]
 
@@ -1263,15 +1261,21 @@ shape = SubResource("BoxShape3D_4ll6s")
 transform = Transform3D(5.745, 0, 0, 0, 2.585, 0, 0, 0, 5.745, -0.0278702, 0.638501, 4.50997)
 shape = SubResource("SphereShape3D_dqqmm")
 
+[node name="CameraOrigin" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.286, 6.67844)
+
+[node name="CameraPlayer" type="Camera3D" parent="CameraOrigin"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 0.112526)
+keep_aspect = 0
+
 [node name="Player" type="CharacterBody3D" parent="." groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.131, 0.36, 2.31)
-script = ExtResource("1_8ug0b")
-max_zoom = 8.0
-
-[node name="Hand" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(0.598997, 0, 0.15648, 0, 0.334724, 0, -0.275432, 0, 0.340306, -0.154148, 0.575148, -0.42651)
-visible = false
-mesh = SubResource("BoxMesh_3jagn")
+script = ExtResource("1_1va1a")
+sens = null
+rotation_speed = null
+zoom_speed = null
+min_zoom = null
+max_zoom = null
 
 [node name="Body" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.00739479, 0.578581, -0.012939)
@@ -1281,15 +1285,8 @@ mesh = SubResource("CapsuleMesh_yf27h")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.579, 0)
 shape = SubResource("CapsuleShape3D_kbvoe")
 
-[node name="CameraOrigin" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.925996, 0)
-
-[node name="CameraPlayer" type="Camera3D" parent="Player/CameraOrigin"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.263, 7.291)
-keep_aspect = 0
-
 [node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player", "interaction_area", "uiButtonA", "uiButtonX", "uiButtonZoom", "uiButtonRotate", "uiButtonDeplacement", "uiCartonPris", "carton_pickable", "hand_player", "niveau_suivant", "niveau_suivant_area")]
-script = ExtResource("2_6uvup")
+script = ExtResource("2_3pphl")
 player = NodePath("../Player")
 interaction_area = NodePath("../DebutTuto/Area3D")
 uiButtonA = NodePath("../Interface/uibuttonA")
@@ -1299,7 +1296,7 @@ uiButtonRotate = NodePath("../Interface/uibuttonrotate")
 uiButtonDeplacement = NodePath("../Interface/uibuttondeplacement")
 uiCartonPris = NodePath("../Interface/uicartonpris")
 carton_pickable = NodePath("../GrenierLevelDesign/Interactables/CartonPrendre")
-hand_player = NodePath("../Player/Hand")
+hand_player = NodePath("")
 niveau_suivant = NodePath("../Sol2/sol-mesh")
 niveau_suivant_area = NodePath("../DebutTuto/Area3D")
 seat_position = Vector3(2.131, 0.36, 2.31)
@@ -1321,7 +1318,7 @@ shape = SubResource("SphereShape3D_sg1q0")
 
 [node name="Armature" type="Node3D" parent="NPCmere"]
 transform = Transform3D(0.000728768, 0, 0, 0, -3.18555e-11, -0.000728768, 0, 0.000728768, -3.18555e-11, 0, 0.0793145, 0)
-script = ExtResource("16_tr21o")
+script = ExtResource("3_jeym5")
 
 [node name="Skeleton3D" type="Skeleton3D" parent="NPCmere/Armature"]
 bones/0/name = "mixamorig_Hips"
@@ -1544,32 +1541,32 @@ transform = Transform3D(0.00080451, -0.000144609, 7.8856e-12, 0, -3.50094e-11, -
 [node name="uibuttonA" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interface1" parent="Interface/uibuttonA" instance=ExtResource("3_0ptmr")]
+[node name="Interface1" parent="Interface/uibuttonA" instance=ExtResource("10_nalop")]
 
 [node name="uibuttonzoom" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interfacejoygauche" parent="Interface/uibuttonzoom" instance=ExtResource("4_ftlst")]
+[node name="Interfacejoygauche" parent="Interface/uibuttonzoom" instance=ExtResource("11_cuc0a")]
 
 [node name="uibuttonX" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interfacejoygauche" parent="Interface/uibuttonX" instance=ExtResource("5_hc3qr")]
+[node name="Interfacejoygauche" parent="Interface/uibuttonX" instance=ExtResource("12_l6dsk")]
 
 [node name="uibuttondeplacement" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interfacejoygauche" parent="Interface/uibuttondeplacement" instance=ExtResource("5_o73f5")]
+[node name="Interfacejoygauche" parent="Interface/uibuttondeplacement" instance=ExtResource("13_f24xq")]
 
 [node name="uibuttonrotate" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interfacejoygauche" parent="Interface/uibuttonrotate" instance=ExtResource("6_tm032")]
+[node name="Interfacejoygauche" parent="Interface/uibuttonrotate" instance=ExtResource("14_p8kpk")]
 
 [node name="uicartonpris" type="CanvasLayer" parent="Interface"]
 visible = false
 
-[node name="Interfacecartonpris" parent="Interface/uicartonpris" instance=ExtResource("8_pyx0l")]
+[node name="Interfacecartonpris" parent="Interface/uicartonpris" instance=ExtResource("15_04iad")]
 
 [node name="GrenierLevelDesign" type="Node3D" parent="."]
 transform = Transform3D(0.875, 0, 0, 0, 0.875, 0, 0, 0, 0.875, -0.0563374, -2.09711, 0.131453)

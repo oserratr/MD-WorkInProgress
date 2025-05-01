@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ug3tlh1qggxh"
-path.s3tc="res://.godot/imported/idll_ChatGPT Image 25 avr.png-6c72e39d3fbeef0e728116e57d3014fd.s3tc.ctex"
+path.s3tc="res://.godot/imported/idll_pant.png-10d00301239a91fd95b233630afca88d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://estetique/asset/idll_ChatGPT Image 25 avr.png"
-dest_files=["res://.godot/imported/idll_ChatGPT Image 25 avr.png-6c72e39d3fbeef0e728116e57d3014fd.s3tc.ctex"]
+source_file="res://estetique/asset/idll_pant.png"
+dest_files=["res://.godot/imported/idll_pant.png-10d00301239a91fd95b233630afca88d.s3tc.ctex"]
 
 [params]
 
