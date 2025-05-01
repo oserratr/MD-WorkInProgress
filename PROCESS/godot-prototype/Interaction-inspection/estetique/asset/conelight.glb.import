@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmiwltbo0jq3k"
-path="res://.godot/imported/testchaise.glb-323c9b009f578e2faaf42e8072b49826.scn"
+uid="uid://xv8hfllfj50w"
+path="res://.godot/imported/conelight.glb-bc6750b7c428e028e5f1339841f7cd30.scn"
 
 [deps]
 
-source_file="res://estetique/asset/Chaise/testchaise.glb"
-dest_files=["res://.godot/imported/testchaise.glb-323c9b009f578e2faaf42e8072b49826.scn"]
+source_file="res://estetique/asset/conelight.glb"
+dest_files=["res://.godot/imported/conelight.glb-bc6750b7c428e028e5f1339841f7cd30.scn"]
 
 [params]
 
