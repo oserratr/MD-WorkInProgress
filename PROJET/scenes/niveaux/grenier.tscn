@@ -29,8 +29,6 @@
 
 [sub_resource type="Environment" id="Environment_32lf4"]
 background_mode = 1
-background_color = Color(1, 1, 1, 1)
-background_energy_multiplier = 1.78
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 1.35
@@ -1618,9 +1616,9 @@ shadow_mesh = SubResource("ArrayMesh_vqeak")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8vjsh"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.25
+shader_parameter/affine_mapping = true
+shader_parameter/alpha_scissor = 0.0
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("15_5u4d5")
 
@@ -1805,9 +1803,9 @@ bind/48/pose = Transform3D(-98.3998, -15.3177, 9.08679, 9.34418, -0.973684, 99.5
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f0ts3"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("16_4ijhx")
 
@@ -1841,9 +1839,9 @@ blend_shape_mode = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u3eke"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("17_m215o")
 
@@ -1877,9 +1875,9 @@ blend_shape_mode = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dwlxw"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("18_hgkxa")
 
@@ -1912,9 +1910,9 @@ blend_shape_mode = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j1nls"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("19_5qwys")
 
@@ -1948,9 +1946,9 @@ blend_shape_mode = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sojpt"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("20_2f5hk")
 
@@ -1983,9 +1981,9 @@ blend_shape_mode = 0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3xixo"]
 render_priority = 0
 shader = ExtResource("2_lbtsu")
-shader_parameter/affine_mapping = false
+shader_parameter/affine_mapping = true
 shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.25
+shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("19_5qwys")
 
@@ -2778,78 +2776,70 @@ surface_material_override/0 = SubResource("ShaderMaterial_sb8ku")
 transform = Transform3D(1, 0, 0, 0, 1, -1.08358e-13, 0, 9.09495e-13, 0.999959, -0.000152609, 0.00457759, 0.0334475)
 shape = SubResource("BoxShape3D_t0v46")
 
-[node name="murs1" type="MeshInstance3D" parent="Level Design/Piece"]
+[node name="Murs" type="Node3D" parent="Level Design/Piece"]
+
+[node name="murs1" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(1.236, 0, 0, 0, 1.236, 0, 0, 0, 1.236, 0, 0.359044, -3.39965)
 mesh = SubResource("ArrayMesh_jp2in")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_bgdq1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/murs1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/Murs/murs1"]
 
-[node name="murs3" type="MeshInstance3D" parent="Level Design/Piece"]
+[node name="murs3" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(1.236, 0, 0, 0, 1.236, 0, 0, 0, 1.236, 0, 0.32459, 3.39577)
 mesh = SubResource("ArrayMesh_jp2in")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_bgdq1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/murs3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/Murs/murs3"]
 
-[node name="murs4" type="MeshInstance3D" parent="Level Design/Piece"]
-transform = Transform3D(-5.40273e-08, 0, -1.236, 0, 1.236, 0, 1.236, 0, -5.40273e-08, -3.38636, -1.02128, 0.0595281)
-visible = false
-mesh = SubResource("ArrayMesh_jp2in")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("ShaderMaterial_bgdq1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/murs4"]
-
-[node name="sol2" type="MeshInstance3D" parent="Level Design/Piece"]
+[node name="sol2" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(1.90864, 5.8637e-07, -0.084104, 1.10196, -1.01562e-06, 0.145672, 0, -3.27923, -6.01559e-08, -1.45688, 3.6982, 0)
 mesh = SubResource("ArrayMesh_j6ut2")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_sb8ku")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/sol2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/Murs/sol2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Design/Piece/sol2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Design/Piece/Murs/sol2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.08358e-13, 0, 9.09495e-13, 0.999959, -0.000152609, 0.00457759, 0.0334475)
 shape = SubResource("BoxShape3D_t0v46")
 
-[node name="sol3" type="MeshInstance3D" parent="Level Design/Piece"]
+[node name="sol3" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(-1.99034, -7.8939e-07, 0.0722352, 0.946447, -1.08193e-06, 0.151908, -1.66859e-07, 3.27923, 6.75085e-08, 1.42132, 4.40437, 0)
 mesh = SubResource("ArrayMesh_j6ut2")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_sb8ku")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/sol3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/Murs/sol3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Design/Piece/sol3/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Design/Piece/Murs/sol3/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.08358e-13, 0, 9.09495e-13, 0.999959, -0.000152609, 0.00457759, 0.0334475)
 shape = SubResource("BoxShape3D_t0v46")
 
-[node name="murs2" type="MeshInstance3D" parent="Level Design/Piece"]
-transform = Transform3D(1.62921e-09, -7.54979e-10, 0.01, 1.50996e-09, -0.01, -7.54979e-10, 0.01, 1.50996e-09, -1.62921e-09, 3.5566, 1.96941, 0.0888658)
+[node name="murs2" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
+transform = Transform3D(1.62921e-09, -7.54979e-10, 0.01, 1.50996e-09, -0.01, -7.54979e-10, 0.01, 1.50996e-09, -1.62921e-09, 3.50377, 1.96941, 0.0888658)
 mesh = SubResource("ArrayMesh_a81jy")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_14asl")
 
-[node name="Cube_003" type="MeshInstance3D" parent="Level Design/Piece/murs2"]
+[node name="Cube_003" type="MeshInstance3D" parent="Level Design/Piece/Murs/murs2"]
 transform = Transform3D(1.57475e-06, 1.5171e-05, 455.192, -9.97323e-07, -200.945, 3.4366e-05, 13.2099, -1.5171e-05, -8.13946e-05, -5.06805, 60.5433, -9.73518)
 mesh = SubResource("ArrayMesh_ywat1")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_55l0a")
 
-[node name="murs_004" type="MeshInstance3D" parent="Level Design/Piece"]
+[node name="murs_004" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(2.52146e-07, 0, 1.295, 0, 1.295, 0, -1.295, 0, 2.52146e-07, -3.3875, -0.813256, 0.136699)
 mesh = SubResource("ArrayMesh_bt8y6")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_a23rq")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866026, -2.60729, 1.43399, 2.44422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97531, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
-transform = Transform3D(0.993756, 0, -0.111573, 0, 1, 0, 0.111573, 0, 0.993756, 0, 0.234851, 0)
 
 [node name="Mere" type="Node3D" parent="."]
 transform = Transform3D(0.38659, 0, -0.136557, 0, 0.41, 0, 0.136557, 0, 0.38659, -2.07118, 0.178835, 1.57525)
