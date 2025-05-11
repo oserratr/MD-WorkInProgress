@@ -20,9 +20,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Mère": "res://assets/Dialogues/Characters/Mère.dch"
+}
+directories/dtl_directory={
+"AlbumPhoto": "res://assets/Dialogues/Grenier/AlbumPhoto.dtl"
+}
 glossary/default_case_sensitive=true
+layout/style_list=[]
+layout/default_style="Default"
 
 [display]
 
