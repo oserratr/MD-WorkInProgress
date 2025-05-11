@@ -24,7 +24,9 @@ directories/dch_directory={
 "Mère": "res://assets/Dialogues/Characters/Mère.dch"
 }
 directories/dtl_directory={
-"AlbumPhoto": "res://assets/Dialogues/Grenier/AlbumPhoto.dtl"
+"AlbumPhoto": "res://assets/Dialogues/Grenier/AlbumPhoto.dtl",
+"AlbumPhotoCarton": "res://assets/Dialogues/Grenier/AlbumPhotoCarton.dtl",
+"AlbumPhotoPasCarton": "res://assets/Dialogues/Grenier/AlbumPhotoPasCarton.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
