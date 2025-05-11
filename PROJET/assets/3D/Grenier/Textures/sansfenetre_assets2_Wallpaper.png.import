@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bygs8aoa3tinl"
-path.s3tc="res://.godot/imported/mur-du-grenier_murs_Wallpaper_BaseColor.png-4d89c9b2069f7d24e50112156289b7c9.s3tc.ctex"
+uid="uid://b8km3yxjgn0kg"
+path.s3tc="res://.godot/imported/sansfenetre_assets2_Wallpaper.png-f26e6f75594d0ba4acd7a82cd9151f67.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ceea50c88c92d91ee5352308c1535b24"
+"md5": "1b578f242f8b97af7c30a7ad4e6fcbb3"
 }
 
 [deps]
 
-source_file="res://assets/3D/Grenier/mur-du-grenier_murs_Wallpaper_BaseColor.png"
-dest_files=["res://.godot/imported/mur-du-grenier_murs_Wallpaper_BaseColor.png-4d89c9b2069f7d24e50112156289b7c9.s3tc.ctex"]
+source_file="res://assets/3D/Grenier/Textures/sansfenetre_assets2_Wallpaper.png"
+dest_files=["res://.godot/imported/sansfenetre_assets2_Wallpaper.png-f26e6f75594d0ba4acd7a82cd9151f67.s3tc.ctex"]
 
 [params]
 
