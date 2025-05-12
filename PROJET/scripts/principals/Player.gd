@@ -1,46 +1,52 @@
 extends CharacterBody3D
 
-@export var move_speed = 5.0
-@export var acceleration = 10.0
-
-var target_position: Vector3
-var current_velocity = Vector3.ZERO
-
+@onready var navigationAgent : NavigationAgent3D = $NavigationAgent3D
+var Speed = 5
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	target_position = global_transform.origin
+	pass # Replace with function body.
 
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if target_position.distance_to(global_transform.origin) > 0.1:
-		move_towards_target(delta)
+	if(navigationAgent.is_navigation_finished()):
+		return
+	
+	moveToPoint(delta, Speed)
+	pass
+
+func moveToPoint(delta, speed):
+	var targetPos = navigationAgent.get_next_path_position()
+	var direction = global_position.direction_to(targetPos)
+	faceDirection(targetPos)
+	velocity = direction * speed
+	move_and_slide()
+
+func faceDirection(target_pos):
+	# Calcule la direction en ignorant l'axe vertical
+	var direction = target_pos - global_position
+	direction.y = 0  # On ignore la hauteur pour éviter les inclinaisons
+
+	# Vérifie que la direction est significative (évite les oscillations)
+	if direction.length() > 0.01:
+		# Inverse la direction pour que le personnage regarde vers l'avant (-Z)
+		look_at(global_position + direction.normalized(), Vector3.UP)
+
+
 
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			handle_click()
-
-func handle_click():
-	var camera = get_viewport().get_camera_3d()
-	var mouse_position = get_viewport().get_mouse_position()
-	var from = camera.project_ray_origin(mouse_position)
-	var direction = camera.project_ray_normal(mouse_position)
-	var space_state = get_world_3d().direct_space_state
-	
-	# Intersect Ray avec collision_mask
-	var query = PhysicsRayQueryParameters3D.new()
-	query.from = from
-	query.to = from + direction * 1000
-	query.exclude = [self]
-	query.collision_mask = 2  # Assure-toi que ton sol est sur le calque 1
-
-	var result = space_state.intersect_ray(query)
-	
-	if result:
-		target_position = result.position
-
-func move_towards_target(delta):
-	var direction = (target_position - global_transform.origin).normalized()
-	current_velocity = direction * move_speed
-	
-	# Applique la vitesse au personnage
-	velocity = current_velocity
-	move_and_slide()
+	if Input.is_action_just_pressed("LeftMouse"):
+		var camera = get_tree().get_nodes_in_group("Camera")[0]
+		var mousePos = get_viewport().get_mouse_position()
+		var rayLength = 100
+		var from = camera.project_ray_origin(mousePos)
+		var to = from + camera.project_ray_normal(mousePos) * rayLength
+		var space = get_world_3d().direct_space_state
+		var rayQuery = PhysicsRayQueryParameters3D.new()
+		rayQuery.from = from
+		rayQuery.to = to
+		rayQuery.collide_with_areas = true
+		var result = space.intersect_ray(rayQuery)
+		print(result)
+		
+		navigationAgent.target_position = result.position
