@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=186 format=3 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lbtsu"]
@@ -24,8 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://bgp1k3yn8g8s5" path="res://assets/3D/Mother/texture/standingreading_haire.png" id="19_5qwys"]
 [ext_resource type="Texture2D" uid="uid://cvn7gn6whfp67" path="res://assets/3D/Mother/texture/standingreading_04730040400-e2.png" id="20_2f5hk"]
 [ext_resource type="Script" path="res://scripts/principals/AnimationManager.gd" id="21_ghmyv"]
-[ext_resource type="Script" path="res://scripts/principals/DialogueManager.gd" id="22_fn8v7"]
 [ext_resource type="Texture2D" uid="uid://bygs8aoa3tinl" path="res://assets/3D/Grenier/Textures/mur-du-grenier_murs_Wallpaper_BaseColor.png" id="23_r3quy"]
+[ext_resource type="Script" path="res://scripts/principals/Player.gd" id="27_7776d"]
 [ext_resource type="Texture2D" uid="uid://dhtqjk8yts3dv" path="res://assets/3D/Fille/Texture/2animFille_haire.png" id="27_vip32"]
 [ext_resource type="Texture2D" uid="uid://bgy5g5sgnkw13" path="res://assets/3D/Fille/Texture/2animFille_teeshirtfill.png" id="28_lqfwu"]
 [ext_resource type="Texture2D" uid="uid://dceem5gv6xeyp" path="res://assets/3D/Fille/Texture/2animFille_fillevisageskin.png" id="29_bbgqa"]
@@ -2646,6 +2646,10 @@ _data = {
 "StandingIdleReading": SubResource("Animation_dtoih")
 }
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f8yum"]
+radius = 0.262235
+height = 1.75556
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puhju"]
 resource_name = "hair.009"
 cull_mode = 2
@@ -4452,11 +4456,13 @@ surface_material_override/0 = SubResource("ShaderMaterial_dayp5")
 
 [node name="sol" type="MeshInstance3D" parent="Level Design/Piece"]
 transform = Transform3D(3.27923, 0, 0, 0, -1.17274e-06, 0.168208, 0, -3.27923, -6.01559e-08, 0, 0, 0)
+layers = 2
 mesh = SubResource("ArrayMesh_j6ut2")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_sb8ku")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/sol"]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level Design/Piece/sol/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.08358e-13, 0, 9.09495e-13, 0.999959, -0.000152609, 0.00457759, 0.0334475)
@@ -4523,7 +4529,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_a23rq")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17197, 1.67278, 2.37361)
+transform = Transform3D(-0.707107, 0.183013, -0.683013, 0, 0.965926, 0.258819, 0.707107, 0.183013, -0.683013, -0.884449, 2.28516, -2.0687)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
 
@@ -4936,13 +4942,13 @@ libraries = {
 [node name="AnimationManager" type="Node3D" parent="." node_paths=PackedStringArray("animation_player_mere", "animation_player_fille")]
 script = ExtResource("21_ghmyv")
 animation_player_mere = NodePath("../Mere/AnimationMere/AnimationPlayer")
-animation_player_fille = NodePath("../Fille/AnimationFille/AnimationPlayer")
+animation_player_fille = NodePath("../Player/Fille/AnimationFille/AnimationPlayer")
 
 [node name="DialogueManager" type="Node3D" parent="."]
-script = ExtResource("22_fn8v7")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(-3.78552e-08, -0.5, 0.866025, -2.18557e-08, 0.866025, 0.5, -1, 0, -4.37114e-08, 3.72872, 2.3197, 0.0947361)
+visible = false
 light_energy = 0.0
 light_volumetric_fog_energy = 4.585
 shadow_enabled = true
@@ -4950,16 +4956,24 @@ editor_only = true
 spot_range = 2.33186
 spot_angle = 24.2168
 
-[node name="Fille" type="Node3D" parent="."]
-transform = Transform3D(-0.367266, 0, -1.01032, 0, 1.075, 0, 1.01032, 0, -0.367266, 1.14446, 0, 0.0727117)
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205583, 0)
+script = ExtResource("27_7776d")
 
-[node name="AnimationFille" type="Node3D" parent="Fille"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0297546, 0.868853, 0.00725979)
+shape = SubResource("CapsuleShape3D_f8yum")
+
+[node name="Fille" type="Node3D" parent="Player"]
+transform = Transform3D(1.075, 0, -1.87959e-07, 0, 1.075, 0, 1.87959e-07, 0, 1.075, 0.0319724, -0.205583, -1.17409)
+
+[node name="AnimationFille" type="Node3D" parent="Player/Fille"]
 transform = Transform3D(0.375, 0, 0, 0, 0.375, 0, 0, 0, 0.375, -4.15026, 0.172883, 1.09954)
 
-[node name="Armature_006" type="Node3D" parent="Fille/AnimationFille"]
+[node name="Armature_006" type="Node3D" parent="Player/Fille/AnimationFille"]
 transform = Transform3D(0.00999999, 0, 0, 0, -4.37113e-10, -0.00999999, 0, 0.00999999, -4.37113e-10, 11.0931, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Fille/AnimationFille/Armature_006"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Player/Fille/AnimationFille/Armature_006"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 729.897, -28.6041, -244.444)
@@ -5311,42 +5325,42 @@ bones/49/position = Vector3(-0.00012435, 15.9655, -4.08254e-06)
 bones/49/rotation = Quaternion(1.3737e-08, -1.69547e-06, 3.25963e-09, 1)
 bones/49/scale = Vector3(1, 1, 1)
 
-[node name="HairMere_008" type="BoneAttachment3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="HairMere_008" type="BoneAttachment3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 transform = Transform3D(100, 0.00746632, 0.0166526, -0.0166402, -0.0880241, 99.9999, 0.0074805, -99.9999, -0.0880299, 11.3786, -3.08792, -4.56091)
 bone_name = "HairMere.008"
 bone_idx = 7
 
-[node name="HairMere_008" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D/HairMere_008"]
+[node name="HairMere_008" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D/HairMere_008"]
 mesh = SubResource("ArrayMesh_hflnk")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_3ygfa")
 
-[node name="CharacterMeshBody_025" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="CharacterMeshBody_025" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 mesh = SubResource("ArrayMesh_ardqg")
 skin = SubResource("Skin_ee5id")
 surface_material_override/0 = SubResource("ShaderMaterial_woaxg")
 
-[node name="CharacterMeshBody_026" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="CharacterMeshBody_026" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 mesh = SubResource("ArrayMesh_4356f")
 skin = SubResource("Skin_ee5id")
 surface_material_override/0 = SubResource("ShaderMaterial_wrs52")
 
-[node name="CharacterMeshBody_027" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="CharacterMeshBody_027" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 mesh = SubResource("ArrayMesh_age7b")
 skin = SubResource("Skin_ee5id")
 surface_material_override/0 = SubResource("ShaderMaterial_52g5u")
 
-[node name="PantMeshMere_008" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="PantMeshMere_008" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 mesh = SubResource("ArrayMesh_4mpp3")
 skin = SubResource("Skin_ee5id")
 surface_material_override/0 = SubResource("ShaderMaterial_o2u3b")
 
-[node name="Shoes_007" type="MeshInstance3D" parent="Fille/AnimationFille/Armature_006/Skeleton3D"]
+[node name="Shoes_007" type="MeshInstance3D" parent="Player/Fille/AnimationFille/Armature_006/Skeleton3D"]
 mesh = SubResource("ArrayMesh_e24n2")
 skin = SubResource("Skin_ee5id")
 surface_material_override/0 = SubResource("ShaderMaterial_irxtt")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fille/AnimationFille"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Fille/AnimationFille"]
 libraries = {
 "": SubResource("AnimationLibrary_yk5n7")
 }
