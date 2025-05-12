@@ -30,8 +30,8 @@ directories/dtl_directory={
 "AlbumPhotoPasCarton": "res://assets/Dialogues/Grenier/AlbumPhotoPasCarton.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style=""
+layout/style_list=["res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"]
+layout/default_style="res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"
 variables={}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

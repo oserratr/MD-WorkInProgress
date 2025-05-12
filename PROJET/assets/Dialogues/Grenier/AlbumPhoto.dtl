@@ -1,3 +1,4 @@
+[style name="OwnStyle"]
 Mère: Regarde ce que j'ai trouvé
 - Qu'est-ce que c'est ?
 	[background fade="0.0"]
@@ -13,3 +14,4 @@ Mère: Regarde ce que j'ai trouvé
 		- On peut faire une pause si tu veux
 			Mère: Il ne reste qu'un dernier carton. Tu peux le descendre au salon avec les autres, s’il te plaît ?
 			Mère: Fais bien attention en le prenant, c’est très fragile.
+[style]
