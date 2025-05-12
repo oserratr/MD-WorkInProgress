@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cqpb3ie51rwl5"]
+[gd_scene load_steps=28 format=3 uid="uid://cqpb3ie51rwl5"]
 
 [ext_resource type="Script" path="res://assets/2D/ui dialogic/OwnStyle/CustomOwnStyle/default_layout_base.gd" id="1_ifsho"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_d65gt"]
@@ -11,11 +11,15 @@
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="7_0352d"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="7_bbunv"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_next_indicator.gd" id="8_bsx7f"]
-[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="8_o6we0"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.gd" id="9_pmeap"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/autoadvance_indicator.gd" id="10_6glup"]
 [ext_resource type="Texture2D" uid="uid://dlylgqn0rcya3" path="res://assets/2D/ui dialogic/OwnStyle/controller button 30.png" id="11_l7eyu"]
 [ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="11_uvk3r"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="12_q45rk"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="17_mro6k"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="18_xuskr"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="19_3gemh"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="20_apfpe"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -208,11 +212,12 @@ _data = {
 
 [sub_resource type="FontVariation" id="FontVariation_v8y64"]
 
+[sub_resource type="AudioStream" id="AudioStream_pe27w"]
+
 [node name="Custom" type="CanvasLayer"]
 script = ExtResource("1_ifsho")
 
 [node name="BackgroundLayer" parent="." instance=ExtResource("2_d65gt")]
-visible = false
 apply_overrides_on_ready = true
 
 [node name="VN_TextboxLayer" type="Control" parent="."]
@@ -220,8 +225,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 121.0
-offset_bottom = 121.0
+offset_top = 49.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -384,8 +389,57 @@ script = ExtResource("12_q45rk")
 name_label_root = NodePath("..")
 
 [node name="FullAdvanceInputLayer" parent="." instance=ExtResource("6_uhrbm")]
-visible = false
 apply_overrides_on_ready = true
 
-[node name="VN_ChoiceLayer" parent="." instance=ExtResource("8_o6we0")]
+[node name="VN_ChoiceLayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -155.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("9_pmeap")
+font_custom = "res://assets/Font/Nunito-SemiBold.ttf"
+font_size_use_global = false
+font_size_custom = 20
+boxes_stylebox_focused = ""
+boxes_fill_width = false
 apply_overrides_on_ready = true
+
+[node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="VN_ChoiceLayer"]
+unique_name_in_owner = true
+script = ExtResource("18_xuskr")
+sound_pressed = ExtResource("19_3gemh")
+sound_hover = ExtResource("20_apfpe")
+sound_focus = SubResource("AudioStream_pe27w")
+
+[node name="Choices" type="VBoxContainer" parent="VN_ChoiceLayer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -33.0
+offset_right = 43.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_layout_mode = 1
+
+[node name="DialogicNode_ChoiceButton1" type="Button" parent="VN_ChoiceLayer/Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("17_mro6k")
+
+[node name="DialogicNode_ChoiceButton2" type="Button" parent="VN_ChoiceLayer/Choices"]
+layout_mode = 2
+text = "Some text"
+script = ExtResource("17_mro6k")
