@@ -1,52 +1,47 @@
 extends CharacterBody3D
 
-@onready var navigationAgent : NavigationAgent3D = $NavigationAgent3D
-var Speed = 5
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var gravity = 9.8
+@export var speed = 2
+@export var camera : Camera3D
+@export var navigation_agent : NavigationAgent3D
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(navigationAgent.is_navigation_finished()):
-		return
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 	
-	moveToPoint(delta, Speed)
-	pass
-
-func moveToPoint(delta, speed):
-	var targetPos = navigationAgent.get_next_path_position()
-	var direction = global_position.direction_to(targetPos)
-	faceDirection(targetPos)
-	velocity = direction * speed
-	move_and_slide()
-
-func faceDirection(target_pos):
-	# Calcule la direction en ignorant l'axe vertical
-	var direction = target_pos - global_position
-	direction.y = 0  # On ignore la hauteur pour éviter les inclinaisons
-
-	# Vérifie que la direction est significative (évite les oscillations)
-	if direction.length() > 0.01:
-		# Inverse la direction pour que le personnage regarde vers l'avant (-Z)
-		look_at(global_position + direction.normalized(), Vector3.UP)
-
-
-
+	var new_velocity = movement()
+	
+	velocity.x = new_velocity.x
+	velocity.z = new_velocity.z
+	
+	move_and_slide();
+	
 func _input(event):
 	if Input.is_action_just_pressed("LeftMouse"):
-		var camera = get_tree().get_nodes_in_group("Camera")[0]
-		var mousePos = get_viewport().get_mouse_position()
-		var rayLength = 100
-		var from = camera.project_ray_origin(mousePos)
-		var to = from + camera.project_ray_normal(mousePos) * rayLength
-		var space = get_world_3d().direct_space_state
-		var rayQuery = PhysicsRayQueryParameters3D.new()
-		rayQuery.from = from
-		rayQuery.to = to
-		rayQuery.collide_with_areas = true
-		var result = space.intersect_ray(rayQuery)
-		print(result)
+		get_world_pos();
+
+func get_world_pos() -> void :
+	var mouse_pos = get_viewport().get_mouse_position();
+	var ray_lenght = 100;
+	var from = camera.project_ray_origin(mouse_pos);
+	var to = from + camera.project_ray_normal(mouse_pos) * ray_lenght;
+	var space = get_world_3d().direct_space_state;
+	var ray_query = PhysicsRayQueryParameters3D.new();
+	ray_query.from = from;
+	ray_query.to = to;
+	
+	var result = space.intersect_ray(ray_query)
+	
+	navigation_agent.target_position = result.position;
+	
+func movement() -> Vector3:
+	var next_path_position = navigation_agent.get_next_path_position()
+	var current_agent_position = global_position
+	
+	var new_velocity = next_path_position - current_agent_position
+	new_velocity = new_velocity.normalized() * speed
+	
+	return new_velocity
 		
-		navigationAgent.target_position = result.position
+	
