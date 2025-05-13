@@ -50,3 +50,9 @@ func _on_vue_porte_body_entered(body):
 func _on_vue_porte_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_area2 = false
+		
+func get_active_camera() -> Camera3D:
+	if active_secondary_camera != null:
+		return active_secondary_camera
+	return player_camera
+

@@ -2,12 +2,16 @@ extends CharacterBody3D
 
 var gravity = 9.8
 @export var speed = 2
-@export var camera : Camera3D
 @export var navigation_agent : NavigationAgent3D
-@export var animation_player : AnimationPlayer  # Assure-toi de l'ajouter dans l'inspecteur
-@export var stop_distance = 0.1  # Distance pour considérer que le personnage est arrivé
+@export var animation_player : AnimationPlayer
+@export var stop_distance = 0.1
+
+@export var game_manager = Node3D
 
 func _process(delta):
+	# Mise à jour de la caméra active depuis le GameManager
+	var active_camera = game_manager.get_active_camera()
+	
 	# Gestion de la gravité
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -28,12 +32,17 @@ func _process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("LeftMouse"):
 		get_world_pos()
-
+		
 func get_world_pos() -> void:
+	var active_camera = game_manager.get_active_camera()
+	if active_camera == null:
+		print("Erreur : Caméra active non définie")
+		return
+	
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_length = 100
-	var from = camera.project_ray_origin(mouse_pos)
-	var to = from + camera.project_ray_normal(mouse_pos) * ray_length
+	var from = active_camera.project_ray_origin(mouse_pos)
+	var to = from + active_camera.project_ray_normal(mouse_pos) * ray_length
 	var space = get_world_3d().direct_space_state
 	var ray_query = PhysicsRayQueryParameters3D.new()
 	ray_query.from = from
@@ -45,7 +54,6 @@ func get_world_pos() -> void:
 		look_at_path(result.position)
 	
 func movement() -> Vector3:
-	# Vérifie si le chemin est terminé
 	if navigation_agent.is_navigation_finished():
 		return Vector3.ZERO
 	

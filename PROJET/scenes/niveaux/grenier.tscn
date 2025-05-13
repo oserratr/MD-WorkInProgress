@@ -5591,12 +5591,12 @@ animation_player_fille = NodePath("../Player/Fille/AnimationFille/AnimationPlaye
 
 [node name="DialogueManager" type="Node3D" parent="."]
 
-[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera", "navigation_agent", "animation_player") groups=["player"]]
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1.80647, 0.658222, 1.79366)
 script = ExtResource("27_7776d")
-camera = NodePath("../CameraOrigin1/Camera3D")
 navigation_agent = NodePath("NavigationAgent3D")
 animation_player = NodePath("Fille/AnimationFille/AnimationPlayer")
+game_manager = NodePath("../GameManager")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player"]
 
