@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://be8mw6e2vjyyt"]
+
+[ext_resource type="Texture2D" uid="uid://owqyp3i773yq" path="res://assets/2D/Ui autre/cursor.png" id="1_oenpg"]
+[ext_resource type="Script" path="res://scripts/principals/Cursor.gd" id="2_el6cj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_oenpg")
+script = ExtResource("2_el6cj")
