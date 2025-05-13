@@ -9,5 +9,5 @@ extends Node3D
 func _ready():
 	# Standing Idle Reading animation Mother
 		animation_player_mere.play(animation_name_mere)
-		animation_player_fille.play(animation_name_fille_idle)
+		#animation_player_fille.play(animation_name_fille_idle)
 	

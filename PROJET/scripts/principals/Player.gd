@@ -35,6 +35,8 @@ func get_world_pos() -> void :
 	
 	navigation_agent.target_position = result.position;
 	
+	look_at_path(result.position)
+	
 func movement() -> Vector3:
 	var next_path_position = navigation_agent.get_next_path_position()
 	var current_agent_position = global_position
@@ -44,4 +46,6 @@ func movement() -> Vector3:
 	
 	return new_velocity
 		
-	
+
+func look_at_path(direction : Vector3) -> void: 
+	look_at(Vector3(direction.x, global_position.y, direction.z), Vector3.UP)
