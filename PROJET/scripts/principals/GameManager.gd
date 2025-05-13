@@ -8,6 +8,7 @@ var camera_switched := false
 # Variable signal detecter
 var player_enter_area1 := false
 var player_enter_area2 := false
+var player_enter_objet := false
 
 func _process(delta):
 	# Activer la caméra secondaire si elle est définie et pas encore active
@@ -19,8 +20,7 @@ func _process(delta):
 	elif not player_enter_area1 and not player_enter_area2 and camera_switched:
 		print("Switching back to player camera")
 		_switch_to_player_camera()
-
-
+		
 func _switch_to_camera(cam: Camera3D):
 	if cam == null:
 		print("Erreur : La caméra secondaire n'est pas définie.")
@@ -55,4 +55,3 @@ func get_active_camera() -> Camera3D:
 	if active_secondary_camera != null:
 		return active_secondary_camera
 	return player_camera
-

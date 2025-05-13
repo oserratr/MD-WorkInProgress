@@ -7,6 +7,7 @@ var gravity = 9.8
 @export var stop_distance = 0.1
 
 @export var game_manager = Node3D
+var movement_locked := false
 
 func _process(delta):
 	# Mise à jour de la caméra active depuis le GameManager
@@ -68,3 +69,9 @@ func movement() -> Vector3:
 		
 func look_at_path(direction : Vector3) -> void: 
 	look_at(Vector3(direction.x, global_position.y, direction.z), Vector3.UP)
+	
+func lock_movement(lock: bool) -> void:
+	movement_locked = lock
+	if lock:
+		navigation_agent.target_position = global_position  # Arrête immédiatement le mouvement
+		animation_player.play("idle")
