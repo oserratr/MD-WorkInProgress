@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pc1j14wh6iwf"
-path.s3tc="res://.godot/imported/talisman_ballbracelet_DefaultMaterial_BaseColor.png-910fc1b773edafe6e019d72e3950a45b.s3tc.ctex"
+uid="uid://uvd8kq5b3i5q"
+path.s3tc="res://.godot/imported/assets2_Wallpaper.004_BaseColor.png-8d57f85ae4afb9978b84136954b85512.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "112764ef6a79fa9e2e08eb5348d0ee14"
-}
 
 [deps]
 
-source_file="res://assets/3D/Objets/textures/talisman_ballbracelet_DefaultMaterial_BaseColor.png"
-dest_files=["res://.godot/imported/talisman_ballbracelet_DefaultMaterial_BaseColor.png-910fc1b773edafe6e019d72e3950a45b.s3tc.ctex"]
+source_file="res://assets/3D/mur/assets2_Wallpaper.004_BaseColor.png"
+dest_files=["res://.godot/imported/assets2_Wallpaper.004_BaseColor.png-8d57f85ae4afb9978b84136954b85512.s3tc.ctex"]
 
 [params]
 

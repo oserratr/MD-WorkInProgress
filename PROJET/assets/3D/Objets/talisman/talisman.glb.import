@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cnpun4te8xme7"
-path="res://.godot/imported/talisman.glb-a78f21f8fb11d74d6a94f3941791df04.scn"
+path="res://.godot/imported/talisman.glb-937963db97973a86804a7b16fc17b053.scn"
 
 [deps]
 
-source_file="res://assets/3D/Objets/talisman.glb"
-dest_files=["res://.godot/imported/talisman.glb-a78f21f8fb11d74d6a94f3941791df04.scn"]
+source_file="res://assets/3D/Objets/talisman/talisman.glb"
+dest_files=["res://.godot/imported/talisman.glb-937963db97973a86804a7b16fc17b053.scn"]
 
 [params]
 

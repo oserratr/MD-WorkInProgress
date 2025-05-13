@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfn8rbbwoeivh"
-path.s3tc="res://.godot/imported/talisman_assetstalisman_DefaultMaterial_BaseColor.png-74596dcb13a05595ad6a252df955a6e1.s3tc.ctex"
+uid="uid://b01pggnj6fij1"
+path.s3tc="res://.godot/imported/tapis_tapismohair.png-a61034d9a971e10579b2b4ccaba77acc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "fd8470421b1477d5f0dbaf9f85974c72"
+"md5": "57436e79ed5ba60a48600f261bf60626"
 }
 
 [deps]
 
-source_file="res://assets/3D/Objets/textures/talisman_assetstalisman_DefaultMaterial_BaseColor.png"
-dest_files=["res://.godot/imported/talisman_assetstalisman_DefaultMaterial_BaseColor.png-74596dcb13a05595ad6a252df955a6e1.s3tc.ctex"]
+source_file="res://assets/3D/Objets/Tapis/tapis_tapismohair.png"
+dest_files=["res://.godot/imported/tapis_tapismohair.png-a61034d9a971e10579b2b4ccaba77acc.s3tc.ctex"]
 
 [params]
 
