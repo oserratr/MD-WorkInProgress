@@ -19,7 +19,7 @@
 - Communication : [09-04-2025](/PROCESS/09-04-2025/ws-communication.md)
 ## Presentations
 
-- Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md) | [Mid-crit presentation](/PROCESS/24-03-2025/presentation-mid-crit-26.md) | [Mid-Jury presentation](/PROCESS/15-04-2025/Prez.md)
+- Jury presentation : [16-01-2025](/PROCESS/16-01-2025/jury-presentation.md) | [Mid-crit presentation](/PROCESS/24-03-2025/presentation-mid-crit-26.md) | [Mid-Jury presentation](/PROCESS/15-04-2025/Prez.md) | [Last crit presentation](/PROCESS/14-05-2025/presentation-crit-dernier.md)
 
 ## Devlog
 
