@@ -3,7 +3,6 @@ extends Node3D
 @export var player_camera = Camera3D
 @export var ui_interaction = Control
 @export var ui_interaction_echap = Control
-
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
 

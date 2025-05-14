@@ -35,3 +35,6 @@ func _on_carton_2_body_entered(body):
 func _on_carton_2_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_objet = false
+
+func get_bool_carton_pris() -> bool:
+	return carton_pris

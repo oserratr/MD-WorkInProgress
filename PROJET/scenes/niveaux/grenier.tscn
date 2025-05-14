@@ -5249,9 +5249,10 @@ transform = Transform3D(-0.866025, -0.25, 0.433012, -5.66162e-08, 0.866025, 0.5,
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin1" groups=["Camera"]]
 current = true
 
-[node name="Mere" type="Node3D" parent="."]
+[node name="Mere" type="Node3D" parent="." node_paths=PackedStringArray("interaction_carton")]
 transform = Transform3D(0.38659, 0, -0.136557, 0, 0.41, 0, 0.136557, 0, 0.38659, -2.07118, 0.178835, 1.57525)
 script = ExtResource("19_ecxhu")
+interaction_carton = NodePath("../InteractionCarton")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mere"]
 

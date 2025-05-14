@@ -7,6 +7,9 @@ var interaction_without_carton = false
 
 @export var interaction_carton = Node3D
 
+func _process(delta):
+	_state_dialogue()
+
 func _input(event):
 	if player_in_area and event.is_action_pressed("e"):
 		if first_interaction:
@@ -19,6 +22,18 @@ func _input(event):
 			_timeline_photo_no_carton()
 			print("start")
 
+
+
+func _state_dialogue():
+	var interaction_carton = interaction_carton.get_bool_carton_pris()
+	
+	if not first_interaction and interaction_carton : 
+		interaction_with_carton = true
+		interaction_without_carton = false
+	elif not first_interaction and not interaction_carton :
+		interaction_with_carton = false
+		interaction_without_carton = true
+	
 func _on_mother_dialogue_body_entered(body):
 	print("Test : body entered")
 	if body.is_in_group("player"):
