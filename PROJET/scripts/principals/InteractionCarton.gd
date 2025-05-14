@@ -5,6 +5,7 @@ var player_enter_objet:= false
 @export var ui_interaction_prendre = Control
 @export var carton_pickable: Node3D
 @export var dialogue = Node3D
+var player_enter_salon := false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -18,6 +19,7 @@ func _process(delta):
 		ui_interaction_prendre.visible = false
 		
 	_interaction_carton()
+	_switch_salon()
 
 func _interaction_carton():
 	var interaction_mother = dialogue.get_bool_interaction()
@@ -38,3 +40,19 @@ func _on_carton_2_body_exited(body):
 
 func get_bool_carton_pris() -> bool:
 	return carton_pris
+
+func _switch_salon():
+	var interaction_mother = dialogue.get_bool_interaction()
+	
+	if player_enter_salon and Input.is_action_just_pressed("e"): 
+		if not interaction_mother :
+			get_tree().change_scene_to_file("res://scenes/niveaux/salon.tscn")
+		
+func _on_salon_body_entered(body):
+	if body.is_in_group("player"):
+		player_enter_salon = true
+
+
+func _on_salon_body_exited(body):
+	if body.is_in_group("player"):
+		player_enter_salon = false

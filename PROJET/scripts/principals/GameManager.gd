@@ -21,6 +21,8 @@ func _process(delta):
 		print("Switching back to player camera")
 		_switch_to_player_camera()
 		
+	
+		
 func _switch_to_camera(cam: Camera3D):
 	if cam == null:
 		print("Erreur : La caméra secondaire n'est pas définie.")

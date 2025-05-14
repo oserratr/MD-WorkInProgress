@@ -1,4 +1,4 @@
-[gd_scene load_steps=276 format=3 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=277 format=3 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="1_53tlp"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
@@ -5057,6 +5057,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hs685")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_4q4go"]
+radius = 0.67877
+
 [node name="Grenier" type="Node3D"]
 
 [node name="Lights" type="Node3D" parent="."]
@@ -6329,30 +6332,36 @@ ui_interaction_prendre = NodePath("../uiinteraction")
 carton_pickable = NodePath("../Level Design/Interactifs/Carton")
 dialogue = NodePath("../Mere")
 
-[node name="Porte" type="Node3D" parent="."]
+[node name="Salon" type="Area3D" parent="."]
+
+[node name="Porte" type="Node3D" parent="Salon"]
 transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 2.01516, -0.34152, -3.26223)
 
-[node name="Cube_002" type="MeshInstance3D" parent="Porte"]
+[node name="Cube_002" type="MeshInstance3D" parent="Salon/Porte"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.165059, 2.89254, 0.0519671)
 mesh = SubResource("ArrayMesh_0if1i")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_upgkv")
 
-[node name="Cube_003" type="MeshInstance3D" parent="Porte"]
+[node name="Cube_003" type="MeshInstance3D" parent="Salon/Porte"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.165059, 2.89254, 0.0519671)
 mesh = SubResource("ArrayMesh_wlkpg")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_qwlou")
 
-[node name="Cube_006" type="MeshInstance3D" parent="Porte"]
+[node name="Cube_006" type="MeshInstance3D" parent="Salon/Porte"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.780401, 2.17641, 0.0519671)
 mesh = SubResource("ArrayMesh_xpqhq")
 skeleton = NodePath("")
 
-[node name="Cube_005" type="MeshInstance3D" parent="Porte"]
+[node name="Cube_005" type="MeshInstance3D" parent="Salon/Porte"]
 transform = Transform3D(0.530467, -8.00983e-08, 0, 8.00983e-08, 0.530467, 0, 0, 0, -0.530467, 0.780401, 2.23476, 0.105014)
 mesh = SubResource("ArrayMesh_a21md")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Salon"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14615, 1.40043, -2.80831)
+shape = SubResource("SphereShape3D_4q4go")
 
 [connection signal="body_entered" from="Level Design/Interactifs/Tableau3" to="InteractionObjet" method="_on_tableau_3_body_entered"]
 [connection signal="body_exited" from="Level Design/Interactifs/Tableau3" to="InteractionObjet" method="_on_tableau_3_body_exited"]
@@ -6368,3 +6377,5 @@ skeleton = NodePath("")
 [connection signal="body_exited" from="VueMere" to="GameManager" method="_on_vue_mere_body_exited"]
 [connection signal="body_entered" from="VuePorte" to="GameManager" method="_on_vue_porte_body_entered"]
 [connection signal="body_exited" from="VuePorte" to="GameManager" method="_on_vue_porte_body_exited"]
+[connection signal="body_entered" from="Salon" to="InteractionCarton" method="_on_salon_body_entered"]
+[connection signal="body_exited" from="Salon" to="InteractionCarton" method="_on_salon_body_exited"]
