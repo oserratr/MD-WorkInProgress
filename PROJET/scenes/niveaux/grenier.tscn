@@ -5168,7 +5168,6 @@ shape = SubResource("BoxShape3D_owf3m")
 [node name="Piece" type="Node3D" parent="Level Design"]
 
 [node name="Murs" type="Node3D" parent="Level Design/Piece"]
-visible = false
 
 [node name="murs1" type="MeshInstance3D" parent="Level Design/Piece/Murs"]
 transform = Transform3D(1.236, 0, 0, 0, 1.236, 0, 0, 0, 1.236, 0, 0.359044, -3.39965)
@@ -5249,10 +5248,11 @@ transform = Transform3D(-0.866025, -0.25, 0.433012, -5.66162e-08, 0.866025, 0.5,
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin1" groups=["Camera"]]
 current = true
 
-[node name="Mere" type="Node3D" parent="." node_paths=PackedStringArray("interaction_carton")]
+[node name="Mere" type="Node3D" parent="." node_paths=PackedStringArray("interaction_carton", "ui_interaction_mere")]
 transform = Transform3D(0.38659, 0, -0.136557, 0, 0.41, 0, 0.136557, 0, 0.38659, -2.07118, 0.178835, 1.57525)
 script = ExtResource("19_ecxhu")
 interaction_carton = NodePath("../InteractionCarton")
+ui_interaction_mere = NodePath("../uiinteraction3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mere"]
 
@@ -6129,7 +6129,7 @@ shape = SubResource("BoxShape3D_q7ulk")
 [node name="InteractionObjet" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap")]
 script = ExtResource("51_vofnk")
 player_camera = NodePath("../CameraOrigin1/Camera3D")
-ui_interaction = NodePath("../uiinteraction")
+ui_interaction = NodePath("../uiinteraction2")
 ui_interaction_echap = NodePath("../ui_interaction_echap")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("52_ue88k")]
@@ -6139,11 +6139,22 @@ offset_right = 1639.0
 offset_bottom = 862.0
 
 [node name="uiinteraction" parent="." instance=ExtResource("52_3skdr")]
-visible = false
-offset_left = 1639.0
-offset_top = 862.0
-offset_right = 1639.0
-offset_bottom = 862.0
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="uiinteraction2" parent="." instance=ExtResource("52_3skdr")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="uiinteraction3" parent="." instance=ExtResource("52_3skdr")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
 
 [node name="InteractionCarton" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction_prendre", "carton_pickable", "dialogue")]
 script = ExtResource("56_3obux")

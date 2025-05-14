@@ -12,6 +12,7 @@ var player_enter_objet := false
 func _process(delta):
 	# Affichage de l'UI d'interaction "E"
 	if player_enter_objet and not camera_switched:
+		print("afficher")
 		ui_interaction.visible = true
 	else:
 		ui_interaction.visible = false

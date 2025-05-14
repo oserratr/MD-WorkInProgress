@@ -13,6 +13,7 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(1678, 848)
 texture = ExtResource("1_u3qmj")
 
 [node name="Label" type="Label" parent="Sprite2D"]

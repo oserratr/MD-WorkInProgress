@@ -6,8 +6,16 @@ var interaction_with_carton = false
 var interaction_without_carton = false
 
 @export var interaction_carton = Node3D
+@export var ui_interaction_mere = Control
 
 func _process(delta):
+	# Affichage de l'UI d'interaction "E"
+	if player_in_area:
+		print("afficher")
+		ui_interaction_mere.visible = true
+	else:
+		ui_interaction_mere.visible = false
+		
 	_state_dialogue()
 
 func _input(event):
