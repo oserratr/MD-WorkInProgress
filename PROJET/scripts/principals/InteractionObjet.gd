@@ -77,3 +77,12 @@ func _on_tableau_2_body_entered(body):
 func _on_tableau_2_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_objet = false
+
+
+func _on_tableau_3_body_entered(body):
+	if body.is_in_group("player"):
+		player_enter_objet = true
+
+func _on_tableau_3_body_exited(body):
+	if body.is_in_group("player"):
+		player_enter_objet = false

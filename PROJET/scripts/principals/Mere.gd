@@ -5,16 +5,19 @@ var first_interaction = true
 var interaction_with_carton = false
 var interaction_without_carton = false
 
+@export var interaction_carton = Node3D
+
 func _input(event):
 	if player_in_area and event.is_action_pressed("e"):
 		if first_interaction:
 			_timeline_album_photo()
 			first_interaction = false
 		elif interaction_with_carton :
+			print("start")
 			_timeline_photo_carton()
-		elif interaction_without_carton:
+		elif interaction_without_carton and not first_interaction:
 			_timeline_photo_no_carton()
-			
+			print("start")
 
 func _on_mother_dialogue_body_entered(body):
 	print("Test : body entered")
@@ -37,3 +40,6 @@ func _timeline_photo_carton():
 	
 func _timeline_photo_no_carton():
 	Dialogic.start_timeline("AlbumPhotoPasCarton")
+	
+func get_bool_interaction() -> bool:
+	return first_interaction
