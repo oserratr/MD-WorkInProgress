@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://be2a2s1lfm655"
-path="res://.godot/imported/animation.glb-028bd691ff7336237aa9afb44d1cee71.scn"
+uid="uid://bhh2ohmmnpjjw"
+path="res://.godot/imported/murcutscne.glb-c8a82cb8e8315e2dccfcda8f5c9fd36f.scn"
 
 [deps]
 
-source_file="res://assets/3D/cutscene/animation.glb"
-dest_files=["res://.godot/imported/animation.glb-028bd691ff7336237aa9afb44d1cee71.scn"]
+source_file="res://assets/3D/cutscene/Mur/murcutscne.glb"
+dest_files=["res://.godot/imported/murcutscne.glb-c8a82cb8e8315e2dccfcda8f5c9fd36f.scn"]
 
 [params]
 

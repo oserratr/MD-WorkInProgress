@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwpmet3hodko4"
-path.s3tc="res://.godot/imported/animation_skinfille.png-94dd285cb7713084c8d77a2f3354a1c1.s3tc.ctex"
+uid="uid://cmc1kg8ywla1v"
+path.s3tc="res://.godot/imported/animation_haire.png-97840939fc17d51e000e4fa9c3e33c88.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "6937c077818cf235741ed72a1c4f7351"
+"md5": "5b88b77c53b70f891a1a08a1edd70ab0"
 }
 
 [deps]
 
-source_file="res://assets/3D/cutscene/animation_skinfille.png"
-dest_files=["res://.godot/imported/animation_skinfille.png-94dd285cb7713084c8d77a2f3354a1c1.s3tc.ctex"]
+source_file="res://assets/3D/cutscene/perso/animation_haire.png"
+dest_files=["res://.godot/imported/animation_haire.png-97840939fc17d51e000e4fa9c3e33c88.s3tc.ctex"]
 
 [params]
 

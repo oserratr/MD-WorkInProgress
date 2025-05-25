@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2t62p1tj0pvm"
-path.s3tc="res://.godot/imported/animation_fillevisageskin.png-d84dd4fbb41c4dd031a57f6b751ac0af.s3tc.ctex"
+path.s3tc="res://.godot/imported/animation_fillevisageskin.png-d774899275a92df1c2dec0871cdaf78c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/3D/cutscene/animation_fillevisageskin.png"
-dest_files=["res://.godot/imported/animation_fillevisageskin.png-d84dd4fbb41c4dd031a57f6b751ac0af.s3tc.ctex"]
+source_file="res://assets/3D/cutscene/perso/animation_fillevisageskin.png"
+dest_files=["res://.godot/imported/animation_fillevisageskin.png-d774899275a92df1c2dec0871cdaf78c.s3tc.ctex"]
 
 [params]
 

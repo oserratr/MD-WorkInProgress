@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5mngokvfcwi"
-path.s3tc="res://.godot/imported/animation_04730040400-e2.png-ec62fa463f15e70e113457a4479f6b55.s3tc.ctex"
+uid="uid://b7noeheco6dgl"
+path.s3tc="res://.godot/imported/murcutscene_DefaultMaterial_BaseColor.png-88262201eba7a246babdebe6e0c3c3b1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "e94079df892539c5aa8ffabbba049fa5"
-}
 
 [deps]
 
-source_file="res://assets/3D/cutscene/animation_04730040400-e2.png"
-dest_files=["res://.godot/imported/animation_04730040400-e2.png-ec62fa463f15e70e113457a4479f6b55.s3tc.ctex"]
+source_file="res://assets/3D/cutscene/Mur/murcutscene_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/murcutscene_DefaultMaterial_BaseColor.png-88262201eba7a246babdebe6e0c3c3b1.s3tc.ctex"]
 
 [params]
 

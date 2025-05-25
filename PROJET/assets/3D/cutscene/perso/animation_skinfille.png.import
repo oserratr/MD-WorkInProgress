@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c63iekno0ldgx"
-path.s3tc="res://.godot/imported/animation_teeshirtfill.png-57611777af89f2de16bea3b46cb4956c.s3tc.ctex"
+uid="uid://cwpmet3hodko4"
+path.s3tc="res://.godot/imported/animation_skinfille.png-d53998167beb97423136e3bd7f457238.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "907094f0eb7f74b73fbc0ec86d7ae7b6"
+"md5": "6937c077818cf235741ed72a1c4f7351"
 }
 
 [deps]
 
-source_file="res://assets/3D/cutscene/animation_teeshirtfill.png"
-dest_files=["res://.godot/imported/animation_teeshirtfill.png-57611777af89f2de16bea3b46cb4956c.s3tc.ctex"]
+source_file="res://assets/3D/cutscene/perso/animation_skinfille.png"
+dest_files=["res://.godot/imported/animation_skinfille.png-d53998167beb97423136e3bd7f457238.s3tc.ctex"]
 
 [params]
 
