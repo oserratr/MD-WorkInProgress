@@ -1,4 +1,4 @@
-[gd_scene load_steps=277 format=3 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=278 format=3 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="1_53tlp"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://dfn8rbbwoeivh" path="res://assets/3D/Objets/talisman/textures/talisman_assetstalisman_DefaultMaterial_BaseColor.png" id="36_4ny2o"]
 [ext_resource type="Texture2D" uid="uid://ca1fm7chijydr" path="res://assets/3D/FilleTransform/Texture/2animFille2_pantfille.png" id="36_6nrdc"]
 [ext_resource type="Texture2D" uid="uid://pc1j14wh6iwf" path="res://assets/3D/Objets/talisman/textures/talisman_ballbracelet_DefaultMaterial_BaseColor.png" id="37_1ixj4"]
+[ext_resource type="Texture2D" uid="uid://dbsyr2wnbxvb8" path="res://assets/3D/cutscene/test2anim/assoiranimation_skinfille.png" id="47_4xjqs"]
 [ext_resource type="Script" path="res://scripts/principals/SwitchVuesporte.gd" id="48_7taqw"]
 [ext_resource type="Script" path="res://scripts/principals/SwitchVues.gd" id="48_tex5s"]
 [ext_resource type="Script" path="res://scripts/principals/InteractionObjet.gd" id="51_vofnk"]
@@ -3512,7 +3513,7 @@ shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("35_r4cu7")
+shader_parameter/albedo = ExtResource("47_4xjqs")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs36k"]
 resource_name = "pantmere.004"
