@@ -10011,7 +10011,7 @@ bones/49/rotation = Quaternion(2.51457e-08, -3.22663e-06, 1.95578e-08, 1)
 bones/49/scale = Vector3(1, 1, 1)
 
 [node name="HairMere_002" type="BoneAttachment3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
-transform = Transform3D(0.990415, -0.126839, -0.0547489, 0.0746124, 0.157574, 0.984687, -0.116269, -0.97933, 0.165527, -7.93878, -0.839527, -3.23997)
+transform = Transform3D(0.990411, -0.126839, -0.0547487, 0.0746122, 0.157575, 0.984684, -0.116269, -0.979327, 0.165528, -7.93877, -0.839525, -3.23997)
 bone_name = "HairMere.002"
 bone_idx = 7
 
