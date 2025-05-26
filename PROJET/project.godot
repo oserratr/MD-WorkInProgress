@@ -59,7 +59,7 @@ mouse_cursor/custom_image="res://assets/2D/Ui autre/Frame 1.png"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/ocean/Documents/MD-WorkInProgress/PROJET/movie/Anim3/test.png"
+movie_writer/movie_file="C:/Users/ocean/Documents/MD-WorkInProgress/PROJET/movie/Anim5/test.png"
 movie_writer/fps=30
 
 [editor_plugins]
