@@ -10,8 +10,8 @@ var player_enter_area1 := false
 var player_enter_area2 := false
 var player_enter_objet := false
 
-func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+#func _ready():
+	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _process(delta):
 	# Activer la caméra secondaire si elle est définie et pas encore active
