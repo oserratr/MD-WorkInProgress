@@ -218,6 +218,7 @@ _data = {
 script = ExtResource("1_ifsho")
 
 [node name="BackgroundLayer" parent="." instance=ExtResource("2_d65gt")]
+visible = false
 apply_overrides_on_ready = true
 
 [node name="VN_TextboxLayer" type="Control" parent="."]
@@ -251,6 +252,7 @@ name_label_box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_V
 name_label_box_use_global_color = false
 name_label_box_modulate = Color(0, 0, 0, 0)
 name_label_box_offset = Vector2(0, -3)
+next_indicator_enabled = false
 next_indicator_texture = "res://assets/2D/ui dialogic/OwnStyle/controller button 30.png"
 next_indicator_size = Vector2(85, 85)
 autoadvance_progressbar = false
@@ -346,6 +348,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 script = ExtResource("8_bsx7f")
+enabled = false
 show_on_questions = true
 texture = ExtResource("11_l7eyu")
 metadata/_edit_layout_mode = 1
