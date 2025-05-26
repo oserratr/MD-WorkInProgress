@@ -57,6 +57,11 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 mouse_cursor/custom_image="res://assets/2D/Ui autre/Frame 1.png"
 
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="C:/Users/ocean/Documents/MD-WorkInProgress/PROJET/movie/1.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
