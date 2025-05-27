@@ -6483,7 +6483,7 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="TransitionCamera" groups=["Camera"]]
-transform = Transform3D(-0.866025, -0.25, 0.433013, -5.66162e-08, 0.866025, 0.5, -0.5, 0.433013, -0.75, 2.52789, 2.91547, -2.87813)
+transform = Transform3D(-0.866023, -0.250002, 0.433016, -5.66162e-08, 0.866025, 0.5, -0.500003, 0.433012, -0.749998, 2.52789, 2.91547, -2.87813)
 current = true
 
 [connection signal="body_entered" from="Level Design/Interactifs/Tableau3" to="InteractionObjet" method="_on_tableau_3_body_entered"]
