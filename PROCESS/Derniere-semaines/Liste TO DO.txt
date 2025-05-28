@@ -22,6 +22,7 @@ Liste TO DO
 		-> Bug camera deplacement perso
 		-> Bloquer deplacement pdt dialogique
 		-> Animation porte + ui
+		-> Recalculer nav mesh
 
 	-> Terminer le salon
 	-> Commencer chambre
