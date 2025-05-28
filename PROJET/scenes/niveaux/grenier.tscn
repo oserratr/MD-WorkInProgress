@@ -1035,7 +1035,6 @@ shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("9_4nebx")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1mjqo"]
-load_path = "res://.godot/imported/drap-grenier_assetsgrenierbeforsubstance_02_BaseColor.png-4789f8e6997f74e9265ef380ed4e47c2.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ceag6"]
 resource_name = "02.001"
@@ -5627,11 +5626,12 @@ transform = Transform3D(-0.866025, -0.25, 0.433013, -5.66162e-08, 0.866025, 0.5,
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin1" groups=["Camera"]]
 
-[node name="Mere" type="Node3D" parent="." node_paths=PackedStringArray("interaction_carton", "ui_interaction_mere")]
+[node name="Mere" type="Node3D" parent="." node_paths=PackedStringArray("interaction_carton", "ui_interaction_mere", "player")]
 transform = Transform3D(0.38659, 0, -0.136557, 0, 0.41, 0, 0.136557, 0, 0.38659, -2.07118, 0.178835, 1.57525)
 script = ExtResource("19_ecxhu")
 interaction_carton = NodePath("../InteractionCarton")
 ui_interaction_mere = NodePath("../uiinteraction3")
+player = NodePath("../Player")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Mere"]
 
