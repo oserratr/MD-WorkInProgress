@@ -20,17 +20,17 @@ Liste TO DO
 		-> Draps qui recouvrent les chaises (changer texture) OK
 		-> Enlever tableaux OK
 		-> Bloquer deplacement pdt dialogique OK
-		-> Animation porte + ui
-		-> Recalculer nav mesh
-		-> Regler PB texture glitch
-		-> Bug camera deplacement perso
+		-> Animation porte + ui OK
+		-> Regler PB texture glitch perso
+		-> Changement area Tableaux inspection OK
+		-> Remettre propre niveau hierarchie OK
 
 	-> Terminer le salon
 	-> Commencer chambre
 	-> Modélisation Cousin
 	-> Lettre Modélisation (autre langue)
 
-	-> Back to grenier
+	-> Salon Back to grenier
 
 * Pour demain
 
@@ -43,8 +43,13 @@ Liste TO DO
 	-> Réfléchir structure présentation
 	-> Son
 	-> Build V2
+	-> Bug camera deplacement perso
+
 
 
 * Questionnements 
 	-> Question sur device pour l'expo ?
 	-> Voir pour structure prez + demander pour faire passage visio
+
+* Issues
+		-> Recalculer nav mesh ??? comment faire pour obstacles

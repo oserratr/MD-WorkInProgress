@@ -1,7 +1,7 @@
 extends Area3D
 
 @export var target_camera: Camera3D
-@onready var controller = $"../../../InteractionObjet"
+@onready var controller = $"../../../../InteractionObjet"
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_area_3d_body_entered"))
