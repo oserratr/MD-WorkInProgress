@@ -19,7 +19,7 @@ Liste TO DO
 		-> Porte ouverte OK
 		-> Draps qui recouvrent les chaises (changer texture) OK
 		-> Enlever tableaux OK
-		-> Bloquer deplacement pdt dialogique
+		-> Bloquer deplacement pdt dialogique OK
 		-> Animation porte + ui
 		-> Recalculer nav mesh
 		-> Regler PB texture glitch
