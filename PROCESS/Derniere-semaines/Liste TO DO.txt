@@ -10,27 +10,37 @@ Liste TO DO
 	-> Finir UI
 	-> Tweak Album photo dialogic
 	-> Gameplay Traduction
+	-> Test motif reminisence
 
 * AJD
 
 	-> UI Choix
 	-> Niveau grenier + collider sur objets
-		-> Porte ouverte 
-		-> Draps qui recouvrent les chaises
-		-> Enlever tableaux
+		-> Porte ouverte OK
+		-> Draps qui recouvrent les chaises (changer texture) OK
+		-> Enlever tableaux OK
+		-> Bug camera deplacement perso
+		-> Bloquer deplacement pdt dialogique
+		-> Animation porte + ui
+
 	-> Terminer le salon
 	-> Commencer chambre
 	-> Modélisation Cousin
 	-> Lettre Modélisation (autre langue)
 
-Pour demain
+	-> Back to grenier
+
+* Pour demain
 
 	-> Tweak Album photo dialogic
 	-> Gameplay Traduction
  	-> Terminer structure de la slice (mot traduire comment + quel assets)
+	-> Ajout asset level design culture grenier + salon + chambre
 
-
-
+* Pour vendredi
+	-> Réfléchir structure présentation
+	-> Son
+	-> Build V2
 
 
 * Questionnements 
