@@ -218,7 +218,6 @@ _data = {
 script = ExtResource("1_ifsho")
 
 [node name="BackgroundLayer" parent="." instance=ExtResource("2_d65gt")]
-visible = false
 apply_overrides_on_ready = true
 
 [node name="VN_TextboxLayer" type="Control" parent="."]
