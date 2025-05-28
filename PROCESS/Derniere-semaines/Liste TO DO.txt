@@ -15,13 +15,12 @@ Liste TO DO
 * AJD
 
 	-> UI Choix
-	-> Niveau grenier + collider sur objets
+	-> Niveau grenier + collider sur objets OK
 		-> Porte ouverte OK
 		-> Draps qui recouvrent les chaises (changer texture) OK
 		-> Enlever tableaux OK
 		-> Bloquer deplacement pdt dialogique OK
 		-> Animation porte + ui OK
-		-> Regler PB texture glitch perso
 		-> Changement area Tableaux inspection OK
 		-> Remettre propre niveau hierarchie OK
 
@@ -53,3 +52,4 @@ Liste TO DO
 
 * Issues
 		-> Recalculer nav mesh ??? comment faire pour obstacles
+		-> Regler PB texture glitch perso
