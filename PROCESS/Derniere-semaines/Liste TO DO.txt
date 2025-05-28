@@ -1,0 +1,38 @@
+Liste TO DO
+
+* A faire
+
+	-> Terminer structure de la slice (mot traduire comment + quel assets)
+	-> Modifier niveau grenier
+	-> Faire chambre + Salon
+	-> Animatiques (a modifier)
+	-> Sound design 
+	-> Finir UI
+	-> Tweak Album photo dialogic
+	-> Gameplay Traduction
+
+* AJD
+
+	-> UI Choix
+	-> Niveau grenier + collider sur objets
+		-> Porte ouverte 
+		-> Draps qui recouvrent les chaises
+		-> Enlever tableaux
+	-> Terminer le salon
+	-> Commencer chambre
+	-> Modélisation Cousin
+	-> Lettre Modélisation (autre langue)
+
+Pour demain
+
+	-> Tweak Album photo dialogic
+	-> Gameplay Traduction
+ 	-> Terminer structure de la slice (mot traduire comment + quel assets)
+
+
+
+
+
+* Questionnements 
+	-> Question sur device pour l'expo ?
+	-> Voir pour structure prez + demander pour faire passage visio
