@@ -6505,11 +6505,12 @@ target_camera = NodePath("../CameraOrigin2/Camera3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0129395, 0, -2.91719)
 shape = SubResource("BoxShape3D_q7ulk")
 
-[node name="InteractionObjet" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap")]
+[node name="InteractionObjet" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player")]
 script = ExtResource("51_vofnk")
 player_camera = NodePath("../CameraOrigin1/Camera3D")
 ui_interaction = NodePath("../uiinteraction2")
 ui_interaction_echap = NodePath("../ui_interaction_echap")
+player = NodePath("../Player")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("52_ue88k")]
 offset_left = 1639.0

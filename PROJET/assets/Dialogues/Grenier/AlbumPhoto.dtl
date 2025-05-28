@@ -2,9 +2,10 @@
 Mère: Regarde ce que j'ai trouvé
 Fille: Qu'est-ce que c'est ?
 Mère: C’est l’album de ta grand-mère…
-Mère: Toutes ces photos, c’était du temps où ton grand-père était encore là
 [background arg="res://assets/2D/Album/albumphotodialogicintegration.png" fade="0.0"]
+Mère: Regarde cette photo, c’était du temps où ton grand-père était encore là
 Fille: Ils avaient l’air heureux sur ces photos !
+[background fade="0.0"]
 Mère: C’est bizarre de trier ses affaires comme ça. J’ai encore du mal à réaliser qu’elle est partie…
 Fille: On peut faire une pause si tu veux
 Mère: Il ne reste qu'un dernier carton. Tu peux le descendre au salon avec les autres, s’il te plaît ?
