@@ -33,7 +33,6 @@ Liste TO DO
 
 * Pour demain
 
-	-> Tweak Album photo dialogic
 	-> Gameplay Traduction
  	-> Terminer structure de la slice (mot traduire comment + quel assets)
 	-> Ajout asset level design culture grenier + salon + chambre
