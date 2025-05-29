@@ -3,18 +3,19 @@ Liste TO DO
 * A faire
 
 	-> Terminer structure de la slice (mot traduire comment + quel assets)
-	-> Modifier niveau grenier
+	-> Modifier niveau grenier OK -> A pofiner
 	-> Faire chambre + Salon
-	-> Animatiques (a modifier)
+	-> Animatiques OK -> A pofiner
 	-> Sound design 
 	-> Finir UI
-	-> Tweak Album photo dialogic
+	-> Tweak Album photo dialogic OK -> A pofiner
 	-> Gameplay Traduction
 	-> Test motif reminisence
+	-> Navigation entre différentes pieces 
 
 * AJD
 
-	-> UI Choix
+	-> UI Choix EN COURS
 	-> Niveau grenier + collider sur objets OK
 		-> Porte ouverte OK
 		-> Draps qui recouvrent les chaises (changer texture) OK
@@ -29,7 +30,6 @@ Liste TO DO
 	-> Modélisation Cousin OK
 	-> Lettre Modélisation (autre langue)
 
-	-> Salon Back to grenier
 
 * Pour demain
 
@@ -39,13 +39,13 @@ Liste TO DO
 	-> Ajout asset level design culture grenier + salon + chambre
 
 * Pour vendredi
+
 	-> Réfléchir structure présentation
+	-> Test motif reminisence
 	-> Son
 	-> Build V2
 	-> Bug camera deplacement perso
 	-> Rig et animation Cousin
-
-
 
 * Questionnements 
 	-> Question sur device pour l'expo ?
