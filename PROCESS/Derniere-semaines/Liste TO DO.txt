@@ -7,7 +7,7 @@ Liste TO DO
 	-> Faire chambre + Salon
 	-> Animatiques OK -> A pofiner
 	-> Sound design 
-	-> Finir UI
+	-> Finir UI OK POUR DIALOGUE -> A pofiner
 	-> Tweak Album photo dialogic OK -> A pofiner
 	-> Gameplay Traduction
 	-> Test motif reminisence
@@ -15,7 +15,7 @@ Liste TO DO
 
 * AJD
 
-	-> UI Choix EN COURS
+	-> UI Choix EN OK https://www.gameuidatabase.com/index.php?&set=1&scrn=5&autoload=4983&scroll=100
 	-> Niveau grenier + collider sur objets OK
 		-> Porte ouverte OK
 		-> Draps qui recouvrent les chaises (changer texture) OK
@@ -25,10 +25,7 @@ Liste TO DO
 		-> Changement area Tableaux inspection OK
 		-> Remettre propre niveau hierarchie OK
 
-	-> Terminer le salon
-	-> Commencer chambre
 	-> Modélisation Cousin OK
-	-> Lettre Modélisation (autre langue)
 
 
 * Pour demain
@@ -36,6 +33,9 @@ Liste TO DO
 	-> Gameplay Traduction
  	-> Terminer structure de la slice (mot traduire comment + quel assets)
 	-> Ajout asset level design culture grenier + salon + chambre
+	-> Lettre Modélisation (autre langue)
+	-> Terminer le salon
+	-> Commencer chambre
 
 * Pour vendredi
 

@@ -15,7 +15,7 @@ func _process(delta):
 	# - le joueur est dans la zone du carton ET peut le prendre
 	# - OU dans la zone de la porte ET peut changer de scène
 	if (player_enter_objet and not carton_pris and not interaction_mother) \
-		or (player_enter_salon and not interaction_mother):
+		or (player_enter_salon and not interaction_mother and carton_pris):
 		ui_interaction_prendre.visible = true
 	else:
 		ui_interaction_prendre.visible = false
@@ -33,7 +33,7 @@ func _interaction_carton():
 
 func _switch_salon():
 	var interaction_mother = dialogue.get_bool_interaction()
-	if player_enter_salon and Input.is_action_just_pressed("e"):
+	if player_enter_salon and Input.is_action_just_pressed("e") and carton_pris:
 		if not interaction_mother:
 			get_tree().change_scene_to_file("res://scenes/niveaux/salon.tscn")
 

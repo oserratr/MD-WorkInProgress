@@ -4,6 +4,7 @@ var player_in_area = false
 var first_interaction = true
 var interaction_with_carton = false
 var interaction_without_carton = false
+var timeline_active = false  # <-- Nouvelle variable
 
 @export var interaction_carton: Node3D
 @export var ui_interaction_mere: Control
@@ -15,11 +16,12 @@ func _ready():
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 
 func _process(delta):
-	ui_interaction_mere.visible = player_in_area
+	# Ne montre l'UI que si le joueur est dans la zone ET qu'aucune timeline n'est en cours
+	ui_interaction_mere.visible = player_in_area and not timeline_active
 	_state_dialogue()
 
 func _input(event):
-	if player_in_area and event.is_action_pressed("e"):
+	if player_in_area and event.is_action_pressed("e") and not timeline_active:
 		if first_interaction:
 			_timeline_album_photo()
 			first_interaction = false
@@ -49,20 +51,24 @@ func _on_mother_dialogue_body_exited(body):
 
 # Timelines avec blocage du joueur
 func _timeline_album_photo():
+	timeline_active = true
 	player.lock_movement(true)
 	Dialogic.start_timeline("AlbumPhoto")
 
 func _timeline_photo_carton():
+	timeline_active = true
 	player.lock_movement(true)
 	Dialogic.start_timeline("AlbumPhotoCarton")
 
 func _timeline_photo_no_carton():
+	timeline_active = true
 	player.lock_movement(true)
 	Dialogic.start_timeline("AlbumPhotoPasCarton")
 
 # Déblocage du mouvement à la fin du dialogue
 func _on_dialogic_timeline_ended():
 	print("Timeline terminée")
+	timeline_active = false
 	player.lock_movement(false)
 
 func get_bool_interaction() -> bool:
