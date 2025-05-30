@@ -24,7 +24,6 @@ Liste TO DO
 		-> Animation porte + ui OK
 		-> Changement area Tableaux inspection OK
 		-> Remettre propre niveau hierarchie OK
-
 	-> Modélisation Cousin OK
 
 
@@ -33,23 +32,29 @@ Liste TO DO
 	-> Gameplay Traduction
  	-> Terminer structure de la slice (mot traduire comment + quel assets)
 	-> Ajout asset level design culture grenier + salon + chambre
+
 	-> Lettre Modélisation (autre langue)
-	-> Terminer le salon
+
+	-> Terminer le salon EN COURS (a finir texture + integration godot)
 	-> Commencer chambre
 
-* Pour vendredi
+
+* Pour vendredi grenier_sol test_DefaultMaterial_BaseColor.png
 
 	-> Réfléchir structure présentation
 	-> Test motif reminisence
 	-> Son
 	-> Build V2
-	-> Bug camera deplacement perso
 	-> Rig et animation Cousin
+	-> Envoyer screen jeu pablo
 
 * Questionnements 
 	-> Question sur device pour l'expo ?
 	-> Voir pour structure prez + demander pour faire passage visio
+	-> Couloirs ?
 
 * Issues
 		-> Recalculer nav mesh ??? comment faire pour obstacles
-		-> Regler PB texture glitch perso
+		-> Regler PB texture glitch perso		
+		-> Bug camera deplacement perso
+

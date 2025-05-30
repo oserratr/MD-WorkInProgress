@@ -1,4 +1,4 @@
-[gd_scene load_steps=271 format=3 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=273 format=3 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="1_53tlp"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
@@ -33,6 +33,7 @@
 [ext_resource type="Script" path="res://scripts/principals/AnimationManager.gd" id="21_ghmyv"]
 [ext_resource type="Script" path="res://scripts/principals/SwitchObjet.gd" id="22_bss2u"]
 [ext_resource type="Texture2D" uid="uid://bygs8aoa3tinl" path="res://assets/3D/Grenier/Textures/mur-du-grenier_murs_Wallpaper_BaseColor.png" id="23_r3quy"]
+[ext_resource type="Texture2D" uid="uid://bq1rgbpiurwhm" path="res://assets/2D/Album/sol test_DefaultMaterial_BaseColor.png" id="24_vg5ny"]
 [ext_resource type="Texture2D" uid="uid://uvd8kq5b3i5q" path="res://assets/3D/mur/assets2_Wallpaper.004_BaseColor.png" id="25_fkrfj"]
 [ext_resource type="Script" path="res://scripts/principals/Player.gd" id="27_7776d"]
 [ext_resource type="Texture2D" uid="uid://dhtqjk8yts3dv" path="res://assets/3D/Fille/Texture/2animFille_haire.png" id="27_vip32"]
@@ -1712,6 +1713,15 @@ size = Vector3(8.01297, 3.66547, 0.233032)
 [sub_resource type="NavigationMesh" id="NavigationMesh_7vdxp"]
 vertices = PackedVector3Array(-4.11903, 0.582326, -4.11903, -4.11903, 0.582326, 4.13097, 4.13097, 0.582326, 4.13097, 4.13097, 0.582326, -4.11903)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qfs2l"]
+render_priority = 0
+shader = ExtResource("2_lbtsu")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.0
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("24_vg5ny")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7hggn"]
 radius = 1.22964
@@ -5175,7 +5185,7 @@ navigation_mesh = SubResource("NavigationMesh_7vdxp")
 transform = Transform3D(4.61903, 0, 0, 0, -2.01904e-07, 0.167674, 0, -4.61903, -7.32928e-09, 0, 0, 0)
 mesh = SubResource("ArrayMesh_j6ut2")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("ShaderMaterial_sb8ku")
+surface_material_override/0 = SubResource("ShaderMaterial_qfs2l")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Level Design/Piece/NavigationRegion3D/sol"]
 transform = Transform3D(1, 0, 0, 0, 1, -1.11022e-16, 0, 0, 1, 0, 0, 0)
