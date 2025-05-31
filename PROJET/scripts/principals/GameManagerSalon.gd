@@ -10,6 +10,8 @@ var camera_switched := false
 # Variables pour détecter les interactions
 var player_enter_area := false
 var player_enter_talisman := false
+var player_enter_area_carton := false
+var player_enter_area_manger := false
 var mother := false
 func _ready():
 	carton_pose.visible = false
@@ -34,6 +36,15 @@ func _process(delta):
 	elif player_enter_talisman and camera_switched and Input.is_action_just_pressed("ui_cancel"):
 		_switch_to_player_camera()
 	
+	# Basculer vers la camera vue carton
+	if active_secondary_camera and not camera_switched:
+		print("Switching to secondary camera:", active_secondary_camera)
+		_switch_to_camera(active_secondary_camera)
+
+	# Retour à la caméra du joueur si aucune caméra secondaire n'est active
+	elif not player_enter_area_carton and not player_enter_area_manger and camera_switched:
+		print("Switching back to player camera")
+		_switch_to_player_camera()
 	
 	
 		
@@ -81,3 +92,21 @@ func _on_area_talisman_body_entered(body):
 func _on_area_talisman_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_talisman = false
+		
+func _on_vue_porte_grenier_body_entered(body):
+	if body.is_in_group("player"):
+		player_enter_area_carton = true
+
+func _on_vue_porte_grenier_body_exited(body):
+	if body.is_in_group("player"):
+		player_enter_area_carton = false
+
+
+func _on_vue_salle_manger_body_entered(body):
+	if body.is_in_group("player"):
+		player_enter_area_manger = true
+
+
+func _on_vue_salle_manger_body_exited(body):
+	if body.is_in_group("player"):
+		player_enter_area_manger = false

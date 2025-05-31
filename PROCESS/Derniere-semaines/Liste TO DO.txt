@@ -4,7 +4,8 @@ Liste TO DO
 
 	-> Terminer structure de la slice (mot traduire comment + quel assets)
 	-> Modifier niveau grenier OK -> A pofiner
-	-> Faire chambre + Salon
+	-> Faire chambre 
+	-> Faire Salon
 	-> Animatiques OK -> A pofiner
 	-> Sound design 
 	-> Finir UI OK POUR DIALOGUE -> A pofiner
@@ -36,6 +37,12 @@ Liste TO DO
 	-> Lettre Modélisation (autre langue)
 
 	-> Terminer le salon EN COURS (a finir texture + integration godot)
+		-> Changement des textures 
+		-> Vues + switch de vues
+		-> Animation poser carton + objet qui tombe
+		-> Back to grenier
+		-> Animation mère qui arrive 
+
 	-> Commencer chambre
 
 
@@ -47,14 +54,25 @@ Liste TO DO
 	-> Build V2
 	-> Rig et animation Cousin
 	-> Envoyer screen jeu pablo
+	-> Changement image du curseur de souris
 
 * Questionnements 
-	-> Question sur device pour l'expo ?
-	-> Voir pour structure prez + demander pour faire passage visio
-	-> Couloirs ?
+	-> Question sur device pour l'expo ? OK
+	-> Voir pour structure prez + demander pour faire passage visio OK Mardi 16h30 a l'ecole
+	-> Couloirs ? Facultatif
 
 * Issues
 		-> Recalculer nav mesh ??? comment faire pour obstacles
 		-> Regler PB texture glitch perso		
 		-> Bug camera deplacement perso
 
+
+* Retours
+		-> Phrase quand inspection objets, ce que ca lui inspire etc
+		-> Dope sheet + mode action editor
+
+
+* Autres 
+		-> finir technical rider pour lundi
+
+		

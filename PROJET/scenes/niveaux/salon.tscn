@@ -1,4 +1,4 @@
-[gd_scene load_steps=290 format=3 uid="uid://b6qjuf1vqxo7i"]
+[gd_scene load_steps=296 format=3 uid="uid://b6qjuf1vqxo7i"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_wog66"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lth6f"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/principals/Talisman.gd" id="9_jtcgw"]
 [ext_resource type="Texture2D" uid="uid://pc1j14wh6iwf" path="res://assets/3D/Objets/talisman/textures/talisman_ballbracelet_DefaultMaterial_BaseColor.png" id="9_p5qur"]
 [ext_resource type="Texture2D" uid="uid://bsdo3ja23xl7r" path="res://assets/3D/Grenier/Textures/grenier_papertexture.png" id="10_yl3qm"]
+[ext_resource type="Texture2D" uid="uid://bq1rgbpiurwhm" path="res://assets/2D/Album/sol test_DefaultMaterial_BaseColor.png" id="16_bm1bb"]
 [ext_resource type="Texture2D" uid="uid://duaf508ng6hd3" path="res://assets/3D/porte2/door_Wood027_2K_Color.jpg" id="17_vmqb5"]
 [ext_resource type="Script" path="res://scripts/principals/Player.gd" id="18_7bprh"]
 [ext_resource type="Texture2D" uid="uid://cum4ucprxgede" path="res://assets/3D/FilleTransform/Texture/2animFille2_haire.png" id="19_ur77b"]
@@ -20,8 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://bsriixetks6b2" path="res://assets/3D/SalonNewVersion/salon_Cardboad_60_A_baseColor_1.png" id="31_32065"]
 [ext_resource type="Texture2D" uid="uid://ch8bact2aehvo" path="res://assets/3D/SalonNewVersion/salon_sol test_DefaultMaterial_BaseColor.png" id="32_0ppmy"]
 [ext_resource type="Texture2D" uid="uid://dlohas30vvlp4" path="res://assets/3D/SalonNewVersion/salon_retro_room.png" id="33_k50cc"]
+[ext_resource type="Script" path="res://scripts/Salon/VuePorteGrenier.gd" id="34_m650i"]
 [ext_resource type="Texture2D" uid="uid://dp4qy66vglfdn" path="res://assets/3D/SalonNewVersion/salon_retro_floor2_D.png" id="34_rt34f"]
 [ext_resource type="Texture2D" uid="uid://vfto06gbtqr2" path="res://assets/3D/SalonNewVersion/salon_lampes.png" id="35_66mjw"]
+[ext_resource type="Script" path="res://scripts/Salon/VueSalleManger.gd" id="35_pvdcr"]
 [ext_resource type="Texture2D" uid="uid://dcyuxa7bj2cm7" path="res://assets/3D/SalonNewVersion/T.png" id="36_kx2di"]
 [ext_resource type="Texture2D" uid="uid://byu27f06jsub6" path="res://assets/3D/SalonNewVersion/salon_Chair_02.png" id="37_hy0aj"]
 [ext_resource type="Texture2D" uid="uid://14ffsp8si0jp" path="res://assets/3D/SalonNewVersion/salon_Chair_02_8.png" id="38_edhsx"]
@@ -359,6 +362,8 @@ shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("10_yl3qm")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hldua"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbnba"]
 resource_name = "DefaultMaterial.001"
@@ -1062,7 +1067,7 @@ polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mvjsp"]
 resource_name = "DefaultMaterial"
 cull_mode = 2
-albedo_texture = ExtResource("32_0ppmy")
+albedo_texture = ExtResource("16_bm1bb")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_kdo78"]
@@ -4454,6 +4459,12 @@ _data = {
 "walking": SubResource("Animation_unbht")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxwyc"]
+size = Vector3(3.04541, 1, 5.70229)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slfx0"]
+size = Vector3(4.5719, 1, 6.29214)
+
 [node name="Salon" type="Node3D"]
 
 [node name="Lights" type="Node3D" parent="."]
@@ -4471,10 +4482,10 @@ carton_pose = NodePath("../LevelDesign/Interactif/Carton")
 talisman = NodePath("../LevelDesign/Interactif/AreaTalisman/Talisman")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(-0.866025, 0.25, -0.433013, 1.29048e-08, 0.866025, 0.5, 0.5, 0.433013, -0.75, -3.27024, 2.74188, -2.60196)
+transform = Transform3D(-0.761775, 0.323921, -0.561047, 4.07107e-08, 0.866025, 0.5, 0.647841, 0.380888, -0.659717, 2.24916, 2.43285, -2.60196)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
-transform = Transform3D(1, 9.68575e-08, 5.96046e-08, -1.78814e-07, 0.965926, -0.258819, 0, 0.258819, 0.965926, -0.803211, 0.696146, -3.0553)
+transform = Transform3D(0.314357, 0.245699, -0.916959, -0.474653, 0.877197, 0.0723217, 0.822122, 0.412502, 0.392374, 0.0971515, -0.345612, -0.390013)
 current = true
 
 [node name="LevelDesign" type="Node3D" parent="."]
@@ -4493,10 +4504,16 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_tolai")
 
 [node name="papier_006" type="MeshInstance3D" parent="LevelDesign/Interactif/Carton"]
-transform = Transform3D(0.00391665, 0.00882734, -0.0669404, -0.0138382, 0.0501108, 0.00904911, 0.0430935, 0.0152894, 0.00898973, 0.0245185, 0.549235, 0.0693818)
+transform = Transform3D(0.00391665, 0.00882734, -0.0669404, -0.0138382, 0.0501108, 0.00904911, 0.0430935, 0.0152894, 0.00898973, 0.0245183, 0.461251, 0.0693818)
 mesh = SubResource("ArrayMesh_ig6qg")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_s5x67")
+
+[node name="CartonArea" type="Area3D" parent="LevelDesign/Interactif/Carton"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/Carton/CartonArea"]
+transform = Transform3D(0.863589, 0, 0.504196, 0, 1, 0, -0.504196, 0, 0.863589, 0, 0.284926, 0)
+shape = SubResource("BoxShape3D_hldua")
 
 [node name="AreaTalisman" type="Area3D" parent="LevelDesign/Interactif"]
 transform = Transform3D(0.95532, 0, 0.295575, 0, 1, 0, -0.295575, 0, 0.95532, 0.947798, 0, -2.04072)
@@ -4545,7 +4562,7 @@ shape = SubResource("BoxShape3D_q3ije")
 transform = Transform3D(1.20482, 0, 0, 0, 1.20482, 0, 0, 0, 1.20482, 0, 0, 0)
 
 [node name="Porte" type="Node3D" parent="LevelDesign/Portes"]
-transform = Transform3D(-2.95052e-08, 0, 0.675, 0, 0.675, 0, -0.675, 0, -2.95052e-08, -4.6182, -0.472587, 1.43567)
+transform = Transform3D(-2.95052e-08, 0, 0.675, 0, 0.675, 0, -0.675, 0, -2.95052e-08, -4.6182, -0.483864, 1.43567)
 
 [node name="Cube_002" type="MeshInstance3D" parent="LevelDesign/Portes/Porte"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.16506, 2.89254, 0.127213)
@@ -4717,8 +4734,7 @@ shape = SubResource("BoxShape3D_p3gua")
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
-transform = Transform3D(12.756, 0, 0, 0, 1.03204, 0, 0, 0, 23.9827, -0.402873, 4.62397, 5.56252)
-visible = false
+transform = Transform3D(12.756, 0, 0, 0, 1.03204, 0, 0, 0, 23.9827, -0.402873, 3.95481, 5.56252)
 mesh = SubResource("BoxMesh_x3u8v")
 surface_material_override/0 = SubResource("ShaderMaterial_85tpm")
 
@@ -4925,7 +4941,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.644806, 0.0401611)
 shape = SubResource("BoxShape3D_j2n8s")
 
 [node name="end_table_001" type="MeshInstance3D" parent="LevelDesign/NonInteractif/Meubles/Salon"]
-transform = Transform3D(0.998413, 0, 0.056319, 0, 1, 0, -0.056319, 0, 0.998413, -1.15907, 0, 0.27287)
+transform = Transform3D(0.995828, 0, -0.0912488, 0, 1, 0, 0.0912488, 0, 0.995828, -1.42929, 0, 0.277011)
 mesh = SubResource("ArrayMesh_5df4g")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_7mbmc")
@@ -4973,7 +4989,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.648206, 0.512442)
 shape = SubResource("BoxShape3D_ts5io")
 
 [node name="sofa_chair_001" type="MeshInstance3D" parent="LevelDesign/NonInteractif/Meubles/Salon"]
-transform = Transform3D(-0.981554, 0, 0.191187, 0, 1, 0, -0.191187, 0, -0.981554, -2.93955, 0, 0.160321)
+transform = Transform3D(-0.942723, 0, 0.333578, 0, 1, 0, -0.333578, 0, -0.942723, -3.17382, 0, -0.0963772)
 mesh = SubResource("ArrayMesh_tsng0")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_7a28l")
@@ -4985,7 +5001,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0125122, 0.602847, -0.0752
 shape = SubResource("BoxShape3D_36l3a")
 
 [node name="sofa_chair_002" type="MeshInstance3D" parent="LevelDesign/NonInteractif/Meubles/Salon"]
-transform = Transform3D(-0.700074, 0, -0.714071, 0, 1, 0, 0.714071, 0, -0.700074, 0.491316, 0, -0.232006)
+transform = Transform3D(-0.797552, 0, -0.603251, 0, 1, 0, 0.603251, 0, -0.797552, 0.277429, 0, 0.020551)
 mesh = SubResource("ArrayMesh_ym6dc")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_cpri6")
@@ -5081,7 +5097,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_3ik11")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
-transform = Transform3D(0.815269, 0, -0.579082, 0, 1, 0, 0.579082, 0, 0.815269, -0.609141, 0.476087, 2.08404)
+transform = Transform3D(-0.0938652, 0, -0.995585, 0, 1, 0, 0.995585, 0, -0.0938652, -3.51312, 0.476087, 1.47887)
 script = ExtResource("18_7bprh")
 navigation_agent = NodePath("NavigationAgent3D")
 animation_player = NodePath("Fille/AnimationFille/AnimationPlayer")
@@ -5494,5 +5510,47 @@ libraries = {
 "": SubResource("AnimationLibrary_cyp6r")
 }
 
+[node name="CameraOrigin2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11456, 1.32561, 2.16482)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin2"]
+transform = Transform3D(0.989175, -0.0372586, 0.14193, -1.93885e-09, 0.967228, 0.25391, -0.146739, -0.251161, 0.956757, 0, 0.549708, 0.754987)
+
+[node name="Vues" type="Node3D" parent="."]
+
+[node name="VuePorteGrenier" type="Area3D" parent="Vues" node_paths=PackedStringArray("target_camera")]
+script = ExtResource("34_m650i")
+target_camera = NodePath("../../CameraOrigin2/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vues/VuePorteGrenier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2721, 0, -1.22113)
+shape = SubResource("BoxShape3D_sxwyc")
+
+[node name="VueSalleManger" type="Area3D" parent="Vues" node_paths=PackedStringArray("target_camera")]
+script = ExtResource("35_pvdcr")
+target_camera = NodePath("../../CameraOrigin3/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vues/VueSalleManger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52911, 0, 6.38376)
+shape = SubResource("BoxShape3D_slfx0")
+
+[node name="CameraOrigin3" type="Node3D" parent="."]
+transform = Transform3D(0.74572, 0.33313, -0.576998, 1.39062e-07, 0.866025, 0.5, 0.666259, -0.37286, 0.645813, 0.594693, 2.74188, 0.11531)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin3"]
+transform = Transform3D(-0.448977, 0.231267, -0.863097, -0.446772, 0.778414, 0.440984, 0.773831, 0.583599, -0.246166, -0.121744, -0.429805, -0.244174)
+
+[node name="CameraOrigin4" type="Node3D" parent="."]
+transform = Transform3D(0.866026, 0.129983, -0.482809, 0, 0.965618, 0.259965, 0.5, -0.225136, 0.83625, -0.289716, 2.685, 8.21639)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Interactif/AreaTalisman" to="GameManager" method="_on_area_talisman_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/AreaTalisman" to="GameManager" method="_on_area_talisman_body_exited"]
+[connection signal="body_entered" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_entered"]
+[connection signal="body_exited" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_exited"]
+[connection signal="body_entered" from="Vues/VueSalleManger" to="GameManager" method="_on_vue_salle_manger_body_entered"]
+[connection signal="body_exited" from="Vues/VueSalleManger" to="GameManager" method="_on_vue_salle_manger_body_exited"]
