@@ -5099,7 +5099,6 @@ shape = SubResource("BoxShape3D_5gn7w")
 [node name="Murs" type="Node3D" parent="Level Design/Piece"]
 
 [node name="Plafond" type="Node3D" parent="Level Design/Piece/Murs"]
-visible = false
 
 [node name="Plafond2" type="MeshInstance3D" parent="Level Design/Piece/Murs/Plafond"]
 transform = Transform3D(-1.99034, -7.8939e-07, 0.0722352, 0.946447, -1.08193e-06, 0.151908, -1.66859e-07, 3.27923, 6.75085e-08, 1.42132, 3.74697, 0)
