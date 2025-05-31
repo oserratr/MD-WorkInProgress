@@ -8,9 +8,11 @@ extends Node3D
 @export var talisman_out_camera: Camera3D
 @export var ui_interaction: Control
 @export var ui_echap: Control
+@export var mere: Node3D  # ✅ Ajout : référence à l'objet "Mere"
 
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
+var carton_drop := false
 
 # Zones de déclenchement
 var player_enter_objet := false
@@ -25,10 +27,8 @@ func _ready():
 	ui_echap.visible = false
 
 func _process(delta):
-	# ✅ Ne pas afficher ui_interaction si on est sur la caméra du talisman
 	var is_on_talisman_cam = is_instance_valid(talisman_camera) and talisman_camera.current
 
-	# ✅ Affichage conditionnel de l'UI d'interaction
 	if not is_on_talisman_cam:
 		if not carton_pose.visible and (not is_instance_valid(talisman) or not talisman.visible):
 			ui_interaction.visible = player_enter_carton
@@ -39,33 +39,28 @@ func _process(delta):
 	else:
 		ui_interaction.visible = false
 
-	# ✅ UI Échap visible uniquement si talisman_camera est active
 	ui_echap.visible = is_on_talisman_cam
 
-	# Affiche le carton et le talisman
 	if player_enter_carton and Input.is_action_just_pressed("e"):
 		carton_pose.visible = true
+		carton_drop = true
 		if is_instance_valid(talisman):
 			talisman.visible = true
 
-	# Basculer vers la caméra du talisman
 	if player_enter_talisman and Input.is_action_just_pressed("e") and not camera_switched:
 		print("Switch vers caméra talisman")
 		if is_instance_valid(talisman_camera):
 			_switch_to_camera(talisman_camera)
 
-	# Revenir à la caméra du joueur depuis le talisman
 	elif player_enter_talisman and camera_switched and Input.is_action_just_pressed("ui_cancel"):
 		print("Retour à la caméra talisman_out")
 		if is_instance_valid(talisman_out_camera):
 			_switch_to_camera(talisman_out_camera)
 
-	# Switch vers caméra secondaire générique
 	if Input.is_action_just_pressed("e") and player_enter_objet and not camera_switched:
 		print("Switch vers caméra secondaire :", active_secondary_camera)
 		_switch_to_camera(active_secondary_camera)
 
-	# Retour caméra joueur depuis objet secondaire
 	elif Input.is_action_just_pressed("ui_cancel") and player_enter_objet and camera_switched:
 		print("Retour à la caméra joueur")
 		_switch_to_player_camera()
@@ -79,15 +74,20 @@ func _switch_to_camera(cam: Camera3D):
 	cam.current = true
 	camera_switched = true
 
-	# 🔒 ou 🔓 Bloquer ou débloquer les mouvements selon la caméra
 	if cam == talisman_out_camera:
 		if player and "lock_movement" in player:
 			player.lock_movement(false)
+
 		if is_instance_valid(talisman):
 			talisman.queue_free()
 			talisman = null
+
 		if is_instance_valid(talisman_camera):
 			talisman_camera = null
+
+		# ✅ Déplacement de l'objet "Mere"
+		if is_instance_valid(mere):
+			mere.global_position = Vector3(-1.726, 0.179, 1.575)  # ← AJUSTE CETTE POSITION
 	else:
 		if player and "lock_movement" in player:
 			player.lock_movement(true)
@@ -128,3 +128,6 @@ func _on_carton_area_body_entered(body):
 func _on_carton_area_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_carton = false
+
+func get_bool_carton_drop() -> bool:
+	return carton_drop

@@ -13,6 +13,7 @@ Liste TO DO
 	-> Gameplay Traduction
 	-> Test motif reminisence
 	-> Navigation entre différentes pieces (faire a la fin)
+	-> UI Inventaire
 
 * AJD
 
@@ -38,7 +39,7 @@ Liste TO DO
 
 	-> Terminer le salon EN COURS (a finir texture + integration godot)
 		-> Changement des textures 
-		-> Vues + switch de vues (regler pb inspection objet)
+		-> Vues + switch de vues (regler pb inspection objet) OK
 		-> Animation poser carton + objet qui tombe
 		-> Back to grenier
 		-> Animation mère qui arrive 
