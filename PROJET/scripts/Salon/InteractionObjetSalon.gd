@@ -87,7 +87,7 @@ func _switch_to_camera(cam: Camera3D):
 
 		# ✅ Déplacement de l'objet "Mere"
 		if is_instance_valid(mere):
-			mere.global_position = Vector3(-1.726, 0.179, 1.575)  # ← AJUSTE CETTE POSITION
+			mere.global_position = Vector3(-1.726, -0.024, 2.348)  # ← AJUSTE CETTE POSITION
 	else:
 		if player and "lock_movement" in player:
 			player.lock_movement(true)

@@ -42,8 +42,9 @@ Liste TO DO
 		-> Vues + switch de vues (regler pb inspection objet) OK
 		-> Animation poser carton + objet qui tombe
 		-> Back to grenier
-		-> Animation mère qui arrive 
-		-> Dialogue + UI
+		-> Animation mère qui arrive OK
+		-> Dialogue + UI OK
+		-> Rajouter vue mere dialogue
 
 	-> Commencer chambre
 
