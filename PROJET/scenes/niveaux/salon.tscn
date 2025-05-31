@@ -4732,6 +4732,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500383, -0.285141, 4.48886
 shape = SubResource("BoxShape3D_p3gua")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(12.756, 0, 0, 0, 1.03204, 0, 0, 0, 23.9827, -0.402873, 3.95481, 5.56252)
@@ -5544,7 +5545,6 @@ transform = Transform3D(-0.448977, 0.231267, -0.863097, -0.446772, 0.778414, 0.4
 transform = Transform3D(0.866026, 0.129983, -0.482809, 0, 0.965618, 0.259965, 0.5, -0.225136, 0.83625, -0.289716, 2.685, 8.21639)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_exited"]
