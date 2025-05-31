@@ -7,11 +7,17 @@ var interaction_without_carton = false
 var timeline_active = false
 var first_interaction = false
 var first_interaction_end = false
-var has_played_first_interaction_force := false  # ✅ ajouté
+var has_played_first_interaction_force := false
 
 @export var interaction_objet: Node3D
 @export var ui_interaction_mere: Control
 @export var player: CharacterBody3D
+@export var player_camera: Camera3D
+@export var camera_vue_mere: Camera3D
+
+var active_secondary_camera: Camera3D = null
+var camera_switched := false
+var current_timeline_name := ""  # ✅ pour savoir quelle timeline est en cours
 
 func _ready():
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
@@ -28,7 +34,6 @@ func _input(event):
 		first_interaction = true
 
 	if player_in_area and event.is_action_pressed("e") and not timeline_active:
-		# ✅ Inverser l’ordre pour permettre à recup_1 de se lancer correctement
 		if interaction_objet_recup_1:
 			_timeline_objet_recup_1()
 		elif first_interaction:
@@ -39,6 +44,30 @@ func _state_dialogue():
 	if first_interaction_end:
 		interaction_objet_recup_1 = true
 		first_interaction = false
+
+func _switch_to_camera(cam: Camera3D):
+	if cam == null:
+		print("Erreur : La caméra secondaire n'est pas définie.")
+		return
+
+	cam.current = true
+	camera_switched = true
+
+	if player and "lock_movement" in player:
+		player.lock_movement(true)
+	else:
+		print("Erreur : joueur non défini ou méthode lock_movement manquante.")
+
+func _switch_to_player_camera():
+	player_camera.current = true
+	camera_switched = false
+	active_secondary_camera = null
+
+	if player and "lock_movement" in player:
+		player.lock_movement(false)
+
+func get_active_camera() -> Camera3D:
+	return active_secondary_camera if active_secondary_camera else player_camera
 
 func _on_mother_dialogue_body_entered(body):
 	if body.is_in_group("player"):
@@ -57,23 +86,30 @@ func _timeline_interaction_force():
 	has_played_first_interaction_force = true
 
 	timeline_active = true
+	current_timeline_name = "FirstInteractionObjetTombe"  # ✅ suivi
 	player.lock_movement(true)
-	Dialogic.start_timeline("FirstInteractionObjetTombe")
+	Dialogic.start_timeline(current_timeline_name)
 
 func _timeline_objet_recup():
 	timeline_active = true
+	current_timeline_name = "objetrecup"  # ✅ suivi
 	player.lock_movement(true)
-	Dialogic.start_timeline("objetrecup")
+	_switch_to_camera(camera_vue_mere)
+	Dialogic.start_timeline(current_timeline_name)
 
 func _timeline_objet_recup_1():
 	timeline_active = true
+	current_timeline_name = "objetrecup1"  # ✅ suivi
 	player.lock_movement(true)
-	Dialogic.start_timeline("objetrecup1")
+	_switch_to_camera(camera_vue_mere)
+	Dialogic.start_timeline(current_timeline_name)
 
+# ✅ Fin de timeline : on switch caméra uniquement pour certaines
 func _on_dialogic_timeline_ended():
-	print("Timeline terminée")
+	print("Timeline terminée :", current_timeline_name)
 	timeline_active = false
 	player.lock_movement(false)
 
-func get_bool_interaction() -> bool:
-	return first_interaction
+	if current_timeline_name in ["objetrecup", "objetrecup1"]:
+		_switch_to_player_camera()
+	current_timeline_name = ""  # reset
