@@ -2,12 +2,14 @@
 Mère: Alors qu’est-ce que tu as fait tomber ?
 Fille: Je... je sais pas trop. J'arrive pas vraiment à comprendre ce que c'est.
 Mère: Montre-moi
+[background arg="res://assets/3D/SalonNewVersion/tapis/imagetalisman.png" fade="0.0"]
 Mère: … \
 …
 Fille: Tu sais ce que c'est, toi ?
+[background fade="0.0"]
 Mère: Oh, c'est rien, juste une vieille babiole sans importance.
 Fille: Pourquoi grand-mère aurait gardé un truc pareil ?
-Mère: Écoute, j'ai pas le temps pour tes questions, d'accord ? 
+Mère: Écoute, j'ai pas le temps pour tes questions, d'accord ?
 Fille: C’est toi qui m’as demandé ce que c’est …
 Mère: Bon, range-le avec la lettre qui va avec, ce n'est vraiment pas le moment pour ça.
 - Une lettre ?
