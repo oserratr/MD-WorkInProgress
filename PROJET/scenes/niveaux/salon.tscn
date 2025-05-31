@@ -1,4 +1,4 @@
-[gd_scene load_steps=296 format=3 uid="uid://b6qjuf1vqxo7i"]
+[gd_scene load_steps=298 format=3 uid="uid://b6qjuf1vqxo7i"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_wog66"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lth6f"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://vfto06gbtqr2" path="res://assets/3D/SalonNewVersion/salon_lampes.png" id="35_66mjw"]
 [ext_resource type="Script" path="res://scripts/Salon/VueSalleManger.gd" id="35_pvdcr"]
 [ext_resource type="Texture2D" uid="uid://dcyuxa7bj2cm7" path="res://assets/3D/SalonNewVersion/T.png" id="36_kx2di"]
+[ext_resource type="Script" path="res://scripts/Salon/InteractionObjetSalon.gd" id="36_uowws"]
 [ext_resource type="Texture2D" uid="uid://byu27f06jsub6" path="res://assets/3D/SalonNewVersion/salon_Chair_02.png" id="37_hy0aj"]
 [ext_resource type="Texture2D" uid="uid://14ffsp8si0jp" path="res://assets/3D/SalonNewVersion/salon_Chair_02_8.png" id="38_edhsx"]
 [ext_resource type="Texture2D" uid="uid://dvi1ak03swjbr" path="res://assets/3D/SalonNewVersion/salon_murs_Wallpaper smal flower_BaseColor.png" id="39_nllyq"]
@@ -4460,7 +4461,10 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxwyc"]
-size = Vector3(3.04541, 1, 5.70229)
+size = Vector3(3.04541, 1, 5.84968)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ajjh"]
+size = Vector3(3.89935, 1, 2.74023)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_slfx0"]
 size = Vector3(4.5719, 1, 6.29214)
@@ -5524,8 +5528,12 @@ script = ExtResource("34_m650i")
 target_camera = NodePath("../../CameraOrigin2/Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Vues/VuePorteGrenier"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2721, 0, -1.22113)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2721, 0, -1.29482)
 shape = SubResource("BoxShape3D_sxwyc")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Vues/VuePorteGrenier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.120514, 0, -2.81564)
+shape = SubResource("BoxShape3D_2ajjh")
 
 [node name="VueSalleManger" type="Area3D" parent="Vues" node_paths=PackedStringArray("target_camera")]
 script = ExtResource("35_pvdcr")
@@ -5546,10 +5554,19 @@ transform = Transform3D(0.866026, 0.129983, -0.482809, 0, 0.965618, 0.259965, 0.
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin4"]
 
-[connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_entered"]
-[connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="GameManager" method="_on_carton_area_body_exited"]
-[connection signal="body_entered" from="LevelDesign/Interactif/AreaTalisman" to="GameManager" method="_on_area_talisman_body_entered"]
-[connection signal="body_exited" from="LevelDesign/Interactif/AreaTalisman" to="GameManager" method="_on_area_talisman_body_exited"]
+[node name="InteractionObjet" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "carton_pose", "talisman", "talisman_camera", "talisman_out_camera")]
+script = ExtResource("36_uowws")
+player_camera = NodePath("../CameraOrigin/Camera3D")
+player = NodePath("../Player")
+carton_pose = NodePath("../LevelDesign/Interactif/Carton")
+talisman = NodePath("../LevelDesign/Interactif/AreaTalisman/Talisman")
+talisman_camera = NodePath("../LevelDesign/Interactif/AreaTalisman/Talisman/Camera3D")
+talisman_out_camera = NodePath("../CameraOrigin2/Camera3D")
+
+[connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_exited"]
+[connection signal="body_entered" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_exited"]
 [connection signal="body_entered" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_entered"]
 [connection signal="body_exited" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_exited"]
 [connection signal="body_entered" from="Vues/VueSalleManger" to="GameManager" method="_on_vue_salle_manger_body_entered"]
