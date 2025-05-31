@@ -29,7 +29,9 @@ directories/dtl_directory={
 "AlbumPhoto": "res://assets/Dialogues/Grenier/AlbumPhoto.dtl",
 "AlbumPhotoCarton": "res://assets/Dialogues/Grenier/AlbumPhotoCarton.dtl",
 "AlbumPhotoPasCarton": "res://assets/Dialogues/Grenier/AlbumPhotoPasCarton.dtl",
-"FirstInteractionObjetTombe": "res://assets/Dialogues/Salon/FirstInteractionObjetTombe.dtl"
+"FirstInteractionObjetTombe": "res://assets/Dialogues/Salon/FirstInteractionObjetTombe.dtl",
+"objetrecup": "res://assets/Dialogues/Salon/objetrecup.dtl",
+"objetrecup1": "res://assets/Dialogues/Salon/objetrecup1.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"]
