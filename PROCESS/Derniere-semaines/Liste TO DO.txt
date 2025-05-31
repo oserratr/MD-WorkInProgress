@@ -12,7 +12,7 @@ Liste TO DO
 	-> Tweak Album photo dialogic OK -> A pofiner
 	-> Gameplay Traduction
 	-> Test motif reminisence
-	-> Navigation entre différentes pieces 
+	-> Navigation entre différentes pieces (faire a la fin)
 
 * AJD
 
@@ -38,10 +38,11 @@ Liste TO DO
 
 	-> Terminer le salon EN COURS (a finir texture + integration godot)
 		-> Changement des textures 
-		-> Vues + switch de vues
+		-> Vues + switch de vues (regler pb inspection objet)
 		-> Animation poser carton + objet qui tombe
 		-> Back to grenier
 		-> Animation mère qui arrive 
+		-> Dialogue + UI
 
 	-> Commencer chambre
 
