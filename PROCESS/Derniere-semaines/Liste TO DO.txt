@@ -44,7 +44,7 @@ Liste TO DO
 		-> Back to grenier 3
 		-> Animation mère qui arrive OK
 		-> Dialogue + UI OK
-		-> Rajouter vue mere dialogue 1
+		-> Rajouter vue mere dialogue OK
 
 	-> Commencer chambre
 
