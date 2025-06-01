@@ -38,10 +38,10 @@ Liste TO DO
 	-> Lettre Modélisation (autre langue)
 
 	-> Terminer le salon EN COURS (a finir texture + integration godot)
-		-> Changement des textures 2
-		-> Vues + switch de vues (regler pb inspection objet) OK
-		-> Animation poser carton + objet qui tombe 4
-		-> Back to grenier 3
+		-> Changement des textures OK a pofiner
+		-> Vues + switch de vues (regler pb inspection objet) OK a pofiner
+		-> Animation poser carton + objet qui tombe 4 FAC
+		-> Back to grenier 3 FAC
 		-> Animation mère qui arrive OK
 		-> Dialogue + UI OK
 		-> Rajouter vue mere dialogue OK
