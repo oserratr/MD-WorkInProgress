@@ -46,17 +46,17 @@ Liste TO DO
 		-> Dialogue + UI OK
 		-> Rajouter vue mere dialogue OK
 
-	-> Commencer chambre
+	-> Faire chambre EN COURS
 
 
-* Pour vendredi grenier_sol test_DefaultMaterial_BaseColor.png
+* Pour vendredi 
 
 	-> Réfléchir structure présentation
 	-> Test motif reminisence
-	-> Son
-	-> Build V2
+	-> Son EN COURS
+	-> Build V2 OK
 	-> Rig et animation Cousin
-	-> Envoyer screen jeu pablo
+	-> Envoyer screen jeu pablo OK
 	-> Changement image du curseur de souris
 
 * Questionnements 
