@@ -18,6 +18,7 @@ Liste TO DO
 	-> Changer curseur point and click OK
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
+	-> Preparer visuel et shooting photo
 
 * AJD
 

@@ -3331,7 +3331,7 @@ transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_kg23l")
 
 [node name="Red Antique Wardrobe" type="MeshInstance3D" parent="LevelDesign/PasInteractif"]
-transform = Transform3D(-0.041, -6.19083e-09, 2.7061e-16, 0, -1.79217e-09, -0.041, 6.19083e-09, -0.041, 1.79217e-09, 20.2188, 9.71632, 15.2758)
+transform = Transform3D(-0.033, -4.98286e-09, 2.17808e-16, 0, -1.44248e-09, -0.033, 4.98286e-09, -0.033, 1.44248e-09, 20.2188, 8.37062, 15.2758)
 mesh = SubResource("ArrayMesh_e4foi")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_hh6vc")
@@ -3463,13 +3463,13 @@ transform = Transform3D(1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, 1, -2.38419
 shape = SubResource("BoxShape3D_8uq6x")
 
 [node name="Ceiling_Fan_02" type="MeshInstance3D" parent="LevelDesign/PasInteractif"]
-transform = Transform3D(-7.15933, 0, 0.706362, 0, 7.19409, 0, -0.706362, 0, -7.15933, -3.12165, 24.4445, -1.91657)
+transform = Transform3D(-7.15933, 0, 0.706362, 0, 7.19409, 0, -0.706362, 0, -7.15933, -3.12165, 21.6065, -1.91657)
 mesh = SubResource("ArrayMesh_o8urd")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_dpl38")
 
 [node name="Ceiling_Fan_Blades_02" type="MeshInstance3D" parent="LevelDesign/PasInteractif"]
-transform = Transform3D(-4.13089, 0, 5.88988, 0, 7.19409, 0, -5.88988, 0, -4.13089, -3.12939, 23.541, -1.90084)
+transform = Transform3D(-4.13089, 0, 5.88988, 0, 7.19409, 0, -5.88988, 0, -4.13089, -3.12939, 20.703, -1.90084)
 mesh = SubResource("ArrayMesh_i8avl")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_0nig5")
@@ -3568,7 +3568,7 @@ shape = SubResource("BoxShape3D_yulgw")
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
-transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 28.917, -0.509425)
+transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 26.079, -0.509425)
 mesh = SubResource("ArrayMesh_lf7bn")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_13d36")
@@ -3608,9 +3608,10 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_kigge")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(0.707107, 0.183013, -0.683013, 0, 0.965926, 0.258819, 0.707107, -0.183013, 0.683013, -3.29163, 2.81968, 3)
+transform = Transform3D(-0.707106, 0.183013, -0.683012, 1.13133e-08, 0.965926, 0.258819, 0.707106, 0.183013, -0.683012, -1.58171, 2.09873, -3.16042)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
+transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0)
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
 transform = Transform3D(-0.16701, 0, 0.985955, 0, 1, 0, -0.985955, 0, -0.16701, 2.31977, 0.563942, -1.39009)
