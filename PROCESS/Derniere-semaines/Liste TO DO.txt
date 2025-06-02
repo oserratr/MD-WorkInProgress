@@ -63,6 +63,7 @@ Liste TO DO
 	-> Question sur device pour l'expo ? OK
 	-> Voir pour structure prez + demander pour faire passage visio OK Mardi 16h30 a l'ecole
 	-> Couloirs ? Facultatif
+	-> chargement entre scene ?
 
 * Issues
 		-> Recalculer nav mesh ??? comment faire pour obstacles
