@@ -16,6 +16,8 @@ Liste TO DO
 	-> UI Inventaire
 	-> SFX
 	-> Changer curseur point and click OK
+	-> Voir pour modification sky texture
+	-> Improuve interaction objet inspection
 
 * AJD
 
