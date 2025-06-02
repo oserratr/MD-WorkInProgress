@@ -4,16 +4,18 @@ Liste TO DO
 
 	-> Terminer structure de la slice (mot traduire comment + quel assets)
 	-> Modifier niveau grenier OK -> A pofiner
-	-> Faire chambre 
-	-> Faire Salon
+	-> Faire chambre OK -> A pofiner
+	-> Faire Salon OK -> A pofiner
 	-> Animatiques OK -> A pofiner
-	-> Sound design 
+	-> Sound design EN COURS
 	-> Finir UI OK POUR DIALOGUE -> A pofiner
 	-> Tweak Album photo dialogic OK -> A pofiner
 	-> Gameplay Traduction
 	-> Test motif reminisence
 	-> Navigation entre différentes pieces (faire a la fin)
 	-> UI Inventaire
+	-> SFX
+	-> Changer curseur point and click OK
 
 * AJD
 
@@ -46,7 +48,11 @@ Liste TO DO
 		-> Dialogue + UI OK
 		-> Rajouter vue mere dialogue OK
 
-	-> Faire chambre EN COURS
+	-> Faire chambre OK (modelisation + integration)
+		-> Vues + switch de vues 
+		-> Animation cousin qui arrive
+		-> Lettre modelisation
+		-> Dialogue cousin
 
 
 * Pour vendredi 

@@ -1910,7 +1910,12 @@ mesh = SubResource("ArrayMesh_0book")
 skeleton = NodePath("")
 
 [node name="pCube1" type="MeshInstance3D" parent="LevelDesign/Piece/Porte"]
-transform = Transform3D(1.818, 0, 0, 0, -5.68248e-10, -3.307, 0, 0.013, -1.44554e-07, 0.137557, 2.39305, 0.109366)
+transform = Transform3D(1.818, 0, -2.5411e-21, 0, -5.68248e-10, -3.307, 0, 0.013, -1.44554e-07, 0.137557, 2.39305, 0.109366)
 mesh = SubResource("ArrayMesh_lxjaa")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_kigge")
+
+[node name="CameraOrigin" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0.353553, -0.612372, 0, 0.866025, 0.5, 0.707107, -0.353553, 0.612372, -17.7106, 22.4352, 11.199)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin"]

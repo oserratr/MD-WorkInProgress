@@ -61,13 +61,13 @@
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ew6wt"]
 panorama = ExtResource("1_vyb4n")
 
-[sub_resource type="Sky" id="Sky_yv0m2"]
+[sub_resource type="Sky" id="Sky_d3wwr"]
 sky_material = SubResource("PanoramaSkyMaterial_ew6wt")
 
 [sub_resource type="Environment" id="Environment_32lf4"]
 background_mode = 1
 background_color = Color(0.823917, 0.915227, 0.933913, 1)
-sky = SubResource("Sky_yv0m2")
+sky = SubResource("Sky_d3wwr")
 sky_rotation = Vector3(0, -0.401426, 0)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
