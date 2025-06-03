@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=3 uid="uid://bpug5nj0fuxi6"]
+[gd_scene load_steps=200 format=3 uid="uid://bpug5nj0fuxi6"]
 
 [ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_3rdn1"]
 [ext_resource type="Texture2D" uid="uid://8mbuoi8bhlyp" path="res://assets/3D/Chambre/piecechambre_sol test_DefaultMaterial_BaseColor.png" id="2_ptj37"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://ca1fm7chijydr" path="res://assets/3D/FilleTransform/Texture/2animFille2_pantfille.png" id="29_b6iw5"]
 [ext_resource type="Texture2D" uid="uid://dhtqjk8yts3dv" path="res://assets/3D/Fille/Texture/2animFille_haire.png" id="30_e0iyp"]
 [ext_resource type="Script" path="res://scripts/principals/GameManagerChambre.gd" id="31_188d1"]
+[ext_resource type="Script" path="res://scripts/Chambre/VueLitFace.gd" id="32_yhfoh"]
+[ext_resource type="Script" path="res://scripts/Chambre/VueCoteGaucheChambre.gd" id="33_355ug"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("1_3rdn1")
@@ -3300,6 +3302,15 @@ _data = {
 "walking": SubResource("Animation_unbht")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dwxbq"]
+size = Vector3(3.35172, 1, 3.36658)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ya8w"]
+size = Vector3(7.29001, 1, 2.64372)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tff0f"]
+size = Vector3(2.87976, 1, 1)
+
 [node name="chambre" type="Node3D"]
 
 [node name="Lights" type="Node3D" parent="."]
@@ -3606,12 +3617,6 @@ transform = Transform3D(1.818, 0, -2.5411e-21, 0, -5.68248e-10, -3.307, 0, 0.013
 mesh = SubResource("ArrayMesh_lxjaa")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_kigge")
-
-[node name="CameraOrigin" type="Node3D" parent="."]
-transform = Transform3D(-0.707106, 0.183013, -0.683012, 1.13133e-08, 0.965926, 0.258819, 0.707106, 0.183013, -0.683012, -1.58171, 2.09873, -3.16042)
-
-[node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
-transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0)
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
 transform = Transform3D(-0.16701, 0, 0.985955, 0, 1, 0, -0.985955, 0, -0.16701, 2.31977, 0.563942, -1.39009)
@@ -4029,4 +4034,50 @@ libraries = {
 
 [node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player_camera")]
 script = ExtResource("31_188d1")
-player_camera = NodePath("../CameraOrigin/Camera3D")
+player_camera = NodePath("../CameraOrigin2/Camera3D")
+
+[node name="CameraOrigin2" type="Node3D" parent="."]
+transform = Transform3D(0.965925, 0.0669873, -0.25, 0, 0.965926, 0.258819, 0.258819, -0.25, 0.933012, -0.00620317, 2.04714, 1.19125)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin2"]
+transform = Transform3D(0.707108, 0.183013, -0.683014, -0.183013, 0.98038, 0.0732233, 0.683013, 0.0732234, 0.726728, -2.26499, -0.0948765, 0.354085)
+current = true
+
+[node name="Vues" type="Node3D" parent="."]
+
+[node name="VueLitFace" type="Area3D" parent="Vues" node_paths=PackedStringArray("target_camera")]
+script = ExtResource("32_yhfoh")
+target_camera = NodePath("../../CameraOrigin4/Camera3D")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Vues/VueLitFace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.45596, 0, -2.20748)
+shape = SubResource("BoxShape3D_dwxbq")
+
+[node name="VueCoteGaucheChambre" type="Area3D" parent="Vues" node_paths=PackedStringArray("target_camera")]
+script = ExtResource("33_355ug")
+target_camera = NodePath("../../CameraOrigin3/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vues/VueCoteGaucheChambre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.470902, 0, 2.32572)
+shape = SubResource("BoxShape3D_4ya8w")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Vues/VueCoteGaucheChambre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62909, 0, 1.18018)
+shape = SubResource("BoxShape3D_tff0f")
+
+[node name="CameraOrigin3" type="Node3D" parent="."]
+transform = Transform3D(-0.965925, -0.0669873, 0.25, 7.71341e-09, 0.965926, 0.258819, -0.258819, 0.25, -0.933012, -0.435929, 2.24857, -1.66713)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin3"]
+transform = Transform3D(0.926181, -0.0975958, 0.364233, 0.0975957, 0.995055, 0.0184549, -0.364233, 0.0184549, 0.931126, 0.00415969, -0.00401795, 0.0149963)
+
+[node name="CameraOrigin4" type="Node3D" parent="."]
+transform = Transform3D(-4.22219e-08, -0.258819, 0.965925, -1.13133e-08, 0.965926, 0.258819, -0.999999, 0, -4.37113e-08, 2.67793, 2.2886, 0.0201725)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin4"]
+transform = Transform3D(0.866026, 0.12941, -0.482964, -0.12941, 0.991025, 0.0334931, 0.482964, 0.0334942, 0.875001, -0.47543, 0.0822276, -0.306878)
+
+[connection signal="body_entered" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_entered"]
+[connection signal="body_exited" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_exited"]
+[connection signal="body_entered" from="Vues/VueCoteGaucheChambre" to="GameManager" method="_on_vue_cote_gauche_chambre_body_entered"]
+[connection signal="body_exited" from="Vues/VueCoteGaucheChambre" to="GameManager" method="_on_vue_cote_gauche_chambre_body_exited"]

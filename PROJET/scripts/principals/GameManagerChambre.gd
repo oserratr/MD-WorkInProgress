@@ -6,9 +6,8 @@ var active_secondary_camera: Camera3D = null
 var camera_switched := false
 
 # Variable signal detecter
-var player_enter_area1 := false
-var player_enter_area2 := false
-var player_enter_objet := false
+var player_enter_area_lit := false
+var player_enter_area_gauche := false
 
 #func _ready():
 	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -20,7 +19,7 @@ func _process(delta):
 		_switch_to_camera(active_secondary_camera)
 
 	# Retour à la caméra du joueur si aucune caméra secondaire n'est active
-	elif not player_enter_area1 and not player_enter_area2 and camera_switched:
+	elif not player_enter_area_lit and not player_enter_area_gauche and camera_switched:
 		print("Switching back to player camera")
 		_switch_to_player_camera()
 		
@@ -39,24 +38,26 @@ func _switch_to_player_camera():
 	active_secondary_camera = null
 
 # Signaux connectés
-func _on_vue_mere_body_entered(body):
+func _on_vue_lit_face_body_entered(body):
+		if body.is_in_group("player"):
+			player_enter_area_lit = true
+	
+func _on_vue_lit_face_body_exited(body):
 	if body.is_in_group("player"):
-		player_enter_area1 = true
-
-
-func _on_vue_mere_body_exited(body):
+			player_enter_area_lit = false
+	
+func _on_vue_cote_gauche_chambre_body_entered(body):
 	if body.is_in_group("player"):
-		player_enter_area1 = false
+			player_enter_area_gauche = true
 
-func _on_vue_porte_body_entered(body):
+func _on_vue_cote_gauche_chambre_body_exited(body):
 	if body.is_in_group("player"):
-		player_enter_area2 = true
-
-func _on_vue_porte_body_exited(body):
-	if body.is_in_group("player"):
-		player_enter_area2 = false
-		
+			player_enter_area_gauche = false
+	
+	
 func get_active_camera() -> Camera3D:
 	if active_secondary_camera != null:
 		return active_secondary_camera
 	return player_camera
+
+

@@ -2,7 +2,7 @@ Liste TO DO
 
 * A faire
 
-	-> Terminer structure de la slice (mot traduire comment + quel assets)
+	-> Terminer structure de la slice (mot traduire comment + quel assets) EN COURS
 	-> Modifier niveau grenier OK -> A pofiner
 	-> Faire chambre OK -> A pofiner
 	-> Faire Salon OK -> A pofiner
@@ -10,7 +10,7 @@ Liste TO DO
 	-> Sound design EN COURS
 	-> Finir UI OK POUR DIALOGUE -> A pofiner
 	-> Tweak Album photo dialogic OK -> A pofiner
-	-> Gameplay Traduction
+	-> Gameplay Traduction EN COURS
 	-> Test motif reminisence
 	-> Navigation entre différentes pieces (faire a la fin)
 	-> UI Inventaire
@@ -19,20 +19,12 @@ Liste TO DO
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
 	-> Preparer visuel et shooting photo
-
-* AJD
-
-	-> UI Choix EN OK https://www.gameuidatabase.com/index.php?&set=1&scrn=5&autoload=4983&scroll=100
-	-> Niveau grenier + collider sur objets OK
-		-> Porte ouverte OK
-		-> Draps qui recouvrent les chaises (changer texture) OK
-		-> Enlever tableaux OK
-		-> Bloquer deplacement pdt dialogique OK
-		-> Animation porte + ui OK
-		-> Changement area Tableaux inspection OK
-		-> Remettre propre niveau hierarchie OK
-	-> Modélisation Cousin OK
-
+	-> Menu screen ?
+	-> Modifier objet + lettre pour indices
+	-> Ajout sous-titre intro
+	-> Pouvoir se promener partout dès le debut ?
+	-> Réfléchir structure présentation
+	-> Test motif reminisence
 
 * Pour demain
 
@@ -57,22 +49,12 @@ Liste TO DO
 		-> Lettre modelisation
 		-> Dialogue cousin
 
-
-* Pour vendredi 
-
-	-> Réfléchir structure présentation
-	-> Test motif reminisence
-	-> Son EN COURS
-	-> Build V2 OK
-	-> Rig et animation Cousin
-	-> Envoyer screen jeu pablo OK
-	-> Changement image du curseur de souris
-
 * Questionnements 
 	-> Question sur device pour l'expo ? OK
 	-> Voir pour structure prez + demander pour faire passage visio OK Mardi 16h30 a l'ecole
 	-> Couloirs ? Facultatif
 	-> chargement entre scene ?
+
 
 * Issues
 		-> Recalculer nav mesh ??? comment faire pour obstacles
@@ -83,9 +65,5 @@ Liste TO DO
 * Retours
 		-> Phrase quand inspection objets, ce que ca lui inspire etc
 		-> Dope sheet + mode action editor
-
-
-* Autres 
-		-> finir technical rider pour lundi
 
 		
