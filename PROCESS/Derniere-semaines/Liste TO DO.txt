@@ -24,6 +24,7 @@ Liste TO DO
 	-> Pouvoir se promener partout dès le debut ?
 	-> Réfléchir structure présentation
 	-> Test motif reminisence
+	-> Changement cursor Hoover inspection objet
 
 * Pour demain
 
@@ -45,9 +46,21 @@ Liste TO DO
 	-> Faire chambre OK (modelisation + integration)
 		-> Vues + switch de vues OK 
 		-> Animation cousin qui arrive
-		-> Lettre modelisation
+		-> Lettre modelisation OK a pofiner
 		-> Dialogue cousin
+		-> Ajout element assets tiroirs
 
+
+	-> Dans le tiroir lettre
+		-> Lettre OK
+		-> bijoux
+		-> journaux
+		-> montre
+	-> Dans autre tiroir
+		-> Lettres
+		-> Montre
+		-> crème
+		-> Peigne afro
 * Questionnements 
 	-> Question sur device pour l'expo ? OK
 	-> Voir pour structure prez + demander pour faire passage visio OK Mardi 16h30 a l'ecole

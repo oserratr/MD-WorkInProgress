@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://doxr8uxr7iaxa"]
+
+[ext_resource type="Texture2D" uid="uid://sgsp30ywm5je" path="res://movie/renderlettre/lettre00000000.png" id="1_c2exj"]
+
+[node name="Inventaire" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UILettreGrand" type="Node2D" parent="."]
+
+[node name="Lettre" type="Sprite2D" parent="UILettreGrand"]
+texture_filter = 1
+position = Vector2(29, -8)
+scale = Vector2(0.925, 0.925)
+texture = ExtResource("1_c2exj")

@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://8mbuoi8bhlyp" path="res://assets/3D/Chambre/piecechambre_sol test_DefaultMaterial_BaseColor.png" id="2_ptj37"]
 [ext_resource type="Texture2D" uid="uid://clukkq06jsdg8" path="res://assets/3D/Chambre/newtable/besidetable_BedStand01-Drawer_DefaultMaterial_BaseColor.png" id="4_5slvj"]
 [ext_resource type="Texture2D" uid="uid://bvicaqjaiuajf" path="res://assets/3D/Chambre/piecechambre_Red Antique Wardrobe-Texture.png" id="4_p7lmt"]
-[ext_resource type="Texture2D" uid="uid://d1f3588pbsttk" path="res://assets/3D/Chambre/newtable/AssetsTiroir/asset-lettre-atraduire_texturelettre.png" id="5_6qvjj"]
 [ext_resource type="Texture2D" uid="uid://t4xa1o0e5tj1" path="res://assets/3D/Chambre/piecechambre_shopping.png" id="5_q6wsn"]
 [ext_resource type="Texture2D" uid="uid://k765gl85dyhl" path="res://assets/3D/Chambre/piecechambre_murs_DefaultMaterial_BaseColor.png" id="6_7olta"]
 [ext_resource type="Texture2D" uid="uid://m4btq6o2xhyh" path="res://assets/3D/Chambre/piecechambre_fenetre_frame.png" id="7_56rfh"]
@@ -35,17 +34,21 @@
 [ext_resource type="Script" path="res://scripts/principals/GameManagerChambre.gd" id="31_188d1"]
 [ext_resource type="Script" path="res://scripts/Chambre/VueLitFace.gd" id="32_yhfoh"]
 [ext_resource type="Script" path="res://scripts/Chambre/VueCoteGaucheChambre.gd" id="33_355ug"]
+[ext_resource type="Script" path="res://scripts/Chambre/InspectionObjectsChambre.gd" id="36_rcctu"]
+[ext_resource type="PackedScene" uid="uid://dl2b8dq54r4n1" path="res://scenes/ui/ui_interaction_echap.tscn" id="37_tasxf"]
+[ext_resource type="PackedScene" uid="uid://bqcrumkdqemdf" path="res://scenes/ui/uiinteraction.tscn" id="38_n0b8h"]
+[ext_resource type="Script" path="res://scripts/principals/Inspectionobjet2.gd" id="39_f3xcg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("1_3rdn1")
 
-[sub_resource type="Sky" id="Sky_yv0m2"]
+[sub_resource type="Sky" id="Sky_res8j"]
 sky_material = SubResource("PanoramaSkyMaterial_qcdca")
 
 [sub_resource type="Environment" id="Environment_t8asa"]
 background_mode = 1
 background_color = Color(0.823917, 0.915227, 0.933913, 1)
-sky = SubResource("Sky_yv0m2")
+sky = SubResource("Sky_res8j")
 sky_rotation = Vector3(0, -0.401426, 0)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
@@ -245,53 +248,6 @@ shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("2_3lv8o")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yful8"]
-resource_name = "Material.002"
-cull_mode = 2
-albedo_texture = ExtResource("5_6qvjj")
-texture_filter = 2
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_otptj"]
-_surfaces = [{
-"aabb": AABB(-1, -0.01, -1, 2, 0.01001, 2.00001),
-"format": 34359742465,
-"index_count": 48,
-"index_data": PackedByteArray(3, 0, 1, 0, 0, 0, 1, 0, 4, 0, 2, 0, 1, 0, 3, 0, 4, 0, 6, 0, 8, 0, 5, 0, 8, 0, 7, 0, 9, 0, 8, 0, 6, 0, 7, 0, 0, 0, 8, 0, 3, 0, 0, 0, 5, 0, 8, 0, 1, 0, 5, 0, 0, 0, 1, 0, 6, 0, 5, 0, 2, 0, 6, 0, 1, 0, 2, 0, 7, 0, 6, 0, 4, 0, 7, 0, 2, 0, 4, 0, 9, 0, 7, 0, 3, 0, 9, 0, 4, 0, 3, 0, 8, 0, 9, 0),
-"name": "Material.002",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 10,
-"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191)
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_1rept"]
-resource_name = "asset-lettre-atraduire_Plane_001"
-_surfaces = [{
-"aabb": AABB(-1, -0.01, -1, 2, 0.01001, 2.00001),
-"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0),
-"format": 34359742487,
-"index_count": 48,
-"index_data": PackedByteArray(9, 0, 4, 0, 1, 0, 4, 0, 13, 0, 7, 0, 4, 0, 9, 0, 13, 0, 19, 0, 24, 0, 16, 0, 24, 0, 22, 0, 28, 0, 24, 0, 19, 0, 22, 0, 2, 0, 26, 0, 11, 0, 2, 0, 17, 0, 26, 0, 3, 0, 15, 0, 0, 0, 3, 0, 18, 0, 15, 0, 8, 0, 20, 0, 5, 0, 8, 0, 23, 0, 20, 0, 12, 0, 21, 0, 6, 0, 12, 0, 27, 0, 21, 0, 10, 0, 29, 0, 14, 0, 10, 0, 25, 0, 29, 0),
-"material": SubResource("StandardMaterial3D_yful8"),
-"name": "Material.002",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 30,
-"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 136, 198, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 136, 198, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 136, 198, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 136, 198, 255, 255, 255, 191)
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_otptj")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u677x"]
-render_priority = 0
-shader = ExtResource("17_57u78")
-shader_parameter/affine_mapping = false
-shader_parameter/alpha_scissor = 0.0
-shader_parameter/jitter = 0.0
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("5_6qvjj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8u0jg"]
 resource_name = "Red Antique Wardrobe"
@@ -3455,6 +3411,9 @@ size = Vector3(7.29001, 1, 2.64372)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tff0f"]
 size = Vector3(2.87976, 1, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eym5n"]
+size = Vector3(0.341797, 1, 0.822266)
+
 [node name="chambre" type="Node3D"]
 
 [node name="Lights" type="Node3D" parent="."]
@@ -3487,7 +3446,7 @@ transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, -9.9476e-14, 0, 1, -0.21616
 shape = SubResource("BoxShape3D_6l0eu")
 
 [node name="tiroir" type="MeshInstance3D" parent="LevelDesign/Interactif/Table1"]
-transform = Transform3D(4.03433e-08, -0.225616, -3.36194e-08, 1.34478e-08, 4.03433e-08, -0.225616, 0.225616, 3.36194e-08, 2.68956e-08, -21.8813, 5.18742, 9.95228)
+transform = Transform3D(4.03433e-08, -0.225616, -3.36194e-08, 1.34478e-08, 4.03433e-08, -0.225616, 0.225616, 3.36194e-08, 2.68956e-08, -24.7645, 5.18742, 9.95228)
 mesh = SubResource("ArrayMesh_a8s6k")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_7k2pn")
@@ -3511,15 +3470,6 @@ surface_material_override/0 = SubResource("ShaderMaterial_nl24h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/Table2/BedsideEndtable_001/StaticBody3D"]
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, -9.9476e-14, 0, 1, -0.216167, -12.8232, 0.115417)
 shape = SubResource("BoxShape3D_6l0eu")
-
-[node name="Lettre" type="Node3D" parent="LevelDesign/Interactif"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4315, 0, 9.8745)
-
-[node name="lettrelangue" type="MeshInstance3D" parent="LevelDesign/Interactif/Lettre"]
-transform = Transform3D(0.354999, 8.74227e-08, 0.866025, -1.2414e-07, 1, 0, -0.614877, -1.51421e-07, 0.5, -0.00731087, 5.14181, 0.422027)
-mesh = SubResource("ArrayMesh_1rept")
-skeleton = NodePath("")
-surface_material_override/0 = SubResource("ShaderMaterial_u677x")
 
 [node name="PasInteractif" type="Node3D" parent="LevelDesign"]
 
@@ -3747,6 +3697,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37458, -0.758789, 0)
 shape = SubResource("BoxShape3D_yulgw")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
+visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 26.079, -0.509425)
@@ -4235,6 +4186,13 @@ shape = SubResource("BoxShape3D_4ya8w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62909, 0, 1.18018)
 shape = SubResource("BoxShape3D_tff0f")
 
+[node name="VueTiroirLettre" type="Area3D" parent="Vues"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55927, 0, 1.40975)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Vues/VueTiroirLettre"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02955, 0, 0.0888672)
+shape = SubResource("BoxShape3D_eym5n")
+
 [node name="CameraOrigin3" type="Node3D" parent="."]
 transform = Transform3D(-0.965925, -0.0669873, 0.25, 7.71341e-09, 0.965926, 0.258819, -0.258819, 0.25, -0.933012, -0.435929, 2.24857, -1.66713)
 
@@ -4248,13 +4206,40 @@ transform = Transform3D(-4.22219e-08, -0.258819, 0.965925, -1.13133e-08, 0.96592
 transform = Transform3D(0.866026, 0.12941, -0.482964, -0.12941, 0.991025, 0.0334931, 0.482964, 0.0334942, 0.875001, -0.47543, 0.0822276, -0.306878)
 
 [node name="CameraOrigin5" type="Node3D" parent="."]
-transform = Transform3D(-1.64203e-15, -1, -4.37114e-08, -4.37113e-08, -4.37114e-08, 0.999999, -0.999999, 0, -4.37113e-08, -3.30943, 1.26837, 1.40829)
+transform = Transform3D(-1.64203e-15, -1, -4.37114e-08, -4.37113e-08, -4.37114e-08, 0.999999, -0.999999, 0, -4.37113e-08, -3.19523, 1.06587, 1.40829)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin5"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, -0.0101903, 0.0822277, 0.0963297)
-current = true
+
+[node name="InspectionObjects" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player")]
+script = ExtResource("36_rcctu")
+player_camera = NodePath("../CameraOrigin2/Camera3D")
+ui_interaction = NodePath("../uiinteraction")
+ui_interaction_echap = NodePath("../ui_interaction_echap")
+player = NodePath("../Player")
+
+[node name="ui_interaction_echap" parent="." instance=ExtResource("37_tasxf")]
+offset_left = 1639.0
+offset_top = 862.0
+offset_right = 1639.0
+offset_bottom = 862.0
+
+[node name="uiinteraction" parent="." instance=ExtResource("38_n0b8h")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="Inspectionobjet2" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player")]
+script = ExtResource("39_f3xcg")
+player_camera = NodePath("../CameraOrigin3/Camera3D")
+ui_interaction = NodePath("../uiinteraction")
+ui_interaction_echap = NodePath("../ui_interaction_echap")
+player = NodePath("../Player")
 
 [connection signal="body_entered" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_entered"]
 [connection signal="body_exited" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_exited"]
 [connection signal="body_entered" from="Vues/VueCoteGaucheChambre" to="GameManager" method="_on_vue_cote_gauche_chambre_body_entered"]
 [connection signal="body_exited" from="Vues/VueCoteGaucheChambre" to="GameManager" method="_on_vue_cote_gauche_chambre_body_exited"]
+[connection signal="body_entered" from="Vues/VueTiroirLettre" to="Inspectionobjet2" method="_on_vue_tiroir_lettre_body_entered"]
+[connection signal="body_exited" from="Vues/VueTiroirLettre" to="Inspectionobjet2" method="_on_vue_tiroir_lettre_body_exited"]
