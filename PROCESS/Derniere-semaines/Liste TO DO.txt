@@ -19,7 +19,7 @@ Liste TO DO
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
 	-> Preparer visuel et shooting photo
-	-> Menu screen depart ?
+	-> Menu screen depart ? 
 	-> Modifier objet + lettre pour indices OK
 	-> Pouvoir se promener partout dès le debut ?
 	-> Réfléchir structure présentation
@@ -78,4 +78,9 @@ Liste TO DO
 		-> Phrase quand inspection objets, ce que ca lui inspire etc
 		-> Dope sheet + mode action editor
 
+
+* Ce soir : 
+	-> Finir pour le premier mot morts
+	-> Intégrer le son
+	-> UI inventaire
 		
