@@ -6,7 +6,7 @@ Liste TO DO
 	-> Modifier niveau grenier OK -> A pofiner
 	-> Faire chambre OK -> A pofiner
 	-> Faire Salon OK -> A pofiner
-	-> Animatiques OK -> A pofiner
+	-> Animatiques OK -> A pofiner (-> Ajout sous-titre intro)
 	-> Sound design EN COURS
 	-> Finir UI OK POUR DIALOGUE -> A pofiner
 	-> Tweak Album photo dialogic OK -> A pofiner
@@ -19,9 +19,8 @@ Liste TO DO
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
 	-> Preparer visuel et shooting photo
-	-> Menu screen ?
-	-> Modifier objet + lettre pour indices
-	-> Ajout sous-titre intro
+	-> Menu screen depart ?
+	-> Modifier objet + lettre pour indices OK
 	-> Pouvoir se promener partout dès le debut ?
 	-> Réfléchir structure présentation
 	-> Test motif reminisence
@@ -44,7 +43,7 @@ Liste TO DO
 		-> Rajouter vue mere dialogue OK
 
 	-> Faire chambre OK (modelisation + integration)
-		-> Vues + switch de vues 
+		-> Vues + switch de vues OK 
 		-> Animation cousin qui arrive
 		-> Lettre modelisation
 		-> Dialogue cousin

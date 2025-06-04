@@ -1,9 +1,11 @@
-[gd_scene load_steps=364 format=3 uid="uid://b6qjuf1vqxo7i"]
+[gd_scene load_steps=370 format=3 uid="uid://b6qjuf1vqxo7i"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_wog66"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lth6f"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="7_2av0j"]
+[ext_resource type="Texture2D" uid="uid://cvt7i6ynvnwtb" path="res://assets/3D/Objets/talisman/texture2talisman/assetstalisman_DefaultMaterial_BaseColor.png" id="7_aqha3"]
 [ext_resource type="Texture2D" uid="uid://dfn8rbbwoeivh" path="res://assets/3D/Objets/talisman/textures/talisman_assetstalisman_DefaultMaterial_BaseColor.png" id="8_doj58"]
+[ext_resource type="Texture2D" uid="uid://va573016xnwy" path="res://assets/3D/Objets/talisman/texture2talisman/bout-lettre_texturelettre.png" id="9_jaxit"]
 [ext_resource type="Script" path="res://scripts/principals/Talisman.gd" id="9_jtcgw"]
 [ext_resource type="Texture2D" uid="uid://pc1j14wh6iwf" path="res://assets/3D/Objets/talisman/textures/talisman_ballbracelet_DefaultMaterial_BaseColor.png" id="9_p5qur"]
 [ext_resource type="Texture2D" uid="uid://bsdo3ja23xl7r" path="res://assets/3D/Grenier/Textures/grenier_papertexture.png" id="10_yl3qm"]
@@ -438,7 +440,7 @@ shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("8_doj58")
+shader_parameter/albedo = ExtResource("7_aqha3")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dbt3"]
 resource_name = "Material.007"
@@ -565,6 +567,53 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_okwr6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ah0gg"]
+resource_name = "Material.004"
+cull_mode = 2
+albedo_texture = ExtResource("9_jaxit")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n25sk"]
+_surfaces = [{
+"aabb": AABB(-1, -0.01, -1, 0.601375, 0.01001, 0.489898),
+"format": 34359742465,
+"index_count": 24,
+"index_data": PackedByteArray(1, 0, 0, 0, 2, 0, 4, 0, 5, 0, 3, 0, 0, 0, 5, 0, 2, 0, 0, 0, 3, 0, 5, 0, 1, 0, 3, 0, 0, 0, 1, 0, 4, 0, 3, 0, 2, 0, 4, 0, 1, 0, 2, 0, 5, 0, 4, 0),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_marwr"]
+resource_name = "bout-lettre_Plane_003"
+_surfaces = [{
+"aabb": AABB(-1, -0.01, -1, 0.601375, 0.01001, 0.489898),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0),
+"format": 34359742487,
+"index_count": 24,
+"index_data": PackedByteArray(3, 0, 1, 0, 7, 0, 12, 0, 16, 0, 10, 0, 0, 0, 15, 0, 6, 0, 0, 0, 9, 0, 15, 0, 5, 0, 11, 0, 2, 0, 5, 0, 14, 0, 11, 0, 8, 0, 13, 0, 4, 0, 8, 0, 17, 0, 13, 0),
+"material": SubResource("StandardMaterial3D_ah0gg"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 117, 185, 255, 127, 255, 255, 255, 63, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 117, 185, 255, 127, 255, 255, 255, 63, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 117, 185, 255, 127, 255, 255, 255, 63, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 117, 185, 255, 127, 255, 255, 255, 63)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_n25sk")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7iql"]
+render_priority = 0
+shader = ExtResource("2_lth6f")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.0
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("9_jaxit")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q3ije"]
 size = Vector3(0.576599, 1, 0.779785)
@@ -5753,6 +5802,15 @@ mesh = SubResource("ArrayMesh_xq8t2")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_syhvv")
 
+[node name="boutlettreobjet" type="Node3D" parent="LevelDesign/Interactif/AreaTalisman/Talisman/Object"]
+transform = Transform3D(-0.0448526, -0.422318, 0.0161649, -0.412111, 0.0473082, 0.0924742, -0.0936899, -0.0059153, -0.414503, 0.252311, 0.433026, 0.106497)
+
+[node name="lettrelangue_002" type="MeshInstance3D" parent="LevelDesign/Interactif/AreaTalisman/Talisman/Object/boutlettreobjet"]
+transform = Transform3D(0.709999, -5.55112e-15, -3.55271e-15, 2.0095e-14, 1, -3.72529e-09, -2.4869e-14, 3.72529e-09, 1, 0.685268, 0.0376315, 0.983143)
+mesh = SubResource("ArrayMesh_marwr")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_k7iql")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/AreaTalisman"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300956, 0, 2.57845)
 shape = SubResource("BoxShape3D_q3ije")
@@ -5931,6 +5989,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500383, -0.285141, 4.48886
 shape = SubResource("BoxShape3D_p3gua")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
+visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(5.48039, 0, 0, 0, 0.339435, 0, 0, 0, 10.0334, -0.491607, 4.20739, 3.95585)
