@@ -40,31 +40,35 @@ Dans plusieurs interviews, plusieurs personnes evoquent le regret de ne pas parl
 
 C’est encore plus difficile lorsque l’on grandit dans un pays qui a colonisé la culture de ses parents ou de ses ancêtres.
 
-Par exemple, dans la langue parlée au quotidien malgache, il n'est pas rare d'avoir beaucoup de mots français. Et encore aujourd'hui, alors même que madagascar est un pays independant, la langue française est toujours très ancré, que ce soit dans les langues parlées, ou encore l'education scolaire.
+Par exemple, dans la langue parlée au quotidien malgache, il n'est pas rare d'avoir beaucoup de mots français. Et encore aujourd'hui, alors même que madagascar est un pays independant, la langue française est toujours très ancré, que ce soit dans les langues parlées, ou encore l'education scolaire. C'est d'ailleurs comme ça que au fil des années j'ai réussi a le comprendre.
 
+Avec ces informations, j'ai donc tester un gameplay focalisé sur la traduction avec plusieurs variantes de prototypes :
 
--> proto qui a pas fonctionner
-    -> Pourquoi ?
+-> Un premier ou j'ai tenter d'incorporé des mots français dans une langue inventé inspiré du malgache a travers des dialogues pour voir si cela facilité la traduction.
+    -> Ce test n'a pas fonctionner car les deux langues sont très différentes dans leurs constructions, ce qui induis en erreur le joueur, pensant que la contruction est la meme. Une certaine frustation est ressenti 
 
--> proto qui a fonctionner 
-    -> Pourquoi ?
+-> Puis, un deuxième ou j'ai laisser le joueur explorer des scènes avec des objets et des puzzles permenttant de traduire les mots, avec un texte sans ajout de mots dans une autre langue 
+    -> Test concluant, les joueurs étaient plus engagé et c'etait plus concret 
 
 ### Ecriture
 
--> Histoire
+Pour l'ecriture de mon jeu, il me fallait des elements concrets historiques. J'ai donc fait des recherches sur le deroulement de la colonisation française à madagascar et j'en ai retenu un evenement très majeur dans son indépendance : celui de l'insurrection. En croisant les différentes sources que j'avais (les temoignages de ma mère, de mon grand-père et les papiers et vidéos qui traitent de ce sujet) je me suis rendue compte qu'il y avait beaucoup de versions différentes de cet evenement, qui est jusqu'a aujourd'hui très mal documenté et pendant longtemps censuré.
 
--> World building
+Donc, avec ces différentes insights, j'ai ecris les différents personnages (comment et pourquoi ils ont quitté leurs pays), les liens intrafamiliaux, ainsi que de concevoir une timeline d'evenement majeurs historiques et familiaux.
 
 ## Presentation projet en meme temps que la demo
 
+Ce jeu est un point-and-click en 3D dans lequel vous incarnez Andy, un membre d'une famille issue de l’immigration. À travers une enquête, vous devrez résoudre des énigmes pour traduire la lettre et remonter le fil de son histoire familiale. 
+
+Le jeu est ancré temporellement a la fin de la timeline, après le décès de la grand-mère d'andy, un moment ou elle trouve un objet mystérieux accompagné d'une lettre en triant ces affaires. Puis, avec l'aide de son cousin, elle va être menée a traduire cette lettre pour comprendre qui l'as écrite et pourquoi.
 
 ## Demo
+explication des mecaniques de gameplay en même temps et des dialogues/storrytelling
+explication des choix graphiques
+    -> Shaders 
+    -> Level design
+explication des différentes etapes
 
+### Conclusion
+-> La démo est une slice qui se trouve au debut du jeu, l'idée ce serait de pouvoir avoir d'autres interactions avec d'autres membres de la famille (tante par exemple) dans d'autres endroits qui permettrait de traduire l'entièreté de la lettre.
 
-
-
-
-
-### Objets
-
-Mais, une autre façon de renouer avec sa culture, c'est de redecouvrir des objets. Avoir une nouvelle perception sur du tangible quelque chose qu'on connais déja.

@@ -25,6 +25,7 @@ Liste TO DO
 	-> Réfléchir structure présentation EN COURS
 	-> Test motif reminisence
 	-> Changement cursor Hoover inspection objet
+	-> Trailer
 
 * Pour demain
 
