@@ -18,11 +18,11 @@ Liste TO DO
 	-> Changer curseur point and click OK
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
-	-> Preparer visuel et shooting photo
+	-> Preparer visuel et shooting photo OK
 	-> Menu screen depart ? 
 	-> Modifier objet + lettre pour indices OK
 	-> Pouvoir se promener partout dès le debut ?
-	-> Réfléchir structure présentation
+	-> Réfléchir structure présentation EN COURS
 	-> Test motif reminisence
 	-> Changement cursor Hoover inspection objet
 
