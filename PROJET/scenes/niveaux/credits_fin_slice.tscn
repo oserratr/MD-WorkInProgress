@@ -1,4 +1,17 @@
-[gd_scene format=3 uid="uid://blpt6npyppq52"]
+[gd_scene load_steps=5 format=3 uid="uid://blpt6npyppq52"]
+
+[ext_resource type="Script" path="res://scripts/credits_fin_slice.gd" id="1_k3mn2"]
+[ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="1_wswrg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qmden"]
+font = ExtResource("1_wswrg")
+font_size = 70
+font_color = Color(1, 0.945098, 0.509804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_eu7qy"]
+font = ExtResource("1_wswrg")
+font_size = 50
+font_color = Color(1, 0.945098, 0.509804, 1)
 
 [node name="CreditsFinSlice" type="Control"]
 layout_mode = 3
@@ -7,3 +20,67 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k3mn2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.5
+offset_top = -193.0
+offset_right = 159.5
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 75
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wswrg")
+theme_override_font_sizes/font_size = 50
+text = "Crédits
+"
+label_settings = SubResource("LabelSettings_qmden")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wswrg")
+theme_override_font_sizes/font_size = 50
+text = "Game Design
+Océane Serrat
+"
+label_settings = SubResource("LabelSettings_eu7qy")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wswrg")
+theme_override_font_sizes/font_size = 50
+text = "Sound Design
+Nicky Lebair
+"
+label_settings = SubResource("LabelSettings_eu7qy")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wswrg")
+theme_override_font_sizes/font_size = 50
+text = "Tutoring
+Marion Bareil
+"
+label_settings = SubResource("LabelSettings_eu7qy")
+horizontal_alignment = 1
