@@ -1,4 +1,4 @@
-[gd_scene load_steps=190 format=3 uid="uid://devr7c72cfatv"]
+[gd_scene load_steps=206 format=3 uid="uid://devr7c72cfatv"]
 
 [ext_resource type="Texture2D" uid="uid://cmc1kg8ywla1v" path="res://assets/3D/cutscene/perso/animation_haire.png" id="1_6kx16"]
 [ext_resource type="Texture2D" uid="uid://dli570ojxb83v" path="res://assets/2D/hdri/studio_small_09_4k.exr" id="1_er76o"]
@@ -42,6 +42,10 @@
 [ext_resource type="Texture2D" uid="uid://b6nqel4hisdx8" path="res://assets/3D/AlbumPhoto/Gp/gp_ShortGP.png" id="40_1m0ld"]
 [ext_resource type="Texture2D" uid="uid://fre8sfddehb7" path="res://assets/3D/AlbumPhoto/Gp/gp_shoesGP.png" id="41_x65ny"]
 [ext_resource type="Texture2D" uid="uid://bc7gtbrccxwsq" path="res://assets/3D/AlbumPhoto/Gp/gp_ChemiseGp.png" id="42_6tvwc"]
+[ext_resource type="Texture2D" uid="uid://bh6hgnqd1uwqm" path="res://assets/2D/ScreenTitle/3d/assetstitle_Mrbg_Material.png" id="43_46t63"]
+[ext_resource type="Texture2D" uid="uid://c4yoc3bo30boi" path="res://assets/2D/ScreenTitle/3d/text/Mrbg_Material.016_BaseColor.png" id="44_3niq5"]
+[ext_resource type="Texture2D" uid="uid://bh45s1lex1flm" path="res://assets/2D/ScreenTitle/3d/assetstitle_retro_room.png" id="44_26l5x"]
+[ext_resource type="Texture2D" uid="uid://dxrlq0svhjibm" path="res://assets/2D/ScreenTitle/3d/assetstitle_projecteur.png" id="45_1qj7a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_574bl"]
 panorama = ExtResource("1_er76o")
@@ -12895,32 +12899,163 @@ _data = {
 "GPposing": SubResource("Animation_mr58o")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gydbk"]
+resource_name = "murscrentitle"
+cull_mode = 2
+albedo_texture = ExtResource("43_46t63")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g881a"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "murscrentitle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f0450"]
+resource_name = "assetstitle_Cube_011"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"attribute_data": PackedByteArray(255, 95, 0, 0, 255, 31, 255, 63, 255, 95, 255, 255, 255, 159, 0, 0, 255, 223, 255, 63, 255, 159, 255, 255, 255, 95, 255, 191, 255, 31, 255, 127, 255, 95, 255, 191, 255, 159, 255, 191, 255, 223, 255, 127, 255, 159, 255, 191, 255, 95, 255, 63, 255, 95, 255, 63, 255, 95, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 159, 255, 63, 255, 95, 255, 127, 255, 95, 255, 127, 255, 95, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127, 255, 159, 255, 127),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 6, 0, 21, 0, 9, 0, 6, 0, 18, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 12, 0, 3, 0, 15, 0, 12, 0, 0, 0, 3, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 22, 0, 4, 0, 10, 0, 22, 0, 16, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_gydbk"),
+"name": "murscrentitle",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 84, 213, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 127, 84, 213, 84, 213, 255, 255, 255, 255, 255, 127, 255, 191, 84, 213, 84, 213, 255, 191, 255, 191, 0, 0, 255, 127, 84, 213, 84, 213, 255, 191, 255, 191, 255, 127, 255, 191, 84, 213, 84, 213, 255, 255, 255, 255, 0, 0, 255, 127, 170, 42, 170, 42, 255, 255, 255, 255, 255, 127, 255, 191, 170, 42, 170, 42, 255, 191, 255, 191, 0, 0, 255, 127, 170, 42, 170, 42, 255, 191, 255, 191, 255, 127, 255, 191, 170, 42, 170, 42)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g881a")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mr86o"]
+render_priority = 0
+shader = ExtResource("2_e2sjs")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.0
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("44_3niq5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3yy5i"]
+resource_name = "Material.022"
+cull_mode = 2
+albedo_texture = ExtResource("44_26l5x")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mr2wl"]
+_surfaces = [{
+"aabb": AABB(-1.14391, -0.755706, -3.30234e-08, 2.28783, 1.51112, 0.0626586),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray(5, 0, 2, 0, 4, 0, 5, 0, 0, 0, 2, 0, 6, 0, 0, 0, 5, 0, 6, 0, 1, 0, 0, 0, 7, 0, 1, 0, 6, 0, 7, 0, 3, 0, 1, 0, 4, 0, 3, 0, 7, 0, 4, 0, 2, 0, 3, 0),
+"name": "Material.022",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 214, 10, 13, 243, 255, 255, 0, 0, 214, 10, 241, 12, 254, 255, 0, 0, 40, 245, 241, 12, 254, 255, 0, 0, 40, 245, 13, 243, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8c3cr"]
+resource_name = "assetstitle_Plane_011"
+_surfaces = [{
+"aabb": AABB(-1.14391, -0.755706, -3.30234e-08, 2.28783, 1.51112, 0.0626586),
+"attribute_data": PackedByteArray(80, 202, 233, 113, 80, 202, 233, 113, 190, 243, 233, 113, 190, 243, 233, 113, 80, 202, 153, 84, 80, 202, 153, 84, 190, 243, 153, 84, 190, 243, 153, 84, 87, 205, 47, 87, 87, 205, 47, 87, 87, 205, 83, 111, 87, 205, 83, 111, 183, 240, 83, 111, 183, 240, 83, 111, 183, 240, 47, 87, 183, 240, 47, 87),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray(11, 0, 5, 0, 9, 0, 11, 0, 1, 0, 5, 0, 12, 0, 0, 0, 10, 0, 12, 0, 2, 0, 0, 0, 15, 0, 3, 0, 13, 0, 15, 0, 7, 0, 3, 0, 8, 0, 6, 0, 14, 0, 8, 0, 4, 0, 6, 0),
+"material": SubResource("StandardMaterial3D_3yy5i"),
+"name": "Material.022",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 251, 155, 0, 0, 0, 0, 0, 0, 197, 157, 255, 255, 0, 0, 0, 0, 251, 155, 255, 255, 0, 0, 0, 0, 8, 158, 0, 0, 255, 255, 0, 0, 251, 155, 0, 0, 255, 255, 0, 0, 8, 158, 255, 255, 255, 255, 0, 0, 251, 155, 255, 255, 255, 255, 0, 0, 197, 157, 214, 10, 13, 243, 255, 255, 251, 155, 214, 10, 13, 243, 255, 255, 229, 159, 214, 10, 241, 12, 254, 255, 251, 155, 214, 10, 241, 12, 254, 255, 255, 156, 40, 245, 241, 12, 254, 255, 251, 155, 40, 245, 241, 12, 254, 255, 229, 159, 40, 245, 13, 243, 255, 255, 251, 155, 40, 245, 13, 243, 255, 255, 255, 156, 0, 0, 255, 127, 61, 113, 66, 191, 0, 0, 255, 127, 131, 62, 237, 14, 255, 255, 255, 127, 123, 193, 17, 241, 255, 255, 255, 127, 193, 142, 188, 64, 255, 255, 255, 127, 43, 198, 255, 239, 0, 0, 255, 127, 200, 113, 163, 193, 0, 0, 255, 127, 211, 57, 255, 15, 255, 255, 255, 127, 54, 142, 91, 62)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mr2wl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulr7s"]
+albedo_texture = ExtResource("44_26l5x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t27bo"]
+resource_name = "room.007"
+cull_mode = 2
+albedo_texture = ExtResource("45_1qj7a")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4w1ch"]
+_surfaces = [{
+"aabb": AABB(-1.14391, -0.755706, -3.30234e-08, 2.28783, 1.51112, 0.0626586),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray(5, 0, 7, 0, 6, 0, 5, 0, 4, 0, 7, 0, 2, 0, 1, 0, 3, 0, 2, 0, 0, 0, 1, 0),
+"name": "room.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 214, 10, 13, 243, 255, 255, 0, 0, 214, 10, 241, 12, 254, 255, 0, 0, 40, 245, 241, 12, 254, 255, 0, 0, 40, 245, 13, 243, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qtmuu"]
+resource_name = "assetstitle_Plane_012"
+_surfaces = [{
+"aabb": AABB(-1.14391, -0.755706, -3.30234e-08, 2.28783, 1.51112, 0.0626586),
+"attribute_data": PackedByteArray(230, 130, 242, 255, 255, 255, 242, 255, 230, 130, 223, 127, 255, 255, 223, 127, 237, 135, 177, 127, 237, 135, 255, 255, 1, 252, 255, 255, 1, 252, 177, 127),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray(5, 0, 7, 0, 6, 0, 5, 0, 4, 0, 7, 0, 2, 0, 1, 0, 3, 0, 2, 0, 0, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_t27bo"),
+"name": "room.007",
+"primitive": 3,
+"uv_scale": Vector4(1.93766, 1.99403, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 214, 10, 13, 243, 255, 255, 0, 128, 214, 10, 241, 12, 254, 255, 0, 128, 40, 245, 241, 12, 254, 255, 0, 128, 40, 245, 13, 243, 255, 255, 0, 128, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4w1ch")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_437sd"]
+albedo_texture = ExtResource("45_1qj7a")
+
 [node name="FirstAnimatique" type="Node3D"]
 
-[node name="Lights" type="Node3D" parent="."]
+[node name="Animatique" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Lights"]
+[node name="Lights" type="Node3D" parent="Animatique"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Animatique/Lights"]
 environment = SubResource("Environment_0qnij")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Animatique/Lights"]
 transform = Transform3D(0.562438, 0.795558, 0.225279, -0.560207, 0.16626, 0.811496, 0.608137, -0.582619, 0.539188, 1.23632, 4.41027, 2.20856)
 visible = false
 light_color = Color(0.813258, 0.813258, 0.813258, 1)
 light_energy = 0.897
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights"]
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Animatique/Lights"]
 transform = Transform3D(0.562438, 0.795558, 0.225279, -0.246559, 0.421433, -0.872699, -0.789222, 0.435295, 0.433182, 1.23632, -0.850031, -2.27247)
 visible = false
 light_color = Color(0.760605, 0.000233338, 0.700928, 1)
 light_energy = 1.561
 
-[node name="AnimationFille" type="Node3D" parent="."]
+[node name="AnimationFille" type="Node3D" parent="Animatique"]
 visible = false
 
-[node name="Armature" type="Node3D" parent="AnimationFille"]
+[node name="Armature" type="Node3D" parent="Animatique/AnimationFille"]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="AnimationFille/Armature"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Animatique/AnimationFille/Armature"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 729.897, -28.6041, -244.444)
@@ -13272,95 +13407,96 @@ bones/49/position = Vector3(-1.51546e-05, 15.9655, 7.30231e-06)
 bones/49/rotation = Quaternion(1.3737e-08, -1.69547e-06, 3.25963e-09, 1)
 bones/49/scale = Vector3(1, 1, 1)
 
-[node name="HairMere_009" type="BoneAttachment3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="HairMere_009" type="BoneAttachment3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 transform = Transform3D(99.7659, -6.58423, -1.8486, 2.90082, 16.2636, 98.626, -6.19311, -98.4487, 16.4165, 1.689, -39.1539, -315.273)
 bone_name = "HairMere.009"
 bone_idx = 7
 
-[node name="HairMere_009" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D/HairMere_009"]
+[node name="HairMere_009" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D/HairMere_009"]
 transform = Transform3D(1, -6.0536e-09, 0, 3.25963e-09, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xp4hp")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_0hpeg")
 
-[node name="CharacterMeshBody_020" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="CharacterMeshBody_020" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_m1kcp")
 skin = SubResource("Skin_0u1s2")
 surface_material_override/0 = SubResource("ShaderMaterial_mlqcp")
 
-[node name="CharacterMeshBody_021" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="CharacterMeshBody_021" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_lo2et")
 skin = SubResource("Skin_0u1s2")
 surface_material_override/0 = SubResource("ShaderMaterial_ou6n0")
 
-[node name="CharacterMeshBody_022" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="CharacterMeshBody_022" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_q8mpp")
 skin = SubResource("Skin_0u1s2")
 surface_material_override/0 = SubResource("ShaderMaterial_yclsn")
 
-[node name="PantMeshMere_006" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="PantMeshMere_006" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_i0nwb")
 skin = SubResource("Skin_0u1s2")
 surface_material_override/0 = SubResource("ShaderMaterial_ocb5b")
 
-[node name="Shoes_005" type="MeshInstance3D" parent="AnimationFille/Armature/Skeleton3D"]
+[node name="Shoes_005" type="MeshInstance3D" parent="Animatique/AnimationFille/Armature/Skeleton3D"]
 mesh = SubResource("ArrayMesh_c7t1l")
 skin = SubResource("Skin_0u1s2")
 surface_material_override/0 = SubResource("ShaderMaterial_t8axe")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationFille"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animatique/AnimationFille"]
 libraries = {
 "": SubResource("AnimationLibrary_ml3n5")
 }
 
-[node name="CameraOrigin" type="Node3D" parent="."]
+[node name="CameraOrigin" type="Node3D" parent="Animatique"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.71803, 2.35682)
 
-[node name="Camera3D" type="Camera3D" parent="CameraOrigin"]
+[node name="Camera3D" type="Camera3D" parent="Animatique/CameraOrigin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0882485, 0.836023)
 keep_aspect = 0
 fov = 56.0
 
-[node name="AnimationManager" type="Node3D" parent="." node_paths=PackedStringArray("animation_player_fille", "animation_player_fille_assoir", "animation_player_fille_talking")]
+[node name="AnimationManager" type="Node3D" parent="Animatique" node_paths=PackedStringArray("animation_player_fille", "animation_player_fille_assoir", "animation_player_fille_talking")]
 script = ExtResource("9_68d22")
 animation_player_fille = NodePath("../AnimationFille/AnimationPlayer")
 animation_player_fille_assoir = NodePath("../AnimationFilleAssoir/AnimationPlayer")
 animation_player_fille_talking = NodePath("../Animation3Talking/AnimationPlayer")
 
-[node name="SetUp" type="Node3D" parent="."]
+[node name="SetUp" type="Node3D" parent="Animatique"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SetUp"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Animatique/SetUp"]
 transform = Transform3D(1.07, 0, 0, 0, 0.525, 0, 0, 0, 1.07, 0, 0.540309, 0.151666)
 mesh = SubResource("CylinderMesh_u7bdi")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="SetUp"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Animatique/SetUp"]
 transform = Transform3D(15.455, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.63518, -7.76819)
 visible = false
 material_override = SubResource("StandardMaterial3D_0x2gj")
 mesh = SubResource("BoxMesh_eda1c")
 surface_material_override/0 = SubResource("ShaderMaterial_4xkyn")
 
-[node name="Cube" type="MeshInstance3D" parent="SetUp"]
+[node name="Cube" type="MeshInstance3D" parent="Animatique/SetUp"]
 transform = Transform3D(-4.03405, 0, -0.244378, 0, 3.572, 0, 13.5357, 0, -0.0728322, 0.0512818, 2.21195, -4.75358)
 mesh = SubResource("ArrayMesh_doxw5")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_dci5v")
 
-[node name="CameraOrigin2" type="Node3D" parent="."]
+[node name="CameraOrigin2" type="Node3D" parent="Animatique"]
 transform = Transform3D(0.922187, 0, -0.386743, 0, 1, 0, 0.386743, 0, 0.922187, -0.619779, 2.91434, 1.75081)
 
-[node name="Camera3D" type="Camera3D" parent="CameraOrigin2"]
+[node name="Camera3D" type="Camera3D" parent="Animatique/CameraOrigin2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222523, -0.224141, 0.335577)
 keep_aspect = 0
+current = true
 
-[node name="AnimationFilleAssoir" type="Node3D" parent="."]
+[node name="AnimationFilleAssoir" type="Node3D" parent="Animatique"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0335169, -0.0673379, 0.845885)
 visible = false
 
-[node name="Armature_002" type="Node3D" parent="AnimationFilleAssoir"]
+[node name="Armature_002" type="Node3D" parent="Animatique/AnimationFilleAssoir"]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 4.76795, 0, 0.364692)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="AnimationFilleAssoir/Armature_002"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Animatique/AnimationFilleAssoir/Armature_002"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -18.9813, -0.286041, -2.44444)
@@ -13712,51 +13848,51 @@ bones/49/position = Vector3(-1.38197e-06, 0.159655, -2.33529e-07)
 bones/49/rotation = Quaternion(1.83936e-08, -4.42512e-06, -3.87081e-09, 1)
 bones/49/scale = Vector3(1, 1, 1)
 
-[node name="HairMere_001" type="BoneAttachment3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="HairMere_001" type="BoneAttachment3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 transform = Transform3D(0.274283, 0.694166, 0.665509, -0.948269, 0.310273, 0.0671873, -0.15985, -0.649511, 0.74336, -4.31974, 0.049033, -4.10574)
 bone_name = "HairMere.001"
 bone_idx = 7
 
-[node name="HairMere_001" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D/HairMere_001"]
+[node name="HairMere_001" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D/HairMere_001"]
 mesh = SubResource("ArrayMesh_0e4e0")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_utoa4")
 
-[node name="CharacterMeshBody_001" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="CharacterMeshBody_001" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 mesh = SubResource("ArrayMesh_hu6u0")
 skin = SubResource("Skin_dg7ju")
 surface_material_override/0 = SubResource("ShaderMaterial_iusn6")
 
-[node name="CharacterMeshBody_002" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="CharacterMeshBody_002" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 mesh = SubResource("ArrayMesh_cyiys")
 skin = SubResource("Skin_dg7ju")
 surface_material_override/0 = SubResource("ShaderMaterial_jjjn2")
 
-[node name="CharacterMeshBody_003" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="CharacterMeshBody_003" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 mesh = SubResource("ArrayMesh_ce4xf")
 skin = SubResource("Skin_dg7ju")
 surface_material_override/0 = SubResource("ShaderMaterial_cij31")
 
-[node name="PantMeshMere_001" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="PantMeshMere_001" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 mesh = SubResource("ArrayMesh_57440")
 skin = SubResource("Skin_dg7ju")
 surface_material_override/0 = SubResource("ShaderMaterial_dacjd")
 
-[node name="Shoes_001" type="MeshInstance3D" parent="AnimationFilleAssoir/Armature_002/Skeleton3D"]
+[node name="Shoes_001" type="MeshInstance3D" parent="Animatique/AnimationFilleAssoir/Armature_002/Skeleton3D"]
 mesh = SubResource("ArrayMesh_qktjf")
 skin = SubResource("Skin_dg7ju")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationFilleAssoir"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animatique/AnimationFilleAssoir"]
 libraries = {
 "": SubResource("AnimationLibrary_kkvq4")
 }
 
-[node name="Animation3Talking" type="Node3D" parent="."]
+[node name="Animation3Talking" type="Node3D" parent="Animatique"]
 
-[node name="Armature_004" type="Node3D" parent="Animation3Talking"]
+[node name="Armature_004" type="Node3D" parent="Animatique/Animation3Talking"]
 transform = Transform3D(0.985396, 0.170278, 0, 0, 0, -1, -0.170278, 0.985396, 0, 7.95435, 0, -0.295896)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Animation3Talking/Armature_004"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Animatique/Animation3Talking/Armature_004"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -5.58607, -0.286041, -2.44444)
@@ -14108,52 +14244,52 @@ bones/49/position = Vector3(-1.87871e-06, 0.159655, 2.02097e-07)
 bones/49/rotation = Quaternion(2.51457e-08, -3.22663e-06, 1.95578e-08, 1)
 bones/49/scale = Vector3(1, 1, 1)
 
-[node name="HairMere_002" type="BoneAttachment3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="HairMere_002" type="BoneAttachment3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 transform = Transform3D(0.990411, -0.126839, -0.0547487, 0.0746122, 0.157575, 0.984684, -0.116269, -0.979327, 0.165528, -7.93877, -0.839525, -3.23997)
 bone_name = "HairMere.002"
 bone_idx = 7
 
-[node name="HairMere_002" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D/HairMere_002"]
+[node name="HairMere_002" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D/HairMere_002"]
 mesh = SubResource("ArrayMesh_krjib")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_hw20p")
 
-[node name="CharacterMeshBody_004" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="CharacterMeshBody_004" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 mesh = SubResource("ArrayMesh_t555c")
 skin = SubResource("Skin_yiiam")
 surface_material_override/0 = SubResource("ShaderMaterial_a638g")
 
-[node name="CharacterMeshBody_005" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="CharacterMeshBody_005" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 mesh = SubResource("ArrayMesh_xt0mr")
 skin = SubResource("Skin_yiiam")
 surface_material_override/0 = SubResource("ShaderMaterial_8120s")
 
-[node name="CharacterMeshBody_006" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="CharacterMeshBody_006" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 mesh = SubResource("ArrayMesh_inb4w")
 skin = SubResource("Skin_yiiam")
 surface_material_override/0 = SubResource("ShaderMaterial_nfv6g")
 
-[node name="PantMeshMere_002" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="PantMeshMere_002" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 mesh = SubResource("ArrayMesh_0n8ow")
 skin = SubResource("Skin_yiiam")
 surface_material_override/0 = SubResource("ShaderMaterial_7lfkn")
 
-[node name="Shoes_002" type="MeshInstance3D" parent="Animation3Talking/Armature_004/Skeleton3D"]
+[node name="Shoes_002" type="MeshInstance3D" parent="Animatique/Animation3Talking/Armature_004/Skeleton3D"]
 mesh = SubResource("ArrayMesh_nb1ws")
 skin = SubResource("Skin_yiiam")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation3Talking"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animatique/Animation3Talking"]
 libraries = {
 "": SubResource("AnimationLibrary_voufv")
 }
 
-[node name="GPAlbum" type="Node3D" parent="."]
+[node name="GPAlbum" type="Node3D" parent="Animatique"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.7274, 0, 0)
 
-[node name="Armature_005" type="Node3D" parent="GPAlbum"]
+[node name="Armature_005" type="Node3D" parent="Animatique/GPAlbum"]
 transform = Transform3D(0.00181609, -0.00102779, -6.21901e-11, 0, 1.2438e-10, -0.00208675, 0.00102779, 0.00181609, 1.2438e-10, -211.002, 0.716353, 18.3017)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="GPAlbum/Armature_005"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Animatique/GPAlbum/Armature_005"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 1.77636e-15, -2.98023e-08, 2.98023e-08, 0, 1, 1.77636e-15, -1, 0, 40121.7, -356.484, -9860.15)
@@ -14498,80 +14634,80 @@ bones/48/position = Vector3(0.00242618, 643.928, 3.11695e-06)
 bones/48/rotation = Quaternion(-2.26209e-08, -1.56045e-06, -3.31488e-09, 1)
 bones/48/scale = Vector3(1, 1, 1)
 
-[node name="BodyGM_002" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="BodyGM_002" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_85tk6")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_7s38o")
 
-[node name="Face_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Face_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_akx52")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_1grnk")
 
-[node name="Hair1_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Hair1_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_tv4f4")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_asajw")
 
-[node name="Hair2_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Hair2_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_fw0rd")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_rbkn0")
 
-[node name="Hair3_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Hair3_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_wkokd")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_rn0lf")
 
-[node name="Hair4_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Hair4_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_txa2w")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_letf7")
 
-[node name="Hair5_001" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Hair5_001" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_kgdq1")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_skkbe")
 
-[node name="ShoesGm_002" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="ShoesGm_002" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_dm2tt")
 skin = SubResource("Skin_f7uuy")
 
-[node name="Short_002" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="Short_002" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_l8ltm")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_slsaq")
 
-[node name="teeshirtgm_002" type="MeshInstance3D" parent="GPAlbum/Armature_005/Skeleton3D"]
+[node name="teeshirtgm_002" type="MeshInstance3D" parent="Animatique/GPAlbum/Armature_005/Skeleton3D"]
 mesh = SubResource("ArrayMesh_vb37i")
 skin = SubResource("Skin_f7uuy")
 surface_material_override/0 = SubResource("ShaderMaterial_jktl4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="GPAlbum/Armature_005"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animatique/GPAlbum/Armature_005"]
 libraries = {
 "": SubResource("AnimationLibrary_06xe0")
 }
 
-[node name="Cylinder_004" type="MeshInstance3D" parent="GPAlbum"]
+[node name="Cylinder_004" type="MeshInstance3D" parent="Animatique/GPAlbum"]
 transform = Transform3D(3.05769, 0.20139, -0.0207922, -0.202114, 3.05473, -0.135136, 0.0118455, 0.136212, 3.06134, -235.303, -3.74184, 3.11183)
 mesh = SubResource("ArrayMesh_kopki")
 skeleton = NodePath("")
 
-[node name="polySurface159_001" type="MeshInstance3D" parent="GPAlbum"]
+[node name="polySurface159_001" type="MeshInstance3D" parent="Animatique/GPAlbum"]
 transform = Transform3D(0.0436829, 0.0686093, 9.69593e-09, -4.84796e-09, 9.69593e-09, -0.0813353, -0.0686093, 0.0436829, 9.69593e-09, -179.87, -5.06471, 1.45984)
 mesh = SubResource("ArrayMesh_5nk6d")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_tx5fs")
 
-[node name="HairMere_009" type="MeshInstance3D" parent="GPAlbum"]
+[node name="HairMere_009" type="MeshInstance3D" parent="Animatique/GPAlbum"]
 transform = Transform3D(0.999626, -0.0139901, -0.023477, 0.00994139, 0.986332, -0.164467, 0.025457, 0.164172, 0.986103, -358.107, 4.33745, -0.525025)
 mesh = SubResource("ArrayMesh_scrqh")
 skeleton = NodePath("")
 
-[node name="GPposing" type="Node3D" parent="."]
+[node name="GPposing" type="Node3D" parent="Animatique"]
 transform = Transform3D(0.00181609, -0.00102779, -6.21901e-11, 0, 1.2438e-10, -0.00208675, 0.00102779, 0.00181609, 1.2438e-10, -264.142, 0.716353, 11.3852)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="GPposing"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Animatique/GPposing"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 1.77636e-15, -2.98023e-08, 2.98023e-08, 0, 1, 1.77636e-15, -1, 0, 0.00244141, -215.799, -9897.16)
@@ -14916,34 +15052,56 @@ bones/48/position = Vector3(-0.000298321, 735.174, -1.1444e-05)
 bones/48/rotation = Quaternion(2.39088e-08, 2.62167e-07, 1.96951e-08, 1)
 bones/48/scale = Vector3(1, 1, 1)
 
-[node name="BodyGP_002" type="MeshInstance3D" parent="GPposing/Skeleton3D"]
+[node name="BodyGP_002" type="MeshInstance3D" parent="Animatique/GPposing/Skeleton3D"]
 mesh = SubResource("ArrayMesh_it7b7")
 skin = SubResource("Skin_6o47l")
 surface_material_override/0 = SubResource("ShaderMaterial_yk0y7")
 
-[node name="Panta_002" type="MeshInstance3D" parent="GPposing/Skeleton3D"]
+[node name="Panta_002" type="MeshInstance3D" parent="Animatique/GPposing/Skeleton3D"]
 mesh = SubResource("ArrayMesh_666pf")
 skin = SubResource("Skin_6o47l")
 surface_material_override/0 = SubResource("ShaderMaterial_b6oks")
 
-[node name="Shoes_004" type="MeshInstance3D" parent="GPposing/Skeleton3D"]
+[node name="Shoes_004" type="MeshInstance3D" parent="Animatique/GPposing/Skeleton3D"]
 mesh = SubResource("ArrayMesh_qb2dw")
 skin = SubResource("Skin_6o47l")
 
-[node name="Teeshirt_002" type="MeshInstance3D" parent="GPposing/Skeleton3D"]
+[node name="Teeshirt_002" type="MeshInstance3D" parent="Animatique/GPposing/Skeleton3D"]
 mesh = SubResource("ArrayMesh_1k38w")
 skin = SubResource("Skin_6o47l")
 surface_material_override/0 = SubResource("ShaderMaterial_yfhv6")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animatique"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_tpxdb")
 }
 
-[node name="CameraOrigin3" type="Node3D" parent="."]
-transform = Transform3D(0.965925, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965925, -266, 34.6741, 36.1727)
+[node name="CameraOrigin3" type="Node3D" parent="Animatique"]
+transform = Transform3D(-4.37114e-08, 0, 0.999999, 0, 1, 0, -0.999999, 0, -4.37114e-08, 72.0344, 12.7534, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CameraOrigin3"]
+[node name="Camera3D" type="Camera3D" parent="Animatique/CameraOrigin3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.222523, -0.224141, 0.335577)
 keep_aspect = 0
 current = true
+
+[node name="RenderTitleScreen" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.294, 0, 0)
+
+[node name="MurbgTitle" type="MeshInstance3D" parent="RenderTitleScreen"]
+transform = Transform3D(6.41792e-06, 0, -1, 0, 16.4617, 0, 35.8916, 0, 1.78814e-07, -10.0213, 11.1316, 0.0185413)
+mesh = SubResource("ArrayMesh_f0450")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_mr86o")
+
+[node name="Grandparents_002" type="MeshInstance3D" parent="RenderTitleScreen"]
+transform = Transform3D(-3.74326e-07, 0, 8.56358, 0, 8.56358, 0, -8.56358, 0, -3.74326e-07, -8.99255, 12.7833, -0.475971)
+mesh = SubResource("ArrayMesh_8c3cr")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ulr7s")
+
+[node name="Grandparents_003" type="MeshInstance3D" parent="RenderTitleScreen"]
+transform = Transform3D(0, 0, 8.56358, 0, 8.56358, 0, -8.56358, 0, 0, -8.99255, 12.7833, -0.475971)
+mesh = SubResource("ArrayMesh_qtmuu")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_437sd")
