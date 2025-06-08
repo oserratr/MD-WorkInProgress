@@ -35,8 +35,11 @@ func _switch_salon():
 	var interaction_mother = dialogue.get_bool_interaction()
 	if player_enter_salon and Input.is_action_just_pressed("e") and carton_pris:
 		if not interaction_mother:
+			Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+			$"../CanvasLayer/AnimationPlayer".play("disolve")
+			await $"../CanvasLayer/AnimationPlayer".animation_finished
 			get_tree().change_scene_to_file("res://scenes/niveaux/salon.tscn")
-
+			$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
 # Zones : carton
 func _on_carton_2_body_entered(body):
 	if body.is_in_group("player"):
