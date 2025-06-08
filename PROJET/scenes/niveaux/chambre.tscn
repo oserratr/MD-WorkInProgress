@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=3 uid="uid://bpug5nj0fuxi6"]
+[gd_scene load_steps=219 format=3 uid="uid://bpug5nj0fuxi6"]
 
 [ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_3rdn1"]
 [ext_resource type="Texture2D" uid="uid://c1nw74bla4j15" path="res://assets/3D/Chambre/newtable/besidetable_BedStand01_DefaultMaterial_BaseColor.png" id="2_3lv8o"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://dl2b8dq54r4n1" path="res://scenes/ui/ui_interaction_echap.tscn" id="37_tasxf"]
 [ext_resource type="PackedScene" uid="uid://bqcrumkdqemdf" path="res://scenes/ui/uiinteraction.tscn" id="38_n0b8h"]
 [ext_resource type="Script" path="res://scripts/principals/Inspectionobjet2.gd" id="39_f3xcg"]
+[ext_resource type="Script" path="res://scripts/principals/SwitchNiveauxChambre.gd" id="39_nm0oo"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("1_3rdn1")
@@ -1719,6 +1720,9 @@ shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("23_6riyh")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3wcj8"]
+radius = 4.74148
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nth1r"]
 height = 3.51408
@@ -3414,6 +3418,60 @@ size = Vector3(2.87976, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_eym5n"]
 size = Vector3(0.341797, 1, 0.822266)
 
+[sub_resource type="Animation" id="Animation_57hf5"]
+resource_name = "disolve"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ur44l"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_um3vg"]
+resource_name = "solve"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x8tuy"]
+_data = {
+"RESET": SubResource("Animation_ur44l"),
+"disolve": SubResource("Animation_57hf5"),
+"solve": SubResource("Animation_um3vg")
+}
+
 [node name="chambre" type="Node3D"]
 
 [node name="Lights" type="Node3D" parent="."]
@@ -3697,6 +3755,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37458, -0.758789, 0)
 shape = SubResource("BoxShape3D_yulgw")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
+visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 26.079, -0.509425)
@@ -3704,39 +3763,46 @@ mesh = SubResource("ArrayMesh_lf7bn")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_13d36")
 
-[node name="Porte" type="Node3D" parent="LevelDesign/Piece"]
-transform = Transform3D(3.91834e-07, 0, -5.19, 0, 5.19, 0, 5.19, 0, 3.91834e-07, 22.6786, -4.19531, -11.2108)
+[node name="PorteSalon" type="Area3D" parent="LevelDesign/Piece"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1207, 0, -10.3635)
 
-[node name="Cube_002" type="MeshInstance3D" parent="LevelDesign/Piece/Porte"]
+[node name="Porte" type="Node3D" parent="LevelDesign/Piece/PorteSalon"]
+transform = Transform3D(3.91834e-07, 0, -5.19, 0, 5.19, 0, 5.19, 0, 3.91834e-07, 0.55788, -4.19531, -0.847272)
+
+[node name="Cube_002" type="MeshInstance3D" parent="LevelDesign/Piece/PorteSalon/Porte"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.16506, 2.89254, 0.127213)
 mesh = SubResource("ArrayMesh_v3y1e")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_xgo4t")
 
-[node name="pivotport" type="Node3D" parent="LevelDesign/Piece/Porte"]
+[node name="pivotport" type="Node3D" parent="LevelDesign/Piece/PorteSalon/Porte"]
 transform = Transform3D(-0.901075, 0, -0.433658, 0, 0.999998, 0, 0.433658, 0, -0.901075, -0.696334, 2.3655, 0.116207)
 
-[node name="Cube_003" type="MeshInstance3D" parent="LevelDesign/Piece/Porte/pivotport"]
+[node name="Cube_003" type="MeshInstance3D" parent="LevelDesign/Piece/PorteSalon/Porte/pivotport"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 0.861397, 0.527038, 0.0110059)
 mesh = SubResource("ArrayMesh_81gul")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_3clhu")
 
-[node name="Cube_006" type="MeshInstance3D" parent="LevelDesign/Piece/Porte/pivotport"]
+[node name="Cube_006" type="MeshInstance3D" parent="LevelDesign/Piece/PorteSalon/Porte/pivotport"]
 transform = Transform3D(0.530467, 0, 0, 0, 0.530467, 0, 0, 0, 0.530467, 1.47674, -0.189092, 0.0110059)
 mesh = SubResource("ArrayMesh_f7w81")
 skeleton = NodePath("")
 
-[node name="Cube_005" type="MeshInstance3D" parent="LevelDesign/Piece/Porte/pivotport"]
+[node name="Cube_005" type="MeshInstance3D" parent="LevelDesign/Piece/PorteSalon/Porte/pivotport"]
 transform = Transform3D(0.530467, -8.00984e-08, 0, 8.00984e-08, 0.530467, 0, 0, 0, -0.530467, 1.47674, -0.130742, 0.0640526)
 mesh = SubResource("ArrayMesh_0book")
 skeleton = NodePath("")
 
-[node name="pCube1" type="MeshInstance3D" parent="LevelDesign/Piece/Porte"]
+[node name="pCube1" type="MeshInstance3D" parent="LevelDesign/Piece/PorteSalon/Porte"]
 transform = Transform3D(1.818, 0, -2.5411e-21, 0, -5.68248e-10, -3.307, 0, 0.013, -1.44554e-07, 0.137557, 2.39305, 0.109366)
 mesh = SubResource("ArrayMesh_lxjaa")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_kigge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Piece/PorteSalon"]
+transform = Transform3D(0.994271, 0.106889, 0, -0.106889, 0.994271, 0, 0, 0, 1, 1.75908, 9.52204, 0)
+shape = SubResource("SphereShape3D_3wcj8")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
 transform = Transform3D(-0.16701, 0, 0.985955, 0, 1, 0, -0.985955, 0, -0.16701, 2.31977, 0.563942, -1.39009)
@@ -4236,6 +4302,30 @@ ui_interaction = NodePath("../uiinteraction")
 ui_interaction_echap = NodePath("../ui_interaction_echap")
 player = NodePath("../Player")
 
+[node name="SwitchNiveaux" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction")]
+script = ExtResource("39_nm0oo")
+ui_interaction = NodePath("../uiinteraction")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_x8tuy")
+}
+movie_quit_on_finish = true
+
+[connection signal="body_entered" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_exited"]
 [connection signal="body_entered" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_entered"]
 [connection signal="body_exited" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_exited"]
 [connection signal="body_entered" from="Vues/VueCoteGaucheChambre" to="GameManager" method="_on_vue_cote_gauche_chambre_body_entered"]
