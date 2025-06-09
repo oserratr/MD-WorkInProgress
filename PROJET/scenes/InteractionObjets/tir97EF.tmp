@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwajkqojf1dci"]
+
+[ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetTrad/InspectionTiroir.gd" id="1_3qoov"]
+[ext_resource type="Texture2D" uid="uid://cuctxxkykxrct" path="res://assets/2D/NiveauxInspection/talisman00000000.png" id="1_tdg10"]
+[ext_resource type="Script" path="res://scripts/2DInspectionObjet/Lettre.gd" id="3_gfgfp"]
+[ext_resource type="Texture2D" uid="uid://sgsp30ywm5je" path="res://movie/renderlettre/lettre00000000.png" id="3_mic81"]
+[ext_resource type="PackedScene" uid="uid://dl2b8dq54r4n1" path="res://scenes/ui/ui_interaction_echap.tscn" id="4_7fx4n"]
+[ext_resource type="Texture2D" uid="uid://umhxf4ucl0be" path="res://assets/2D/Chambre/InnerVoice/TrouverLettre.png" id="5_js2ww"]
+[ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="6_glkvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2kqb"]
+size = Vector2(445.185, 218.356)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ece1u"]
+size = Vector2(335.791, 95.9878)
+
+[node name="Tiroir1Interaction" type="Control" node_paths=PackedStringArray("ui_innervoice", "ui_echap")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qoov")
+ui_innervoice = NodePath("InnerVoice")
+ui_echap = NodePath("ui_interaction_echap")
+
+[node name="Lettre" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_tdg10")
+
+[node name="Lettre" type="Area2D" parent="Lettre" node_paths=PackedStringArray("ui_node_path")]
+script = ExtResource("3_gfgfp")
+ui_node_path = NodePath("../../UILettreGrand")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lettre/Lettre"]
+position = Vector2(4.25482, 17.3599)
+rotation = -1.0472
+shape = SubResource("RectangleShape2D_g2kqb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lettre/Lettre"]
+position = Vector2(-159.044, -15.2615)
+rotation = -1.0472
+shape = SubResource("RectangleShape2D_ece1u")
+
+[node name="UILettreGrand" type="Node2D" parent="."]
+
+[node name="Lettre" type="Sprite2D" parent="UILettreGrand"]
+texture_filter = 1
+position = Vector2(29, -8)
+scale = Vector2(0.925, 0.925)
+texture = ExtResource("3_mic81")
+
+[node name="ui_interaction_echap" parent="." instance=ExtResource("4_7fx4n")]
+layout_mode = 1
+offset_left = 727.0
+offset_top = 382.0
+offset_right = 727.0
+offset_bottom = 382.0
+
+[node name="InnerVoice" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fond" type="Sprite2D" parent="InnerVoice"]
+position = Vector2(0, 399)
+scale = Vector2(1.625, 1)
+texture = ExtResource("5_js2ww")
+
+[node name="Label" type="Label" parent="InnerVoice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.0
+offset_top = 348.0
+offset_right = 410.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
+theme_override_fonts/font = ExtResource("6_glkvl")
+theme_override_font_sizes/font_size = 35
+text = "Ça doit être la lettre en question. Je vais la prendre."
