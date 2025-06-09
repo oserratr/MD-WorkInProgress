@@ -10,8 +10,9 @@ Liste TO DO
 	-> Rajouts assets culturels un peux parton (dans tt les pièces)
 	-> Animation carton et objet qui tombes
 	-> Cinematique debut
-	-> UI Accès Objet
+	-> UI Accès Objet EN COURS
 	-> UI Style custom pour traduction
+	-> Revoir pour salon
 
 * A faire
 

@@ -4703,7 +4703,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37458, -0.758789, 0)
 shape = SubResource("BoxShape3D_yulgw")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
-visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 26.079, -0.509425)
