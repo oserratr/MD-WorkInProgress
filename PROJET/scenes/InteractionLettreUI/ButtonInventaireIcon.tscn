@@ -29,7 +29,6 @@ lettre_inventaire = NodePath("../../PriseDeNote")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconLettre/Area2D"]
 position = Vector2(1.1106, 71.1681)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gdjb1")
 
 [node name="PriseDeNote" type="Control" parent="."]

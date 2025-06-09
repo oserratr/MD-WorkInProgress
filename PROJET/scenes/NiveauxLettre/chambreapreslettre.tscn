@@ -5246,7 +5246,7 @@ player = NodePath("../Player")
 
 [node name="SwitchNiveaux" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction")]
 script = ExtResource("39_aweig")
-ui_interaction = NodePath("../uiinteraction")
+ui_interaction = NodePath("../uiinteraction2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -5714,7 +5714,6 @@ lettre_inventaire = NodePath("../../../../CanvasLayer3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/Inventaire/IconLettre/Area2D"]
 position = Vector2(1.1106, 71.1681)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3rut5")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
@@ -5739,6 +5738,12 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 36
 text = "LETTRE NIANIANIA"
+
+[node name="uiinteraction2" parent="." instance=ExtResource("37_hnvgb")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
 
 [connection signal="body_entered" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_exited"]
