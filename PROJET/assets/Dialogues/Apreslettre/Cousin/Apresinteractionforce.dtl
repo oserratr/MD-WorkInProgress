@@ -1,0 +1,19 @@
+[style name="OwnStyle"]
+Fille: Salut ! Ouai, je sais ...
+Fille: J'ai trouvé un objet bizarre dans les affaires de mamie, et tout de suite, elle s'est braquée...
+Cousin: C'est quoi ?
+Fille: Je sais pas... Mais là, je viens de trouver la lettre qui va avec !
+Fille: Mais je comprends rien.
+Cousin: Une lettre ? Fais voir !
+[background arg="res://assets/Movie/AssetLettreDialogue/lettredialogue00000000.png" fade="0.0"]
+Cousin: J'y crois pas..
+Cousin: Mamie m'avait déjà parlé de cette lettre quand elle est arrivée ici.
+[background fade="0.0"]
+Fille: Ah bon ? Il y a quoi dans cette lettre alors ?
+Cousin: J’ai toujours voulu savoir, mais elle est toujours restée vague à propos de ce que ça contenait.
+Fille: Tu pourrais la traduire ?
+Cousin: Franchement, ça fait vraiment longtemps que je n’ai pas pratiqué, je pense que je suis un peu rouillé.
+Cousin: L'idéal, ce serait que tu m'aides à traduire les mots sur lesquels je bloque.
+Fille: Je veux bien mais comment ?
+Cousin: Par exemple, je ne comprends pas la dernière phrase...
+Fille: Le mot "maty" est ambigu. Tu devrais peut-être chercher sa signification dans la maison.

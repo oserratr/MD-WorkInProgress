@@ -22,6 +22,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Cousin": "res://assets/Dialogues/Apreslettre/Cousin/Cousin.dch",
 "Fille": "res://assets/Dialogues/Characters/Fille.dch",
 "Mère": "res://assets/Dialogues/Characters/Mère.dch"
 }
@@ -29,7 +30,9 @@ directories/dtl_directory={
 "AlbumPhoto": "res://assets/Dialogues/Grenier/AlbumPhoto.dtl",
 "AlbumPhotoCarton": "res://assets/Dialogues/Grenier/AlbumPhotoCarton.dtl",
 "AlbumPhotoPasCarton": "res://assets/Dialogues/Grenier/AlbumPhotoPasCarton.dtl",
+"Apresinteractionforce": "res://assets/Dialogues/Apreslettre/Cousin/Apresinteractionforce.dtl",
 "FirstInteractionObjetTombe": "res://assets/Dialogues/Salon/FirstInteractionObjetTombe.dtl",
+"InteractionAfterLettreForce": "res://assets/Dialogues/Apreslettre/Cousin/InteractionAfterLettreForce.dtl",
 "objetrecup": "res://assets/Dialogues/Salon/objetrecup.dtl",
 "objetrecup1": "res://assets/Dialogues/Salon/objetrecup1.dtl"
 }
@@ -62,7 +65,7 @@ mouse_cursor/custom_image="res://assets/3D/Chambre/CurseurPtnclick.png"
 
 [editor]
 
-movie_writer/movie_file="C:/Users/ocean/Documents/MD-WorkInProgress/PROCESS/PhotoshootingAssets/Bg/4/mur4.png"
+movie_writer/movie_file="C:/Users/ocean/Documents/MD-WorkInProgress/PROJET/assets/Movie/AssetLettreDialogue/lettredialogue.png"
 movie_writer/fps=30
 
 [editor_plugins]
