@@ -35,7 +35,7 @@ func _switch_chambre():
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	$"../CanvasLayer/AnimationPlayer".play("disolve")
 	await $"../CanvasLayer/AnimationPlayer".animation_finished
-	get_tree().change_scene_to_file("res://scenes/niveaux/chambre.tscn")
+	get_tree().change_scene_to_file("res://scenes/NiveauxLettre/chambrebis.tscn")
 	$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
 	
 func _on_porte_chambre_body_entered(body):
