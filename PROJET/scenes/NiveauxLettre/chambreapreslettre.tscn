@@ -1,4 +1,4 @@
-[gd_scene load_steps=325 format=3 uid="uid://dhg4u3ueycwbj"]
+[gd_scene load_steps=326 format=3 uid="uid://dhg4u3ueycwbj"]
 
 [ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_tru6w"]
 [ext_resource type="Texture2D" uid="uid://c1nw74bla4j15" path="res://assets/3D/Chambre/newtable/besidetable_BedStand01_DefaultMaterial_BaseColor.png" id="2_r8pnk"]
@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://c2hutwaolbq25" path="res://assets/2D/Chambre/UIacceslettre/IconLettre.png" id="46_ckkdv"]
 [ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetTrad/Icon.gd" id="47_uc6jc"]
 [ext_resource type="Texture2D" uid="uid://b4mvqe8bo5llc" path="res://assets/Movie/Vue2dPhotoAutelChambre/photogp00000000.png" id="54_n0v54"]
+[ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetALO.gd" id="56_m0xyg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("1_tru6w")
@@ -1107,7 +1108,7 @@ shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("11_jpg0e")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fgpd0"]
-size = Vector3(3.57324, 6.2478, 2.41135)
+size = Vector3(4.6969, 6.2478, 2.41135)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8u0jg"]
 resource_name = "Red Antique Wardrobe"
@@ -5274,6 +5275,18 @@ size = Vector2(387.922, 199.783)
 
 [node name="chambre" type="Node3D"]
 
+[node name="ui_interaction_echap2" parent="." instance=ExtResource("36_hqm3q")]
+offset_left = 1639.0
+offset_top = 862.0
+offset_right = 1639.0
+offset_bottom = 862.0
+
+[node name="uiinteraction3" parent="." instance=ExtResource("37_hnvgb")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
 [node name="Lights" type="Node3D" parent="."]
 transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0)
 
@@ -5470,7 +5483,7 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.10253, 0, 19.5407)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/Autel/Aloalo/Aloalo"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27999, 0, -2.35686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.718165, 0, -3.02043)
 shape = SubResource("BoxShape3D_fgpd0")
 
 [node name="PasInteractif" type="Node3D" parent="LevelDesign"]
@@ -5699,7 +5712,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37458, -0.758789, 0)
 shape = SubResource("BoxShape3D_yulgw")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
-visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(28.035, 0, 0, 0, 1.734, 0, 0, 0, 51.328, -3.86201, 26.079, -0.509425)
@@ -5745,7 +5757,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_kigge")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Piece/PorteSalon"]
-transform = Transform3D(0.994271, 0.106889, 0, -0.106889, 0.994271, 0, 0, 0, 1, 1.75908, 9.52204, 0)
+transform = Transform3D(0.994271, 0.106889, 0, -0.106889, 0.994271, 0, 0, 0, 1, -0.330667, 9.52204, 0)
 shape = SubResource("SphereShape3D_3wcj8")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
@@ -6214,11 +6226,10 @@ transform = Transform3D(-4.22219e-08, -0.258819, 0.965925, -1.13133e-08, 0.96592
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin4"]
 transform = Transform3D(0.866026, 0.12941, -0.482964, -0.12941, 0.991025, 0.0334931, 0.482964, 0.0334942, 0.875001, -0.47543, 0.0822276, -0.306878)
 
-[node name="InspectionObjects" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player")]
+[node name="InspectionObjects" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "player")]
 script = ExtResource("35_hyroi")
 player_camera = NodePath("../CameraOrigin2/Camera3D")
 ui_interaction = NodePath("../uiinteraction")
-ui_interaction_echap = NodePath("../ui_interaction_echap")
 player = NodePath("../Player")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("36_hqm3q")]
@@ -6236,14 +6247,14 @@ offset_bottom = -3.0
 [node name="Inspectionobjet2" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player", "zoomphotogp")]
 script = ExtResource("38_atxy7")
 player_camera = NodePath("../CameraOrigin3/Camera3D")
-ui_interaction = NodePath("../uiinteractioncousin")
-ui_interaction_echap = NodePath("../ui_interaction_echap")
+ui_interaction = NodePath("../uiinteraction3")
+ui_interaction_echap = NodePath("../ui_interaction_echap2")
 player = NodePath("../Player")
 zoomphotogp = NodePath("../Zoomphotogp/Sprite2D")
 
 [node name="SwitchNiveaux" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction")]
 script = ExtResource("39_aweig")
-ui_interaction = NodePath("../uiinteraction2")
+ui_interaction = NodePath("../uiinteraction4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -6273,7 +6284,7 @@ offset_bottom = -3.0
 [node name="Cousin" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction_cousin", "player_camera", "camera_vue_cousin", "player", "ui_inventaire")]
 transform = Transform3D(0.0412049, 0, -0.101991, 0, 0.11, 0, 0.101991, 0, 0.0412049, 1.29583, 0.110712, -1.28225)
 script = ExtResource("40_s2214")
-ui_interaction_cousin = NodePath("../uiinteraction")
+ui_interaction_cousin = NodePath("../uiinteraction2")
 player_camera = NodePath("../CameraOrigin2/Camera3D")
 camera_vue_cousin = NodePath("CameraOrigin5/Camera3D")
 player = NodePath("../Player")
@@ -6762,10 +6773,25 @@ offset_top = 382.0
 offset_right = 727.0
 offset_bottom = 382.0
 
+[node name="InspectionObjetALO" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "alo_camera", "alo_out_camera", "ui_interaction", "ui_echap")]
+script = ExtResource("56_m0xyg")
+player_camera = NodePath("../CameraOrigin2/Camera3D")
+player = NodePath("../Player")
+alo_camera = NodePath("../LevelDesign/Interactif/Autel/Aloalo/Camera3D")
+alo_out_camera = NodePath("../CameraOrigin3/Camera3D")
+ui_interaction = NodePath("../uiinteraction")
+ui_echap = NodePath("../ui_interaction_echap")
+
+[node name="uiinteraction4" parent="." instance=ExtResource("37_hnvgb")]
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
 [connection signal="body_entered" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_exited"]
-[connection signal="body_entered" from="LevelDesign/Interactif/Autel/Aloalo/Aloalo" to="Inspectionobjet2" method="_on_aloalo_body_entered"]
-[connection signal="body_exited" from="LevelDesign/Interactif/Autel/Aloalo/Aloalo" to="Inspectionobjet2" method="_on_aloalo_body_exited"]
+[connection signal="body_entered" from="LevelDesign/Interactif/Autel/Aloalo/Aloalo" to="InspectionObjetALO" method="_on_aloalo_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/Autel/Aloalo/Aloalo" to="InspectionObjetALO" method="_on_aloalo_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Piece/PorteSalon" to="SwitchNiveaux" method="_on_porte_salon_body_exited"]
 [connection signal="body_entered" from="Vues/VueLitFace" to="GameManager" method="_on_vue_lit_face_body_entered"]

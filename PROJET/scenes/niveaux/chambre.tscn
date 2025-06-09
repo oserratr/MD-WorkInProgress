@@ -4275,11 +4275,10 @@ transform = Transform3D(-1.64203e-15, -1, -4.37114e-08, -4.37113e-08, -4.37114e-
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin5"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, 0, 0, 1, -0.0101903, 0.0822277, 0.0963297)
 
-[node name="InspectionObjects" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "ui_interaction_echap", "player")]
+[node name="InspectionObjects" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "ui_interaction", "player")]
 script = ExtResource("36_rcctu")
 player_camera = NodePath("../CameraOrigin2/Camera3D")
 ui_interaction = NodePath("../uiinteraction")
-ui_interaction_echap = NodePath("../ui_interaction_echap")
 player = NodePath("../Player")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("37_tasxf")]
