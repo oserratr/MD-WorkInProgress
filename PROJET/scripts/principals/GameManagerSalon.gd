@@ -12,6 +12,10 @@ var player_enter_talisman := false
 var player_enter_area_carton := false
 var player_enter_area_manger := false
 
+func _ready():
+	# Exemple dans _ready() ou au moment de changer de musique
+	var my_music = preload("res://assets/Son/grenier.mp3")
+	AudioManager.play_music(my_music)
 			
 func _process(delta):
 

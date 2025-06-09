@@ -10,8 +10,11 @@ var player_enter_area1 := false
 var player_enter_area2 := false
 var player_enter_objet := false
 
-#func _ready():
-	#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+func _ready():
+	# Exemple dans _ready() ou au moment de changer de musique
+	var my_music = preload("res://assets/Son/grenier.mp3")
+	AudioManager.play_music(my_music)
+	
 
 func _process(delta):
 	# Activer la caméra secondaire si elle est définie et pas encore active
