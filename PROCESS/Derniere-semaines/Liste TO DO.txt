@@ -11,6 +11,7 @@ Liste TO DO
 	-> Animation carton et objet qui tombes
 	-> Cinematique debut
 	-> UI Accès Objet
+	-> UI Style custom pour traduction
 
 * A faire
 
