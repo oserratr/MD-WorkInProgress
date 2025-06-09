@@ -19,7 +19,7 @@ func _process(delta):
 	# Si l'UI d'échappement est visible et que le joueur appuie sur "ui_cancel"
 	if ui_echap.visible and Input.is_action_just_pressed("ui_cancel"):
 		# Remplace ici par le chemin vers la scène que tu veux charger
-		get_tree().change_scene_to_file("res://scenes/niveaux/chambre.tscn")
+		get_tree().change_scene_to_file("res://scenes/NiveauxLettre/chambreapreslettre.tscn")
 
 
 func _innervoice():

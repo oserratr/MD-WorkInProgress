@@ -7,6 +7,7 @@ var interaction_force = false
 @export var player_camera: Camera3D
 @export var camera_vue_cousin: Camera3D
 @export var player: CharacterBody3D
+@export var ui_inventaire: Control
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
 var current_timeline_name := ""
@@ -16,6 +17,7 @@ func _ready():
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
 	_timeline_interaction_force()  # ✅ Gardée au démarrage
+	ui_inventaire.visible = false
 
 func _process(delta):
 	# Affiche le prompt uniquement si joueur est dans la zone ET qu'aucune timeline n'est active
@@ -82,5 +84,9 @@ func _on_dialogic_timeline_ended():
 
 	if current_timeline_name in ["objetrecup", "objetrecup1", "Apresinteractionforce"]:
 		_switch_to_player_camera()
+
+	# 👉 Affiche l'inventaire uniquement après "Apresinteractionforce"
+	if current_timeline_name == "Apresinteractionforce":
+		ui_inventaire.visible = true
 
 	current_timeline_name = ""
