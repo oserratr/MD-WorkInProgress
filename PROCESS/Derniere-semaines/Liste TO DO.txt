@@ -7,7 +7,7 @@ Liste TO DO
 	-> Cinematique debut (sous-titres + changement voix andy)
 	-> Mesh perso fix bug
 	-> Ameliorer inspection d'objet OK
-	-> Rajouts assets culturels un peux parton (dans tt les pièces)
+	-> Rajouts assets culturels un peux partout (dans tt les pièces)
 	-> Animation carton et objet qui tombes
 	-> Cinematique debut
 	-> UI Accès Objet EN COURS
