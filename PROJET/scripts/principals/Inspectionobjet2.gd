@@ -9,13 +9,18 @@ var active_secondary_camera: Camera3D = null
 var camera_switched := false
 var player_enter_objet := false
 
+func _ready():
+	ui_interaction.visible = false
+	ui_interaction_echap.visible = false
+
 func _process(delta):
 	# Affichage UI "E"
 	ui_interaction.visible = player_enter_objet and not camera_switched
-
+	if player_enter_objet :
+		ui_interaction.visible = true
+		if Input.is_action_just_pressed("e") and not camera_switched :
 	# Switch vers autrescene
-	if Input.is_action_just_pressed("e") and player_enter_objet and not camera_switched:
-		get_tree().change_scene_to_file("res://scenes/InteractionObjets/tiroir_1_interaction.tscn")
+			get_tree().change_scene_to_file("res://scenes/InteractionObjets/tiroir_1_interaction.tscn")
 
 	# Retour caméra joueur
 	elif Input.is_action_just_pressed("ui_cancel") and player_enter_objet and camera_switched:

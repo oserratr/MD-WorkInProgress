@@ -1,5 +1,11 @@
 Liste TO DO
 
+* Polish
+	-> SFX
+	-> Test motif reminisence
+	-> Changement cursor Hoover inspection objet
+	-> Cinematique debut (sous-titres + changement voix andy)
+
 * A faire
 
 	-> Terminer structure de la slice (mot traduire comment + quel assets) EN COURS
@@ -13,18 +19,14 @@ Liste TO DO
 	-> Gameplay Traduction EN COURS
 	-> Test motif reminisence
 	-> Navigation entre différentes pieces (faire a la fin)
-	-> UI Inventaire
-	-> SFX
+	-> UI Inventaire EN COURS
 	-> Changer curseur point and click OK
 	-> Voir pour modification sky texture
 	-> Improuve interaction objet inspection
 	-> Preparer visuel et shooting photo OK
-	-> Menu screen depart ? 
+	-> Menu screen depart ? OK
 	-> Modifier objet + lettre pour indices OK
-	-> Pouvoir se promener partout dès le debut ?
 	-> Réfléchir structure présentation EN COURS
-	-> Test motif reminisence
-	-> Changement cursor Hoover inspection objet
 	-> Trailer
 
 * Pour demain
@@ -62,11 +64,6 @@ Liste TO DO
 		-> Montre
 		-> crème
 		-> Peigne afro
-* Questionnements 
-	-> Question sur device pour l'expo ? OK
-	-> Voir pour structure prez + demander pour faire passage visio OK Mardi 16h30 a l'ecole
-	-> Couloirs ? Facultatif
-	-> chargement entre scene ?
 
 
 * Issues
@@ -80,8 +77,5 @@ Liste TO DO
 		-> Dope sheet + mode action editor
 
 
-* Ce soir : 
-	-> Finir pour le premier mot morts
-	-> Intégrer le son
-	-> UI inventaire
+
 		
