@@ -6,7 +6,7 @@ Liste TO DO
 	-> Changement cursor Hoover inspection objet
 	-> Cinematique debut (sous-titres + changement voix andy)
 	-> Mesh perso fix bug
-	-> Ameliorer inspection d'objet
+	-> Ameliorer inspection d'objet OK
 	-> Rajouts assets culturels un peux parton (dans tt les pièces)
 	-> Animation carton et objet qui tombes
 	-> Cinematique debut
