@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=3 uid="uid://b57mxrf2dkekd"]
+[gd_scene load_steps=210 format=3 uid="uid://b57mxrf2dkekd"]
 
 [ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_32to2"]
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="2_mhdoe"]
@@ -23,10 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://uvd8kq5b3i5q" path="res://assets/3D/mur/assets2_Wallpaper.004_BaseColor.png" id="25_qqnn1"]
 [ext_resource type="Texture2D" uid="uid://b8km3yxjgn0kg" path="res://assets/3D/Grenier/Textures/sansfenetre_assets2_Wallpaper.png" id="26_p21yr"]
 [ext_resource type="Texture2D" uid="uid://237uk1n2c7eo" path="res://assets/3D/Grenier/Textures/avecfenetre_assets_lambert1.png" id="27_8tat7"]
+[ext_resource type="Script" path="res://scripts/slice2/AnimationManagergrenierslicetrad.gd" id="27_p1wfl"]
 [ext_resource type="Texture2D" uid="uid://bvku51qj3fffh" path="res://assets/3D/Grenier/Textures/avecfenetre_assets_Backrooms Wallpaper_BaseColor.png" id="28_xfcia"]
 [ext_resource type="Texture2D" uid="uid://bfyf7a6umhiuk" path="res://assets/3D/mur/assets_Backrooms Wallpaper_BaseColor.png" id="29_oxqbf"]
 [ext_resource type="Texture2D" uid="uid://bq1rgbpiurwhm" path="res://assets/2D/Album/sol test_DefaultMaterial_BaseColor.png" id="30_5e604"]
-[ext_resource type="Script" path="res://scripts/principals/AnimationManager.gd" id="38_wsvaa"]
 [ext_resource type="Script" path="res://scripts/principals/Player.gd" id="39_ttqbv"]
 [ext_resource type="Texture2D" uid="uid://cum4ucprxgede" path="res://assets/3D/FilleTransform/Texture/2animFille2_haire.png" id="40_ukp0p"]
 [ext_resource type="Texture2D" uid="uid://bn6m07bhllgaw" path="res://assets/3D/FilleTransform/Texture/2animFille2_teeshirtfill.png" id="41_sdue1"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dbsyr2wnbxvb8" path="res://assets/3D/cutscene/test2anim/assoiranimation_skinfille.png" id="44_cv4ln"]
 [ext_resource type="Texture2D" uid="uid://ca1fm7chijydr" path="res://assets/3D/FilleTransform/Texture/2animFille2_pantfille.png" id="45_4he60"]
 [ext_resource type="Texture2D" uid="uid://dhtqjk8yts3dv" path="res://assets/3D/Fille/Texture/2animFille_haire.png" id="46_yvqge"]
+[ext_resource type="Script" path="res://scripts/slice2/SwitchSalongrenierap.gd" id="47_1jbfm"]
 [ext_resource type="PackedScene" uid="uid://b8b5gkkpfe64u" path="res://scenes/ui/control.tscn" id="47_7mqqh"]
 [ext_resource type="Texture2D" uid="uid://owqyp3i773yq" path="res://assets/2D/Ui autre/cursor.png" id="48_xr2pk"]
 [ext_resource type="Script" path="res://scripts/principals/SwitchVues.gd" id="49_45oky"]
@@ -42,10 +43,8 @@
 [ext_resource type="Script" path="res://scripts/principals/InteractionObjet.gd" id="51_m0ae8"]
 [ext_resource type="PackedScene" uid="uid://dl2b8dq54r4n1" path="res://scenes/ui/ui_interaction_echap.tscn" id="52_p444a"]
 [ext_resource type="PackedScene" uid="uid://bqcrumkdqemdf" path="res://scenes/ui/uiinteraction.tscn" id="53_btik1"]
-[ext_resource type="Script" path="res://scripts/principals/InteractionCarton.gd" id="54_eytiy"]
 [ext_resource type="Texture2D" uid="uid://duaf508ng6hd3" path="res://assets/3D/porte2/door_Wood027_2K_Color.jpg" id="55_clygl"]
 [ext_resource type="Texture2D" uid="uid://tjqm5tv0ocue" path="res://assets/3D/Grenier/opendoor/opendoor_DoorOpen_lambert1_BaseColor.png" id="56_mnckn"]
-[ext_resource type="Script" path="res://scripts/gamesmanager/TransitionCameraManager.gd" id="57_x15es"]
 [ext_resource type="Texture2D" uid="uid://umhxf4ucl0be" path="res://assets/2D/Chambre/InnerVoice/TrouverLettre.png" id="58_jfb2d"]
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="59_s3ytn"]
 
@@ -3115,115 +3114,6 @@ shader_parameter/albedo = ExtResource("56_mnckn")
 [sub_resource type="SphereShape3D" id="SphereShape3D_4q4go"]
 radius = 0.67877
 
-[sub_resource type="Animation" id="Animation_njmdw"]
-resource_name = "CinematiqueTransition"
-length = 3.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(1.77605, 1.82968, 1.07718), Vector3(2.52789, 2.91547, -2.87813)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 3.14159, 0), Vector3(-0.523599, 2.61799, -6.53748e-08)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D:current")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [true, true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../CameraOrigin1/Camera3D:current")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 3, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, false, true]
-}
-
-[sub_resource type="Animation" id="Animation_ijip4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera3D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(2.52789, 2.91547, -2.87813)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.523599, 2.61799, -6.53748e-08)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Camera3D:current")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../CameraOrigin1/Camera3D:current")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_akpkn"]
-_data = {
-"CinematiqueTransition": SubResource("Animation_njmdw"),
-"RESET": SubResource("Animation_ijip4")
-}
-
 [sub_resource type="Animation" id="Animation_ur44l"]
 resource_name = "RESET"
 tracks/0/type = "value"
@@ -3626,7 +3516,6 @@ shape = SubResource("BoxShape3D_5gn7w")
 [node name="Murs" type="Node3D" parent="Level Design/Piece"]
 
 [node name="Plafond" type="Node3D" parent="Level Design/Piece/Murs"]
-visible = false
 
 [node name="Plafond2" type="MeshInstance3D" parent="Level Design/Piece/Murs/Plafond"]
 transform = Transform3D(-1.99034, -7.8939e-07, 0.0722352, 0.946447, -1.08193e-06, 0.151908, -1.66859e-07, 3.27923, 6.75085e-08, 1.42132, 3.74697, 0)
@@ -3726,16 +3615,16 @@ shape = SubResource("BoxShape3D_t0v46")
 transform = Transform3D(-0.866025, -0.25, 0.433013, -5.66162e-08, 0.866025, 0.5, -0.5, 0.433013, -0.749999, 2.52789, 2.91547, -2.87813)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin1" groups=["Camera"]]
+current = true
 
-[node name="AnimationManager" type="Node3D" parent="." node_paths=PackedStringArray("animation_player_mere", "animation_player_fille")]
-script = ExtResource("38_wsvaa")
-animation_player_mere = NodePath("")
+[node name="AnimationManager" type="Node3D" parent="." node_paths=PackedStringArray("animation_player_fille")]
+script = ExtResource("27_p1wfl")
 animation_player_fille = NodePath("../Player/Fille/AnimationFille/AnimationPlayer")
 
 [node name="DialogueManager" type="Node3D" parent="."]
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("navigation_agent", "animation_player", "game_manager") groups=["player"]]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 1.80647, 0.658222, 1.79366)
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 2.10957, 0.658222, -1.77499)
 script = ExtResource("39_ttqbv")
 navigation_agent = NodePath("NavigationAgent3D")
 animation_player = NodePath("Fille/AnimationFille/AnimationPlayer")
@@ -4192,34 +4081,32 @@ ui_interaction_echap = NodePath("../ui_interaction_echap")
 player = NodePath("../Player")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("52_p444a")]
+visible = false
 offset_left = 1639.0
 offset_top = 862.0
 offset_right = 1639.0
 offset_bottom = 862.0
 
 [node name="uiinteraction" parent="." instance=ExtResource("53_btik1")]
+visible = false
 offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
 
 [node name="uiinteraction2" parent="." instance=ExtResource("53_btik1")]
+visible = false
 offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
 
 [node name="uiinteraction3" parent="." instance=ExtResource("53_btik1")]
+visible = false
 offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
-
-[node name="InteractionCarton" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction_prendre", "carton_pickable", "dialogue")]
-script = ExtResource("54_eytiy")
-ui_interaction_prendre = NodePath("../uiinteraction")
-carton_pickable = NodePath("")
-dialogue = NodePath("")
 
 [node name="Salon" type="Area3D" parent="."]
 
@@ -4260,18 +4147,6 @@ surface_material_override/0 = SubResource("ShaderMaterial_sm2id")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Salon"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14615, 1.40043, -2.80831)
 shape = SubResource("SphereShape3D_4q4go")
-
-[node name="TransitionCamera" type="Node3D" parent="."]
-script = ExtResource("57_x15es")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionCamera"]
-libraries = {
-"": SubResource("AnimationLibrary_akpkn")
-}
-
-[node name="Camera3D" type="Camera3D" parent="TransitionCamera" groups=["Camera"]]
-transform = Transform3D(-0.866023, -0.250002, 0.433015, -5.66162e-08, 0.866025, 0.5, -0.500003, 0.433012, -0.749998, 2.52789, 2.91547, -2.87813)
-current = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -4342,11 +4217,22 @@ libraries = {
 "": SubResource("AnimationLibrary_gej3t")
 }
 
+[node name="SwitchSalon" type="Node3D" parent="." node_paths=PackedStringArray("ui_interaction")]
+script = ExtResource("47_1jbfm")
+ui_interaction = NodePath("../uiinteraction4")
+
+[node name="uiinteraction4" parent="." instance=ExtResource("53_btik1")]
+visible = false
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
 [connection signal="body_entered" from="Level Design/Interactifs/Tableau2/Tableau3" to="InteractionObjet" method="_on_tableau_3_body_entered"]
 [connection signal="body_exited" from="Level Design/Interactifs/Tableau2/Tableau3" to="InteractionObjet" method="_on_tableau_3_body_exited"]
 [connection signal="body_entered" from="VueMere" to="GameManager" method="_on_vue_mere_body_entered"]
 [connection signal="body_exited" from="VueMere" to="GameManager" method="_on_vue_mere_body_exited"]
 [connection signal="body_entered" from="VuePorte" to="GameManager" method="_on_vue_porte_body_entered"]
 [connection signal="body_exited" from="VuePorte" to="GameManager" method="_on_vue_porte_body_exited"]
-[connection signal="body_entered" from="Salon" to="InteractionCarton" method="_on_salon_body_entered"]
-[connection signal="body_exited" from="Salon" to="InteractionCarton" method="_on_salon_body_exited"]
+[connection signal="body_entered" from="Salon" to="SwitchSalon" method="_on_salon_body_entered"]
+[connection signal="body_exited" from="Salon" to="SwitchSalon" method="_on_salon_body_exited"]

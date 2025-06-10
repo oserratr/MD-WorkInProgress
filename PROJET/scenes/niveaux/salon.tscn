@@ -7537,7 +7537,6 @@ ui_interaction = NodePath("../uiinteraction")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.02519, 1.98934, 6.3408)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="InspectionObjetsSlice" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "alo_camera", "alo_out_camera", "ui_interaction", "ui_echap")]
 script = ExtResource("66_nl2o4")
@@ -7618,7 +7617,6 @@ libraries = {
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.25187, 1.15089, -1.66068)
 
 [node name="Camera3D" type="Camera3D" parent="CameraOrigin6"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="InspectionObjetsSlice2" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "alo_camera", "alo_out_camera", "ui_interaction", "ui_echap")]
 script = ExtResource("69_3ioxs")
