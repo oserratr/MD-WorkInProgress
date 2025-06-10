@@ -1,4 +1,4 @@
-[gd_scene load_steps=387 format=3 uid="uid://b6qjuf1vqxo7i"]
+[gd_scene load_steps=389 format=3 uid="uid://b6qjuf1vqxo7i"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_wog66"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lth6f"]
@@ -68,6 +68,7 @@
 [ext_resource type="Script" path="res://scripts/slice2/InspectionObjetsSliceSalon.gd" id="66_nl2o4"]
 [ext_resource type="Texture2D" uid="uid://umhxf4ucl0be" path="res://assets/2D/Chambre/InnerVoice/TrouverLettre.png" id="67_738ly"]
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="68_cuop6"]
+[ext_resource type="Script" path="res://scripts/slice2/InspectionObjetsSlice2Salon.gd" id="69_3ioxs"]
 
 [sub_resource type="Animation" id="Animation_ur44l"]
 resource_name = "RESET"
@@ -728,6 +729,9 @@ shader_parameter/albedo = ExtResource("10_km0n6")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bi46k"]
 size = Vector3(1, 1, 1.5614)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bohrm"]
+size = Vector3(0.888184, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1yl6"]
 resource_name = "Frame"
@@ -5793,7 +5797,7 @@ tracks/0/path = NodePath("Invoice:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.5, 1.2),
+"times": PackedFloat32Array(0.8, 1.5),
 "transitions": PackedFloat32Array(0.68302, 3.605),
 "update": 0,
 "values": [Vector2(0, 290), Vector2(0, 0)]
@@ -5805,7 +5809,7 @@ tracks/1/path = NodePath("Invoice:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.8, 1.2),
+"times": PackedFloat32Array(1.1, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -5817,7 +5821,7 @@ tracks/2/path = NodePath("Invoice:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.5, 1.2),
+"times": PackedFloat32Array(0.8, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(30, 40), Vector2(40, 40)]
@@ -6031,6 +6035,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0441684, 0, 2.01704)
 transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1.46866, -2.32095, -2.30836)
 shape = SubResource("BoxShape3D_bi46k")
 
+[node name="TV" type="Node3D" parent="LevelDesign/Interactif"]
+
+[node name="TV" type="Area3D" parent="LevelDesign/Interactif/TV"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/TV/TV"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66468, 0, -1.61982)
+shape = SubResource("BoxShape3D_bohrm")
+
 [node name="Portes" type="Node3D" parent="LevelDesign"]
 transform = Transform3D(1.20482, 0, 0, 0, 1.20482, 0, 0, 0, 1.20482, 0, 0, 0)
 
@@ -6212,7 +6224,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500383, -0.285141, 4.48886
 shape = SubResource("BoxShape3D_p3gua")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
-visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(5.48039, 0, 0, 0, 0.339435, 0, 0, 0, 10.0334, -0.491607, 4.20739, 3.95585)
@@ -7592,12 +7603,95 @@ libraries = {
 "": SubResource("AnimationLibrary_gej3t")
 }
 
+[node name="CameraOrigin6" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.25187, 1.15089, -1.66068)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="InspectionObjetsSlice2" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "alo_camera", "alo_out_camera", "ui_interaction", "ui_echap")]
+script = ExtResource("69_3ioxs")
+player_camera = NodePath("../CameraOrigin/Camera3D")
+player = NodePath("../Player")
+alo_camera = NodePath("../CameraOrigin6/Camera3D")
+alo_out_camera = NodePath("../CameraOrigin/Camera3D")
+ui_interaction = NodePath("../uiinteraction4")
+ui_echap = NodePath("../ui_interaction_echap3")
+
+[node name="InnervoiceTV" type="CanvasLayer" parent="."]
+
+[node name="InnerVoice" type="Control" parent="InnervoiceTV"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Invoice" type="Control" parent="InnervoiceTV/InnerVoice"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Fond" type="Sprite2D" parent="InnervoiceTV/InnerVoice/Invoice"]
+position = Vector2(0, 399)
+scale = Vector2(1.625, 1)
+texture = ExtResource("67_738ly")
+
+[node name="Label" type="Label" parent="InnervoiceTV/InnerVoice/Invoice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 348.0
+offset_right = 187.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
+theme_override_fonts/font = ExtResource("68_cuop6")
+theme_override_font_sizes/font_size = 35
+text = "Tiens, je me demande qui c'est."
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InnervoiceTV/InnerVoice"]
+libraries = {
+"": SubResource("AnimationLibrary_gej3t")
+}
+
+[node name="uiinteraction4" parent="." instance=ExtResource("38_dx15b")]
+visible = false
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="ui_interaction_echap3" parent="." instance=ExtResource("37_52moq")]
+visible = false
+offset_left = 1639.0
+offset_top = 862.0
+offset_right = 1639.0
+offset_bottom = 862.0
+
 [connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_exited"]
+[connection signal="body_entered" from="LevelDesign/Interactif/TV/TV" to="InspectionObjetsSlice2" method="_on_tv_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/TV/TV" to="InspectionObjetsSlice2" method="_on_tv_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Portes/PorteChambre" to="SwitchNiveaux" method="_on_porte_chambre_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Portes/PorteChambre" to="SwitchNiveaux" method="_on_porte_chambre_body_exited"]
 [connection signal="body_entered" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_entered"]
