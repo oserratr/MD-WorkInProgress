@@ -1,7 +1,7 @@
 extends Node3D
 
-var player_enter_salon = false
-
+var player_enter_chambre = false
+var player_enter_grenier = false
 @export var ui_interaction: Control
 
 func _ready():
@@ -24,29 +24,49 @@ func _ready():
 func _process(delta):
 	
 	# Afficher ou non UI
-	if player_enter_salon :
+	if player_enter_chambre :
 		ui_interaction.visible = true
 		if Input.is_action_just_pressed("e"):
-			_switch_salon()
-
+			_switch_chambre()
+	elif player_enter_grenier :
+		ui_interaction.visible = true
+		if Input.is_action_just_pressed("e"):
+			_switch_grenier()
 	else :
 		ui_interaction.visible = false
 	
 	
-func _switch_salon():
+func _switch_chambre():
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	$"../CanvasLayer/AnimationPlayer".play("disolve")
 	await $"../CanvasLayer/AnimationPlayer".animation_finished
 	GlobalSceneState.previous_scene_name = get_tree().current_scene.name
-	get_tree().change_scene_to_file("res://scenes/niveaux/salonapreslettre.tscn")
+	get_tree().change_scene_to_file("res://scenes/NiveauxLettre/chambreapreslettretrad.tscn")
+	$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
+
+func _switch_grenier():
+	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	$"../CanvasLayer/AnimationPlayer".play("disolve")
+	await $"../CanvasLayer/AnimationPlayer".animation_finished
+	GlobalSceneState.previous_scene_name = get_tree().current_scene.name
+	get_tree().change_scene_to_file("res://scenes/niveaux/grenierApcarton.tscn")
 	$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
 	
-
-func _on_salon_body_entered(body):
+func _on_porte_chambre_body_entered(body):
 	if body.is_in_group("player"):
-		player_enter_salon = true
+		player_enter_chambre = true
 
 
-func _on_salon_body_exited(body):
+func _on_porte_chambre_body_exited(body):
 	if body.is_in_group("player"):
-		player_enter_salon = false
+		player_enter_chambre = false
+
+
+func _on_porte_grenier_body_entered(body):
+	if body.is_in_group("player"):
+		player_enter_grenier = true
+
+
+func _on_porte_grenier_body_exited(body):
+	if body.is_in_group("player"):
+		player_enter_grenier = false

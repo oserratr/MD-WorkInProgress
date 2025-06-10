@@ -1,18 +1,23 @@
 [style name="OwnStyle"]
+set {mottrouver} = 
 Cousin: Alors tu as trouvé ?
 - Dis, je dois trouver quoi déjà ?
 	Cousin: Le mot "maty" est ambigu. Tu devrais peut-être chercher sa signification dans la maison.
 - Oui !
 	Cousin: Super ! Je t’écoute.
 	[text_input var="tradmotmort"]
-	if {"{tradmotmort}"} == "morts":
+	if {tradmotmort} == "morts":
 		Cousin: Je pense que tu as trouvé ! Dans la phrase entière, ça donne "Tant que la mémoire vit, nous ne sommes pas morts."
+		set {mottrouver} = true
 	elif {tradmotmort} == "mort":
 		Cousin: Je pense que tu as trouvé ! Dans la phrase entière, ça donne "Tant que la mémoire vit, nous ne sommes pas morts."
+		set {mottrouver} = true
 	elif {tradmotmort} == "Mort":
 		Cousin: Je pense que tu as trouvé ! Dans la phrase entière, ça donne "Tant que la mémoire vit, nous ne sommes pas morts."
+		set {mottrouver} = true
 	elif {tradmotmort} == "Morts":
 		Cousin: Je pense que tu as trouvé ! Dans la phrase entière, ça donne "Tant que la mémoire vit, nous ne sommes pas morts."
+		set {mottrouver} = true
 	else:
-		Cousin: Je pense que ça ne colle pas très bien avec le reste de la phrase. 
+		Cousin: Je pense que ça ne colle pas très bien avec le reste de la phrase.
 		Cousin: Essaye de chercher sa signification dans la maison.

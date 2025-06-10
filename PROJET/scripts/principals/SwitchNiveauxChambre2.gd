@@ -24,7 +24,7 @@ func _switch_chambre():
 	$"../CanvasLayer/AnimationPlayer".play("disolve")
 	await $"../CanvasLayer/AnimationPlayer".animation_finished
 	GlobalSceneState.previous_scene_name = get_tree().current_scene.name
-	get_tree().change_scene_to_file("res://scenes/niveaux/salon.tscn")
+	get_tree().change_scene_to_file("res://scenes/niveaux/salonapreslettre.tscn")
 	$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
 
 func _on_porte_salon_body_entered(body):

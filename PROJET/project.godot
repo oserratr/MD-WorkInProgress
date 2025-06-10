@@ -43,6 +43,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"]
 layout/default_style="res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"
 variables={
+"mottrouver": false,
 "tradmotmort": ""
 }
 text/letter_speed=0.01
