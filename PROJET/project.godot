@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Projet-Diplome"
-run/main_scene="res://scenes/Cutscene/mainintrocutscene.tscn"
+run/main_scene="res://scenes/title_screen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 AudioManager="*res://scenes/audio_manager.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
