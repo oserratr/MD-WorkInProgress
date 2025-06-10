@@ -1,4 +1,4 @@
-[gd_scene load_steps=379 format=3 uid="uid://b6qjuf1vqxo7i"]
+[gd_scene load_steps=387 format=3 uid="uid://b6qjuf1vqxo7i"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_wog66"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lth6f"]
@@ -65,6 +65,9 @@
 [ext_resource type="Texture2D" uid="uid://nj5bw7ysl1q" path="res://assets/3D/MereSalon/mere_haire.png" id="49_p0qrc"]
 [ext_resource type="Texture2D" uid="uid://c22jh15fc7msc" path="res://assets/3D/MereSalon/mere_04730040400-e2.png" id="50_xc65k"]
 [ext_resource type="Script" path="res://scripts/principals/SwitchNiveauxSalon.gd" id="63_3m1gd"]
+[ext_resource type="Script" path="res://scripts/slice2/InspectionObjetsSliceSalon.gd" id="66_nl2o4"]
+[ext_resource type="Texture2D" uid="uid://umhxf4ucl0be" path="res://assets/2D/Chambre/InnerVoice/TrouverLettre.png" id="67_738ly"]
+[ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="68_cuop6"]
 
 [sub_resource type="Animation" id="Animation_ur44l"]
 resource_name = "RESET"
@@ -722,6 +725,9 @@ shader_parameter/alpha_scissor = 0.0
 shader_parameter/jitter = 0.0
 shader_parameter/resolution = Vector2i(320, 240)
 shader_parameter/albedo = ExtResource("10_km0n6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bi46k"]
+size = Vector3(1, 1, 1.5614)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1yl6"]
 resource_name = "Frame"
@@ -5777,6 +5783,120 @@ _data = {
 [sub_resource type="SphereShape3D" id="SphereShape3D_lx1e0"]
 radius = 2.80006
 
+[sub_resource type="Animation" id="Animation_2jx17"]
+resource_name = "Fade_up"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Invoice:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.2),
+"transitions": PackedFloat32Array(0.68302, 3.605),
+"update": 0,
+"values": [Vector2(0, 290), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Invoice:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Invoice:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(30, 40), Vector2(40, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_b05kb"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Invoice:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Invoice:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Invoice:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_7lruw"]
+resource_name = "remove"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Invoice:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Invoice:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gej3t"]
+_data = {
+"Fade_up": SubResource("Animation_2jx17"),
+"RESET": SubResource("Animation_b05kb"),
+"remove": SubResource("Animation_7lruw")
+}
+
 [node name="Salon" type="Node3D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -5899,10 +6019,17 @@ shape = SubResource("BoxShape3D_q3ije")
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.596545, 2.00271, 5.26676)
 
 [node name="simply_cloth" type="MeshInstance3D" parent="LevelDesign/Interactif/Lamba"]
-transform = Transform3D(5.01163e-07, -1.40135, 1.05799e-07, -1.40135, -5.01163e-07, 1.05799e-07, -1.05799e-07, -1.05799e-07, -1.40135, 0, 0, 0)
+transform = Transform3D(5.01163e-07, -1.40135, 1.05799e-07, -1.40135, -5.01163e-07, 1.05799e-07, -1.05799e-07, -1.05799e-07, -1.40135, 0, 0, 1.54654)
 mesh = SubResource("ArrayMesh_3ehk6")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_w75ej")
+
+[node name="VueLamba" type="Area3D" parent="LevelDesign/Interactif/Lamba"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0441684, 0, 2.01704)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelDesign/Interactif/Lamba/VueLamba"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1.46866, -2.32095, -2.30836)
+shape = SubResource("BoxShape3D_bi46k")
 
 [node name="Portes" type="Node3D" parent="LevelDesign"]
 transform = Transform3D(1.20482, 0, 0, 0, 1.20482, 0, 0, 0, 1.20482, 0, 0, 0)
@@ -6943,18 +7070,21 @@ ui_echap = NodePath("../ui_interaction_echap")
 mere = NodePath("../Mere")
 
 [node name="ui_interaction_echap" parent="." instance=ExtResource("37_52moq")]
+visible = false
 offset_left = 1639.0
 offset_top = 862.0
 offset_right = 1639.0
 offset_bottom = 862.0
 
 [node name="uiinteraction" parent="." instance=ExtResource("38_dx15b")]
+visible = false
 offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
 
 [node name="uiinteraction2" parent="." instance=ExtResource("38_dx15b")]
+visible = false
 offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
@@ -7381,10 +7511,90 @@ animation_player_mere = NodePath("../Mere/AnimationMere/AnimationPlayer")
 script = ExtResource("63_3m1gd")
 ui_interaction = NodePath("../uiinteraction")
 
+[node name="CameraOrigin5" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.02519, 1.98934, 6.3408)
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="InspectionObjetsSlice" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "player", "alo_camera", "alo_out_camera", "ui_interaction", "ui_echap")]
+script = ExtResource("66_nl2o4")
+player_camera = NodePath("../CameraOrigin/Camera3D")
+player = NodePath("../Player")
+alo_camera = NodePath("../CameraOrigin5/Camera3D")
+alo_out_camera = NodePath("../CameraOrigin3/Camera3D")
+ui_interaction = NodePath("../uiinteraction3")
+ui_echap = NodePath("../ui_interaction_echap2")
+
+[node name="uiinteraction3" parent="." instance=ExtResource("38_dx15b")]
+visible = false
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="ui_interaction_echap2" parent="." instance=ExtResource("37_52moq")]
+visible = false
+offset_left = 1639.0
+offset_top = 862.0
+offset_right = 1639.0
+offset_bottom = 862.0
+
+[node name="InnervoiceLamba" type="CanvasLayer" parent="."]
+
+[node name="InnerVoice" type="Control" parent="InnervoiceLamba"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_right = 20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Invoice" type="Control" parent="InnervoiceLamba/InnerVoice"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fond" type="Sprite2D" parent="InnervoiceLamba/InnerVoice/Invoice"]
+position = Vector2(0, 399)
+scale = Vector2(1.625, 1)
+texture = ExtResource("67_738ly")
+
+[node name="Label" type="Label" parent="InnervoiceLamba/InnerVoice/Invoice"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 348.0
+offset_right = 187.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
+theme_override_fonts/font = ExtResource("68_cuop6")
+theme_override_font_sizes/font_size = 35
+text = "Tiens, on dirait un cimetière."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InnervoiceLamba/InnerVoice"]
+libraries = {
+"": SubResource("AnimationLibrary_gej3t")
+}
+
 [connection signal="body_entered" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Carton/CartonArea" to="InteractionObjet" method="_on_carton_area_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/AreaTalisman" to="InteractionObjet" method="_on_area_talisman_body_exited"]
+[connection signal="body_entered" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_entered"]
+[connection signal="body_exited" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Portes/PorteChambre" to="SwitchNiveaux" method="_on_porte_chambre_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Portes/PorteChambre" to="SwitchNiveaux" method="_on_porte_chambre_body_exited"]
 [connection signal="body_entered" from="Vues/VuePorteGrenier" to="GameManager" method="_on_vue_porte_grenier_body_entered"]
