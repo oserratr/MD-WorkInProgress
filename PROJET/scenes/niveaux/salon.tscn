@@ -5931,11 +5931,12 @@ environment = SubResource("Environment_rp0om")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, -0.25038, 0.968148, 0, -0.968148, -0.25038, 0.511518, 7.51462, 2.69708)
 
-[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "carton_pose", "talisman")]
+[node name="GameManager" type="Node3D" parent="." node_paths=PackedStringArray("player_camera", "carton_pose", "talisman", "playerposition")]
 script = ExtResource("1_wog66")
 player_camera = NodePath("../CameraOrigin/Camera3D")
 carton_pose = NodePath("../LevelDesign/Interactif/Carton")
 talisman = NodePath("../LevelDesign/Interactif/AreaTalisman/Talisman")
+playerposition = NodePath("../Player")
 
 [node name="CameraOrigin" type="Node3D" parent="."]
 transform = Transform3D(-0.673012, -0.33233, 0.660765, 0, 0.893371, 0.449319, -0.739631, 0.302397, -0.60125, 2.32036, 3.09113, -2.09451)
@@ -6234,7 +6235,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500383, -0.285141, 4.48886
 shape = SubResource("BoxShape3D_p3gua")
 
 [node name="Plafond" type="Node3D" parent="LevelDesign/Piece"]
-visible = false
 
 [node name="plafond_001" type="MeshInstance3D" parent="LevelDesign/Piece/Plafond"]
 transform = Transform3D(5.48039, 0, 0, 0, 0.339435, 0, 0, 0, 10.0334, -0.491607, 4.20739, 3.95585)

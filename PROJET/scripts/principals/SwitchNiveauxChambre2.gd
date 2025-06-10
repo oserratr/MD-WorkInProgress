@@ -23,6 +23,7 @@ func _switch_chambre():
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	$"../CanvasLayer/AnimationPlayer".play("disolve")
 	await $"../CanvasLayer/AnimationPlayer".animation_finished
+	GlobalSceneState.previous_scene_name = get_tree().current_scene.name
 	get_tree().change_scene_to_file("res://scenes/niveaux/salon.tscn")
 	$"../CanvasLayer/AnimationPlayer".play_backwards("disolve")
 

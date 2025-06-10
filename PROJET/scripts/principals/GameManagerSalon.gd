@@ -3,6 +3,8 @@ extends Node3D
 @export var player_camera: Camera3D
 @export var carton_pose: Node3D
 @export var talisman: Node3D
+@export var playerposition: CharacterBody3D
+
 
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
@@ -13,9 +15,24 @@ var player_enter_area_carton := false
 var player_enter_area_manger := false
 
 func _ready():
-	# Exemple dans _ready() ou au moment de changer de musique
+	# Jouer la musique
 	var my_music = preload("res://assets/Son/grenier.mp3")
 	AudioManager.play_music(my_music)
+
+	# Modifier la position en fonction de la scène précédente
+	match GlobalSceneState.previous_scene_name:
+		"Grenier", "GrenierApcarton":
+			playerposition.global_transform.origin = Vector3(-3.252, 0.476, 1.479)
+			playerposition.rotation = Vector3(0, deg_to_rad(-95.4), 0)
+			print("desend du grenier")
+
+		"Chambrebis","chambre":
+			playerposition.global_transform.origin = Vector3(2.198, 0.476, 2.595)
+			playerposition.rotation = Vector3(0, deg_to_rad(69.6), 0)
+			print("desend de la chambre")
+		_:
+			print("Aucune position définie pour la scène précédente :", GlobalSceneState.previous_scene_name)
+
 			
 func _process(delta):
 
