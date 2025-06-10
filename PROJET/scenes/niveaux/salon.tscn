@@ -7555,11 +7555,13 @@ offset_right = 20.0
 offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Invoice" type="Control" parent="InnervoiceLamba/InnerVoice"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Fond" type="Sprite2D" parent="InnervoiceLamba/InnerVoice/Invoice"]
 position = Vector2(0, 399)
@@ -7583,6 +7585,7 @@ theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
 theme_override_fonts/font = ExtResource("68_cuop6")
 theme_override_font_sizes/font_size = 35
 text = "Tiens, on dirait un cimetière."
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="InnervoiceLamba/InnerVoice"]
 libraries = {

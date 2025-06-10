@@ -8,6 +8,10 @@ extends Node3D
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
 var player_enter_objet := false
+var player_enter_tableau1 := false
+
+func _ready():
+	$"../Innervoicetableau1".visible = false
 
 func _process(delta):
 	# Affichage UI "E"
@@ -20,11 +24,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("e") and player_enter_objet and not camera_switched:
 		print("Switching to secondary camera:", active_secondary_camera)
 		_switch_to_camera(active_secondary_camera)
+		if player_enter_tableau1 : 
+			$"../Innervoicetableau1".visible = true
+			$"../Innervoicetableau1/InnerVoice/AnimationPlayer".play("Fade_up")
 
 	# Retour caméra joueur
 	elif Input.is_action_just_pressed("ui_cancel") and player_enter_objet and camera_switched:
 		print("Switching back to player camera")
 		_switch_to_player_camera()
+		$"../Innervoicetableau1".visible = false
 
 func _switch_to_camera(cam: Camera3D):
 	if cam == null:
@@ -59,10 +67,12 @@ func get_active_camera() -> Camera3D:
 func _on_tableau_1_body_entered(body):
 	if body.is_in_group("player"):
 		player_enter_objet = true
+		player_enter_tableau1 = true
 
 func _on_tableau_1_body_exited(body):
 	if body.is_in_group("player"):
 		player_enter_objet = false
+		player_enter_tableau1 = false
 
 # Zone tableau 2
 func _on_tableau_2_body_entered(body):
