@@ -1,14 +1,13 @@
 extends Node3D
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print(Dialogic.VAR.mottrouver)
+var transition_lancee := false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	_switch_ecran_lettre()
-	
-func _switch_ecran_lettre():
-	print(Dialogic.VAR.mottrouver)
-	if Dialogic.VAR.mottrouver : 
-		get_tree().change_scene_to_file("res://scenes/Findelaslice2/lettreentiere.tscn")
+	if Dialogic.VAR.mottrouver and not transition_lancee:
+		transition_lancee = true
+		_start_delayed_scene_switch()
+
+func _start_delayed_scene_switch():
+	print("mot trouvé, changement de scène dans 3 secondes…")
+	await get_tree().create_timer(3.0).timeout
+	get_tree().change_scene_to_file("res://scenes/Findelaslice2/lettreentiere.tscn")
