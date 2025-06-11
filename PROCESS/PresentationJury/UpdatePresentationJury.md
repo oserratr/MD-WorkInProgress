@@ -16,7 +16,7 @@ Le jeu se passe après le décès de la grand-mère d'Andy, un moment ou elle tr
 ## Demo (5 minutes max)
 
 -> Ecrire ca a la fin + repeté
-
+    -> Spoile la fin ?
 ## Question SLIDE 2 (2 minutes)
 Pour designer ce jeu, voici ma question de départ :
 
@@ -62,3 +62,7 @@ Pendant mes recherches pour mon mémoire sur la technostalgie et les jeux vidéo
 ## Slide 13
 
 -> Ecrire en fonction de ce que je dis dans la démo
+
+## Conclusion
+
+Pour conclure, je souhaite pousser ce projet plus loin pour potentiellement l'exposer et le mettre sur des plateformes tel que itch.io ou encore steam. J'aimerais continuer de travailler sur des projet abordant les questions de colonialisme et neo-coloialisme.
