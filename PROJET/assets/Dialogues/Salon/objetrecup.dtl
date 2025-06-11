@@ -2,7 +2,7 @@
 Mère: Alors qu’est-ce que tu as fait tomber ?
 Fille: Je... je sais pas trop. J'arrive pas vraiment à comprendre ce que c'est.
 Mère: Montre-moi
-[background arg="talisman00000000.png" fade="0.0"]
+[background arg="res://movie/renderobjet/talisman00000000.png" fade="0.0"]
 Mère: … \
 …
 Fille: Tu sais ce que c'est, toi ?

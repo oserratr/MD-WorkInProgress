@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://dxap6tqur4n5n"]
+[gd_scene load_steps=24 format=3 uid="uid://dxap6tqur4n5n"]
 
 [ext_resource type="Texture2D" uid="uid://dfn8rbbwoeivh" path="res://assets/3D/Objets/talisman/textures/talisman_assetstalisman_DefaultMaterial_BaseColor.png" id="2_054ks"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="3_xcbo1"]
 [ext_resource type="Texture2D" uid="uid://pc1j14wh6iwf" path="res://assets/3D/Objets/talisman/textures/talisman_ballbracelet_DefaultMaterial_BaseColor.png" id="4_0b8ma"]
+[ext_resource type="Texture2D" uid="uid://d1f3588pbsttk" path="res://assets/3D/Chambre/newtable/AssetsTiroir/asset-lettre-atraduire_texturelettre.png" id="4_6nfp4"]
+[ext_resource type="Texture2D" uid="uid://cg23t3kox1ds8" path="res://scenes/Findelaslice2/texturelettretraduite/texturelettre.png" id="5_yri8t"]
 
 [sub_resource type="Environment" id="Environment_lqnme"]
 background_mode = 1
@@ -186,12 +188,60 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_v6dfp")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yful8"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("4_6nfp4")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_otptj"]
+_surfaces = [{
+"aabb": AABB(-1, -0.01, -1, 2, 0.01001, 2.00001),
+"format": 34359742465,
+"index_count": 48,
+"index_data": PackedByteArray(3, 0, 1, 0, 0, 0, 1, 0, 4, 0, 2, 0, 1, 0, 3, 0, 4, 0, 6, 0, 8, 0, 5, 0, 8, 0, 7, 0, 9, 0, 8, 0, 6, 0, 7, 0, 0, 0, 8, 0, 3, 0, 0, 0, 5, 0, 8, 0, 1, 0, 5, 0, 0, 0, 1, 0, 6, 0, 5, 0, 2, 0, 6, 0, 1, 0, 2, 0, 7, 0, 6, 0, 4, 0, 7, 0, 2, 0, 4, 0, 9, 0, 7, 0, 3, 0, 9, 0, 4, 0, 3, 0, 8, 0, 9, 0),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1jd2c"]
+resource_name = "asset-lettre-atraduire_Plane_001"
+_surfaces = [{
+"aabb": AABB(-1, -0.01, -1, 2, 0.01001, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 0, 0, 0, 0, 240, 211, 122, 62, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0, 184, 243, 153, 62, 0, 0, 0, 0),
+"format": 34359742487,
+"index_count": 48,
+"index_data": PackedByteArray(9, 0, 4, 0, 1, 0, 4, 0, 13, 0, 7, 0, 4, 0, 9, 0, 13, 0, 19, 0, 24, 0, 16, 0, 24, 0, 22, 0, 28, 0, 24, 0, 19, 0, 22, 0, 2, 0, 26, 0, 11, 0, 2, 0, 17, 0, 26, 0, 3, 0, 15, 0, 0, 0, 3, 0, 18, 0, 15, 0, 8, 0, 20, 0, 5, 0, 8, 0, 23, 0, 20, 0, 12, 0, 21, 0, 6, 0, 12, 0, 27, 0, 21, 0, 10, 0, 29, 0, 14, 0, 10, 0, 25, 0, 29, 0),
+"material": SubResource("StandardMaterial3D_yful8"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 0, 0, 128, 191, 0, 0, 0, 0, 8, 150, 2, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 144, 24, 204, 190, 0, 0, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 191, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 63, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 63, 10, 215, 35, 188, 0, 0, 128, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 0, 0, 128, 191, 10, 215, 35, 188, 8, 150, 2, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 144, 24, 204, 190, 10, 215, 35, 188, 0, 0, 128, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 255, 255, 255, 127, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 136, 198, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 255, 255, 191, 0, 0, 136, 198, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 255, 127, 255, 255, 255, 191, 255, 127, 255, 127, 255, 255, 255, 63, 255, 127, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 255, 255, 255, 127, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 136, 198, 255, 255, 255, 191, 0, 0, 255, 127, 255, 255, 255, 191, 255, 255, 255, 255, 255, 255, 255, 191, 255, 127, 0, 0, 255, 255, 255, 63, 0, 0, 136, 198, 255, 255, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_otptj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_35gxq"]
+render_priority = 0
+shader = ExtResource("3_xcbo1")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.0
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("5_yri8t")
+
 [node name="RenduObjet" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_lqnme")
 
 [node name="Object" type="Node3D" parent="."]
+visible = false
 
 [node name="wood_001" type="MeshInstance3D" parent="Object"]
 transform = Transform3D(2.70369, 2.70369, -8.24543, -6.42678, 6.42678, -3.63588e-06, 5.8304, 5.8304, 3.82359, -0.015519, 0.0205829, 0.0179696)
@@ -218,7 +268,14 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_j4887")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 4.37114e-08, 1, -4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, 2.65751, -0.396446, 0)
+transform = Transform3D(1, 4.37114e-08, 8.74745e-15, -8.74746e-15, 1.06581e-14, 1, 4.37114e-08, -1, 1.06581e-14, -0.0142543, 1.32807, 0.00179791)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.965926, -0.0648031, 0.250575, -0.258819, -0.241848, 0.935159, 0, -0.968148, -0.25038, 8.09869, 5.86921, -3.50038)
+visible = false
+
+[node name="lettrelangue" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.709999, 0, 0, 0, 1, 0, 0, 0, 1, -0.00790143, 0, 0)
+mesh = SubResource("ArrayMesh_1jd2c")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_35gxq")

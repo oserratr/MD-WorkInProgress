@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b267f2a8pbigk"]
+[gd_scene load_steps=4 format=3 uid="uid://b267f2a8pbigk"]
 
 [ext_resource type="Script" path="res://scripts/slice2/SwitchSurScreenTitle.gd" id="1_3xq4e"]
+[ext_resource type="Texture2D" uid="uid://x0acp1wnmo8j" path="res://scenes/Findelaslice2/texturelettretraduite/lettretraduitesprite.png" id="2_rysuc"]
+[ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="3_eax36"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,17 +22,68 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="AlignementLettre" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -529.0
+offset_top = -20.0
+offset_right = -489.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "LETTRE TRADUITE"
+scale = Vector2(0.9, 0.9)
+
+[node name="LettreTraduite" type="Sprite2D" parent="AlignementLettre"]
+position = Vector2(1658.89, 134.445)
+rotation = -0.367971
+scale = Vector2(1.40276, 1.40276)
+texture = ExtResource("2_rysuc")
+
+[node name="LisibleTexte" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 77.0
+offset_top = 64.0
+offset_right = 117.0
+offset_bottom = 104.0
+
+[node name="Label" type="Label" parent="LisibleTexte"]
+layout_mode = 1
+offset_left = -29.0
+offset_top = -29.0
+offset_right = 1358.0
+offset_bottom = 852.0
+theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
+theme_override_fonts/font = ExtResource("3_eax36")
+theme_override_font_sizes/font_size = 35
+text = "Aina,
+
+Chaque soir, j’écris sans savoir si tu me liras. Peut-être qu’un jour, un autre me lira sans 
+connaître nos noms. Il fait froid ici. Ce n’est pas les murs, mais c’est moi. Ils veulent que 
+j’oublie qui je suis, d’où je viens. Que j’aie honte de mon nom. Mais je pense toujours à 
+ton rire, celui de notre fille, à l'odeur de nos fleurs. Depuis que je suis prisonnier,
+mon esprit s’éteint. 
+
+Ce n’est pas la faim, ni les coups. C’est le silence. 
+Celui qui dévore nos mots, nos noms, nos chants. 
+Un silence qui veut me faire oublier, jusqu’à moi-même.
+
+Alors j’ai fabriqué Fahafahana. Rien à leurs yeux, mais gardant en lui ce qu’ils tentent 
+d’effacer : notre mémoire, notre colère. S’ils me prennent tout, qu’il me reste au 
+moins ça : une trace. Une façon de dire que je n’ai pas cédé.
+
+Tant que la mémoire vit, nous ne sommes pas morts."
+
+[node name="Label2" type="Label" parent="LisibleTexte"]
+offset_left = 932.0
+offset_top = 879.0
+offset_right = 1089.0
+offset_bottom = 941.0
+theme_override_colors/font_color = Color(1, 0.945098, 0.509804, 1)
+theme_override_fonts/font = ExtResource("3_eax36")
+theme_override_font_sizes/font_size = 45
+text = "Dadavy"
