@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dispo5nrawrm1"]
 
-[ext_resource type="VideoStream" path="res://movie/Cutscene/IntroCutsceneEditv1.ogv" id="1_eircl"]
 [ext_resource type="Script" path="res://scripts/gamesmanager/cutsceneintromanager.gd" id="1_g8sjh"]
+[ext_resource type="VideoStream" path="res://movie/Cutscene/IntroCutsceneEditv2.ogv" id="2_566tw"]
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("video_player")]
 script = ExtResource("1_g8sjh")
@@ -19,7 +19,7 @@ offset_right = 960.0
 offset_bottom = 544.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_eircl")
+stream = ExtResource("2_566tw")
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

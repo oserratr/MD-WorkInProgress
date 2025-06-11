@@ -7116,7 +7116,7 @@ offset_bottom = -3.0
 transform = Transform3D(-0.104297, 0, 0.396512, 0, 0.41, 0, -0.396512, 0, -0.104297, -10.9639, -0.024, 2.348)
 script = ExtResource("39_t8axi")
 interaction_objet = NodePath("../InteractionObjet")
-ui_interaction_mere = NodePath("../uiinteraction")
+ui_interaction_mere = NodePath("../uiinteraction5")
 player = NodePath("../Player")
 player_camera = NodePath("../CameraOrigin/Camera3D")
 camera_vue_mere = NodePath("CameraOrigin4/Camera3D")
@@ -7687,6 +7687,20 @@ offset_right = 5.0
 offset_bottom = -3.0
 
 [node name="ui_interaction_echap3" parent="." instance=ExtResource("37_52moq")]
+visible = false
+offset_left = 1639.0
+offset_top = 862.0
+offset_right = 1639.0
+offset_bottom = 862.0
+
+[node name="uiinteraction5" parent="." instance=ExtResource("38_dx15b")]
+visible = false
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 5.0
+offset_bottom = -3.0
+
+[node name="ui_interaction_echap4" parent="." instance=ExtResource("37_52moq")]
 visible = false
 offset_left = 1639.0
 offset_top = 862.0
