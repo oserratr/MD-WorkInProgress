@@ -3,6 +3,7 @@ extends Control
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 	$Texte.play("Blink")
+	AudioManager.stop_music()
 
 func _process(delta):
 	if Input.is_action_just_pressed("PlayGame") :
