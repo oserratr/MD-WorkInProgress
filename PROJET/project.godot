@@ -36,6 +36,7 @@ directories/dtl_directory={
 "CousinTraduction": "res://assets/Dialogues/Apreslettre/Cousin/CousinTraduction.dtl",
 "FirstInteractionObjetTombe": "res://assets/Dialogues/Salon/FirstInteractionObjetTombe.dtl",
 "InteractionAfterLettreForce": "res://assets/Dialogues/Apreslettre/Cousin/InteractionAfterLettreForce.dtl",
+"dialoguenirina": "res://assets/Dialogues/SliceFin/dialoguenirina.dtl",
 "objetrecup": "res://assets/Dialogues/Salon/objetrecup.dtl",
 "objetrecup1": "res://assets/Dialogues/Salon/objetrecup1.dtl"
 }

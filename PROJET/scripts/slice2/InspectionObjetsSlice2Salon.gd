@@ -9,6 +9,7 @@ extends Node3D
 
 var active_secondary_camera: Camera3D = null
 var camera_switched := false
+var tv_inspecter := false
 
 # Zone de déclenchement
 var player_enter_alo := false
@@ -40,6 +41,7 @@ func _process(delta):
 		if is_instance_valid(alo_out_camera):
 			_switch_to_camera(alo_out_camera)
 			$"../InnervoiceTV".visible = false
+			tv_inspecter = true
 
 func _switch_to_camera(cam: Camera3D):
 	if cam == null:

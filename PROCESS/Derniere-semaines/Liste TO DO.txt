@@ -2,14 +2,10 @@ Liste TO DO
 
 * Polish
 	-> Cinematique debut (sous-titres + changement voix andy) 
-	-> Mesh perso fix bug PTETRE
 	-> Ameliorer inspection d'objet OK
 	-> Rajouts assets culturels un peux partout (dans tt les pièces) + TIROIRS CHAMBRE
-	-> Animation carton et objet qui tombes 
 	-> UI Accès Objet EN COURS
 	-> UI Style custom pour traduction
-	-> Revoir pour salon
-
 
 * A faire
 
