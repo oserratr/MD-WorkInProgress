@@ -79,6 +79,7 @@ moins ça : une trace. Une façon de dire que je n’ai pas cédé.
 Tant que la mémoire vit, nous ne sommes pas morts."
 
 [node name="Label2" type="Label" parent="LisibleTexte"]
+layout_mode = 0
 offset_left = 932.0
 offset_top = 879.0
 offset_right = 1089.0

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="DialogicStyle" load_steps=6 format=3 uid="uid://bww8psfbyaq2"]
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://assets/2D/ui dialogic/OwnStyle/CustomOwnStyle/custom_own_style.tscn" id="1_v4er1"]
-[ext_resource type="PackedScene" path="res://AssetsSlice/styletraduction/SimpleTextInputBox/custom_text_input_layer.tscn" id="2_r1yuw"]
+[ext_resource type="PackedScene" uid="uid://c4ocn2m1lj0ls" path="res://AssetsSlice/styletraduction/SimpleTextInputBox/custom_text_input_layer.tscn" id="2_r1yuw"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="3_eg4fq"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_pa480"]
 

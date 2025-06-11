@@ -24,13 +24,13 @@ Voici un extrait d'une des interviews que j'ai pu faire avec un membre de ma fam
 
 **Note vocale** **SLIDE 3**
 
-**SLIDE 4**Finalement, je me suis rendu compte que ce n'etais pas un excercice facile pour tout le monde, loin de la. Il y a vraiment une gêne, de la part des parents a aborder des sujets tels que l’histoire familiale ou l'histoire coloniale. On peut parler de pudeur et même de fierté.
+**SLIDE 4** (30 secondes) Grâce a ces interviews, je me suis rendu compte que ce n'etais pas un excercice facile pour tout le monde, loin de la. Il y a vraiment une gêne, de la part des parents a aborder des sujets tels que l’histoire familiale ou l'histoire coloniale. On peut parler de pudeur et même de fierté.
 
-Cela procure beaucoup de frustration pour les personnes que j'ai interviewés, qui se sentent totalement impuissant face a ces non-dits, qui s'encrent et impactent activement la transmisison d'héritage culturelle.
+Cela procure beaucoup de frustration pour les personnes que j'ai interviewés, qui se sentent totalement impuissant face a ces non-dits, qui impactent peut a peut la transmisison d'héritage culturelle.
 
-**SLIDE 5**Typiquement, dans le cas de Madagascar, on peut parler "d'aliénation" encore très présente dans le pays par apport a la france, par apport notamment à la religion. Beaucoup de rituels et coutumes sont pratiquement devenus obsolète. Et même pour beaucoup de Malgaches inconnus.
+**SLIDE 5**Typiquement, dans le cas de Madagascar, on peut voir assez facilement les vestiges de la colonisation française, notamment par apport à la religion. Beaucoup de rituels et coutumes sont pratiquement devenus obsolète pour laisser place a ceux d'une autre religion. Ces rituels sont pratiquement inconnus pour la diaspora malgache.
 
-Par exemple, ceci est un AloAlo, faisant parti de l'art funéraire malgache. C'est un totem sculptés dans du bois, sencé accompagné le mort, lui rendre hommage. J'ai moi-même jusqu'à peu de temps pensé que ces totems étaient le "logo" officiel de Madagascar. Car, très présent sur les objets "touristiques" dénaturant la signification sprituelle de cet objet.
+Par exemple, ceci est un AloAlo, un objet faisant parti de l'art funéraire malgache. C'est un totem sculptés dans du bois, sencé accompagné le mort, lui rendre hommage. J'ai moi-même cru que ces totems étaient le "logo" officiel de Madagascar. Car, très présent sur les objets "touristiques" dénaturant la signification sprituelle de cet objet.
 
 ### Barrière de la langue & acculturation
 
