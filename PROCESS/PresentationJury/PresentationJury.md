@@ -24,15 +24,13 @@ Voici un extrait d'une des interviews que j'ai pu faire avec un membre de ma fam
 
 **Note vocale** **SLIDE 3**
 
-**SLIDE 4**C'est au cours des différentes discussions que j'ai pu avoir, que je me suis rendu compte que ce n'etais pas un excercice facile pour tout le monde, loin de la. Parmi les quatre personnes que j’ai interviewées, un malaise général se faisait sentir lorsqu’il s’agissait d’aborder l’histoire familiale, aussi bien du côté de la personne qui posait les questions que de celui du membre de la famille interrogé. Il en est de même par apport a l'évocation de l'histoire coloniale, une certaine frustration des personnes interviewées est exprimé quand au fait que personne n'as vraiment l'air de savoir, ou de vouloir en parler.
+**SLIDE 4**Finalement, je me suis rendu compte que ce n'etais pas un excercice facile pour tout le monde, loin de la. Il y a vraiment une gêne, de la part des parents a aborder des sujets tels que l’histoire familiale ou l'histoire coloniale. On peut parler de pudeur et même de fierté.
 
-C'est finalement une réaction banale, et c'est plutot rare de pouvoir parler librement de ces sujets.
+Cela procure beaucoup de frustration pour les personnes que j'ai interviewés, qui se sentent totalement impuissant face a ces non-dits, qui s'encrent et impactent activement la transmisison d'héritage culturelle.
 
-Ces non-dits s'encrent et impactent activement la transmission d'héritage culturelle. 
+**SLIDE 5**Typiquement, dans le cas de Madagascar, on peut parler "d'aliénation" encore très présente dans le pays par apport a la france, par apport notamment à la religion. Beaucoup de rituels et coutumes sont pratiquement devenus obsolète. Et même pour beaucoup de Malgaches inconnus.
 
-**SLIDE 5**Typiquement, dans le cas de Madagascar, on peut parler "d'aliénation" encore très présente dans le pays par apport a la france, par apport notamment à la religion, beaucoup de rituels et coutumes comme le retournement des morts ou encore la fabrication de totems funéraire est devenu presque obsolète. Et même pour beaucoup de Malgaches inconnus. J'ai moi-même jusqu'à peu de temps pensé que ces totems étaient le "logo" officiel de Madagascar. Car, très présent sur les objets "touristiques" dénaturant la signification sprituelle de cet objet.
-
-On peut aussi évoquer, la perte de mémoire autour de l'origine de certains noms en guadeloupe, qui, sont enfait lourd de sens faisant référence directement à l'esclavage.
+Par exemple, ceci est un AloAlo, faisant parti de l'art funéraire malgache. C'est un totem sculptés dans du bois, sencé accompagné le mort, lui rendre hommage. J'ai moi-même jusqu'à peu de temps pensé que ces totems étaient le "logo" officiel de Madagascar. Car, très présent sur les objets "touristiques" dénaturant la signification sprituelle de cet objet.
 
 ### Barrière de la langue & acculturation
 
@@ -42,27 +40,66 @@ Par exemple, à Madagascar, il y a plusieurs dialectes qui se perdent énorméme
 
 Cette barrière linguistique est étroitement liée au phénomène d'acculturation. Pour beaucoup, être né ou avoir grandi très jeune dans un autre pays a entraîné une perte progressive du lien avec la langue d’origine de leur famille, en particulier chez les nouvelles générations issues de l’immigration. 
 
-Dans plusieurs interviews, plusieurs personnes evoquent le regret de ne pas parler la langue du pays d'origine de leur famille, en ayant negligé sont apprentissage, ou, en n'etant peu ou pas exposé a cette langue, souvent jugée par les membre de la famille sans "reel" necessité, pensant incompatible les deux langues dans la reussite des nouvelles generations. 
+Plusieurs personnes ont exprimé le regret de ne pas parler la langue d’origine de leur famille, faute de l’avoir apprise ou entendue. Souvent jugée inutile ou incompatible avec la réussite, cette langue a été mise de côté par leurs proches.
 
 C’est encore plus difficile lorsque l’on grandit dans un pays qui a colonisé la culture de ses parents ou de ses ancêtres.
 
-Par exemple, dans la langue parlée au quotidien malgache, il n'est pas rare d'avoir beaucoup de mots français. Et encore aujourd'hui, alors même que madagascar est un pays independant, la langue française est toujours très ancré, que ce soit dans les langues parlées, ou encore l'education scolaire. C'est d'ailleurs comme ça que au fil des années j'ai réussi a le comprendre.
+Par exemple, en malgache, la langue parlée intègre de nombreux mots français. Aujourd’hui encore, malgré l’indépendance, le français reste très présent, notamment dans la langue et l’éducation. C’est d’ailleurs comme ça que j’ai fini par le comprendre avec le temps.
 
-**SLIDE 7**Avec ces informations, j'ai donc tester un gameplay focalisé sur la traduction avec plusieurs variantes de prototypes :
+**SLIDE 7**
+
+En tant que game designer, je me suis alors demandé : pourquoi ne pas imaginer un gameplay centré sur la traduction ?
+
+**SLIDE 8**
+
+Avec ces informations, j'ai donc tester ce gameplay avec plusieurs variantes de prototypes :
 
 -> Un premier ou j'ai tenter d'incorporé des mots français dans une langue inventé inspiré du malgache a travers des dialogues pour voir si cela facilité la traduction.
     -> Ce test n'a pas fonctionner car les deux langues sont très différentes dans leurs constructions, ce qui induis en erreur le joueur, pensant que la contruction est la meme. Une certaine frustation est ressenti 
 
-**SLIDE 8**-> Puis, un deuxième ou j'ai laisser le joueur explorer des scènes avec des objets et des puzzles permenttant de traduire les mots, avec un texte sans ajout de mots dans une autre langue 
+**SLIDE 9**-> Puis, un deuxième ou j'ai laisser le joueur explorer des scènes avec des objets et des puzzles permenttant de traduire les mots, avec un texte sans ajout de mots dans une autre langue 
     -> Test concluant, les joueurs étaient plus engagé et c'etait plus concret 
 
 ### Ecriture
 
-Pour l'ecriture de mon jeu, il me fallait des elements concrets historiques. J'ai donc fait des recherches sur le deroulement de la colonisation française à madagascar et j'en ai retenu un evenement très majeur dans son indépendance : celui de l'insurrection. En croisant les différentes sources que j'avais (les temoignages de ma mère, de mon grand-père et les papiers et vidéos qui traitent de ce sujet) je me suis rendue compte qu'il y avait beaucoup de versions différentes de cet evenement, qui est jusqu'a aujourd'hui très mal documenté et pendant longtemps censuré.
+Pour l'ecriture du jeu, il me fallait des elements concrets historiques. J'ai donc fait des recherches sur le deroulement de la colonisation française à madagascar et j'en ai retenu un evenement très majeur dans son indépendance : celui de l'insurrection. En croisant les différentes sources que j'avais (les temoignages de ma mère, de mon grand-père et les papiers et vidéos qui traitent de ce sujet) je me suis rendue compte qu'il y avait beaucoup de versions différentes de cet evenement, qui est jusqu'a aujourd'hui très mal documenté et pendant longtemps censuré.
 
 **SLIDE 9 a 14**Donc, avec ces différentes insights, j'ai ecris les différents personnages (comment et pourquoi ils ont quitté leurs pays), les liens intrafamiliaux, ainsi que de concevoir une timeline d'evenement majeurs historiques et familiaux.
 
-1 slide = explication rapide du personnage
+## explication personnages
+Dadavy
+Grand-père, 1939-1999
+A connu la colonisation de son pays
+S’est battu pour l’indépendance
+Ses petits-enfants ne l’ont pas connu
+Attacher à sa culture
+
+Aina
+Grand-mère, 1938-2024
+A connu la colonisation de son pays
+Attacher au traditions
+A quitté son pays pour recevoir de meilleurs soins
+
+Anja
+Mère, 1964
+A connu la colonisation de son pays
+Distante avec les événements historiques et familiaux
+A quitté le pays a 20 ans pour une situation + confortable
+Intégration difficile
+
+Bary
+Cousin, 2002
+Est né dans le pays d’origine de la famille
+Arrivé dans le pays actuel en regroupement familial
+Lacunes dans sa langue d’origine
+Essaye de renouer avec sa culture
+
+Andy
+Personnage principal, 2000
+N’est pas né dans le pays d’origine de la famille
+Ne parle pas sa langue d’origine
+Proche de sa famille
+Essaye de renouer avec sa culture
 
 **SLIDE 15 a 16**
 Explication de la timeline 
@@ -70,7 +107,7 @@ Explication de la timeline
 ## Esthétique
 
 **SLIDE 17**
-Suite a mon mémoire sur la technostalgie et les jeux vidéos, j'ai pu redécouvrir l'utilisation des esthétiques de la ps1 remises au gout du jour. C'est l'esthétique que j'ai décidé d'utilisé pour mon jeu car, il fait echo directement a un génération de joueur qui a grandis avec ces jeux qui peuvent être justement dans cet âge ou on essaye de renouer avec sa culture. Et, il etait important d'avoir des "humains" mais qui n'etais pas aussi réaliste que ce que l'on peut voir aujourd'hui dans des triples A, c'est une esthétique qui fonctionne bien egalement pour parler de sujet lourds comme celui-ci.
+Suite a mon mémoire sur la technostalgie et les jeux vidéos, j'ai pu redécouvrir l'utilisation des esthétiques de la ps1 remises au gout du jour. C'est l'esthétique que j'ai décidé d'utilisé pour mon jeu car, il fait echo directement a un génération de joueur qui a grandis avec ces jeux qui peuvent être justement dans cet âge ou on essaye de renouer avec sa culture.
 
 ## Presentation projet en meme temps que la demo
 
