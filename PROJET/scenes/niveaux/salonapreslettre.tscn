@@ -1,4 +1,4 @@
-[gd_scene load_steps=396 format=3 uid="uid://d0pgot84navwb"]
+[gd_scene load_steps=397 format=3 uid="uid://d0pgot84navwb"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManagerSalon.gd" id="1_rr4ll"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="2_ldofg"]
@@ -70,6 +70,7 @@
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="68_rpt1p"]
 [ext_resource type="Script" path="res://scripts/slice2/InspectionObjetsSlice2Salon.gd" id="69_ilc5w"]
 [ext_resource type="FontFile" uid="uid://bcvoa7qhjjjv0" path="res://assets/Font/Chubbo-Medium.ttf" id="69_rtjxf"]
+[ext_resource type="Script" path="res://scenes/NiveauxLettre/SonAfterlettre.gd" id="71_6e25t"]
 
 [sub_resource type="Animation" id="Animation_ur44l"]
 resource_name = "RESET"
@@ -8937,6 +8938,9 @@ offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
+
+[node name="Son" type="Node3D" parent="."]
+script = ExtResource("71_6e25t")
 
 [connection signal="body_entered" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Lamba/VueLamba" to="InspectionObjetsSlice" method="_on_vue_lamba_body_exited"]

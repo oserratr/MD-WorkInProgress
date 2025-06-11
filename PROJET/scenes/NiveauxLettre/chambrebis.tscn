@@ -5373,6 +5373,8 @@ offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
 
+[node name="Son" type="Node3D" parent="."]
+
 [connection signal="body_entered" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_exited"]
 [connection signal="body_entered" from="LevelDesign/Interactif/Autel/Aloalo/Aloalo" to="InspectionObjetALO" method="_on_aloalo_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=327 format=3 uid="uid://bnoq6hy0qe8kh"]
+[gd_scene load_steps=328 format=3 uid="uid://bnoq6hy0qe8kh"]
 
 [ext_resource type="PackedScene" uid="uid://dl2b8dq54r4n1" path="res://scenes/ui/ui_interaction_echap.tscn" id="1_bbwme"]
 [ext_resource type="PackedScene" uid="uid://bqcrumkdqemdf" path="res://scenes/ui/uiinteraction.tscn" id="2_hp5t0"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://b4mvqe8bo5llc" path="res://assets/Movie/Vue2dPhotoAutelChambre/photogp00000000.png" id="55_56k05"]
 [ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetALO.gd" id="56_hh3tj"]
 [ext_resource type="Script" path="res://scripts/slice2/SwitchLettreFin.gd" id="57_3l7m4"]
+[ext_resource type="Script" path="res://scenes/NiveauxLettre/SonAfterlettre.gd" id="58_h6nam"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("3_t7u73")
@@ -6816,6 +6817,9 @@ libraries = {
 "": SubResource("AnimationLibrary_x8tuy")
 }
 movie_quit_on_finish = true
+
+[node name="Son" type="Node3D" parent="."]
+script = ExtResource("58_h6nam")
 
 [connection signal="body_entered" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_exited"]

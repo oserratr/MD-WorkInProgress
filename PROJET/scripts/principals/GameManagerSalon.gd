@@ -15,9 +15,6 @@ var player_enter_area_carton := false
 var player_enter_area_manger := false
 
 func _ready():
-	# Jouer la musique
-	var my_music = preload("res://assets/Son/grenier.mp3")
-	AudioManager.play_music(my_music)
 
 	# Modifier la position en fonction de la scène précédente
 	match GlobalSceneState.previous_scene_name:

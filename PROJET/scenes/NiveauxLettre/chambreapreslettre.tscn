@@ -1,4 +1,4 @@
-[gd_scene load_steps=326 format=3 uid="uid://dhg4u3ueycwbj"]
+[gd_scene load_steps=327 format=3 uid="uid://dhg4u3ueycwbj"]
 
 [ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_tru6w"]
 [ext_resource type="Texture2D" uid="uid://c1nw74bla4j15" path="res://assets/3D/Chambre/newtable/besidetable_BedStand01_DefaultMaterial_BaseColor.png" id="2_r8pnk"]
@@ -56,6 +56,7 @@
 [ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetTrad/Icon.gd" id="47_uc6jc"]
 [ext_resource type="Texture2D" uid="uid://b4mvqe8bo5llc" path="res://assets/Movie/Vue2dPhotoAutelChambre/photogp00000000.png" id="54_n0v54"]
 [ext_resource type="Script" path="res://scripts/Chambre/InspectionObjetALO.gd" id="56_m0xyg"]
+[ext_resource type="Script" path="res://scenes/NiveauxLettre/SonAfterlettre.gd" id="57_nmphq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qcdca"]
 panorama = ExtResource("1_tru6w")
@@ -6787,6 +6788,9 @@ offset_left = 5.0
 offset_top = -3.0
 offset_right = 5.0
 offset_bottom = -3.0
+
+[node name="Son" type="Node3D" parent="."]
+script = ExtResource("57_nmphq")
 
 [connection signal="body_entered" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_entered"]
 [connection signal="body_exited" from="LevelDesign/Interactif/Autel/Photo/PhotoGP" to="Inspectionobjet2" method="_on_photo_gp_body_exited"]

@@ -43,8 +43,6 @@ func _process(delta):
 
 	if player_enter_carton and Input.is_action_just_pressed("e"):
 		carton_pose.visible = true
-		var my_music = preload("res://assets/Son/lettre.mp3")
-		AudioManager.play_music(my_music)
 		carton_drop = true
 		if is_instance_valid(talisman):
 			talisman.visible = true

@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://du46i4eb1cwfg"]
+[gd_scene load_steps=2 format=3 uid="uid://du46i4eb1cwfg"]
 
 [ext_resource type="Script" path="res://scripts/audio_manager.gd" id="1_ud183"]
-[ext_resource type="AudioStream" uid="uid://cik0vuiyp4fy8" path="res://assets/Son/grenier2.mp3" id="2_nody7"]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_ud183")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_nody7")
 volume_db = -12.0
 autoplay = true
