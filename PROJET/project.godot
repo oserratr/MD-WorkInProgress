@@ -19,12 +19,28 @@ config/icon="res://icon.svg"
 
 AudioManager="*res://scenes/audio_manager.tscn"
 GlobalSceneState="*res://scripts/SceneState.gd"
+Global="*res://global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Cousin": "res://assets/Dialogues/Apreslettre/Cousin/Cousin.dch",
+"Fille": "res://assets/Dialogues/Characters/Fille.dch",
+"Mère": "res://assets/Dialogues/Characters/Mère.dch"
+}
+directories/dtl_directory={
+"AlbumPhotoCarton": "res://assets/Dialogues/Grenier/AlbumPhotoCarton.dtl",
+"AlbumPhotoPasCarton": "res://assets/Dialogues/Grenier/AlbumPhotoPasCarton.dtl",
+"Apresinteractionforce": "res://assets/Dialogues/Apreslettre/Cousin/Apresinteractionforce.dtl",
+"CousinTraduction": "res://assets/Dialogues/Apreslettre/Cousin/CousinTraduction.dtl",
+"FirstInteractionObjetTombe": "res://assets/Dialogues/Salon/FirstInteractionObjetTombe.dtl",
+"InteractionAfterLettreForce": "res://assets/Dialogues/Apreslettre/Cousin/InteractionAfterLettreForce.dtl",
+"albumphoto": "res://assets/Dialogues/Grenier/albumphoto.dtl",
+"dialoguenirina": "res://assets/Dialogues/SliceFin/dialoguenirina.dtl",
+"objetrecup": "res://assets/Dialogues/Salon/objetrecup.dtl",
+"objetrecup1": "res://assets/Dialogues/Salon/objetrecup1.dtl"
+}
 glossary/default_case_sensitive=true
 layout/style_list=["res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"]
 layout/default_style=""

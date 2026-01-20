@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/Transitions/scene_transition.gd" id="1_fkkxf"]
 
+[sub_resource type="Animation" id="Animation_lboiu"]
+resource_name = "Disolve"
+
 [sub_resource type="Animation" id="Animation_6cwss"]
 length = 0.001
 tracks/0/type = "value"
@@ -16,9 +19,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_lboiu"]
-resource_name = "Disolve"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u55lp"]
 _data = {
