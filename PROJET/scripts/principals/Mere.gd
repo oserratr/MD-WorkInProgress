@@ -11,6 +11,11 @@ var timeline_active = false  # <-- Nouvelle variable
 @export var player: CharacterBody3D  # à connecter au CharacterBody3D
 
 func _ready():
+	print("WEB TEST: ready")
+	await get_tree().process_frame
+	print("WEB TEST: launching dialogic")
+	Dialogic.start("albumphoto")
+	
 	# Connecte le signal de fin de timeline
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):
 		Dialogic.timeline_ended.connect(_on_dialogic_timeline_ended)
@@ -53,7 +58,7 @@ func _on_mother_dialogue_body_exited(body):
 func _timeline_album_photo():
 	timeline_active = true
 	player.lock_movement(true)
-	Dialogic.start_timeline("AlbumPhoto")
+	Dialogic.start_timeline("albumphoto")
 
 func _timeline_photo_carton():
 	timeline_active = true
