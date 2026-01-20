@@ -1,19 +1,13 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=6 format=3 uid="uid://bww8psfbyaq2"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=4 format=3 uid="uid://bww8psfbyaq2"]
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://assets/2D/ui dialogic/OwnStyle/CustomOwnStyle/custom_own_style.tscn" id="1_v4er1"]
-[ext_resource type="PackedScene" uid="uid://c4ocn2m1lj0ls" path="res://AssetsSlice/styletraduction/SimpleTextInputBox/custom_text_input_layer.tscn" id="2_r1yuw"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="3_eg4fq"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_pa480"]
-
-[sub_resource type="Resource" id="Resource_8lc46"]
-script = ExtResource("3_eg4fq")
-scene = ExtResource("2_r1yuw")
-overrides = {}
 
 [resource]
 script = ExtResource("10_pa480")
 name = "OwnStyle"
 base_scene = ExtResource("1_v4er1")
 base_overrides = {}
-layers = Array[ExtResource("3_eg4fq")]([SubResource("Resource_8lc46")])
-metadata/_latest_layer = 0
+layers = Array[ExtResource("3_eg4fq")]([])
+metadata/_latest_layer = -1

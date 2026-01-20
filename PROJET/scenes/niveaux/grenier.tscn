@@ -1,8 +1,8 @@
-[gd_scene load_steps=283 format=4 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=284 format=4 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="1_53tlp"]
+[ext_resource type="Script" path="res://scenes/niveaux/textbrutaldialogic.gd" id="1_d7kud"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
-[ext_resource type="Texture2D" uid="uid://vigv73qk023h" path="res://assets/2D/hdri/autumn_field_puresky_4k.exr" id="1_vyb4n"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lbtsu"]
 [ext_resource type="Texture2D" uid="uid://b01pggnj6fij1" path="res://assets/3D/Objets/Tapis/tapis_tapismohair.png" id="6_kjpcy"]
 [ext_resource type="Texture2D" uid="uid://c5g2g5mn0ja1m" path="res://assets/3D/Grenier/drap/drap-grenier_Chair.png" id="9_4nebx"]
@@ -60,8 +60,11 @@
 [ext_resource type="Script" path="res://scripts/gamesmanager/TransitionCameraManager.gd" id="59_hno5o"]
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="59_iwybr"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jiich"]
+load_path = "res://.godot/imported/autumn_field_puresky_4k.exr-9d1938a4f73eeb7c694084660eb4038d.bptc.ctex"
+
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ew6wt"]
-panorama = ExtResource("1_vyb4n")
+panorama = SubResource("CompressedTexture2D_jiich")
 
 [sub_resource type="Sky" id="Sky_kgj7h"]
 sky_material = SubResource("PanoramaSkyMaterial_ew6wt")
@@ -4981,6 +4984,7 @@ _data = {
 }
 
 [node name="Grenier" type="Node3D"]
+script = ExtResource("1_d7kud")
 
 [node name="Lights" type="Node3D" parent="."]
 
