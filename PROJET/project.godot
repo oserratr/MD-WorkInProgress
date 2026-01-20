@@ -41,8 +41,8 @@ directories/dtl_directory={
 "objetrecup1": "res://assets/Dialogues/Salon/objetrecup1.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://test.tres"]
-layout/default_style="res://test.tres"
+layout/style_list=["res://assets/2D/ui dialogic/OwnStyle/OwnStyle.tres"]
+layout/default_style=""
 variables={
 "mottrouver": false,
 "tradmotmort": ""

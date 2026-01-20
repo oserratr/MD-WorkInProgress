@@ -61,7 +61,6 @@
 [ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="59_iwybr"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jiich"]
-load_path = "res://.godot/imported/autumn_field_puresky_4k.exr-9d1938a4f73eeb7c694084660eb4038d.bptc.ctex"
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ew6wt"]
 panorama = SubResource("CompressedTexture2D_jiich")
