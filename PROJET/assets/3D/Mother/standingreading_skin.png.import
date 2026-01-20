@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bj4vf0651w0vi"
+path.s3tc="res://.godot/imported/standingreading_skin.png-2a032854273e3d309f4f28324f8b5c0e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "3242d246b2057557701c74c3d6dbe960"
+}
+
+[deps]
+
+source_file="res://assets/3D/Mother/standingreading_skin.png"
+dest_files=["res://.godot/imported/standingreading_skin.png-2a032854273e3d309f4f28324f8b5c0e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
