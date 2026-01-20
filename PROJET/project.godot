@@ -53,6 +53,7 @@ text/autopauses={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/3D/Chambre/CurseurPtnclick.png"
 
 [editor]
