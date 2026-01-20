@@ -1,7 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://g2n5dihxgfd8"]
-
-[ext_resource type="FontFile" uid="uid://02or5kc0e4i2" path="res://assets/Font/Nunito-SemiBold.ttf" id="1_hip47"]
-[ext_resource type="Texture2D" uid="uid://bl7su4dy6iquh" path="res://assets/2D/ui dialogic/OwnStyle/testautre/Rectangle.png" id="2_0lqqu"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://g2n5dihxgfd8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw0la"]
 content_margin_left = 4.0
@@ -18,7 +15,6 @@ corner_detail = 5
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gn8e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkgiw"]
-texture = ExtResource("2_0lqqu")
 expand_margin_left = 15.0
 expand_margin_right = 15.0
 
@@ -44,7 +40,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 20
-Button/fonts/font = ExtResource("1_hip47")
+Button/fonts/font = null
 Button/styles/disabled = SubResource("StyleBoxFlat_dw0la")
 Button/styles/focus = SubResource("StyleBoxTexture_5gn8e")
 Button/styles/hover = SubResource("StyleBoxTexture_fkgiw")

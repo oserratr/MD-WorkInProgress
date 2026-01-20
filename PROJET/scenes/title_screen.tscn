@@ -148,7 +148,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_g211y")
 theme_override_font_sizes/font_size = 50
-text = "Appuyer sur [espace] pour commencer"
+text = "Appuyez sur [espace] pour commencer"
 
 [node name="Texte" type="AnimationPlayer" parent="."]
 libraries = {
