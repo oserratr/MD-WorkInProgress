@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byq8s8hif4sib"
+uid="uid://kesxv3id0rbd"
 path.s3tc="res://.godot/imported/2animFille2_skinfille.png-d54a1cdabbeda01adbfb5fa22146bd93.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "9c3febf3c32c8d2fe83042b159ffe8d7"
 }
 
 [deps]

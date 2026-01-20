@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co2jtglmx16eh"
+uid="uid://bvmutmpou7brf"
 path.s3tc="res://.godot/imported/standingreading_chemisemere.png-68546d785db345d774a3f1142b48b6f0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "cf4e6fa1b16776461bd5d2141664493a"
 }
 
 [deps]

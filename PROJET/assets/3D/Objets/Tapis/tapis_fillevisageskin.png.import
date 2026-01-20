@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7qibo0gtfy36"
+uid="uid://mgljdaedx64n"
 path.s3tc="res://.godot/imported/tapis_fillevisageskin.png-ed1d5c1718dd8c2fcc7166906c5a7a2e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ba3d21d510502a874190d44c4eaf8664"
 }
 
 [deps]

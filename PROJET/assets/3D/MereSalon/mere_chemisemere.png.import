@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nbf010op8w6l"
+uid="uid://bofoolt5l4iw6"
 path.s3tc="res://.godot/imported/mere_chemisemere.png-00cfbbb613e686ededc3f689edd14809.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "cf4e6fa1b16776461bd5d2141664493a"
 }
 
 [deps]

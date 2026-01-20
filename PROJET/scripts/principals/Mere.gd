@@ -11,10 +11,6 @@ var timeline_active = false  # <-- Nouvelle variable
 @export var player: CharacterBody3D  # à connecter au CharacterBody3D
 
 func _ready():
-	print("WEB TEST: ready")
-	await get_tree().process_frame
-	print("WEB TEST: launching dialogic")
-	Dialogic.start("albumphoto")
 	
 	# Connecte le signal de fin de timeline
 	if not Dialogic.timeline_ended.is_connected(_on_dialogic_timeline_ended):

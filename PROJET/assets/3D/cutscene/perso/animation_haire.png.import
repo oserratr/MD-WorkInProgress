@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmc1kg8ywla1v"
+uid="uid://cdem0mw7dtd3b"
 path.s3tc="res://.godot/imported/animation_haire.png-97840939fc17d51e000e4fa9c3e33c88.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "5b88b77c53b70f891a1a08a1edd70ab0"
 }
 
 [deps]

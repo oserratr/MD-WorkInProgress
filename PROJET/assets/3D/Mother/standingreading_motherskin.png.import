@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7t6qh4s7gthl"
+uid="uid://bt0tk17ukcm1s"
 path.s3tc="res://.godot/imported/standingreading_motherskin.png-2a2420f5cfa360a1239ee4c6dff77f13.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "9475394e0d55323b24903bd68a24c79e"
 }
 
 [deps]

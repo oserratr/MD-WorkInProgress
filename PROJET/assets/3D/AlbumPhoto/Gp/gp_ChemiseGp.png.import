@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc7gtbrccxwsq"
+uid="uid://bxj6aygwycq0h"
 path.s3tc="res://.godot/imported/gp_ChemiseGp.png-19af7f6843ea878478bccb7092421ea4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "05ec5c3a5782f1bb3f276b984024ece4"
 }
 
 [deps]

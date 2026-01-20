@@ -1,7 +1,6 @@
-[gd_scene load_steps=284 format=4 uid="uid://bca0rxviy3bpj"]
+[gd_scene load_steps=283 format=4 uid="uid://bca0rxviy3bpj"]
 
 [ext_resource type="Script" path="res://scripts/principals/GameManager.gd" id="1_53tlp"]
-[ext_resource type="Script" path="res://scenes/niveaux/textbrutaldialogic.gd" id="1_d7kud"]
 [ext_resource type="Texture2D" uid="uid://clfmv0143fivc" path="res://assets/3D/Grenier/Textures/grenier_Cardboad_60_A_baseColor.png" id="1_k0tc4"]
 [ext_resource type="Shader" path="res://scripts/shaders/psx.gdshader" id="2_lbtsu"]
 [ext_resource type="Texture2D" uid="uid://b01pggnj6fij1" path="res://assets/3D/Objets/Tapis/tapis_tapismohair.png" id="6_kjpcy"]
@@ -4983,7 +4982,6 @@ _data = {
 }
 
 [node name="Grenier" type="Node3D"]
-script = ExtResource("1_d7kud")
 
 [node name="Lights" type="Node3D" parent="."]
 

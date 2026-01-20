@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjp4cf2vfk2ur"
+uid="uid://doqht4cf4bo3k"
 path.s3tc="res://.godot/imported/2_fillevisageskin.png-16de5e7bdcb83a2ca2080489921499c1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "ba3d21d510502a874190d44c4eaf8664"
 }
 
 [deps]
