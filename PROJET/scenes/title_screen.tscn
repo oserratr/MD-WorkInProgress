@@ -128,7 +128,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_dj026")
 theme_override_font_sizes/font_size = 175
-text = "ROOT"
+text = "ROOTS"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
