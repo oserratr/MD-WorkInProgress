@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://g2n5dihxgfd8"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://g2n5dihxgfd8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw0la"]
 content_margin_left = 4.0
@@ -14,9 +14,13 @@ corner_detail = 5
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5gn8e"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_tpdu6"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fkgiw"]
+texture = SubResource("CanvasTexture_tpdu6")
 expand_margin_left = 15.0
 expand_margin_right = 15.0
+modulate_color = Color(1, 0.643137, 0.286275, 0.690196)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ihq2"]
 
